@@ -1,26 +1,38 @@
 #!/bin/bash
 
-declare -r path='/Users/gianmarco/Downloads/organization'
-declare -r file_name='/Users/gianmarco/Downloads/organization.xml'
+# THIS SCRIPT IS USED IN ORDER TO AGGREGATE THE RECORDS CONTAINED IN THE DUMPS PROVIDED BY ZENODO. IN ORDER
+# TO RUN THE SCRIPT IT IS MUST PROVIDED BOTH THE PATH TO THE UNCOMPRESSED FILE WHICH CONTAINS THE DUMP AND
+# THE PATH WHERE THE FINAL XML FILE HAS TO BE SAVED.
+#
+# HERE IS AN EXAMPLE: bash zenodo_parser_to_xml.sh path/to/uncompressed/file path/where/to/save/file.xml
+#
+
 declare -r to_remove='<?xml version="1.0" encoding="UTF-8"?>'
 
-touch $file_name
+echo $1
+echo $2
 
-printf '<?xml version="1.0" encoding="UTF-8"?>\n<data>\n' >> $file_name
+if [ -f $1 ]; then
+    touch $2
 
-i=0
+    printf '<?xml version="1.0" encoding="UTF-8"?>\n<data>\n' >> $2
 
-while read line; do
-    xml_record=`echo $line | jq '.body."$binary"' -r | base64 --decode | bsdtar -x -O`
+    i=0
 
-    echo $xml_record | sed -e "s/^$to_remove//" >> $file_name
+    while read line; do
+        xml_record=`echo $line | jq '.body."$binary"' -r | base64 --decode | bsdtar -x -O`
+
+        echo $xml_record | sed -e "s/^$to_remove//" >> $2
 
 
-    if [ $i -eq 1000 ]; then
-        break
-    fi
+        if [ $i -eq 1000 ]; then
+            break
+        fi
 
-    ((i=i+1))
-done < $path
+        ((i=i+1))
+    done < $1
 
-printf '</data>' >> $file_name
+    printf '</data>' >> $2
+else
+    echo "THE FILE DOESN'T EXISTS!"
+fi
