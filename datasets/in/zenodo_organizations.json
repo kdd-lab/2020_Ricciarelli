@@ -1,0 +1,4192 @@
+{
+  "": [
+    {
+      "id": "conicytf____::55db404046b3a294de2ba4ed6955d084",
+      "legal_name": null
+    },
+    {
+      "id": "conicytf____::fde5ee079a4549d3d5662018ebe329a8",
+      "legal_name": null
+    },
+    {
+      "id": "conicytf____::4bd60751dfd87e1d0519e54c9464db94",
+      "legal_name": null
+    },
+    {
+      "id": "conicytf____::7952ad85741ac483b212b7cd3a5f7971",
+      "legal_name": null
+    }
+  ],
+  "Albania": [
+    {
+      "id": "corda__h2020::933006917",
+      "legal_name": "INSTITUTI PER RUAJTJEN E NATYRES SHQIPTARE SHOQATA"
+    },
+    {
+      "id": null,
+      "legal_name": "Institute for Democracy and Mediation"
+    },
+    {
+      "id": "corda_______::998022137",
+      "legal_name": "University of Tirana"
+    }
+  ],
+  "Algeria": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/187560010",
+      "legal_name": "University of B\u00e9ja\u00efa"
+    }
+  ],
+  "Argentina": [
+    {
+      "id": null,
+      "legal_name": "Juan Agust\u00edn Maza University"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802359038",
+      "legal_name": "Hospital Italiano de Buenos Aires"
+    },
+    {
+      "id": null,
+      "legal_name": "Institute of Astronomy and Space Physics"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/174689663",
+      "legal_name": "Universidad de Flores"
+    },
+    {
+      "id": "corda_______::999858638",
+      "legal_name": "National University of La Plata"
+    }
+  ],
+  "Armenia": [
+    {
+      "id": null,
+      "legal_name": "NAS RA - Institute of Archaeology and Ethnography"
+    }
+  ],
+  "Australia": [
+    {
+      "id": "corda_______::998586677",
+      "legal_name": "VICTOR CHANG CARDIAC RESEARCH INSTITUTE LIMITED LBG"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/94936111",
+      "legal_name": "Moore College"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802320085",
+      "legal_name": "Reformed Theological College"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801185773",
+      "legal_name": "Hunter Water"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/1334950195",
+      "legal_name": "Australian Government - Australian Nuclear Science and Technology Organisation"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801241159",
+      "legal_name": "The Heart Research Institute"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/40676200",
+      "legal_name": "Australia and New Zealand School of Government"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801046730",
+      "legal_name": "Logan Hospital"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800034446",
+      "legal_name": "PIRSA - South Australian Research and Development Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "Australia and New Zealand Dialysis and Transplant Registry"
+    },
+    {
+      "id": "corda__h2020::999511572",
+      "legal_name": "Commonwealth Scientific and Industrial Research Organisation"
+    },
+    {
+      "id": "doajarticles::Australian_Council_for_Computers_in_Education",
+      "legal_name": "Australian Council for Computers in Education"
+    }
+  ],
+  "Austria": [
+    {
+      "id": "corda_______::999919069",
+      "legal_name": "FORSCHUNGSINSTITUT FUER MOLEKULARE PATHOLOGIE Ges.m.b.H"
+    },
+    {
+      "id": "corda_______::998011176",
+      "legal_name": "Carbopharm GmbH"
+    },
+    {
+      "id": "corda_______::961894293",
+      "legal_name": "DYNARDO AUSTRIA GMBH"
+    },
+    {
+      "id": "corda_______::988498095",
+      "legal_name": "MAXIM INTEGRATED GMBH"
+    },
+    {
+      "id": "corda__h2020::948751860",
+      "legal_name": "STUDIA-Schlierbach Studienzentrum f\u00fcr internationale Analysen"
+    },
+    {
+      "id": "corda__h2020::940144177",
+      "legal_name": "INTERNATIONAL SOFTWARE-EXPERTS FORCOLLABORATIVE NETWORKS I.S.C.N. GESMBH"
+    },
+    {
+      "id": "corda__h2020::910612139",
+      "legal_name": "HOERBIGER VENTILWERKE GMBH & CO KG"
+    },
+    {
+      "id": "corda__h2020::916251137",
+      "legal_name": "GENSPEED BIOTECH GMBH"
+    },
+    {
+      "id": "corda__h2020::942900917",
+      "legal_name": "VERMESSUNG AVT-ZT-GMBH"
+    },
+    {
+      "id": "corda__h2020::954310057",
+      "legal_name": "IMPACT HUB GMBH"
+    },
+    {
+      "id": "corda_______::999584128",
+      "legal_name": "Austrian Institute of Technology"
+    },
+    {
+      "id": null,
+      "legal_name": "Austrian Institute of Ecology"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/93485673",
+      "legal_name": "University of Applied Sciences Kufstein"
+    },
+    {
+      "id": "corda_______::998166667",
+      "legal_name": "HOEHERE BUNDESLEHR- UND FORSCHUNGSANSTALT FUER LANDWIRTSCHAFT, LANDTECHNIK UND LEBENSMITTELTECHNOLOGIE"
+    },
+    {
+      "id": "corda__h2020::999851848",
+      "legal_name": "VETERINAERMEDIZINISCHE UNIVERSITAET WIEN"
+    },
+    {
+      "id": null,
+      "legal_name": "Federal Ministry for Education and Women"
+    },
+    {
+      "id": "corda_______::993430060",
+      "legal_name": "ONCOTYROL-CENTER FOR PERSONALIZED CANCER MEDICINE GMBH"
+    }
+  ],
+  "Azerbaijan": [
+    {
+      "id": null,
+      "legal_name": "ANAS - A.I Karaev Institute of Physiology"
+    }
+  ],
+  "Bahrain": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/53218197",
+      "legal_name": "Arabian Gulf University"
+    }
+  ],
+  "Bangladesh": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/135366938",
+      "legal_name": "Sylhet Agricultural University"
+    },
+    {
+      "id": "doajarticles::Association_of_Naval_Architects_and_Marine_Engineers",
+      "legal_name": "Association of Naval Architects and Marine Engineers"
+    }
+  ],
+  "Belgium": [
+    {
+      "id": "corda_______::985009975",
+      "legal_name": "CENTRUM VOOR INNOVATIE EN STIMULATIEVAN MEDICIJNONTWIKKELING LEUVEN VZW"
+    },
+    {
+      "id": "corda_______::994166096",
+      "legal_name": "Health & Environment Alliance"
+    },
+    {
+      "id": "corda_______::992070023",
+      "legal_name": "Sarens nv"
+    },
+    {
+      "id": "corda_______::999954474",
+      "legal_name": "EUROPEAN FOOD INFORMATION COUNCIL AISBL"
+    },
+    {
+      "id": "corda_______::967444439",
+      "legal_name": "BMT TECHMAR NV"
+    },
+    {
+      "id": "corda_______::964196491",
+      "legal_name": "BELGAFIX"
+    },
+    {
+      "id": "corda_______::951052021",
+      "legal_name": "SPIRITSEUROPE AISBL"
+    },
+    {
+      "id": "corda__h2020::999514773",
+      "legal_name": "AQUAFIN N.V."
+    },
+    {
+      "id": "corda__h2020::928421242",
+      "legal_name": "BLUE4YOU SPRL"
+    },
+    {
+      "id": "corda__h2020::915011477",
+      "legal_name": "FEDERATION EUROPEENNE DE LA PROPRIETE IMMOBILIERE - EUROPEAN PROPERTY FEDERATION"
+    },
+    {
+      "id": "corda__h2020::922839086",
+      "legal_name": "ARCHIVES GENERALES DU ROYAUME ET ARCHIVES DE L'ETAT DANS LES PROVINCES"
+    },
+    {
+      "id": "corda__h2020::928538515",
+      "legal_name": "PARKWIND"
+    },
+    {
+      "id": "corda__h2020::950837069",
+      "legal_name": "YAZZOOM BVBA"
+    },
+    {
+      "id": "corda_______::999783657",
+      "legal_name": "INTEL CORPORATION"
+    },
+    {
+      "id": null,
+      "legal_name": "Trans European Policy Studies Association"
+    },
+    {
+      "id": "corda_______::961628416",
+      "legal_name": "SOLIDAR"
+    },
+    {
+      "id": "corda__h2020::999943125",
+      "legal_name": "MICROSOFT NV"
+    },
+    {
+      "id": "corda__h2020::996538425",
+      "legal_name": "UTEXBEL NV"
+    },
+    {
+      "id": "corda_______::972441782",
+      "legal_name": "PRACSIS SPRL"
+    }
+  ],
+  "Brazil": [
+    {
+      "id": "corda__h2020::953606807",
+      "legal_name": "CONFEDERACAO NACIONAL DA INDUSTRIA"
+    },
+    {
+      "id": null,
+      "legal_name": "Brazilian Radiation Protection Society"
+    },
+    {
+      "id": null,
+      "legal_name": "Faculdades Integradas Teresa D'\u00c1vila"
+    },
+    {
+      "id": null,
+      "legal_name": "Departamento de Ci\u00eancia e Tecnologia"
+    },
+    {
+      "id": null,
+      "legal_name": "Secretaria de Estado de Seguran\u00e7a P\u00fablica"
+    },
+    {
+      "id": "doajarticles::Eduem_-_Editora_da_Universidade_Estadual_de_Maring\u00e1",
+      "legal_name": "Eduem - Editora da Universidade Estadual de Maring\u00e1"
+    },
+    {
+      "id": null,
+      "legal_name": "Amazon Research Foundation"
+    },
+    {
+      "id": null,
+      "legal_name": "Sociedade Brasileira de Neuroci\u00eancias e Comportamento"
+    },
+    {
+      "id": "doajarticles::Associa\u00e7\u00e3o_Paulista_de_Medicina",
+      "legal_name": "Associa\u00e7\u00e3o Paulista de Medicina"
+    },
+    {
+      "id": "opendoar____::Universidade_Federal_de_Santa_Catarina",
+      "legal_name": "Universidade Federal de Santa Catarina"
+    },
+    {
+      "id": "doajarticles::UNIABEU",
+      "legal_name": "UNIABEU"
+    },
+    {
+      "id": "doajarticles::Faculdade_de_Medicina_de_Itajub\u00e1",
+      "legal_name": "Faculdade de Medicina de Itajub\u00e1"
+    },
+    {
+      "id": "doajarticles::Uniabeu",
+      "legal_name": "Uniabeu"
+    }
+  ],
+  "Bulgaria": [
+    {
+      "id": "corda_______::999870278",
+      "legal_name": "AGRICULTURAL UNIVERSITY"
+    },
+    {
+      "id": null,
+      "legal_name": "American Research Center in Sofia Foundation"
+    }
+  ],
+  "Cameroon": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/279418767",
+      "legal_name": "Universit\u00e9 des Montagnes"
+    }
+  ],
+  "Canada": [
+    {
+      "id": null,
+      "legal_name": "InStream Fisheries Research (Canada)"
+    },
+    {
+      "id": null,
+      "legal_name": "Ontario Mental Health Foundation"
+    },
+    {
+      "id": null,
+      "legal_name": "College of General and Professional Education"
+    },
+    {
+      "id": null,
+      "legal_name": "Canadian Energy Research Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "British Columbia Environmental and Occupational Health Research Network"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/1297363086",
+      "legal_name": "St. Michael's Hospital"
+    },
+    {
+      "id": null,
+      "legal_name": "Ministery of Economy, Innovation and Exports - Commission de l'Ethique en Science et en Technologie"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/95297979",
+      "legal_name": "Canadian Blood Services"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/1303976077",
+      "legal_name": "Employment and Social Development Canada"
+    },
+    {
+      "id": null,
+      "legal_name": "Centre for Energy Advancement through Technological Innovation"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/223441202",
+      "legal_name": "Royal Astronomical Society of Canada"
+    },
+    {
+      "id": null,
+      "legal_name": "Artificial Insemination Center of Quebec"
+    },
+    {
+      "id": null,
+      "legal_name": "Association of Canadian College and University Teachers of English"
+    },
+    {
+      "id": null,
+      "legal_name": "Heritage Lower Saint Lawrence"
+    },
+    {
+      "id": null,
+      "legal_name": "Association francophone pour le savoir"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/65447124",
+      "legal_name": "Universit\u00e9 de Saint-Boniface"
+    },
+    {
+      "id": "re3data_____::5f75af08ae2e74f30fa5bf262f351558",
+      "legal_name": "Government of Ontario"
+    },
+    {
+      "id": null,
+      "legal_name": "International Health Economics Association"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799698466",
+      "legal_name": "HHS - Juravinski Cancer Centre"
+    },
+    {
+      "id": null,
+      "legal_name": "Resolute Forest Products (Canada)"
+    },
+    {
+      "id": null,
+      "legal_name": "Petrel Robertson Consulting (Canada)"
+    },
+    {
+      "id": null,
+      "legal_name": "Canadian Sleep & Circadian Network"
+    },
+    {
+      "id": "re3data_____::a9f6c8393217f19dd367d9ea5da83baa",
+      "legal_name": "Ontario Cancer Institute Princess Margaret Hospital"
+    },
+    {
+      "id": null,
+      "legal_name": "Nunavik Regional Board of Health and Social Services"
+    }
+  ],
+  "China": [
+    {
+      "id": null,
+      "legal_name": "Luoyang Orthopedic-Traumatological Hospital"
+    },
+    {
+      "id": null,
+      "legal_name": "Sichuan Food Fermentation Industry Research and Design Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "Yueyang Hospital"
+    },
+    {
+      "id": null,
+      "legal_name": "Guizhou Provincial People's Hospital"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802776907",
+      "legal_name": "Central Academy of Drama"
+    },
+    {
+      "id": null,
+      "legal_name": "IGDB - Center for Agricultural Resources Research"
+    },
+    {
+      "id": null,
+      "legal_name": "China Nuclear Energy Association"
+    },
+    {
+      "id": null,
+      "legal_name": "Jiangsu Vocational Institute of Architectural Technology"
+    },
+    {
+      "id": null,
+      "legal_name": "Beijing Water Science and Technology Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "CAAS - Sweet Potato Research Institute"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/110440473",
+      "legal_name": "Xi'an University of Science and Technology"
+    },
+    {
+      "id": null,
+      "legal_name": "Shanghai Blood Center"
+    },
+    {
+      "id": null,
+      "legal_name": "CAS - Chengdu Institute of Biology"
+    },
+    {
+      "id": null,
+      "legal_name": "Xiyuan Hospital"
+    },
+    {
+      "id": null,
+      "legal_name": "Jiren Charity Foundation"
+    },
+    {
+      "id": null,
+      "legal_name": "Sichuan Academy Of Social Sciences"
+    },
+    {
+      "id": null,
+      "legal_name": "Beijing Zhenxing Metrology & Measurement Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "Chengdu Organic Chemicals (China)"
+    },
+    {
+      "id": null,
+      "legal_name": "CAAS - Sichuan Academy of Agricultural Sciences"
+    },
+    {
+      "id": null,
+      "legal_name": "Shandong Ocean and Fisheries Department"
+    },
+    {
+      "id": null,
+      "legal_name": "Hunan Xiangdian Test Research Institute (China)"
+    },
+    {
+      "id": null,
+      "legal_name": "Chinese People's Armed Police Force Engineering University"
+    },
+    {
+      "id": null,
+      "legal_name": "Zhejiang Tongji Vocational College of Science and Technology"
+    },
+    {
+      "id": null,
+      "legal_name": "Beike Biotechnology (China)"
+    },
+    {
+      "id": null,
+      "legal_name": "China Sexology Association"
+    },
+    {
+      "id": null,
+      "legal_name": "Baoji City Central Hospital"
+    },
+    {
+      "id": null,
+      "legal_name": "Chinese Academy of Cultural Heritage"
+    },
+    {
+      "id": null,
+      "legal_name": "Sinomach (China)"
+    },
+    {
+      "id": null,
+      "legal_name": "Xinjiang Academy of Agricultural Sciences"
+    },
+    {
+      "id": null,
+      "legal_name": "Guizhou Provincial Education Department"
+    },
+    {
+      "id": null,
+      "legal_name": "Lanzhou City College"
+    },
+    {
+      "id": null,
+      "legal_name": "Xintai People's Hospital"
+    },
+    {
+      "id": null,
+      "legal_name": "Ningbo Product Quality Supervision and Inspection Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "Guizhou Institute of Biology"
+    }
+  ],
+  "Colombia": [
+    {
+      "id": null,
+      "legal_name": "Colombian Corporation for Agricultural Research"
+    }
+  ],
+  "Costa Rica": [
+    {
+      "id": null,
+      "legal_name": "Latin University of Costa Rica"
+    }
+  ],
+  "Croatia": [
+    {
+      "id": "corda_______::989065933",
+      "legal_name": "biciklistickog kluba bicikl"
+    },
+    {
+      "id": "corda__h2020::910319296",
+      "legal_name": "BIO-MI DRUSTVO S OGRANICENOM ODGOVORNOSCU ZA PROIZVODNJU, ISTRAZIVANJEI RAZVOJ"
+    },
+    {
+      "id": "corda__h2020::929638010",
+      "legal_name": "KONZUM,TRGOVINA NA VELIKO I MALO DD"
+    },
+    {
+      "id": "doajarticles::Institute_of_Art_History",
+      "legal_name": "Institute of Art History"
+    }
+  ],
+  "Cuba": [
+    {
+      "id": "doajarticles::Sociedad_Cubana_de_Neurolog\u00eda_y_Neurocirug\u00eda",
+      "legal_name": "Sociedad Cubana de Neurolog\u00eda y Neurocirug\u00eda"
+    }
+  ],
+  "Cyprus": [
+    {
+      "id": "corda__h2020::917943205",
+      "legal_name": "VILABS (CY) LTD"
+    },
+    {
+      "id": "corda__h2020::937978652",
+      "legal_name": "CYPRUS SPACE EXPLORATION ORGANISATION (CSEO)"
+    },
+    {
+      "id": "corda__h2020::956158392",
+      "legal_name": "AVANTI HYLAS 2 CYPRUS LIMITED"
+    },
+    {
+      "id": null,
+      "legal_name": "University of Kyrenia"
+    }
+  ],
+  "Czech Republic": [
+    {
+      "id": "corda_______::998171323",
+      "legal_name": "VYZKUMNY USTAV POTRAVINARSKY PRAHA"
+    },
+    {
+      "id": "corda_______::998231851",
+      "legal_name": "VATRANS ZLIN VOS"
+    },
+    {
+      "id": "corda_______::959364436",
+      "legal_name": "Symbiom, s.r.o."
+    },
+    {
+      "id": "corda_______::998980400",
+      "legal_name": "NAVETA CZ SRO"
+    },
+    {
+      "id": "corda__h2020::925973447",
+      "legal_name": "SENIOR FLEXONICS CZECH S.R.O."
+    },
+    {
+      "id": "corda__h2020::950418708",
+      "legal_name": "EDIP SRO"
+    },
+    {
+      "id": "corda__h2020::999536210",
+      "legal_name": "USTAV PRISTROJOVE TECHNIKY AVCR VVI"
+    },
+    {
+      "id": "snsf________::UNI:_Drop-in_Prag_TS",
+      "legal_name": "UNI: Drop-in Prag TS"
+    }
+  ],
+  "Czechia": [
+    {
+      "id": "corda__h2020::937632653",
+      "legal_name": "Institute of Endocrinology"
+    },
+    {
+      "id": null,
+      "legal_name": "Ceske Lupkove Zavody (Czechia)"
+    },
+    {
+      "id": null,
+      "legal_name": "SQS Fiber Optics (Czechia)"
+    },
+    {
+      "id": "corda__h2020::998733341",
+      "legal_name": "University of Economics Prague"
+    },
+    {
+      "id": null,
+      "legal_name": "eAGRI - Lesy \u010cesk\u00e9 Republiky"
+    },
+    {
+      "id": null,
+      "legal_name": "Research Institute of Inorganic Chemistry"
+    },
+    {
+      "id": null,
+      "legal_name": "Quality Quantity Time (Czechia)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800304270",
+      "legal_name": "Silesian Museum"
+    },
+    {
+      "id": null,
+      "legal_name": "Vy\u0161\u0161\u00ed Odborn\u00e1 \u0160kola Pedagogick\u00e1 a Soci\u00e1ln\u00ed St\u0159edn\u00ed Odborn\u00e1 \u0160kola Pedagogick\u00e1 a Gymn\u00e1zium Praha 6"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/220619192",
+      "legal_name": "Valeo (France) - Valeo (Czechia)"
+    },
+    {
+      "id": null,
+      "legal_name": "Czech Aeroholding (Czechia)"
+    }
+  ],
+  "Democratic Republic of the Congo": [
+    {
+      "id": null,
+      "legal_name": "\u00c9cole d'Informatique d'\u00c9lectronique et d'Expertise Comptable"
+    }
+  ],
+  "Denmark": [
+    {
+      "id": "corda_______::972133904",
+      "legal_name": "XELPMA AS"
+    },
+    {
+      "id": "corda_______::996531150",
+      "legal_name": "Vestjysk Rustfri Montage ApS"
+    },
+    {
+      "id": "corda_______::996523972",
+      "legal_name": "F.A. Muggler Service A/S"
+    },
+    {
+      "id": "corda_______::953048960",
+      "legal_name": "TANBREEZ MINING GREENLAND AS"
+    },
+    {
+      "id": "corda_______::996565585",
+      "legal_name": "11CityDesign"
+    },
+    {
+      "id": "corda_______::973492389",
+      "legal_name": "DEN CENTRALE VIDENSKABSETISKE KOMITE"
+    },
+    {
+      "id": "corda_______::998214294",
+      "legal_name": "FOSS ANALYTICAL AS"
+    },
+    {
+      "id": "corda__h2020::938073033",
+      "legal_name": "ECOXPAC A/S"
+    },
+    {
+      "id": "corda__h2020::905049965",
+      "legal_name": "RED BARNET"
+    },
+    {
+      "id": "corda__h2020::927253168",
+      "legal_name": "RSP SYSTEMS A/S"
+    },
+    {
+      "id": "corda__h2020::928295142",
+      "legal_name": "NYFORS ENTERPRISE AS"
+    },
+    {
+      "id": "corda__h2020::972962478",
+      "legal_name": "INTOMICS AS"
+    }
+  ],
+  "Estonia": [
+    {
+      "id": "corda_______::996492738",
+      "legal_name": "Hama Investeeringud OU"
+    }
+  ],
+  "Ethiopia": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/156762387",
+      "legal_name": "Addis Continental Institute of Public Health"
+    }
+  ],
+  "Finland": [
+    {
+      "id": "aka_________::3ba57eef6fcd93eb782bce828b897303",
+      "legal_name": "Finno-Ugrian Society"
+    },
+    {
+      "id": "aka_________::d5f661fdb07f8e03a0ed54598a7151f3",
+      "legal_name": "GLOSSA"
+    },
+    {
+      "id": "aka_________::e7cfa935de531f5dc4eb30aa62aa6ed4",
+      "legal_name": "Universiteit Leiden"
+    },
+    {
+      "id": "aka_________::28dd2c7955ce926456240b2ff0100bde",
+      "legal_name": "77"
+    },
+    {
+      "id": "aka_________::3c488c73bead33aea3c49cd988665b66",
+      "legal_name": "Ius Gentium ry"
+    },
+    {
+      "id": "aka_________::9ac6e10d8ae1f1b220fd228ba7c8c495",
+      "legal_name": "Institute of Mechatronics and Virtual Engineering"
+    },
+    {
+      "id": "aka_________::5ee4e4e88f07dc731df6d14195e96739",
+      "legal_name": "Finnish Historical Society"
+    },
+    {
+      "id": "aka_________::f270c395b36957cccf34862290942b7f",
+      "legal_name": "University of California, Los Angeles"
+    },
+    {
+      "id": "corda_______::986316565",
+      "legal_name": "ABACUS DIAGNOSTICA OY"
+    },
+    {
+      "id": "corda_______::952891238",
+      "legal_name": "C2 SMARTLIGHT OY"
+    },
+    {
+      "id": "corda_______::983278428",
+      "legal_name": "PKC Electronics"
+    },
+    {
+      "id": "corda__h2020::906875602",
+      "legal_name": "DESENTUM OY"
+    },
+    {
+      "id": "corda__h2020::928513780",
+      "legal_name": "LAMOR CORPORATION AB"
+    },
+    {
+      "id": null,
+      "legal_name": "UTC - United Technologies (Finland)"
+    }
+  ],
+  "France": [
+    {
+      "id": "corda_______::968742202",
+      "legal_name": "UBERTONE SAS"
+    },
+    {
+      "id": "corda_______::966544473",
+      "legal_name": "CQFD COMPOSITES SARL"
+    },
+    {
+      "id": "corda_______::998021361",
+      "legal_name": "HELIOS BIOSCIENCES SARL"
+    },
+    {
+      "id": "corda_______::999484121",
+      "legal_name": "INSTALLATION EUROPEENNE DE RAYONNEMENT SYNCHROTRON"
+    },
+    {
+      "id": "corda_______::996729224",
+      "legal_name": "CMA CGM"
+    },
+    {
+      "id": "corda_______::998498989",
+      "legal_name": "LIBRAGEN"
+    },
+    {
+      "id": "corda_______::986018387",
+      "legal_name": "BILLION SAS"
+    },
+    {
+      "id": "corda_______::999447552",
+      "legal_name": "ORKEO SARL"
+    },
+    {
+      "id": "corda_______::993627940",
+      "legal_name": "ASSOCIATION FEMISE"
+    },
+    {
+      "id": "corda_______::984884263",
+      "legal_name": "DRAKA FILECA SAS"
+    },
+    {
+      "id": "corda_______::984094392",
+      "legal_name": "SOCIETE DE GESTION DE TERMINAUX INFORMATIQUES"
+    },
+    {
+      "id": "corda_______::975614652",
+      "legal_name": "Association Les Petits Debrouillards Ile-de-France"
+    },
+    {
+      "id": "corda_______::992402054",
+      "legal_name": "ASSOCIATION PHYRENEES"
+    },
+    {
+      "id": "corda_______::966100310",
+      "legal_name": "NOV@LOG ASSOCIATION"
+    },
+    {
+      "id": "corda__h2020::936927560",
+      "legal_name": "SERVICE DEPARTEMENTAL D'INCENDIE ET DE SECOURS DE SEINE ET MARNE"
+    },
+    {
+      "id": "corda__h2020::910576734",
+      "legal_name": "TND"
+    },
+    {
+      "id": "corda__h2020::916064121",
+      "legal_name": "NOVENER"
+    },
+    {
+      "id": "corda__h2020::952693940",
+      "legal_name": "SPORT INITIATIVE ET LOISIR BLEU ASSOCIATION"
+    },
+    {
+      "id": "corda__h2020::942969884",
+      "legal_name": "CHAMBRE REGIONALE D'AGRICULTURE DE NORMANDIE"
+    },
+    {
+      "id": "corda__h2020::930599862",
+      "legal_name": "AXEL'ONE"
+    },
+    {
+      "id": "corda__h2020::921676250",
+      "legal_name": "ENDONOV"
+    },
+    {
+      "id": "corda__h2020::932044580",
+      "legal_name": "I.C.O.N.E."
+    },
+    {
+      "id": "corda__h2020::937232237",
+      "legal_name": "MILLIPORE SAS"
+    },
+    {
+      "id": "corda__h2020::916241340",
+      "legal_name": "EVOTEC (FRANCE) SAS"
+    },
+    {
+      "id": "corda__h2020::999964659",
+      "legal_name": "SAFRAN SA"
+    },
+    {
+      "id": null,
+      "legal_name": "Canc\u00e9rop\u00f4le Lyon Auvergne-Rh\u00f4ne-Alpes"
+    },
+    {
+      "id": null,
+      "legal_name": "National Superior School of Information Science and Libraries"
+    },
+    {
+      "id": null,
+      "legal_name": "Paris Descartes University - Laboratory Orofacial Pathologies, Imaging and Biotherapies"
+    },
+    {
+      "id": null,
+      "legal_name": "Association Fran\u00e7aise de M\u00e9decine Morpho-Esth\u00e9tique et anti-\u00e2ge"
+    },
+    {
+      "id": null,
+      "legal_name": "University of Paris-Sud - Institut d'Astrophysique Spatiale"
+    },
+    {
+      "id": "corda_______::997785651",
+      "legal_name": "Compagnie Europ\u00e9enne d\u2019intelligence Strat\u00e9gique (France)"
+    },
+    {
+      "id": null,
+      "legal_name": "INSERM - D\u00e9l\u00e9gation Paris 12"
+    },
+    {
+      "id": null,
+      "legal_name": "CEA - Laboratoire Physiologie Cellulaire & V\u00e9g\u00e9tale"
+    },
+    {
+      "id": null,
+      "legal_name": "Centre de Recherches de Jouy-en-Josas - Plants and cropping Systems in Horticulture"
+    },
+    {
+      "id": null,
+      "legal_name": "CNES - Centre d'Etudes Spatiales de la BIOsph\u00e8re"
+    },
+    {
+      "id": "corda_______::952224072",
+      "legal_name": "IMAGE GUIDED THERAPY SA"
+    },
+    {
+      "id": "corda_______::962072288",
+      "legal_name": "VESO Concept"
+    },
+    {
+      "id": null,
+      "legal_name": "AMU - Institut de Neurosciences de la Timone"
+    },
+    {
+      "id": "corda_______::999597417",
+      "legal_name": "Institut de Physique du Globe de Paris"
+    },
+    {
+      "id": null,
+      "legal_name": "UCBL - Institut de G\u00e9nomique Fonctionnelle de Lyon"
+    },
+    {
+      "id": null,
+      "legal_name": "INRIA - Laboratoire Sp\u00e9cification et V\u00e9rification"
+    },
+    {
+      "id": null,
+      "legal_name": "University of Lyon System - Mines Saint-Etienne"
+    },
+    {
+      "id": null,
+      "legal_name": "Institut National de Physique Nucl\u00e9aire et de Physique des Particules - Centre de Spectrom\u00e9trie Nucl\u00e9aire et de Spectrom\u00e9trie de Masse"
+    },
+    {
+      "id": null,
+      "legal_name": "Institut Hospitalier Franco Britannique"
+    },
+    {
+      "id": "corda_______::969044260",
+      "legal_name": "Agence Fran\u00e7aise pour le D\u00e9veloppement et la Promotion de l\u2019Agriculture Biologique"
+    },
+    {
+      "id": "corda_______::996063319",
+      "legal_name": "PaxiTech (France)"
+    },
+    {
+      "id": "corda_______::958884383",
+      "legal_name": "Univercell-Biosolutions (France)"
+    },
+    {
+      "id": "corda__h2020::999612452",
+      "legal_name": "OMMIC SAS"
+    },
+    {
+      "id": "corda_______::996280890",
+      "legal_name": "ACTIVEEON"
+    },
+    {
+      "id": "corda_______::986601066",
+      "legal_name": "CIVITEC SARL"
+    },
+    {
+      "id": "doajarticles::Soci\u00e9t\u00e9_d'Etudes_Anglo-Am\u00e9ricaines_des_XVIIe_et_XVIIIe_si\u00e8cles",
+      "legal_name": "Soci\u00e9t\u00e9 d'Etudes Anglo-Am\u00e9ricaines des XVIIe et XVIIIe si\u00e8cles"
+    }
+  ],
+  "Germany": [
+    {
+      "id": "corda_______::972131673",
+      "legal_name": "CITY SYSTEM GESELLSCHAFT FUR ZUGANGSKONTROLLSYSTEM MBH"
+    },
+    {
+      "id": "corda_______::999673659",
+      "legal_name": "LESSWIRE AG"
+    },
+    {
+      "id": "corda_______::952167715",
+      "legal_name": "PROTAGEN PROTEIN SERVICES GMBH"
+    },
+    {
+      "id": "corda_______::998822775",
+      "legal_name": "SURA CHEMICALS GMBH"
+    },
+    {
+      "id": "corda_______::998329918",
+      "legal_name": "AuRA B\u00e4rbel Dieruff Karl Fiedler GbR"
+    },
+    {
+      "id": "corda_______::991665727",
+      "legal_name": "GIRAF PM Consultants"
+    },
+    {
+      "id": "corda_______::985188455",
+      "legal_name": "BLACKBIRD ROBOTERSYSTEME GMBH"
+    },
+    {
+      "id": "corda_______::964466345",
+      "legal_name": "KOLMYKOVA UND NACK GBR"
+    },
+    {
+      "id": "corda_______::953291557",
+      "legal_name": "RAPP STEFAN BENEDIKT"
+    },
+    {
+      "id": "corda_______::950787696",
+      "legal_name": "WAPURE INTERNATIONAL GMBH"
+    },
+    {
+      "id": "corda_______::952179064",
+      "legal_name": "MEMMERT GMBH + CO.KG"
+    },
+    {
+      "id": "corda_______::986470310",
+      "legal_name": "BIONTECH AG"
+    },
+    {
+      "id": "corda_______::951153677",
+      "legal_name": "BIOCAMPUS STRAUBING GMBH"
+    },
+    {
+      "id": "corda_______::950105301",
+      "legal_name": "UNIVERSITATS-HERZZENTRUM FREIBURG-BAD KROZINGEN GMBH"
+    },
+    {
+      "id": "corda_______::998821223",
+      "legal_name": "TSI GmbH"
+    },
+    {
+      "id": "corda_______::950964139",
+      "legal_name": "ComCard GmbH"
+    },
+    {
+      "id": "corda_______::950925048",
+      "legal_name": "S-PACT GMBH"
+    },
+    {
+      "id": "corda_______::998686005",
+      "legal_name": "CAIGOS GMBH"
+    },
+    {
+      "id": "corda_______::998134560",
+      "legal_name": "Michael Mueller Verlag GmbH"
+    },
+    {
+      "id": "corda_______::966306435",
+      "legal_name": "HPTI HAMBURG PORT TRAINING INSTITUTE GMBH"
+    },
+    {
+      "id": "corda__h2020::937966139",
+      "legal_name": "H.J.X.W. HOLDING GMBH"
+    },
+    {
+      "id": "corda__h2020::923040458",
+      "legal_name": "C&CS CATALYSTS AND CHEMICAL SPECIALTIES GMBH"
+    },
+    {
+      "id": "corda__h2020::911439549",
+      "legal_name": "THYSSENKRUPP INFRASTRUCTURE GMBH"
+    },
+    {
+      "id": "corda__h2020::952628465",
+      "legal_name": "AGRI CON GMBH PRECISION FARMING COMPANY"
+    },
+    {
+      "id": "corda__h2020::959084106",
+      "legal_name": "AKUT UMWELTSCHUTZ INGENIEURE BURKARD UND PARTNER"
+    },
+    {
+      "id": "corda__h2020::952586367",
+      "legal_name": "UNIQUE FORESTRY AND LAND USE GMBH"
+    },
+    {
+      "id": "corda__h2020::910049636",
+      "legal_name": "VOLTSTORAGE GMBH"
+    },
+    {
+      "id": "corda__h2020::911296668",
+      "legal_name": "MYBIOTECH GMBH"
+    },
+    {
+      "id": "corda__h2020::912793572",
+      "legal_name": "MERANTIX AG"
+    },
+    {
+      "id": "corda__h2020::928230928",
+      "legal_name": "KONSALT GESELLSCHAFT FUR STADT UNDREGIONALANALYSEN UND PROJEKTENTWICKLUNG MBH"
+    },
+    {
+      "id": "corda__h2020::935079225",
+      "legal_name": "GNS MBH GESELLSCHAFT FUR NUMERISCHE SIMULATION MBH"
+    },
+    {
+      "id": "corda__h2020::917715352",
+      "legal_name": "GIF ENTWICKLUNGSGESELLSCHAFT MBH"
+    },
+    {
+      "id": "corda__h2020::924655702",
+      "legal_name": "SAT4M2M GMBH"
+    },
+    {
+      "id": "corda__h2020::905882322",
+      "legal_name": "METABUILD GMBH"
+    },
+    {
+      "id": "corda__h2020::906193110",
+      "legal_name": "ESSITY OPERATIONS MANNHEIM GMBH"
+    },
+    {
+      "id": "corda__h2020::941401006",
+      "legal_name": "ATI KUSTE GMBH - GESELLSCHAFT FUR TECHNOLOGIE UND INNOVATION"
+    },
+    {
+      "id": null,
+      "legal_name": "Bavarian Center for Applied Energy Research"
+    },
+    {
+      "id": null,
+      "legal_name": "MPG - Max Planck Institute for Marine Microbiology"
+    },
+    {
+      "id": "corda_______::953905567",
+      "legal_name": "CORIOLIS PHARMA RESEARCH GMBH*"
+    },
+    {
+      "id": null,
+      "legal_name": "Natural and Medical Sciences Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "Union of the German Academies of Sciences and Humanities"
+    },
+    {
+      "id": null,
+      "legal_name": "LG - Leibniz Institute for Educational Trajectories"
+    },
+    {
+      "id": null,
+      "legal_name": "Fresenius (Germany)"
+    },
+    {
+      "id": "corda_______::945595577",
+      "legal_name": "Berlin University of the Arts"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/112756935",
+      "legal_name": "Mannheim University of Applied Sciences"
+    },
+    {
+      "id": null,
+      "legal_name": "LG - Max-Born-Institute for Nonlinear Optics and Short Pulse Spectroscopy"
+    },
+    {
+      "id": null,
+      "legal_name": "KVB"
+    },
+    {
+      "id": null,
+      "legal_name": "Hanns Eisler College or Academy of Music"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2899265240",
+      "legal_name": "Enercon (Germany)"
+    },
+    {
+      "id": null,
+      "legal_name": "FHG - Fraunhofer Institute for Material and Beam Technology"
+    },
+    {
+      "id": null,
+      "legal_name": "Medizinisches Wirtschaftsinstitut"
+    },
+    {
+      "id": "corda__h2020::990590094",
+      "legal_name": "SICK AG"
+    },
+    {
+      "id": null,
+      "legal_name": "Institute of Pathology Celle"
+    },
+    {
+      "id": "corda_______::985097954",
+      "legal_name": "Eilenburger Elektrolyse - und Umwelttechnik (Germany)"
+    },
+    {
+      "id": null,
+      "legal_name": "European Academy for Standardisation"
+    },
+    {
+      "id": null,
+      "legal_name": "LG - Leibniz Institute of Vegetable and Ornamental Crops"
+    },
+    {
+      "id": "corda_______::950338877",
+      "legal_name": "DREAM CHIP TECHNOLOGIES GMBH"
+    },
+    {
+      "id": "re3data_____::fed7574512b4d0f4a89694e847b3d65f",
+      "legal_name": "Federal Ministry of Education and Research"
+    },
+    {
+      "id": "re3data_____::ccaa5a9b28353bd0a5398010b35dcd87",
+      "legal_name": "Deutsches Biomasseforschungszentrum"
+    },
+    {
+      "id": "corda__h2020::960542404",
+      "legal_name": "Institute for Advanced Sustainability Studies"
+    },
+    {
+      "id": "corda__h2020::998803666",
+      "legal_name": "DEUTSCHES MUSEUM VON MEISTERWERKEN DER NATURWISSENSCHAFT UND TECHNIK"
+    },
+    {
+      "id": "corda_______::997589517",
+      "legal_name": "Kuratorium f\u00fcr Technik und Bauwesen in der Landwirtschaft"
+    },
+    {
+      "id": "corda__h2020::998506749",
+      "legal_name": "HFC HUMAN-FACTORS-CONSULT GMBH"
+    },
+    {
+      "id": "doajarticles::Prof._Dr._Ralf_Vollbrecht_und_Christine_Dallmann_M.A.",
+      "legal_name": "Prof. Dr. Ralf Vollbrecht und Christine Dallmann M.A."
+    }
+  ],
+  "Ghana": [
+    {
+      "id": null,
+      "legal_name": "Global Water Partnership"
+    }
+  ],
+  "Greece": [
+    {
+      "id": "corda_______::951103140",
+      "legal_name": "ALIKI NIKOLAOU-NIKITA"
+    },
+    {
+      "id": "corda_______::963730406",
+      "legal_name": "N. PANAGOPOULOS - N. DEMOU OE"
+    },
+    {
+      "id": "corda_______::952606931",
+      "legal_name": "SKARFI TYROKOMIKA PROIONTA MONOPROSOPI EPE"
+    },
+    {
+      "id": "corda_______::996757354",
+      "legal_name": "HORAMA, MARKETING & ENGINEERING SERVICES S.A."
+    },
+    {
+      "id": "corda_______::941598207",
+      "legal_name": "S STRATELIS KAI SIA EE"
+    },
+    {
+      "id": "corda_______::953641727",
+      "legal_name": "ELEKTRONIKA DIAPLOUS ETAIRIA PERIOR ISMENIS EVTHINIS"
+    },
+    {
+      "id": "corda__h2020::950097444",
+      "legal_name": "HERON ENGINEERING MECHANICAL STRUCTURAL ANALYSIS EPE"
+    },
+    {
+      "id": "corda__h2020::949367713",
+      "legal_name": "CULTUREPOLIS"
+    },
+    {
+      "id": "corda__h2020::930260071",
+      "legal_name": "GENIKES RADIOTILEOPTIKES EPIXEIRISEIS SA"
+    },
+    {
+      "id": "corda__h2020::992006003",
+      "legal_name": "ANAPTYXIAKI DIADIMOTIKI ETERIA PSIFIAKES POLIS KENTRIKIS ELLADAS AE OTA (INTERMUNICIPAL DEVELOPMENT COMPANY DIGITAL CITIES OF CENTRAL GREECE SA)"
+    },
+    {
+      "id": "corda__h2020::999582382",
+      "legal_name": "RESEARCH AND EDUCATION LABORATORY IN INFORMATION TECHNOLOGIES"
+    },
+    {
+      "id": "corda_______::951393267",
+      "legal_name": "ADAPT IT AE"
+    },
+    {
+      "id": null,
+      "legal_name": "General Hospital of Ioannina G. Hatzikosta"
+    },
+    {
+      "id": null,
+      "legal_name": "Industrial Systems Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "Merchant Marine Academy"
+    },
+    {
+      "id": "corda__h2020::983282308",
+      "legal_name": "SINGULARLOGIC ANONYMI ETAIREIA PLIROFORIAKON SYSTIMATON KAI EFARMOGON PLIROFORIKIS"
+    },
+    {
+      "id": "corda__h2020::996326383",
+      "legal_name": "Institute of Plasma Physics"
+    },
+    {
+      "id": "corda__h2020::983250492",
+      "legal_name": "MAKEDONIKI VIOMIHANIA GALAKTOS ANONIMOS ETERIA (MEVGAL SA)"
+    }
+  ],
+  "Hungary": [
+    {
+      "id": "corda_______::969066279",
+      "legal_name": "ADEXGO IPARI, KERESKEDELMI ES SZOLGALTATO KFT"
+    },
+    {
+      "id": "corda_______::953591287",
+      "legal_name": "CENTRAL EUROPEAN RESEARCH CENTER KFT"
+    },
+    {
+      "id": "corda_______::998453593",
+      "legal_name": "NEUMANN JANOS DIGITALIS KONYVTAR ES MULTIMEDIA KOZPONT KOZHASZNU TARSESAG"
+    },
+    {
+      "id": "corda__h2020::917677425",
+      "legal_name": "OKOFORESTINO KORLATOLT FELELOSSEGUTARSASAG"
+    },
+    {
+      "id": "corda__h2020::928988207",
+      "legal_name": "ARANYPONTY HALASZATI ZRT"
+    },
+    {
+      "id": "corda__h2020::924047706",
+      "legal_name": "BE-NOVATIVE HUNGARY FEJLESZTO ES TECHNOLOGIAI KORLATOLT FELELOSSEGU TARSASAG"
+    },
+    {
+      "id": "corda__h2020::906629513",
+      "legal_name": "NKM ARAMHALOZATI KFT"
+    },
+    {
+      "id": "corda__h2020::971772482",
+      "legal_name": "GEOX TERINFORMATIKAI KFT"
+    },
+    {
+      "id": "snsf________::UNI:_E\u00f6tv\u00f6s_Lorand_Unviersit\u00e4t_Arch\u00e4ologisch_es_Institut_Budapest_H",
+      "legal_name": "UNI: E\u00f6tv\u00f6s Lorand Unviersit\u00e4t Arch\u00e4ologisch es Institut Budapest H"
+    }
+  ],
+  "Iceland": [
+    {
+      "id": "corda_______::971026455",
+      "legal_name": "EFLA HF"
+    },
+    {
+      "id": "corda_______::966236207",
+      "legal_name": "ISLANDSPOSTUR HF"
+    },
+    {
+      "id": "doajarticles::Icelandic_Sociological_Association",
+      "legal_name": "Icelandic Sociological Association"
+    }
+  ],
+  "India": [
+    {
+      "id": null,
+      "legal_name": "Indo-US Science and Technology Forum"
+    },
+    {
+      "id": null,
+      "legal_name": "Indian Institute of Forest Management"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/183970581",
+      "legal_name": "Abasaheb Garware College"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/20791572",
+      "legal_name": "Indira Gandhi Institute of Technology"
+    },
+    {
+      "id": null,
+      "legal_name": "Integrated Coastal and Marine Area Management Project Directorate"
+    },
+    {
+      "id": null,
+      "legal_name": "Hindustan Aeronautics Limited (India)"
+    },
+    {
+      "id": null,
+      "legal_name": "ICAR - Krishi Vigyan Kendra, Latur"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/152754861",
+      "legal_name": "Bose Institute"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/128420443",
+      "legal_name": "CSIR - Central Salt and Marine Chemicals Research Institute"
+    },
+    {
+      "id": "nsf_________::Indian_Institute_of_Astrophysics",
+      "legal_name": "Indian Institute of Astrophysics"
+    },
+    {
+      "id": null,
+      "legal_name": "Vijaya Medical and Educational Trust"
+    },
+    {
+      "id": "corda__h2020::996330748",
+      "legal_name": "Indian Institute of Technology Kanpur"
+    },
+    {
+      "id": null,
+      "legal_name": "Sriram Chandra Bhanja Medical College Hospital"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800696116",
+      "legal_name": "Bihar Agricultural University"
+    },
+    {
+      "id": "corda__h2020::927614687",
+      "legal_name": "O. P. Jindal Global University"
+    },
+    {
+      "id": "corda_______::999527189",
+      "legal_name": "Centre for Science and Environment"
+    },
+    {
+      "id": null,
+      "legal_name": "Ministry of Health and Family Welfare - Central Council for Research in Homoeopathy"
+    },
+    {
+      "id": null,
+      "legal_name": "Institute for Transformative Technologies"
+    },
+    {
+      "id": "doajarticles::Narayana_Medical_College_and_Hospitals",
+      "legal_name": "Narayana Medical College and Hospitals"
+    },
+    {
+      "id": "doajarticles::Wildlife_Information_Liaison_Development_Society",
+      "legal_name": "Wildlife Information Liaison Development Society"
+    },
+    {
+      "id": "doajarticles::KROS_Publications",
+      "legal_name": "KROS Publications"
+    }
+  ],
+  "Indonesia": [
+    {
+      "id": "doajarticles::Petra_Christian_University",
+      "legal_name": "Petra Christian University"
+    },
+    {
+      "id": "corda_______::999629233",
+      "legal_name": "Badan Pengkajian dan Penerapan Teknologi"
+    },
+    {
+      "id": "opendoar____::Bunda_Mulia_University",
+      "legal_name": "University of Bunda Mulia"
+    },
+    {
+      "id": "opendoar____::Institut_Seni_Indonesia,_Denpasar",
+      "legal_name": "Institut Seni Indonesia Denpasar"
+    },
+    {
+      "id": "doajarticles::Department_of_Mathematics_Education,_UIN_Sunan_Ampel_Surabaya",
+      "legal_name": "Department of Mathematics Education, UIN Sunan Ampel Surabaya"
+    },
+    {
+      "id": "doajarticles::Semarang_State_University",
+      "legal_name": "Semarang State University"
+    },
+    {
+      "id": "doajarticles::Badan_Penerbit_FHUI",
+      "legal_name": "Badan Penerbit FHUI"
+    },
+    {
+      "id": "doajarticles::Department_of_Economics",
+      "legal_name": "Department of Economics"
+    }
+  ],
+  "Iran": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/1300409581",
+      "legal_name": "University of Bonab"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/183859904",
+      "legal_name": "IAU - Islamic Azad University, Mashhad"
+    },
+    {
+      "id": "doajarticles::Yasuj_University_Of_Medical_Sciences",
+      "legal_name": "Yasuj University of Medical Sciences"
+    }
+  ],
+  "Iraq": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/1294182474",
+      "legal_name": "Cihan University"
+    },
+    {
+      "id": "opendoar____::University_of_Babylon",
+      "legal_name": "University of Babylon"
+    }
+  ],
+  "Ireland": [
+    {
+      "id": "corda_______::986580987",
+      "legal_name": "CTL TASTAIL TEORANTA LIMITED"
+    },
+    {
+      "id": "corda__h2020::934968451",
+      "legal_name": "DIANIA TECHNOLOGIES LIMITED"
+    },
+    {
+      "id": null,
+      "legal_name": "National Suicide Research Foundation"
+    },
+    {
+      "id": "corda_______::952391979",
+      "legal_name": "Q4 PR LIMITED"
+    },
+    {
+      "id": "sfi_________::Ballyhoura Development Ltd",
+      "legal_name": "Ballyhoura Development (Ireland)"
+    },
+    {
+      "id": "corda_______::995604024",
+      "legal_name": "LIGHTWAVE OPTICS LTD (IRISH PRECISION OPTICS)"
+    },
+    {
+      "id": "doajarticles::Compuscript",
+      "legal_name": "Compuscript"
+    }
+  ],
+  "Israel": [
+    {
+      "id": "corda_______::965790201",
+      "legal_name": "ImmunArray Ltd"
+    },
+    {
+      "id": "corda_______::953046438",
+      "legal_name": "TECHNO-STAT LIMITED"
+    },
+    {
+      "id": "corda_______::984206427",
+      "legal_name": "OPTIBASE TECHNOLOGIES LTD"
+    },
+    {
+      "id": "corda_______::998002155",
+      "legal_name": "D-Pharm LTD"
+    },
+    {
+      "id": "corda_______::997438100",
+      "legal_name": "Protea Vaccine Technologies Ltd."
+    },
+    {
+      "id": "corda__h2020::905284608",
+      "legal_name": "OKO FINANCE LTD"
+    },
+    {
+      "id": null,
+      "legal_name": "Israel Diabetes Association"
+    },
+    {
+      "id": "corda_______::972554011",
+      "legal_name": "NETIVEI ISRAEL - NATIONAL TRANSPORT INFRASTRUCTURE COMPANY LTD"
+    }
+  ],
+  "Italy": [
+    {
+      "id": "corda_______::986250314",
+      "legal_name": "GOGLIO S.P.A."
+    },
+    {
+      "id": "corda_______::999802475",
+      "legal_name": "AMTEC SPA"
+    },
+    {
+      "id": "corda_______::984182468",
+      "legal_name": "VIROTEC ITALIA SRL"
+    },
+    {
+      "id": "corda_______::985458406",
+      "legal_name": "ZIPLAST SRL"
+    },
+    {
+      "id": "corda_______::998053371",
+      "legal_name": "AZIENDA OSPEDALIERA, OSPEDALE INFANTILE REGINA MARGHERITA-SANT' ANNA DI TORINO"
+    },
+    {
+      "id": "corda_______::996564130",
+      "legal_name": "AZIENDA DI RILIEVO NAZIONALE E DI ALTA SPECIALIZZAZIONE"
+    },
+    {
+      "id": "corda_______::987017875",
+      "legal_name": "DYESOL ITALIA SRL"
+    },
+    {
+      "id": "corda__h2020::912958084",
+      "legal_name": "LIMIX SRL"
+    },
+    {
+      "id": "corda__h2020::936601252",
+      "legal_name": "CEG ELETTRONICA INDUSTRIALE SPA"
+    },
+    {
+      "id": "corda__h2020::916488108",
+      "legal_name": "FONDAZIONE AGENFOR INTERNATIONAL"
+    },
+    {
+      "id": "corda__h2020::930062773",
+      "legal_name": "CO.RA. SRL"
+    },
+    {
+      "id": "corda__h2020::999739231",
+      "legal_name": "UMBRIA INNOVAZIONE SCARL"
+    },
+    {
+      "id": "corda__h2020::913536301",
+      "legal_name": "ELSE CORP SRL"
+    },
+    {
+      "id": "corda__h2020::950829406",
+      "legal_name": "EKA SRL"
+    },
+    {
+      "id": "corda__h2020::951308295",
+      "legal_name": "SOTACARBO - SOCIETA TECNOLOGIE AVANZATE LOW CARBON SPA."
+    },
+    {
+      "id": "corda__h2020::999968733",
+      "legal_name": "UNINFO ASSOCIAZIONE"
+    },
+    {
+      "id": "corda__h2020::929009450",
+      "legal_name": "FONDAZIONE REGIONALE PER LA RICERCA BIOMEDICA"
+    },
+    {
+      "id": "corda__h2020::953659866",
+      "legal_name": "3D RESEARCH SRL"
+    },
+    {
+      "id": "corda__h2020::995995904",
+      "legal_name": "AUTOSTRADE PER L'ITALIA SPA"
+    },
+    {
+      "id": "corda__h2020::940407920",
+      "legal_name": "NHP srl"
+    },
+    {
+      "id": "corda__h2020::917085822",
+      "legal_name": "CONSORZIO ZAILOG"
+    },
+    {
+      "id": "corda__h2020::941974082",
+      "legal_name": "BEDIN SARA"
+    },
+    {
+      "id": "corda__h2020::925263504",
+      "legal_name": "ARGO SRL"
+    },
+    {
+      "id": "corda__h2020::938643296",
+      "legal_name": "MOVIMENTO CONSUMATORI"
+    },
+    {
+      "id": "corda__h2020::965904273",
+      "legal_name": "LFOUNDRY SRL"
+    },
+    {
+      "id": "corda__h2020::930262690",
+      "legal_name": "ISTITUTO PER SERVIZI DI RICOVERO E ASSISTENZA AGLI ANZIANI"
+    },
+    {
+      "id": "corda__h2020::985510204",
+      "legal_name": "SITAEL SPA"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/25217355",
+      "legal_name": "University of Pavia"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/205887594",
+      "legal_name": "Rina Services (Italy)"
+    },
+    {
+      "id": null,
+      "legal_name": "CNR - Institute for Agricultural and Earthmoving Machines"
+    },
+    {
+      "id": "corda_______::959258221",
+      "legal_name": "Revoind Industriale (Italy)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/246010334",
+      "legal_name": "Universit\u00e0 degli Studi di Enna Kore"
+    },
+    {
+      "id": null,
+      "legal_name": "Museo Egizio"
+    },
+    {
+      "id": null,
+      "legal_name": "INFN - National Center for Frame Analysis"
+    },
+    {
+      "id": null,
+      "legal_name": "Consorzio Multi-Ente per la promozione e l'adozione di Tecnologie di calcolo Avanzato"
+    },
+    {
+      "id": "corda__h2020::913300300",
+      "legal_name": "Bureau Veritas (Italy)"
+    },
+    {
+      "id": "corda_______::997943373",
+      "legal_name": "TERNA - RETE ELETTRICA NAZIONALE SPA"
+    },
+    {
+      "id": "corda_______::990657703",
+      "legal_name": "Linkra S.R.L."
+    },
+    {
+      "id": "corda__h2020::968496113",
+      "legal_name": "Experimental Station for the Food Preserving Industry"
+    },
+    {
+      "id": "corda_______::999465691",
+      "legal_name": "Regione del Veneto"
+    },
+    {
+      "id": "corda_______::999482375",
+      "legal_name": "REGIONE EMILIA ROMAGNA"
+    },
+    {
+      "id": null,
+      "legal_name": "Ente Nazionale ACLI Istruzione Professionale"
+    },
+    {
+      "id": "corda__h2020::973862444",
+      "legal_name": "University of Sannio"
+    },
+    {
+      "id": null,
+      "legal_name": "CNR - Institute of Neurological Sciences"
+    },
+    {
+      "id": "corda__h2020::958788450",
+      "legal_name": "ENEX SRL"
+    },
+    {
+      "id": "corda_______::986279026",
+      "legal_name": "G&G Design and Engineering Srl"
+    },
+    {
+      "id": "corda_______::969126419",
+      "legal_name": "Rizzoli Orthopaedic Institute"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800717031",
+      "legal_name": "Academy of Fine Arts of Bari"
+    },
+    {
+      "id": "corda_______::999977754",
+      "legal_name": "Polytechnic University of Turin"
+    }
+  ],
+  "Ivory Coast": [
+    {
+      "id": null,
+      "legal_name": "Center for Marine and Oceanographic Research"
+    }
+  ],
+  "Japan": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/37367598",
+      "legal_name": "Niigata Institute of Technology"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800060654",
+      "legal_name": "Nishi-Nippon Junior College"
+    },
+    {
+      "id": null,
+      "legal_name": "Institute of Advanced Media Arts and Sciences"
+    },
+    {
+      "id": null,
+      "legal_name": "JRCS - Takayama Red Cross Hospital"
+    },
+    {
+      "id": null,
+      "legal_name": "Kameda College of Health Sciences"
+    },
+    {
+      "id": null,
+      "legal_name": "Jiseikai Welfare Kyusyu Hospital"
+    },
+    {
+      "id": null,
+      "legal_name": "Mie Prefectural Kobe High School"
+    },
+    {
+      "id": null,
+      "legal_name": "Philatelic Museum"
+    },
+    {
+      "id": null,
+      "legal_name": "Tokyo Metropolitan Nerima High School"
+    },
+    {
+      "id": null,
+      "legal_name": "Sumitomo Mitsui Trust Holdings (Japan)"
+    },
+    {
+      "id": null,
+      "legal_name": "Ohkagakuen University"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799690556",
+      "legal_name": "Tokyo Metropolitan Police Department"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/141912181",
+      "legal_name": "Saga Women's Junior College"
+    },
+    {
+      "id": null,
+      "legal_name": "Tokushima Prefectural Police"
+    },
+    {
+      "id": null,
+      "legal_name": "Japan Biological Informatics Consortium"
+    },
+    {
+      "id": null,
+      "legal_name": "Keisen University"
+    },
+    {
+      "id": null,
+      "legal_name": "Iwaki Kyoritsu General Hospital"
+    },
+    {
+      "id": null,
+      "legal_name": "Tokyo Biochemical Research Foundation"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/37596208",
+      "legal_name": "Osaka University of Human Sciences"
+    },
+    {
+      "id": null,
+      "legal_name": "Nippon Steel & Sumitomo Metal (Japan)"
+    },
+    {
+      "id": "opendoar____::Hirosaki_University",
+      "legal_name": "Hirosaki University"
+    },
+    {
+      "id": null,
+      "legal_name": "Education software (Japan)"
+    },
+    {
+      "id": null,
+      "legal_name": "The Shoto Museum of Art"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/31241351",
+      "legal_name": "Aomori University of Health and Welfare"
+    },
+    {
+      "id": null,
+      "legal_name": "Denso (Japan)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/201719341",
+      "legal_name": "Daito Bunka University"
+    },
+    {
+      "id": null,
+      "legal_name": "Princess Takamatsu Cancer Research Fund"
+    }
+  ],
+  "Jordan": [
+    {
+      "id": null,
+      "legal_name": "Arab Education Forum"
+    }
+  ],
+  "Kazakhstan": [
+    {
+      "id": "doajarticles::Physics_and_Technical_Society_of_Kazakhstan",
+      "legal_name": "Physics and Technical Society of Kazakhstan"
+    }
+  ],
+  "Kenya": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/89008938",
+      "legal_name": "University of Eastern Africa, Baraton"
+    }
+  ],
+  "Korea (Republic of)": [
+    {
+      "id": "doajarticles::Korean_Movement_Disorders_Society",
+      "legal_name": "Korean Movement Disorders Society"
+    }
+  ],
+  "Latvia": [
+    {
+      "id": null,
+      "legal_name": "Latvian Centre for Contemporary Art"
+    }
+  ],
+  "Lithuania": [
+    {
+      "id": "corda_______::996639693",
+      "legal_name": "UAB Vittamed"
+    },
+    {
+      "id": "corda__h2020::952481316",
+      "legal_name": "VIA SOLIS UAB"
+    },
+    {
+      "id": "corda__h2020::953756672",
+      "legal_name": "VIESOJI ISTAIGA FIZIKOS INSTITUTO MOKSLO IR TECHNOLOGIJU PARKAS"
+    }
+  ],
+  "Luxembourg": [
+    {
+      "id": "corda_______::986464393",
+      "legal_name": "CELLON SA"
+    },
+    {
+      "id": "corda__h2020::917297961",
+      "legal_name": "FUNCOATS SA"
+    },
+    {
+      "id": "corda__h2020::951463592",
+      "legal_name": "NEUROCOM LUXEMBOURG SA"
+    },
+    {
+      "id": null,
+      "legal_name": "MSF - M\u00e9decins Sans Fronti\u00e8res"
+    },
+    {
+      "id": null,
+      "legal_name": "Real Impact Analytics"
+    }
+  ],
+  "Malaysia": [
+    {
+      "id": "corda_______::990682050",
+      "legal_name": "CUSTOMMEDIA SDN BHD"
+    },
+    {
+      "id": null,
+      "legal_name": "Ministry of Agriculture and Agro Based Industry"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/891303086",
+      "legal_name": "MIMOS (Malaysia)"
+    }
+  ],
+  "Mauritius": [
+    {
+      "id": null,
+      "legal_name": "Mauritius Research Council"
+    }
+  ],
+  "Mexico": [
+    {
+      "id": "re3data_____::fea832cdbc46ab7d21c2cccfed3792be",
+      "legal_name": "National Commission for the Knowledge and Use of Biodiversity"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/113686770",
+      "legal_name": "Western Institute of Technology and Higher Education"
+    },
+    {
+      "id": "doajarticles::Sociedad_Geol\u00f3gica_Mexicana",
+      "legal_name": "Sociedad Geol\u00f3gica Mexicana"
+    }
+  ],
+  "Mongolia": [
+    {
+      "id": null,
+      "legal_name": "MAS - Institute of Physics and Technology"
+    }
+  ],
+  "Namibia": [
+    {
+      "id": null,
+      "legal_name": "Ministy of Fisheries and Marine Resources"
+    }
+  ],
+  "Nepal": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801573932",
+      "legal_name": "Patan Hospital"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799987170",
+      "legal_name": "Nepal Red Cross Society"
+    }
+  ],
+  "Netherlands": [
+    {
+      "id": "corda_______::998373277",
+      "legal_name": "XPAND BIOTECHNOLOGY BV"
+    },
+    {
+      "id": "corda_______::957974426",
+      "legal_name": "TRUSTFOOD STICHTING"
+    },
+    {
+      "id": "corda_______::963470349",
+      "legal_name": "SUMMIT EUROPE CV"
+    },
+    {
+      "id": "corda_______::986496403",
+      "legal_name": "DSM Innovation Center B.V."
+    },
+    {
+      "id": "corda_______::999504200",
+      "legal_name": "Movisie - Kennis En Advies Voor Maatschappelijke Ontwikkeling"
+    },
+    {
+      "id": "corda_______::998425657",
+      "legal_name": "SHIELD GROUP NV"
+    },
+    {
+      "id": "corda_______::985176427",
+      "legal_name": "BASFOOD BV"
+    },
+    {
+      "id": "corda_______::959046470",
+      "legal_name": "BLUEBEE HOLDING BV"
+    },
+    {
+      "id": "corda__h2020::928895475",
+      "legal_name": "ROBOT CARE SYSTEMS BV"
+    },
+    {
+      "id": "corda__h2020::959098462",
+      "legal_name": "SUSTEC CONSULTING & CONTRACTING BV"
+    },
+    {
+      "id": "corda__h2020::938346670",
+      "legal_name": "CO2 DRY BV"
+    },
+    {
+      "id": "corda__h2020::999751162",
+      "legal_name": "TECHNOLUTION BV"
+    },
+    {
+      "id": "corda__h2020::937775049",
+      "legal_name": "ACCELOVANCE EUROPE BV"
+    },
+    {
+      "id": "corda__h2020::925143418",
+      "legal_name": "MACOMI BV"
+    },
+    {
+      "id": "corda_______::999759601",
+      "legal_name": "KAMER VAN KOOPHANDEL"
+    },
+    {
+      "id": null,
+      "legal_name": "St.Jans Gasthuis Weert"
+    },
+    {
+      "id": null,
+      "legal_name": "NWO - Centrum Wiskunde and Informatica"
+    },
+    {
+      "id": null,
+      "legal_name": "Materials innovation institute"
+    },
+    {
+      "id": "corda_______::999594895",
+      "legal_name": "SURF"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/39431069",
+      "legal_name": "KNAW - Royal Netherlands Institute of Southeast Asian and Caribbean Studies"
+    },
+    {
+      "id": null,
+      "legal_name": "Environmental Research Instruments"
+    },
+    {
+      "id": null,
+      "legal_name": "Railinfratrust (Netherlands)"
+    },
+    {
+      "id": "corda__h2020::992236087",
+      "legal_name": "TECHNOBIS FIBRE TECHNOLOGIES BV"
+    },
+    {
+      "id": "re3data_____::b6cf4c4f556c66b36db6e39b64950c1b",
+      "legal_name": "Naturalis Biodiversity Center"
+    }
+  ],
+  "New Zealand": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802073567",
+      "legal_name": "Government of New Zealand"
+    },
+    {
+      "id": null,
+      "legal_name": "Structural Timber Innovation Company (New Zealand)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801129757",
+      "legal_name": "CCDHB - Wellington Hospital"
+    }
+  ],
+  "Nigeria": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/280533721",
+      "legal_name": "Caleb University"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/37797678",
+      "legal_name": "University of Uyo"
+    }
+  ],
+  "Norway": [
+    {
+      "id": "corda_______::954318011",
+      "legal_name": "DEEP SEA ANCHORS AS"
+    },
+    {
+      "id": "corda_______::950137990",
+      "legal_name": "TELEMARKROYE AS"
+    },
+    {
+      "id": "corda_______::999670652",
+      "legal_name": "TRIAD AS"
+    },
+    {
+      "id": "corda_______::953606904",
+      "legal_name": "WESTCONTROL AS"
+    },
+    {
+      "id": "corda_______::966218456",
+      "legal_name": "DPCOM AS"
+    },
+    {
+      "id": "corda_______::997741031",
+      "legal_name": "SENTER FOR STUDIER AV HOLOCAUST OGLIVSSYNSSMINORITETERS STILLING I NORGE STIFTELSE"
+    },
+    {
+      "id": "corda__h2020::906854359",
+      "legal_name": "MEMOSCALE AS"
+    },
+    {
+      "id": "corda__h2020::904449050",
+      "legal_name": "ZWIPE AS"
+    },
+    {
+      "id": "corda__h2020::929038841",
+      "legal_name": "FOURC AS"
+    },
+    {
+      "id": "corda__h2020::905310022",
+      "legal_name": "ATB AS"
+    },
+    {
+      "id": "corda__h2020::914013444",
+      "legal_name": "VARANGER KRAFTVIND AS"
+    },
+    {
+      "id": "corda__h2020::954982461",
+      "legal_name": "OSLOMET - STORBYUNIVERSITETET"
+    },
+    {
+      "id": "corda__h2020::973582017",
+      "legal_name": "GENOK - SENTER FOR BIOSIKKERHET"
+    },
+    {
+      "id": null,
+      "legal_name": "Bergen Research Foundation"
+    },
+    {
+      "id": null,
+      "legal_name": "Valnesfjord Helsesportssenter"
+    },
+    {
+      "id": "corda__h2020::985866194",
+      "legal_name": "CHRISTIAN MICHELSEN RESEARCH AS"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801800136",
+      "legal_name": "Northern Norway Regional Health Authority - Nordland Hospital Trust"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/49324905",
+      "legal_name": "Equinor (Norway)"
+    },
+    {
+      "id": "doajarticles::University_of_Oslo_Library",
+      "legal_name": "University of Oslo Library"
+    }
+  ],
+  "Pakistan": [
+    {
+      "id": null,
+      "legal_name": "Marie Stopes Society"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/29698356",
+      "legal_name": "HITEC University"
+    }
+  ],
+  "Palestinian-administered areas": [
+    {
+      "id": "corda_______::993438014",
+      "legal_name": "PALESTINE ECONOMIC POLICY RESEARCH INSTITUTE MAS"
+    }
+  ],
+  "Peru": [
+    {
+      "id": null,
+      "legal_name": "Seminario Permanente de Investigaci\u00f3n Agraria"
+    },
+    {
+      "id": "corda_______::972652272",
+      "legal_name": "Universidad Nacional del Altiplano"
+    }
+  ],
+  "Philippines": [
+    {
+      "id": null,
+      "legal_name": "Davao Medical School Foundation"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800838154",
+      "legal_name": "San Pedro College"
+    },
+    {
+      "id": "doajarticles::World_Health_Organization",
+      "legal_name": "World Health Organization"
+    }
+  ],
+  "Poland": [
+    {
+      "id": "corda_______::999454439",
+      "legal_name": "INSTYTUT PODSTAWOWYCH PROBLEMOW TECHNIKI POLSKIEJ AKADEMII NAUK"
+    },
+    {
+      "id": "corda_______::994333906",
+      "legal_name": "Przedsiebiorstwo Wodociagow i Kanalizacji Sp. z o.o. Gliwice"
+    },
+    {
+      "id": "corda_______::997416954",
+      "legal_name": "KGHM ECOREN SA"
+    },
+    {
+      "id": "corda_______::952909280",
+      "legal_name": "Polish Society of Non-Destructive Testing and Technical Diagnostics SIMP"
+    },
+    {
+      "id": "corda_______::986210156",
+      "legal_name": "IMPACT CLEAN POWER TECHNOLOGY SA"
+    },
+    {
+      "id": "corda__h2020::927095737",
+      "legal_name": "SESCOM SPOLKA AKCYJNA"
+    },
+    {
+      "id": "corda__h2020::999659691",
+      "legal_name": "POLITECHNIKA POZNANSKA"
+    },
+    {
+      "id": "corda__h2020::940603666",
+      "legal_name": "ATENDE SPOLKA AKCYNA"
+    },
+    {
+      "id": "corda__h2020::957590403",
+      "legal_name": "POLSKI ZWIAZEK HODOWCOW I PRODUCENTOW TRZODY CHLEWNEJ POLSUS"
+    },
+    {
+      "id": "corda__h2020::916107771",
+      "legal_name": "KAPELANCZYK PAWEL MICHAL"
+    },
+    {
+      "id": "corda__h2020::950169321",
+      "legal_name": "DANE-I-ANALIZY.PL SP ZOO"
+    },
+    {
+      "id": null,
+      "legal_name": "ZOSP RP Wytw\u00f3rnia Umundurowania Stra\u017cackiego (Poland)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/283429734",
+      "legal_name": "Kazimierz Pu\u0142aski University of Technology and Humanities in Radom"
+    },
+    {
+      "id": "corda__h2020::995772028",
+      "legal_name": "University of Zielona G\u00f3ra"
+    },
+    {
+      "id": null,
+      "legal_name": "General Directorate for Environmental Protection"
+    },
+    {
+      "id": null,
+      "legal_name": "PAN - Institute of Theoretical and Applied Informatics"
+    },
+    {
+      "id": null,
+      "legal_name": "PAN - Institute of Philosophy and Sociology"
+    },
+    {
+      "id": null,
+      "legal_name": "University of Humanities and Economics in Lodz"
+    }
+  ],
+  "Portugal": [
+    {
+      "id": "corda_______::992213971",
+      "legal_name": "SYMLABS DESENVOLVIMENTO DE SOFTWARE, S.A."
+    },
+    {
+      "id": "corda_______::952566870",
+      "legal_name": "SULDOURO - VALORIZACAO E TRATAMENTO DE RESIDUOS SOLIDOS URBANOS SA"
+    },
+    {
+      "id": "corda_______::992860088",
+      "legal_name": "Federacao Nacional dos Apicultores de Portugal"
+    },
+    {
+      "id": "corda_______::999426891",
+      "legal_name": "EDAETECH ENGENHARIA E TECNOLOGIA, S.A."
+    },
+    {
+      "id": "corda__h2020::952036183",
+      "legal_name": "INSTITUTO PORTUGUES DO SANGUE E DA TRANSPLANTACAO IP"
+    },
+    {
+      "id": "corda__h2020::942519513",
+      "legal_name": "TRIDIVISIONS, LDA"
+    },
+    {
+      "id": "corda__h2020::928391463",
+      "legal_name": "MUNICIPIO DE SAO JOAO DA MADEIRA"
+    },
+    {
+      "id": "corda__h2020::933490850",
+      "legal_name": "EFACEC ELECTRIC MOBILITY, SA"
+    },
+    {
+      "id": "corda__h2020::933299857",
+      "legal_name": "CNET CENTRE FOR NEW ENERGY TECHNOLOGIES SA"
+    },
+    {
+      "id": "corda__h2020::926175886",
+      "legal_name": "JPM - AUTOMACAO E EQUIPAMENTOS INDUSTRIAIS, SA"
+    },
+    {
+      "id": "corda__h2020::997586704",
+      "legal_name": "VISIONWARE-SISTEMAS DE INFORMACAO SA"
+    },
+    {
+      "id": null,
+      "legal_name": "IADE Superior de Marketing e Publicidade"
+    },
+    {
+      "id": "re3data_____::ca2e413a0445e354fb770cd148880781",
+      "legal_name": "University of Porto"
+    },
+    {
+      "id": "corda__h2020::915056194",
+      "legal_name": "FCIENCIAS.ID - ASSOCIACAO PARA A INVESTIGACAO E DESENVOLVIMENTO DE CIENCIAS"
+    },
+    {
+      "id": null,
+      "legal_name": "INESC - Instituto de Engenharia de Sistemas e Computadores Microsistemas e Nanotecnologias"
+    },
+    {
+      "id": null,
+      "legal_name": "Centro de Gen\u00e9tica Cl\u00ednica"
+    },
+    {
+      "id": "corda__h2020::999813339",
+      "legal_name": "INSTITUTO DE MEDICINA MOLECULAR JOAO LOBO ANTUNES"
+    },
+    {
+      "id": "corda_______::960662393",
+      "legal_name": "PLUX - WIRELESS BIOSIGNALS S.A."
+    },
+    {
+      "id": "corda__h2020::954733268",
+      "legal_name": "LOGISTEMA CONSULTORES DE LOGISTICA SA"
+    },
+    {
+      "id": "corda_______::996406020",
+      "legal_name": "NECTON - COMPANHIA PORTUGUESA DE CULTURAS MARINHAS SA"
+    }
+  ],
+  "Romania": [
+    {
+      "id": "corda_______::996096008",
+      "legal_name": "SOCIETATEA COMERCIALA DE DISTRIBUTIE SI FURNIZARE A ENERGIEI ELECTRICE - ELECTRICA SA"
+    },
+    {
+      "id": "corda_______::998172584",
+      "legal_name": "ACADEMIA ROMANA - FILIALA TIMISOARA"
+    },
+    {
+      "id": "corda__h2020::924558508",
+      "legal_name": "VITALITY MEDIA SRL"
+    },
+    {
+      "id": "corda__h2020::918741612",
+      "legal_name": "CENTRUL NATIONAL DE CARTOGRAFIE"
+    },
+    {
+      "id": "corda__h2020::928422018",
+      "legal_name": "TUD BUSINESS CONSULTING SRL"
+    },
+    {
+      "id": null,
+      "legal_name": "Institutul Na\u0163ional al Patrimoniului"
+    },
+    {
+      "id": null,
+      "legal_name": "Ministerul Comunica\u021biilor \u0219i Societ\u0103\u021bii Informa\u021bionale"
+    },
+    {
+      "id": null,
+      "legal_name": "National Research Development Institute for Animal Biology and Nutrition"
+    },
+    {
+      "id": "doajarticles::Association_of_Social_and_Educational_Innovation",
+      "legal_name": "Association of Social and Educational Innovation"
+    }
+  ],
+  "Russia": [
+    {
+      "id": null,
+      "legal_name": "Human Stem Cells Institute PJSC (Russia)"
+    },
+    {
+      "id": null,
+      "legal_name": "Tula University"
+    },
+    {
+      "id": null,
+      "legal_name": "Ural research Institute of Phthisiopulmonology"
+    },
+    {
+      "id": null,
+      "legal_name": "Department of Earth Sciences - Institute of Water Problems of the North Karelian Research Centre"
+    },
+    {
+      "id": null,
+      "legal_name": "Perm State Humanitarian Pedagogical University"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/23236222",
+      "legal_name": "Yaroslavl State Medical Academy"
+    },
+    {
+      "id": null,
+      "legal_name": "Institute of Management, Marketing and Finance"
+    },
+    {
+      "id": null,
+      "legal_name": "Sputnik"
+    },
+    {
+      "id": null,
+      "legal_name": "Department of Earth Sciences - Institute of Mining"
+    },
+    {
+      "id": null,
+      "legal_name": "Central Scientific and Research Institute of the Sewing Industry"
+    },
+    {
+      "id": null,
+      "legal_name": "All-Russian Research Institute of Irrigation Vegetable and Melon Crops"
+    },
+    {
+      "id": null,
+      "legal_name": "Kostroma State University named after N A Nekrasov"
+    },
+    {
+      "id": null,
+      "legal_name": "Ural State Agrarian University"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/98642627",
+      "legal_name": "St. Petersburg State Technological Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "Samara State Pedagogical University"
+    }
+  ],
+  "Russian Federation": [
+    {
+      "id": "corda_______::996524748",
+      "legal_name": "Viatech"
+    },
+    {
+      "id": "corda_______::961920483",
+      "legal_name": "UBITEL CO LTD"
+    },
+    {
+      "id": "corda_______::974420388",
+      "legal_name": "BAUMAN MOSCOW STATE TECHNICAL UNIVERSITY"
+    },
+    {
+      "id": "corda_______::998321770",
+      "legal_name": "Autonomous non-commercial organisation EcoPolicy Research and Consulting"
+    },
+    {
+      "id": "corda__h2020::936507550",
+      "legal_name": "SCIENTIFIC AND ENGINEERING CENTRE FOR NUCLEAR AND RADIATION SAFETY"
+    }
+  ],
+  "Senegal": [
+    {
+      "id": "corda_______::997664304",
+      "legal_name": "AGENCE NATIONALE DE LA METEOROLOGIE DU SENEGAL"
+    },
+    {
+      "id": "corda__h2020::953636295",
+      "legal_name": "MANOBI SENEGAL - SA"
+    }
+  ],
+  "Serbia": [
+    {
+      "id": "corda__h2020::975084450",
+      "legal_name": "PREDUZECE ZA INFORMACIONE TEHNOLOGIJE I ELEKTRONSKO TRGOVANJE BELIT DOO"
+    },
+    {
+      "id": null,
+      "legal_name": "Petnica Science Center"
+    }
+  ],
+  "Singapore": [
+    {
+      "id": null,
+      "legal_name": "A*STAR - Institute of Bioengineering and Nanotechnology"
+    }
+  ],
+  "Slovakia": [
+    {
+      "id": "corda__h2020::909563472",
+      "legal_name": "BONEHEADZ AS"
+    },
+    {
+      "id": "corda__h2020::905020962",
+      "legal_name": "RIMANEC SRO"
+    },
+    {
+      "id": null,
+      "legal_name": "V\u00fdskumn\u00fd Ustav P\u00f4doznalectva a Ochrany P\u00f4dy"
+    }
+  ],
+  "Slovenia": [
+    {
+      "id": "corda_______::985698287",
+      "legal_name": "AMIS DRUZBA ZA TELEKOMUNIKACIJE D.O.O."
+    },
+    {
+      "id": "corda_______::998275210",
+      "legal_name": "AGENCIJA ZA PRESTRUKTURIRANJE ENERGETIKE DOO"
+    },
+    {
+      "id": "corda__h2020::957062432",
+      "legal_name": "Telekom Slovenije (Slovenia)"
+    },
+    {
+      "id": null,
+      "legal_name": "Institute for Water of the Republic of Slovenia"
+    },
+    {
+      "id": null,
+      "legal_name": "Centre of Excellence for Integrated Approaches in Chemistry and Biology of Proteins"
+    },
+    {
+      "id": null,
+      "legal_name": "Ministry of the Environment and Spatial Planning"
+    }
+  ],
+  "South Africa": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799983529",
+      "legal_name": "Colleges of Medicine of South Africa"
+    },
+    {
+      "id": null,
+      "legal_name": "African Federation for Emergency Medicine"
+    },
+    {
+      "id": "corda_______::999565116",
+      "legal_name": "South African Nuclear Energy Corporation (South Africa)"
+    }
+  ],
+  "South Korea": [
+    {
+      "id": "doajarticles::Korean_Society_for_the_Study_of_Obesity",
+      "legal_name": "Korean Society for the Study of Obesity"
+    },
+    {
+      "id": null,
+      "legal_name": "Seoul Business Agency"
+    },
+    {
+      "id": null,
+      "legal_name": "Chosun University Hospital"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/67900169",
+      "legal_name": "Chung-Ang University"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/89015989",
+      "legal_name": "Dankook University"
+    },
+    {
+      "id": null,
+      "legal_name": "The Korea Association of Foreign Language Education"
+    },
+    {
+      "id": null,
+      "legal_name": "Korean Philosophical Association"
+    },
+    {
+      "id": null,
+      "legal_name": "Korea Service Management Society"
+    },
+    {
+      "id": null,
+      "legal_name": "Reformed Theological Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "Korea Integrated Logistics Association"
+    }
+  ],
+  "Spain": [
+    {
+      "id": "corda_______::947699022",
+      "legal_name": "CLUSTER DE ENERGIAS RENOVABLES Y SOLUCIONES ENERGETICAS EN CASTILLA Y LEON"
+    },
+    {
+      "id": "corda_______::954810965",
+      "legal_name": "LUCIO GIL ANTONIO"
+    },
+    {
+      "id": "corda_______::999812854",
+      "legal_name": "ACCIONA INFRAESTRUCTURAS S.A."
+    },
+    {
+      "id": "corda_______::951066280",
+      "legal_name": "A 3 APROFITAMENT ASSESORAMENT AMBIENTAL SL"
+    },
+    {
+      "id": "corda_______::974340460",
+      "legal_name": "FUNDACIO D'INVESTIGACIO SANITARIA DE LES ILLES BALEARS RAMON LLULL"
+    },
+    {
+      "id": "corda_______::957000255",
+      "legal_name": "DEVOTEAM FRINGES SA"
+    },
+    {
+      "id": "corda_______::969023502",
+      "legal_name": "ADVANCE INTELLIGENT DEVELOPMENTS S.L."
+    },
+    {
+      "id": "corda_______::992756007",
+      "legal_name": "FUNDACION SAN VALERO"
+    },
+    {
+      "id": "corda_______::996523681",
+      "legal_name": "EUROCONSULT SA"
+    },
+    {
+      "id": "corda_______::968833964",
+      "legal_name": "FLOWLAB PROYECTOS DE INNOVACION SL"
+    },
+    {
+      "id": "corda_______::968769847",
+      "legal_name": "FEDERACION ESPANOLA DE ASOCIACIONES DE GANADO SELECTO"
+    },
+    {
+      "id": "corda__h2020::934859520",
+      "legal_name": "PREFABRICADOS LUFORT SLU"
+    },
+    {
+      "id": "corda__h2020::905520609",
+      "legal_name": "EIT FOOD CLC SOUTH S.L."
+    },
+    {
+      "id": "corda__h2020::937928503",
+      "legal_name": "DUCAMAR SPAIN SL"
+    },
+    {
+      "id": "corda__h2020::950649956",
+      "legal_name": "UNIONS AGRARIAS UPA"
+    },
+    {
+      "id": "corda__h2020::920991721",
+      "legal_name": "AGROILLA SAT"
+    },
+    {
+      "id": "corda__h2020::927303705",
+      "legal_name": "LUMIKER APLICACIONES TECNOLOGICAS SOCIEDAD LIMITADA"
+    },
+    {
+      "id": "corda__h2020::945052086",
+      "legal_name": "INSTITUTO PARA EL FOMENTO DEL DESARROLLO Y LA FORMACION SL"
+    },
+    {
+      "id": "corda__h2020::907550625",
+      "legal_name": "CICHORIUM SL"
+    },
+    {
+      "id": "corda__h2020::932257883",
+      "legal_name": "ASOCIACION ESPANOLA DE GESTORES DE PATRIMONIO CULTURAL"
+    },
+    {
+      "id": "corda__h2020::945104369",
+      "legal_name": "DESTINA GENOMICA"
+    },
+    {
+      "id": "corda__h2020::917429784",
+      "legal_name": "ATEKNEA SOLUTIONS EUROPE, S.L"
+    },
+    {
+      "id": "corda__h2020::910400679",
+      "legal_name": "ALLATHERM SL"
+    },
+    {
+      "id": "corda__h2020::950464977",
+      "legal_name": "SOCIEDAD ARAGONESA DE GESTION AGROAMBIENTAL SL"
+    },
+    {
+      "id": "corda__h2020::936584568",
+      "legal_name": "TECNOLOGIAS DIM SL"
+    },
+    {
+      "id": "corda__h2020::985772104",
+      "legal_name": "FUNDACIO INSTITUT D'INVESTIGACIO SANITARIA PERE VIRGILI (IISPV)"
+    },
+    {
+      "id": "corda__h2020::924598278",
+      "legal_name": "MOLECOR TECNOLOGIA SL"
+    },
+    {
+      "id": "corda__h2020::999551245",
+      "legal_name": "FUNDACIO CENTRE DE RECERCA EN EPIDEMIOLOGIA AMBIENTAL - CREAL"
+    },
+    {
+      "id": "corda__h2020::996643282",
+      "legal_name": "RETEVISION I SA"
+    },
+    {
+      "id": "corda__h2020::918187742",
+      "legal_name": "HORTO-VELEZ SA"
+    },
+    {
+      "id": null,
+      "legal_name": "Vivienda y Suelo de Euskadi (Spain)"
+    },
+    {
+      "id": "opendoar____::Instituto_Andaluz_de_Patrimonio_Hist\ufffdrico",
+      "legal_name": "Instituto Andaluz del Patrimonio Hist\u00f3rico"
+    },
+    {
+      "id": null,
+      "legal_name": "Alfonso X el Sabio University"
+    },
+    {
+      "id": "corda_______::955418476",
+      "legal_name": "FPK LIGHTWEIGHT TECHNOLOGIES S.COOP."
+    },
+    {
+      "id": null,
+      "legal_name": "Federaci\u00f3n Espa\u00f1ola de Padres de Ni\u00f1os con C\u00e1ncer"
+    },
+    {
+      "id": "corda_______::998768067",
+      "legal_name": "Fundaci\u00f3n Agust\u00edn de Betancourt"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/185763367",
+      "legal_name": "Bank of Spain"
+    },
+    {
+      "id": "corda__h2020::961648495",
+      "legal_name": "BATZ SOCIEDAD COOPERATIVA"
+    },
+    {
+      "id": "corda_______::999513415",
+      "legal_name": "AIMPLAS - ASOCIACION DE INVESTIGACION DE MATERIALES PLASTICOS Y CONEXAS"
+    },
+    {
+      "id": "corda_______::991683963",
+      "legal_name": "Ayuntamiento de Getafe"
+    },
+    {
+      "id": "corda_______::965130213",
+      "legal_name": "ONA PRODUCT SL"
+    },
+    {
+      "id": null,
+      "legal_name": "UAB - Institut Catal\u00e0 d'Arqueologia Cl\u00e0ssica"
+    },
+    {
+      "id": "corda__h2020::935909545",
+      "legal_name": "INNOVACION DE SYSTEMAS ELECTRONICOS MTSYSTEM SL"
+    },
+    {
+      "id": null,
+      "legal_name": "Centro de Cirug\u00eda de M\u00ednima Invasi\u00f3n Jes\u00fas Us\u00f3n"
+    },
+    {
+      "id": "corda__h2020::999485382",
+      "legal_name": "FUNDACION PARA LA INVESTIGACION MEDICA APLICADA FIMA"
+    }
+  ],
+  "Sri Lanka": [
+    {
+      "id": null,
+      "legal_name": "National Centre for Advanced Studies in Humanities and Social Sciences"
+    }
+  ],
+  "Sweden": [
+    {
+      "id": "corda_______::951656622",
+      "legal_name": "BORAS KOMMUN"
+    },
+    {
+      "id": "corda_______::998072480",
+      "legal_name": "SAAB AUTOMOBILE POWERTRAIN AB"
+    },
+    {
+      "id": "corda__h2020::938642714",
+      "legal_name": "MILJOORGANISATIONERNAS KARNAVFALLSGRANSKNING"
+    },
+    {
+      "id": "corda__h2020::919657583",
+      "legal_name": "TIETO SWEDEN SUPPORT SERVICES AB"
+    },
+    {
+      "id": "corda__h2020::917444528",
+      "legal_name": "TENSTAR SIMULATION AB"
+    },
+    {
+      "id": "corda__h2020::999906459",
+      "legal_name": "Uminova Innovation (Sweden)"
+    },
+    {
+      "id": null,
+      "legal_name": "Jeansson Foundations"
+    },
+    {
+      "id": "corda__h2020::911815230",
+      "legal_name": "Medfield Diagnostics (Sweden)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802885564",
+      "legal_name": "Swedish Association for Sexuality Education"
+    },
+    {
+      "id": "corda__h2020::934799283",
+      "legal_name": "Ferroamp Elektronik (Sweden)"
+    },
+    {
+      "id": "corda_______::954681955",
+      "legal_name": "GETINGE INFECTION CONTROL AB"
+    },
+    {
+      "id": "doajarticles::Swedish_Nutrition_Foundation",
+      "legal_name": "Swedish Nutrition Foundation"
+    },
+    {
+      "id": "corda_______::956108146",
+      "legal_name": "SARomics Biostructures (Sweden)"
+    },
+    {
+      "id": "corda_______::989041780",
+      "legal_name": "AGILENT TECHNOLOGIES SWEDEN AB"
+    }
+  ],
+  "Switzerland": [
+    {
+      "id": "corda_______::950797493",
+      "legal_name": "Takeda Pharmaceuticals International GmbH"
+    },
+    {
+      "id": "corda_______::964336365",
+      "legal_name": "SINGLE BUOY MOORINGS INC SA"
+    },
+    {
+      "id": "corda_______::998595504",
+      "legal_name": "VHF-TECHNOLOGIES SA"
+    },
+    {
+      "id": "corda_______::996604967",
+      "legal_name": "ADOLF KUHNER AG"
+    },
+    {
+      "id": "corda_______::996891602",
+      "legal_name": "designtoproduction GmbH"
+    },
+    {
+      "id": "corda_______::965946177",
+      "legal_name": "POLYTYPE CONVERTING AG"
+    },
+    {
+      "id": "corda_______::994090048",
+      "legal_name": "AMCOR FLEXIBLES KREUZLINGEN AG"
+    },
+    {
+      "id": "corda_______::953222493",
+      "legal_name": "COMMUNE DE SAINT SULPICE"
+    },
+    {
+      "id": "corda_______::961336446",
+      "legal_name": "AGIE CHARMILLES SA"
+    },
+    {
+      "id": "corda__h2020::915102172",
+      "legal_name": "SWITZERLAND GLOBAL ENTERPRISE"
+    },
+    {
+      "id": "corda__h2020::906214547",
+      "legal_name": "PG WCONSULTING SARL"
+    },
+    {
+      "id": "corda__h2020::910035474",
+      "legal_name": "SWISS BIOBANKING PLATFORM"
+    },
+    {
+      "id": "corda__h2020::904243216",
+      "legal_name": "METYS PHARMACEUTICALS AG"
+    },
+    {
+      "id": "corda__h2020::904979640",
+      "legal_name": "AGROSUSTAIN SA"
+    },
+    {
+      "id": "corda__h2020::910399321",
+      "legal_name": "SINGULARITY AG"
+    },
+    {
+      "id": "corda__h2020::921199883",
+      "legal_name": "MUHLE RYTZ AG"
+    },
+    {
+      "id": "corda__h2020::916261322",
+      "legal_name": "SOUTH POLE CARBON ASSET MANAGEMENT AG"
+    },
+    {
+      "id": "corda__h2020::954832693",
+      "legal_name": "INILABS AG"
+    },
+    {
+      "id": "snsf________::Schweiz__Pastoralsoziologisches_Inst__(SPI)",
+      "legal_name": "Schweiz. Pastoralsoz. Institut (SPI)"
+    },
+    {
+      "id": "snsf________::Lehrstuhl_f\u00fcr_Organisationspsychologie_Universit\u00e4t_St__Gallen",
+      "legal_name": "Lehrstuhl f\u00fcr Organisationspsychologie Universit\u00e4t St. Gallen"
+    },
+    {
+      "id": null,
+      "legal_name": "Federal Office for Gender Equality"
+    },
+    {
+      "id": "snsf________::Wasserressourcen_und_Trinkwasser_Eawag",
+      "legal_name": "Wasserressourcen und Trinkwasser EAWAG"
+    },
+    {
+      "id": "snsf________::Chaire_de_statistique_math\u00e9matique_EPFL_-_SB_-_MATHAA_-_SMAT",
+      "legal_name": "Chaire de statistique appliqu\u00e9e EPFL - SB - MATHAA - STAP"
+    },
+    {
+      "id": "snsf________::Institut_f\u00fcr_Klinische_Chemie_Universit\u00e4tsSpital_Z\u00fcrich",
+      "legal_name": "Institut f\u00fcr Klinische Chemie Universit\u00e4tsspital Z\u00fcrich"
+    },
+    {
+      "id": "snsf________::Facult\u00e9_des_lettres_et_sciences_humaines_Universit\u00e9_de_Neuch\u00e2tel",
+      "legal_name": "Institut de psychologie et \u00e9ducation Facult\u00e9 des lettres et sciences humaines Universit\u00e9 de Neuch\u00e2tel"
+    },
+    {
+      "id": null,
+      "legal_name": "Integrierte Psychiatrie Winterthur"
+    },
+    {
+      "id": null,
+      "legal_name": "Swiss School of Tourism and Hospitality"
+    },
+    {
+      "id": "snsf________::Stiftung_Z\u00fcrcher_Kinder-_und_Jugendheime",
+      "legal_name": "Stiftung Z\u00fcrcher Kinder- und Jugendheime"
+    },
+    {
+      "id": "corda_______::999731277",
+      "legal_name": "MEGGITT SA"
+    },
+    {
+      "id": "corda_______::983104216",
+      "legal_name": "AKADEMIEN DER WISSENSCHAFTEN SCHWEIZ VEREIN"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/127558574",
+      "legal_name": "DSM (Netherlands) - DSM (Switzerland)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/901610228",
+      "legal_name": "Lonza (Switzerland)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/131328143",
+      "legal_name": "Union Bank of Switzerland"
+    }
+  ],
+  "Syria": [
+    {
+      "id": null,
+      "legal_name": "International University for Science and Technology"
+    }
+  ],
+  "Taiwan": [
+    {
+      "id": null,
+      "legal_name": "Service Science Society of Taiwan"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/119213423",
+      "legal_name": "Taipei Chengshih University of Science and Technology"
+    },
+    {
+      "id": null,
+      "legal_name": "Tri-Service General Hospital Beitou Branch"
+    },
+    {
+      "id": null,
+      "legal_name": "Far Eastern Memorial Hospital"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/214539897",
+      "legal_name": "Wenzao Ursuline University of Languages"
+    }
+  ],
+  "Tanzania": [
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802539107",
+      "legal_name": "Aga Khan Hospital Dar es Salaam"
+    }
+  ],
+  "Thailand": [
+    {
+      "id": null,
+      "legal_name": "Dental Innovation Foundation Under Royal Patronage"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/154381313",
+      "legal_name": "Pibulsongkram Rajabhat University"
+    }
+  ],
+  "Tunisia": [
+    {
+      "id": "corda__h2020::936765279",
+      "legal_name": "CENTRE NATIONAL DE LA CARTOGRAPHIEET DE LA TELEDETECTION"
+    },
+    {
+      "id": null,
+      "legal_name": "Institut National Agronomique de Tunisie"
+    }
+  ],
+  "Turkey": [
+    {
+      "id": "corda_______::999871442",
+      "legal_name": "GEBZE YUKSEK TEKNOLOJI ENSTITUSU"
+    },
+    {
+      "id": "corda_______::992792091",
+      "legal_name": "OMEGA MAKINA SANAYI VE TICARET LIMITED SIRKETI"
+    },
+    {
+      "id": "re3data_____::b0889c7852d4dc4efa8e3f4c434c87ff",
+      "legal_name": "Ko\u00e7 University, Suna Kira\u00e7 Library"
+    },
+    {
+      "id": "opendoar____::Bilecik_University",
+      "legal_name": "Bilecik University"
+    },
+    {
+      "id": "doajarticles::T\u00fcm_Bilim_\u0130nsanlar\u0131_ve_Akademisyenler_Derne\u011fi",
+      "legal_name": "T\u00fcm Bilim \u0130nsanlar\u0131 ve Akademisyenler Derne\u011fi"
+    },
+    {
+      "id": "doajarticles::Galenos_Publishing_House",
+      "legal_name": "Galenos Publishing House"
+    },
+    {
+      "id": "doajarticles::Turkish_Society_of_Automotive_Engineers",
+      "legal_name": "Turkish Society of Automotive Engineers"
+    }
+  ],
+  "Ukraine": [
+    {
+      "id": null,
+      "legal_name": "Kharkiv National University of Construction and Architecture"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/118493624",
+      "legal_name": "Kherson National Technical University"
+    },
+    {
+      "id": "doajarticles::Pavlo_Tychyna_Uman_State_Pedagogical_University",
+      "legal_name": "Pavlo Tychyna Uman State Pedagogical University"
+    }
+  ],
+  "United Arab Emirates": [
+    {
+      "id": "doajarticles::Barcaray_International",
+      "legal_name": "Barcaray International"
+    }
+  ],
+  "United Kingdom": [
+    {
+      "id": "corda_______::953491765",
+      "legal_name": "COLAS LIMITED"
+    },
+    {
+      "id": "corda_______::999657945",
+      "legal_name": "INFORMATION TECHNOLOGY TELECOMMUNICATIONS AND ELECTRONICS ASSOCIATION"
+    },
+    {
+      "id": "corda_______::974518455",
+      "legal_name": "SALUNDA LIMITED"
+    },
+    {
+      "id": "corda_______::952790843",
+      "legal_name": "CRESSALL RESISTORS LIMITED"
+    },
+    {
+      "id": "corda_______::953855806",
+      "legal_name": "EUROPEAN MUSEUM FORUM LBG"
+    },
+    {
+      "id": "corda_______::941153850",
+      "legal_name": "PINBELLCOM LIMITED"
+    },
+    {
+      "id": "corda_______::953868416",
+      "legal_name": "NEXTEK LIMITED"
+    },
+    {
+      "id": "corda__h2020::941655437",
+      "legal_name": "THE RIVER RESTORATION CENTRE"
+    },
+    {
+      "id": "corda__h2020::936688552",
+      "legal_name": "TOKYO ELECTRON EUROPE LIMITED"
+    },
+    {
+      "id": "corda__h2020::931752222",
+      "legal_name": "ATLANTIS RESOURCES (SCOTLAND) LIMITED"
+    },
+    {
+      "id": "corda__h2020::989104054",
+      "legal_name": "GRAPHIC SCIENCE LIMITED"
+    },
+    {
+      "id": "corda__h2020::937242713",
+      "legal_name": "IGS STRATEGIC COMMUNICATIONS LIMITED"
+    },
+    {
+      "id": "corda__h2020::947726958",
+      "legal_name": "THE NOTHERN IRELAND AGRICULTURAL RESEARCH AND DEVELOPMENT COUNCIL"
+    },
+    {
+      "id": "corda__h2020::942805760",
+      "legal_name": "TRIPDATABASE LTD"
+    },
+    {
+      "id": "corda__h2020::907782649",
+      "legal_name": "CASCADE WATER PRODUCTS LIMITED"
+    },
+    {
+      "id": "corda__h2020::944714720",
+      "legal_name": "COMMUNITY FOREST TRUST"
+    },
+    {
+      "id": "corda__h2020::948164816",
+      "legal_name": "FAR-UK LTD"
+    },
+    {
+      "id": "corda__h2020::923714026",
+      "legal_name": "HORIBA UK LIMITED"
+    },
+    {
+      "id": null,
+      "legal_name": "Benenden Hospital"
+    },
+    {
+      "id": "corda_______::965410349",
+      "legal_name": "CVD Technologies (United Kingdom)"
+    },
+    {
+      "id": null,
+      "legal_name": "Northumberland and Durham Family History Society"
+    },
+    {
+      "id": "corda__h2020::987496085",
+      "legal_name": "Earlham Institute"
+    },
+    {
+      "id": "corda__h2020::999912764",
+      "legal_name": "TWI LIMITED"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/245818263",
+      "legal_name": "Operation Wallacea"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800186071",
+      "legal_name": "Yeovil District Hospital NHS Foundation Trust"
+    },
+    {
+      "id": null,
+      "legal_name": "Tropical Biology Association"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800368655",
+      "legal_name": "British Society for Antimicrobial Chemotherapy"
+    },
+    {
+      "id": "opendoar____::Glynd\u0175r_University_(Prifysgol_Glynd\u0175r)",
+      "legal_name": "Glynd\u0175r University (Prifysgol Glynd\u0175r)"
+    },
+    {
+      "id": null,
+      "legal_name": "Kingston Computer Consultancy (United Kingdom)"
+    },
+    {
+      "id": "rcuk________::7A9A3A29-86F4-4401-8CC1-70080EE36F77",
+      "legal_name": "Chilled Food Association"
+    },
+    {
+      "id": "corda_______::968681674",
+      "legal_name": "Perpetuum Limited"
+    },
+    {
+      "id": null,
+      "legal_name": "Greater Shankill Partnership"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/921835857",
+      "legal_name": "Trinity Laban Conservatoire of Music and Dance"
+    },
+    {
+      "id": null,
+      "legal_name": "Central Research Laboratories (United Kingdom)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/1294711689",
+      "legal_name": "Abertawe Bro Morgannwg University Health Board"
+    },
+    {
+      "id": "corda__h2020::958362329",
+      "legal_name": "DEVENISH NUTRITION LTD"
+    },
+    {
+      "id": "rcuk________::88D81377-E91C-4C8A-AD1F-802E3B184F3B",
+      "legal_name": "Pelamis Wave Power (United Kingdom)"
+    },
+    {
+      "id": "rcuk________::2B8AEC93-4C61-4ABA-B1E4-82C0627FAEA2",
+      "legal_name": "Country Land and Business Association"
+    },
+    {
+      "id": null,
+      "legal_name": "European Society for Paediatric Endocrinology"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802627858",
+      "legal_name": "Commonwealth Forestry Association"
+    },
+    {
+      "id": "corda_______::954314325",
+      "legal_name": "TECH TRANSFER SUMMIT LIMITED"
+    },
+    {
+      "id": "rcuk________::FCE996CD-B93F-458C-8B23-29F78F2139A9",
+      "legal_name": "Centre for Literacy in Primary Education"
+    },
+    {
+      "id": "rcuk________::53DC5CCA-8844-47A1-A048-3AE5F5587408",
+      "legal_name": "Associated British Ports (United Kingdom)"
+    },
+    {
+      "id": "corda_______::999839432",
+      "legal_name": "University of West England Bristol"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801227970",
+      "legal_name": "Buckinghamshire Healthcare NHS Trust"
+    },
+    {
+      "id": "rcuk________::5EADAD05-7A19-45C3-A755-D4605B6E6E79",
+      "legal_name": "Orchestra of the Age of Enlightenment"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/1293052470",
+      "legal_name": "Barking, Havering And Redbridge University Hospitals NHS Trust"
+    },
+    {
+      "id": "corda__h2020::953462180",
+      "legal_name": "Point Source Ltd"
+    },
+    {
+      "id": null,
+      "legal_name": "Sainsbury Family Charitable Trusts"
+    },
+    {
+      "id": null,
+      "legal_name": "Cast Metals Federation (United Kingdom)"
+    },
+    {
+      "id": "rcuk________::1CDB493C-BA1F-4275-A61D-D067B3F828F5",
+      "legal_name": "Efficient Energy Centre"
+    },
+    {
+      "id": "rcuk________::35F9DB62-7F35-4375-A0B4-D16A14C4B3D6",
+      "legal_name": "Illumina Digital (United Kingdom)"
+    },
+    {
+      "id": null,
+      "legal_name": "Endomagnetics (United Kingdom)"
+    },
+    {
+      "id": "rcuk________::B743A3C3-8868-46DB-9031-1035F83B5222",
+      "legal_name": "Hydrogen Solar (United Kingdom)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/900159353",
+      "legal_name": "The Royal Scottish Academy of Music and Drama"
+    },
+    {
+      "id": "rcuk________::7488C26B-9D68-49B5-A60D-9C120A229412",
+      "legal_name": "Yorkshire Agricultural Society"
+    },
+    {
+      "id": "corda__h2020::929518118",
+      "legal_name": "Anvil Semiconductors (United Kingdom)"
+    },
+    {
+      "id": "corda_______::998010303",
+      "legal_name": "NORTH BRISTOL NATIONAL HEALTH SERVICE TRUST"
+    },
+    {
+      "id": null,
+      "legal_name": "Chartered Institute of Ecology and Environmental Management"
+    },
+    {
+      "id": "rcuk________::4FAD1C80-6B73-4BB5-AB12-44C213A6C60D",
+      "legal_name": "Lafarge Aggregates Limited"
+    },
+    {
+      "id": "corda_______::953939420",
+      "legal_name": "Ealing Hospital NHS Trust"
+    },
+    {
+      "id": null,
+      "legal_name": "Oil & Gas Innovation Centre"
+    },
+    {
+      "id": "rcuk________::27FD63EA-F5D5-49A9-B3DE-FAEC45F62994",
+      "legal_name": "London & Scandinavian Metallurgical Co L"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/867661903",
+      "legal_name": "City of Glasgow College"
+    },
+    {
+      "id": "rcuk________::B542E812-C35D-4B08-A45B-FF2047CCA3BA",
+      "legal_name": "Ramboll UK"
+    },
+    {
+      "id": null,
+      "legal_name": "British Society for Middle Eastern Studies"
+    },
+    {
+      "id": "rcuk________::21CFC584-0BCD-450C-B2C1-EFF574194DBF",
+      "legal_name": "NERC - British Antarctic Survey"
+    },
+    {
+      "id": "rcuk________::44E0FA2E-8099-4F24-9216-C863DADE282E",
+      "legal_name": "Clyde Biosciences Ltd"
+    },
+    {
+      "id": "corda_______::972465741",
+      "legal_name": "DOCOBO LTD"
+    },
+    {
+      "id": "corda_______::990570015",
+      "legal_name": "Cytec Engineered Materials Ltd (UK)"
+    },
+    {
+      "id": "corda_______::949775210",
+      "legal_name": "IOTA Pharmaceuticals Ltd"
+    },
+    {
+      "id": "corda_______::985898301",
+      "legal_name": "AMBIESENSE LTD"
+    },
+    {
+      "id": "corda__h2020::963108442",
+      "legal_name": "Processors and Growers Research Organisation"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/154935518",
+      "legal_name": "Royal College of Emergency Medicine"
+    },
+    {
+      "id": "rcuk________::04334449-5BAF-44AF-93DF-860047C544D1",
+      "legal_name": "B H R Group Ltd"
+    },
+    {
+      "id": "rcuk________::9C11D610-CB89-4BED-8E47-E97C5AEB1ED1",
+      "legal_name": "Somerset County Council"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801954517",
+      "legal_name": "Dudley Group NHS Foundation Trust"
+    },
+    {
+      "id": "corda_______::997430243",
+      "legal_name": "J C Bamford Excavators (United Kingdom)"
+    },
+    {
+      "id": "corda_______::953926616",
+      "legal_name": "Coppice Resources Ltd"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800235963",
+      "legal_name": "Dumfries and Galloway Royal Infirmary"
+    },
+    {
+      "id": "rcuk________::EA4E11DE-61D5-4FF3-82BA-644EE5EF1331",
+      "legal_name": "Ticon Uk Limited"
+    },
+    {
+      "id": "rcuk________::C31F77A3-EF9E-4125-B5AC-AD3768991AAA",
+      "legal_name": "Permasense Limited"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/257179599",
+      "legal_name": "BHGE - Baker Hughes (United Kingdom)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802144681",
+      "legal_name": "Bolton NHS Foundation Trust"
+    },
+    {
+      "id": "doajarticles::Editorial_Board_of_the_Programming_Historian",
+      "legal_name": "Editorial Board of the Programming Historian"
+    }
+  ],
+  "United States": [
+    {
+      "id": "corda_______::999890066",
+      "legal_name": "SIMMONS FEMALE COLLEGE"
+    },
+    {
+      "id": "corda_______::951531007",
+      "legal_name": "ALBERT B. SABIN VACCINE INSTITUTE INC"
+    },
+    {
+      "id": null,
+      "legal_name": "Higher Learning Commission"
+    },
+    {
+      "id": null,
+      "legal_name": "New Mexico Hospital Association"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799567181",
+      "legal_name": "United States Department of Energy - Princeton Plasma Physics Laboratory"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/1299303238",
+      "legal_name": "DHHS - National Institutes of Health"
+    },
+    {
+      "id": null,
+      "legal_name": "Western Maine Health"
+    },
+    {
+      "id": null,
+      "legal_name": "Prevention Connections"
+    },
+    {
+      "id": null,
+      "legal_name": "Parkinson Research Foundation"
+    },
+    {
+      "id": null,
+      "legal_name": "National Association of Women Judges"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800938003",
+      "legal_name": "Great Lakes Christian College"
+    },
+    {
+      "id": null,
+      "legal_name": "Ferry County Memorial Hospital"
+    },
+    {
+      "id": "nsf_________::Allan_Hancock_College",
+      "legal_name": "Allan Hancock College"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800357161",
+      "legal_name": "Society for Immunotherapy of Cancer"
+    },
+    {
+      "id": "nsf_________::Recording_for_the_Blind__Inc_",
+      "legal_name": "Recording For the Blind Inc"
+    },
+    {
+      "id": null,
+      "legal_name": "Yellowstone Christian College"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799440964",
+      "legal_name": "Peralta Community College District - Laney College"
+    },
+    {
+      "id": null,
+      "legal_name": "National Women's Law Center"
+    },
+    {
+      "id": null,
+      "legal_name": "American Association of Avian Pathologists"
+    },
+    {
+      "id": null,
+      "legal_name": "American Association of Agricultural Education"
+    },
+    {
+      "id": "nsf_________::Syscon_Corporation",
+      "legal_name": "Syscon Corporation"
+    },
+    {
+      "id": null,
+      "legal_name": "Recreation and Conservation Office"
+    },
+    {
+      "id": null,
+      "legal_name": "Center for World Indigenous Studies"
+    },
+    {
+      "id": null,
+      "legal_name": "Mercer County Mosquito Control"
+    },
+    {
+      "id": null,
+      "legal_name": "Norwich University Applied Research Institute"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802949983",
+      "legal_name": "Western Maryland Health System"
+    },
+    {
+      "id": "nsf_________::Cambridge_Scientific_Inc",
+      "legal_name": "Cambridge Scientific Inc"
+    },
+    {
+      "id": null,
+      "legal_name": "Maine Central Institute"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799646508",
+      "legal_name": "Cedar Valley College"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/178710411",
+      "legal_name": "PSU - Penn State Fayette"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799442855",
+      "legal_name": "NYU - New York University Press"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800507137",
+      "legal_name": "New Jersey Department of Law and Public Safety"
+    },
+    {
+      "id": null,
+      "legal_name": "Virginia Research Institute"
+    },
+    {
+      "id": "nsf_________::Foreman__Christine_M",
+      "legal_name": "Offerman Christine E"
+    },
+    {
+      "id": null,
+      "legal_name": "International Society for Vaccines"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799712144",
+      "legal_name": "Fairbanks North Star Borough School District"
+    },
+    {
+      "id": null,
+      "legal_name": "Life Cycle Engineering (United States)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801349183",
+      "legal_name": "Spartanburg Regional Medical Center"
+    },
+    {
+      "id": null,
+      "legal_name": "Arizona's Public Universities"
+    },
+    {
+      "id": null,
+      "legal_name": "American College of Traditional Chinese Medicine"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/880774266",
+      "legal_name": "Littelfuse (United States)"
+    },
+    {
+      "id": null,
+      "legal_name": "VitalStrategic Research Institute"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800056074",
+      "legal_name": "SI - Smithsonian Conservation Biology Institute"
+    },
+    {
+      "id": "nsf_________::Clearton__LLC",
+      "legal_name": "Clearton, LLC"
+    },
+    {
+      "id": null,
+      "legal_name": "State Innovation Exchange"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801352141",
+      "legal_name": "Northern Baptist Theological Seminary"
+    },
+    {
+      "id": null,
+      "legal_name": "Heartland Clinical Research"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800334857",
+      "legal_name": "California Historical Society"
+    },
+    {
+      "id": null,
+      "legal_name": "Great Valley Center"
+    },
+    {
+      "id": "nsf_________::Institute_of_American_Indian_Arts",
+      "legal_name": "Institute of American Indian Arts"
+    },
+    {
+      "id": null,
+      "legal_name": "Tri-State Bible College"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800856465",
+      "legal_name": "Columbia College of Nursing"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802716091",
+      "legal_name": "American Society for Pharmacology and Experimental Therapeutics"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/1294382768",
+      "legal_name": "Historical Society of Western Pennsylvania"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802706549",
+      "legal_name": "Consortium of Universities for Global Health"
+    },
+    {
+      "id": "nsf_________::Columbia_University_Lamont_Doherty_Earth_Observatory",
+      "legal_name": "Lamont-Doherty Earth Observatory Columbia University"
+    },
+    {
+      "id": null,
+      "legal_name": "AMPAC Fine Chemicals (United States)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/69337369",
+      "legal_name": "International Technological University"
+    },
+    {
+      "id": "nsf_________::Institute_For_Defense_Analyses",
+      "legal_name": "Institute For Defense Analyses"
+    },
+    {
+      "id": null,
+      "legal_name": "Western Surgical Association"
+    },
+    {
+      "id": null,
+      "legal_name": "Foundation for Physical Therapy Research"
+    },
+    {
+      "id": null,
+      "legal_name": "Applied Optimization (United States)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/19334954",
+      "legal_name": "Montana Office of Public Instruction"
+    },
+    {
+      "id": null,
+      "legal_name": "NSF MPS - Office of Multidisciplinary Activities"
+    },
+    {
+      "id": null,
+      "legal_name": "Southern Nursing Research Society"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/45466929",
+      "legal_name": "Milwaukee Area Technical College"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/104411113",
+      "legal_name": "Alaska Department of Fish and Game"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/55486353",
+      "legal_name": "Reed College"
+    },
+    {
+      "id": null,
+      "legal_name": "International Center of Photography"
+    },
+    {
+      "id": null,
+      "legal_name": "Hollings Cancer Center"
+    },
+    {
+      "id": null,
+      "legal_name": "Friends Research Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "Material Innovations (United States)"
+    },
+    {
+      "id": null,
+      "legal_name": "South Carolina Ovarian Cancer Foundation"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802297355",
+      "legal_name": "Colorado Health Foundation"
+    },
+    {
+      "id": "nsf_________::Saint_Mary's_University_of_Minnesota",
+      "legal_name": "Saint Mary's University of Minnesota"
+    },
+    {
+      "id": "nsf_________::Dick_Young_Productions",
+      "legal_name": "Dick Young Productions"
+    },
+    {
+      "id": null,
+      "legal_name": "Idaho Association of School Administrators"
+    },
+    {
+      "id": "corda_______::997166015",
+      "legal_name": "University of Pennsylvania"
+    },
+    {
+      "id": null,
+      "legal_name": "Ignited"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801649442",
+      "legal_name": "State University System of Florida"
+    },
+    {
+      "id": null,
+      "legal_name": "NASA - Idaho Space Grant Consortium"
+    },
+    {
+      "id": null,
+      "legal_name": "American Association of Plastic Surgeons"
+    },
+    {
+      "id": "nsf_________::College_of_Saint_Mary",
+      "legal_name": "College of Saint Mary"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802170910",
+      "legal_name": "Association of University Centers on Disabilities"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/181190486",
+      "legal_name": "NTL Institute for Applied Behavioral Science"
+    },
+    {
+      "id": null,
+      "legal_name": "Statewide Parent Advocacy Network"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799493269",
+      "legal_name": "Hawaii Department of Human Services"
+    },
+    {
+      "id": null,
+      "legal_name": "Syracuse Orthopedic Specialists"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801122820",
+      "legal_name": "Contra Costa County Library"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/240992025",
+      "legal_name": "Luther College"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/1294824412",
+      "legal_name": "Infectious Disease Consultants"
+    },
+    {
+      "id": null,
+      "legal_name": "Maryland Dermatology Laser Skin and Vein Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "Foundation for the History of Women in Medicine"
+    },
+    {
+      "id": null,
+      "legal_name": "Aging In New York Fund"
+    },
+    {
+      "id": null,
+      "legal_name": "American Academy of Periodontology Foundation"
+    },
+    {
+      "id": "nsf_________::Techno-Sciences_Incorporated",
+      "legal_name": "Techno-Sciences Incorporated"
+    },
+    {
+      "id": "snsf________::Children's_Research_Institute",
+      "legal_name": "Children's Research Institute"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799434844",
+      "legal_name": "Carilion New River Valley Medical Center"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802232195",
+      "legal_name": "Finley Hospital"
+    },
+    {
+      "id": null,
+      "legal_name": "Minnesota Department of Agriculture"
+    },
+    {
+      "id": null,
+      "legal_name": "International Association of Environmental Mutagenesis and Genomics Societies"
+    },
+    {
+      "id": null,
+      "legal_name": "V. Kann Rasmussen Foundation"
+    },
+    {
+      "id": "re3data_____::745ea0b80cca3eeb16f95f7154fa4c54",
+      "legal_name": "W.K. Kellogg Foundation"
+    },
+    {
+      "id": null,
+      "legal_name": "David Library of the American Revolution"
+    },
+    {
+      "id": null,
+      "legal_name": "Rett Syndrome Research Trust"
+    },
+    {
+      "id": "nsf_________::Wake_Forest_University",
+      "legal_name": "Wake Forest University"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801170595",
+      "legal_name": "Oklahoma State University System - Oklahoma State University Medical Center"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802074281",
+      "legal_name": "Gulf of Mexico Foundation"
+    },
+    {
+      "id": "nsf_________::InferLink_Corporation",
+      "legal_name": "Infolenz Corporation"
+    },
+    {
+      "id": null,
+      "legal_name": "Aerotech Research (United States)"
+    },
+    {
+      "id": "re3data_____::a29a713bf63ff6d0bf94d3406219d364",
+      "legal_name": "National Institutes of Health, National Institute of Diabetes and Digestive and Kidney Diseases"
+    },
+    {
+      "id": null,
+      "legal_name": "Technology Access Foundation"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/60922557",
+      "legal_name": "Upper Iowa University"
+    },
+    {
+      "id": "nsf_________::INTELLIGENT_OPTICAL_SYSTEMS__INC",
+      "legal_name": "Intelligent Optical Systems (United States)"
+    },
+    {
+      "id": null,
+      "legal_name": "Lynn Health Science Institute"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/1301991143",
+      "legal_name": "American Bar Association"
+    },
+    {
+      "id": "nsf_________::EndoMetric__LLC",
+      "legal_name": "EndoMetric, LLC"
+    },
+    {
+      "id": null,
+      "legal_name": "SUNY - Jefferson Community College"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/1320395740",
+      "legal_name": "Federal Deposit Insurance Corporation"
+    },
+    {
+      "id": "opendoar____::Pepperdine_University",
+      "legal_name": "Pepperdine University"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/1316158181",
+      "legal_name": "Fort Belvoir Community Hospital"
+    },
+    {
+      "id": null,
+      "legal_name": "Arkansas Community Colleges"
+    },
+    {
+      "id": "nsf_________::Indian_Hills_Community_College",
+      "legal_name": "Indian Hills Community College"
+    },
+    {
+      "id": null,
+      "legal_name": "Denver School of Nursing"
+    },
+    {
+      "id": null,
+      "legal_name": "Talking Fingers (United States)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/94746745",
+      "legal_name": "Massasoit Community College"
+    },
+    {
+      "id": null,
+      "legal_name": "NOAA - Southwest Fisheries Science Center"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/118458328",
+      "legal_name": "Spelman College"
+    },
+    {
+      "id": "nsf_________::Maine_Discovery_Museum",
+      "legal_name": "Maine Discovery Museum"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800729682",
+      "legal_name": "Iowa Lakes Community College"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/1289422878",
+      "legal_name": "Dartmouth\u2013Hitchcock Medical Center"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/84360360",
+      "legal_name": "College of Saint Benedict and Saint John's University"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799785534",
+      "legal_name": "Eastern Shore Hospital Center"
+    },
+    {
+      "id": null,
+      "legal_name": "Environmental and Occupational Health Sciences Institute"
+    },
+    {
+      "id": null,
+      "legal_name": "Carl Wilson Foundation"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2801730634",
+      "legal_name": "St. Louis Public Library"
+    },
+    {
+      "id": "nsf_________::Orlando_Science_Center",
+      "legal_name": "Orlando Science Center"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2802826586",
+      "legal_name": "Spring Valley Hospital"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800489302",
+      "legal_name": "IHC - Logan Regional Hospital"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/36721757",
+      "legal_name": "Consol Energy (United States)"
+    },
+    {
+      "id": null,
+      "legal_name": "Hunter Defense Technologies (United States)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2800016486",
+      "legal_name": "North Carolina Community College System"
+    },
+    {
+      "id": null,
+      "legal_name": "South Dakota Department of Health"
+    },
+    {
+      "id": "nsf_________::Innovative_Micro_Technology",
+      "legal_name": "Innovative Micro Technology (United States)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799885155",
+      "legal_name": "James Cancer Hospital"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/66772239",
+      "legal_name": "National Conference of State Legislatures"
+    },
+    {
+      "id": null,
+      "legal_name": "Korean Resource Center"
+    },
+    {
+      "id": null,
+      "legal_name": "SpectraDynamics (United States)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/51885818",
+      "legal_name": "RJ Lee Group (United States)"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/2799640157",
+      "legal_name": "Astronomical Society of the Pacific"
+    },
+    {
+      "id": "doajarticles::Florida_State_University_College_of_Medicine",
+      "legal_name": "Florida State University College of Medicine"
+    }
+  ],
+  "Uruguay": [
+    {
+      "id": "corda_______::972358265",
+      "legal_name": "EDL S.A."
+    }
+  ],
+  "Venezuela": [
+    {
+      "id": null,
+      "legal_name": "Escuela Campo Alegre"
+    }
+  ],
+  "Vietnam": [
+    {
+      "id": null,
+      "legal_name": "Haiphong Private University"
+    },
+    {
+      "id": "https://academic.microsoft.com/#/detail/121799043",
+      "legal_name": "Electric Power University"
+    },
+    {
+      "id": null,
+      "legal_name": "Institute of Population, Health and Development"
+    }
+  ]
+}

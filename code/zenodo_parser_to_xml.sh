@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# THIS SCRIPT IS USED IN ORDER TO AGGREGATE THE RECORDS CONTAINED IN THE DUMPS PROVIDED BY ZENODO. IN ORDER
-# TO RUN THE SCRIPT IT MUST BE PROVIDED BOTH THE PATH TO THE UNCOMPRESSED FILE WHICH CONTAINS THE DUMP AND
-# THE PATH WHERE THE FINAL XML FILE HAS TO BE SAVED.
+# This script aggregates the records provided by the Zenodo's dumps in a XML file which is provided by the user.
+# In order to run the script two positional arguments must be provided, that is, the path to the uncompressed dump
+# and the path where the XML have to be saved.
 #
-# HERE IS AN EXAMPLE: bash zenodo_parser_to_xml.sh path/to/uncompressed/file path/where/to/save/file.xml
-#
+# EXAMPLE: bash zenodo_parser_to_xml.sh path/to/dump path/where/the/file/have/to/be/saved.xml
 
 declare -r to_remove='<?xml version="1.0" encoding="UTF-8"?>'
 
