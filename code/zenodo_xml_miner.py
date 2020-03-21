@@ -2,18 +2,24 @@ import json
 
 from collections import defaultdict
 from lxml import etree
+from tqdm import tqdm
 
-root = etree.parse('../datasets/in/zenodo_organizations.xml').getroot()
+root = etree.parse('./zenodo_organizations.xml').getroot()
 tag = '{http://namespace.openaire.eu/oaf}organization'
 
 data = defaultdict(list)
 
-for organization in root.iter(tag):
+records = 0
+
+for organization in tqdm(root.iter(tag)):
     country = organization.find('country').attrib['classname']
     legalname = organization.find('legalname').text
     original_id = organization.find('originalId').text
 
-    data[country].append({'legal_name': legalname, 'id': original_id})
+    if original_id is not None and country != '':
+        data[country].append({'legal_name': legalname, 'id': original_id})
+
+    records += 1
 
 with open('../datasets/in/zenodo_organizations.json', 'w') as f:
     json.dump(data, f, sort_keys=True, indent=2)

@@ -21,9 +21,9 @@ if [ -f $1 ]; then
         echo $xml_record | sed -e "s/^$to_remove//" >> $2
 
 
-        if [ $i -eq 1000 ]; then
-            break
-        fi
+        # if [ $i -eq 9999 ]; then
+        #     break
+        # fi
 
         ((i=i+1))
     done < $1
