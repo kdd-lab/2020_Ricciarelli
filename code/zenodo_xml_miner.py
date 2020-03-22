@@ -1,10 +1,11 @@
 import json
+import sys
 
 from collections import defaultdict
 from lxml import etree
 from tqdm import tqdm
 
-root = etree.parse('./zenodo_organizations.xml').getroot()
+root = etree.parse(sys.argv[1]).getroot()
 tag = '{http://namespace.openaire.eu/oaf}organization'
 
 data = defaultdict(list)

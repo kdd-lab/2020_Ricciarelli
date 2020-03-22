@@ -9,6 +9,10 @@
 declare -r to_remove='<?xml version="1.0" encoding="UTF-8"?>'
 
 if [ -f $1 ]; then
+    gunzip -dk $1
+
+    uncompressed_file=`echo $1 | cut -d "." -f 1`
+
     touch $2
 
     printf '<?xml version="1.0" encoding="UTF-8"?>\n<data>\n' >> $2
@@ -21,12 +25,12 @@ if [ -f $1 ]; then
         echo $xml_record | sed -e "s/^$to_remove//" >> $2
 
 
-        # if [ $i -eq 9999 ]; then
-        #     break
-        # fi
+        if [ $i -eq 4 ]; then
+            break
+        fi
 
         ((i=i+1))
-    done < $1
+    done < $uncompressed_file
 
     printf '</data>' >> $2
 else

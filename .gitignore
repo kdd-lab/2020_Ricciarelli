@@ -1,3 +1,9 @@
+# DOCX files
+*.docx
+
+# XML files
+*.xml
+
 # OSX related files
 .DS_Store
 
