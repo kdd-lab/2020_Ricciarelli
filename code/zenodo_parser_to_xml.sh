@@ -20,14 +20,13 @@ if [ -f $1 ]; then
     i=0
 
     while read line; do
+        # if [ $i -eq 19 ]; then
+        #     break
+        # fi
+
         xml_record=`echo $line | jq '.body."$binary"' -r | base64 --decode | bsdtar -x -O`
 
         echo $xml_record | sed -e "s/^$to_remove//" >> $2
-
-
-        if [ $i -eq 4 ]; then
-            break
-        fi
 
         ((i=i+1))
     done < $uncompressed_file
