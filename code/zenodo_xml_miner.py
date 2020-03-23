@@ -5,37 +5,40 @@ from collections import defaultdict
 from lxml import etree
 from tqdm import tqdm
 
-root = etree.parse(sys.argv[1]).getroot()
+data, xml_name = None, sys.argv[1].split('_')[1]
 
-tag, data, xml_file = None, None, sys.argv[1].split('_')[1]
+with open(sys.argv[1], 'r') as xml_file:
+    data = defaultdict(list) if xml_name == 'organizations' else dict()
 
-if xml_file == 'organizations':
-    tag = '{http://namespace.openaire.eu/oaf}organization'
-    data = defaultdict(list)
-elif xml_file == 'h2020':
-    tag = '{http://namespace.openaire.eu/oaf}result'
-    data = dict()
+    xml_file.readline()
+    xml_file.readline()
 
-for record in tqdm(root.iter(tag)):
-    if xml_file == 'organizations':
-        country = record.find('country').attrib['classname']
-        legalname = record.find('legalname').text
-        original_id = record.find('originalId').text
+    for record in tqdm(xml_file):
+        r = None
 
-        if original_id is not None and country != '':
-            data[country].append({'legal_name': legalname, 'id': original_id})
-    elif xml_file == 'h2020':
-        creators = record.findall('creator')
+        try:
+            r = etree.XML(record)
+        except Exception as e:
+            break
 
-        for creator in creators:
-            attributes = dict(creator.attrib)
+        if xml_name == 'organizations':
+            country = r.find('.//country').attrib['classname']
+            legalname = r.find('.//legalname').text
+            original_id = r.find('.//originalId').text
 
-            for attr in ['rank', 'name', 'surname']:
-                if attr in attributes.keys():
-                    del attributes[attr]
+            if original_id is not None and country != '':
+                data[country].append({'legal_name': legalname,
+                                     'id': original_id})
+        elif xml_name == 'h2020' or xml_name == 'fp7':
+            for creator in r.findall('.//creator'):
+                attributes = dict(creator.attrib)
 
-            if len(list(attributes.keys())) != 0:
-                data[creator.text.lower()] = attributes
+                for attr in ['rank', 'name', 'surname']:
+                    if attr in attributes.keys():
+                        del attributes[attr]
 
-with open('../datasets/in/zenodo_{}.json'.format(xml_file), 'w') as f:
+                if len(list(attributes.keys())) != 0:
+                    data[creator.text.lower()] = attributes
+
+with open('../datasets/in/zenodo_{}.json'.format(xml_name), 'w') as f:
     json.dump(data, f, sort_keys=True, indent=2)

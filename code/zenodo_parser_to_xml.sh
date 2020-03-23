@@ -17,7 +17,7 @@ if [ -f $1 ]; then
 
     printf '<?xml version="1.0" encoding="UTF-8"?>\n<data>\n' >> $2
 
-    i=0
+    # i=0
 
     while read line; do
         # if [ $i -eq 19 ]; then
@@ -28,7 +28,7 @@ if [ -f $1 ]; then
 
         echo $xml_record | sed -e "s/^$to_remove//" >> $2
 
-        ((i=i+1))
+        # ((i=i+1))
     done < $uncompressed_file
 
     printf '</data>' >> $2
