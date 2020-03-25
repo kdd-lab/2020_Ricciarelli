@@ -35,7 +35,7 @@ with open(sys.argv[1], 'r') as xml_file:
             if original_id is not None and country != '':
                 data[country].append({'legal_name': legalname,
                                      'id': original_id})
-        elif xml_name == 'h2020' or xml_name == 'fp7':
+        else:
             creators = r.findall('.//creator')
             researchers_per_project.append(len(creators))
 
