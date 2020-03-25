@@ -10,3 +10,5 @@ can be freely processed via script or via XML parser.
 previous script and extracts the informations contained in every record, 
 finally saving them as ease-to-read CSV files that can be found in the 
 *datasets* directory. The script also builds a JSON archive for every XML file.
+* The *notebook* subdirectory contains the Python notebooks I used for a more
+visual approach to the analysis of some of the datasets I studied.
