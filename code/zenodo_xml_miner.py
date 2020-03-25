@@ -51,8 +51,13 @@ with open(sys.argv[1], 'r') as xml_file:
 
                 if creator.text is not None and 'name' in attributes.keys()  \
                         and 'surname' in attributes.keys():
-                    name = attributes['name'].lower() + ' ' + \
-                        attributes['surname'].lower()
+                    nn = attributes['name'].lower()
+                    ss = attributes['surname'].lower()
+
+                    if nn[0] == ' ':
+                        nn = nn[1:]
+
+                    name = nn + ' ' + ss
 
                     if name not in researchers.keys():
                         researchers_num += 1
