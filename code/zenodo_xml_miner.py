@@ -39,8 +39,12 @@ with open(sys.argv[1], 'r') as xml_file:
             creators = r.findall('.//creator')
             researchers_per_project.append(len(creators))
 
-            [subjects.append(s.text.lower()) for s in r.findall('.//subject')
-             if s.text is not None]
+            subs = [s.text.lower() for s in r.findall('.//subject')
+                    if s.text is not None]
+
+            for s in subs:
+                if s.isalpha() and s != 'article':
+                    subjects.append(s)
 
             for creator in creators:
                 attributes = dict(creator.attrib)
@@ -84,8 +88,14 @@ if xml_name != 'organizations':
          'Most popular Subject': subjects.most_common(1)[0][0]}
 
     pd.DataFrame(data=d, index=[0]).\
-        to_csv(path_or_buf='../datasets/in/zenodo_{}_statistics.csv'
+        to_csv(path_or_buf='../datasets/zenodo/zenodo_{}_statistics.csv'
                .format(xml_name), index=False)
+
+    pd.DataFrame(data=subjects.values(), index=subjects.keys(),
+                 columns=['Counter']).\
+        to_csv(
+            path_or_buf='../datasets/zenodo/zenodo_{}_subjects_statistics.csv'
+            .format(xml_name))
 
 with open('../datasets/zenodo/zenodo_{}.json'.format(xml_name), 'w') as f:
     json.dump(data if xml_name == 'organizations' else researchers, f,
