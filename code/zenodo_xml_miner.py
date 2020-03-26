@@ -5,6 +5,8 @@ import sys
 
 from collections import Counter, defaultdict
 from lxml import etree
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 from tqdm import tqdm
 
 xml_name = sys.argv[1].split('_')[1]
@@ -14,6 +16,8 @@ researchers = dict() if xml_name != 'organizations' else None
 
 researchers_num, researchers_with_MAG, projects_per_researcher = 0, 0, 0
 researchers_per_project, subjects = list(), list()
+
+stopwords = stopwords.words('english')
 
 with open(sys.argv[1], 'r') as xml_file:
     xml_file.readline()
@@ -42,8 +46,11 @@ with open(sys.argv[1], 'r') as xml_file:
             subs = [s.text.lower() for s in r.findall('.//subject')
                     if s.text is not None]
 
+            subs = ' '.join(subs)
+            subs = word_tokenize(subs)
+
             for s in subs:
-                if s.isalpha() and s != 'article':
+                if s.isalpha() and s != 'article' and s not in stopwords:
                     subjects.append(s)
 
             for creator in creators:
@@ -102,6 +109,7 @@ if xml_name != 'organizations':
             path_or_buf='../datasets/zenodo/zenodo_{}_subjects_statistics.csv'
             .format(xml_name))
 
-with open('../datasets/zenodo/zenodo_{}.json'.format(xml_name), 'w') as f:
-    json.dump(data if xml_name == 'organizations' else researchers, f,
-              sort_keys=True, indent=2)
+if input('\nSAVE JSON?[Y/N]') == 'Y':
+    with open('../datasets/zenodo/zenodo_{}.json'.format(xml_name), 'w') as f:
+        json.dump(data if xml_name == 'organizations' else researchers, f,
+                  sort_keys=True, indent=2)
