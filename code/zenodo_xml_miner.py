@@ -121,7 +121,7 @@ if xml_name != 'organizations':
 if input('\nSAVE JSONL?[Y/N] ') == 'Y':
     with open('../datasets/zenodo_json_xml/zenodo_{}.jsonl'.format(xml_name),
               'w') as f:
-        for n in researchers.keys():
+        for n in tqdm(researchers.keys(), desc='SAVING JSONL'):
             to_write = dict()
 
             for a in researchers[n].keys():
