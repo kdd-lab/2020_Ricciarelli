@@ -33,7 +33,8 @@ with open(sys.argv[1], 'r') as xml_file:
                 data[country].append({'legal_name': legalname,
                                      'id': original_id})
         else:
-            project_title = r.find('.//title').text.lower()
+            project_title = r.find('.//title').text.lower() if \
+                r.find('.//title').text is not None else None
             d_of_acc = r.find('.//dateofacceptance').text
             relevant_date = r.find('.//relevantdate').text
 
@@ -43,11 +44,7 @@ with open(sys.argv[1], 'r') as xml_file:
             subs = [s.text.lower() for s in r.findall('.//subject')
                     if s.text is not None]
 
-            # subs = ' '.join(subs)
-            # subs = word_tokenize(subs)
-
             for s in subs:
-                # if s.isalpha() and s != 'article' and s not in stopwords:
                 subjects.append(s)
 
             for creator in creators:
@@ -121,7 +118,7 @@ if xml_name != 'organizations':
             path_or_buf='../datasets/zenodo/zenodo_{}_subjects_statistics.csv'
             .format(xml_name))
 
-if input('\nSAVE JSONL?[Y/N]') == 'Y':
+if input('\nSAVE JSONL?[Y/N] ') == 'Y':
     with open('../datasets/zenodo_json_xml/zenodo_{}.jsonl'.format(xml_name),
               'w') as f:
         for n in researchers.keys():
@@ -134,6 +131,3 @@ if input('\nSAVE JSONL?[Y/N]') == 'Y':
 
             json.dump(to_write if xml_name != 'organization' else data, f)
             f.write('\n')
-
-        # json.dump(data if xml_name == 'organizations' else researchers, f,
-        #           sort_keys=True, indent=2)
