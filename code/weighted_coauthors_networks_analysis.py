@@ -8,7 +8,7 @@ from collections import Counter
 
 path_to_nets = '../datasets/coauthors_networks/network_weight/'
 
-g, years = None, np.arange(1960, 1970)
+g, years = None, np.arange(1970, 1980)
 
 nodes, edges, densities, avg_cc, transitivities, eccen, diameters, rads = \
     list(), list(), list(), list(), list(), list(), list(), list()
