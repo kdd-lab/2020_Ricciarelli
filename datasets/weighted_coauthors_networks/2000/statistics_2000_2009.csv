@@ -1,11 +1,11 @@
-,Nodes,Edges,Density,AVG Clustering Coefficient,Trasitivity,Eccentricity,Diameter,Radius,Transitivity
-2000,1.26e+06,9.42e+05,1.18e-06,0.e+00,,inf,inf,inf,0.e+00
-2001,1.33e+06,9.91e+05,1.13e-06,0.e+00,,inf,inf,inf,0.e+00
-2002,1.45e+06,1.09e+06,1.03e-06,0.e+00,,inf,inf,inf,0.e+00
-2003,1.56e+06,1.17e+06,9.66e-07,0.e+00,,inf,inf,inf,0.e+00
-2004,1.71e+06,1.29e+06,8.84e-07,0.e+00,,inf,inf,inf,0.e+00
-2005,1.88e+06,1.42e+06,8.04e-07,0.e+00,,inf,inf,inf,0.e+00
-2006,2.11e+06,1.6e+06,7.18e-07,0.e+00,,inf,inf,inf,0.e+00
-2007,2.29e+06,1.74e+06,6.63e-07,0.e+00,,inf,inf,inf,0.e+00
-2008,2.52e+06,1.92e+06,6.05e-07,0.e+00,,inf,inf,inf,0.e+00
-2009,2.72e+06,2.07e+06,5.58e-07,0.e+00,,inf,inf,inf,0.e+00
+Year,Nodes,Edges,Density,Average Clustering Coefficient,Transitivity,Eccentricity,Diameter,Radius
+2000,1.26e+06,9.42e+05,1.18e-06,0.e+00,0.e+00,inf,inf,inf
+2001,1.33e+06,9.91e+05,1.13e-06,0.e+00,0.e+00,inf,inf,inf
+2002,1.45e+06,1.09e+06,1.03e-06,0.e+00,0.e+00,inf,inf,inf
+2003,1.56e+06,1.17e+06,9.66e-07,0.e+00,0.e+00,inf,inf,inf
+2004,1.71e+06,1.29e+06,8.84e-07,0.e+00,0.e+00,inf,inf,inf
+2005,1.88e+06,1.42e+06,8.04e-07,0.e+00,0.e+00,inf,inf,inf
+2006,2.11e+06,1.6e+06,7.18e-07,0.e+00,0.e+00,inf,inf,inf
+2007,2.29e+06,1.74e+06,6.63e-07,0.e+00,0.e+00,inf,inf,inf
+2008,2.52e+06,1.92e+06,6.05e-07,0.e+00,0.e+00,inf,inf,inf
+2009,2.72e+06,2.07e+06,5.58e-07,0.e+00,0.e+00,inf,inf,inf
