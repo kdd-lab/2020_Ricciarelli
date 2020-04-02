@@ -1,11 +1,11 @@
-,Nodes,Edges,Density,AVG Clustering Coefficient,Trasitivity,Eccentricity,Diameter,Radius,Transitivity
-1950,1.4e+04,8.54e+03,8.76e-05,0.e+00,,inf,inf,inf,0.e+00
-1951,1.59e+04,9.79e+03,7.71e-05,0.e+00,,inf,inf,inf,0.e+00
-1952,1.78e+04,1.1e+04,6.92e-05,0.e+00,,inf,inf,inf,0.e+00
-1953,1.98e+04,1.21e+04,6.23e-05,0.e+00,,inf,inf,inf,0.e+00
-1954,2.18e+04,1.33e+04,5.63e-05,0.e+00,,inf,inf,inf,0.e+00
-1955,2.36e+04,1.45e+04,5.22e-05,0.e+00,,inf,inf,inf,0.e+00
-1956,2.62e+04,1.62e+04,4.73e-05,0.e+00,,inf,inf,inf,0.e+00
-1957,2.9e+04,1.81e+04,4.3e-05,0.e+00,,inf,inf,inf,0.e+00
-1958,3.25e+04,2.02e+04,3.83e-05,0.e+00,,inf,inf,inf,0.e+00
-1959,3.67e+04,2.29e+04,3.4e-05,0.e+00,,inf,inf,inf,0.e+00
+Year,Nodes,Edges,Density,Average Clustering Coefficient,Transitivity,Eccentricity,Diameter,Radius
+1950,1.4e+04,8.54e+03,8.76e-05,0.e+00,0.e+00,inf,inf,inf
+1951,1.59e+04,9.79e+03,7.71e-05,0.e+00,0.e+00,inf,inf,inf
+1952,1.78e+04,1.1e+04,6.92e-05,0.e+00,0.e+00,inf,inf,inf
+1953,1.98e+04,1.21e+04,6.23e-05,0.e+00,0.e+00,inf,inf,inf
+1954,2.18e+04,1.33e+04,5.63e-05,0.e+00,0.e+00,inf,inf,inf
+1955,2.36e+04,1.45e+04,5.22e-05,0.e+00,0.e+00,inf,inf,inf
+1956,2.62e+04,1.62e+04,4.73e-05,0.e+00,0.e+00,inf,inf,inf
+1957,2.9e+04,1.81e+04,4.3e-05,0.e+00,0.e+00,inf,inf,inf
+1958,3.25e+04,2.02e+04,3.83e-05,0.e+00,0.e+00,inf,inf,inf
+1959,3.67e+04,2.29e+04,3.4e-05,0.e+00,0.e+00,inf,inf,inf

@@ -8,11 +8,10 @@ from collections import Counter
 
 path_to_nets = '../datasets/coauthors_networks/network_weight/'
 
-g, years = None, np.arange(2000, 2010)
+g, years = None, np.arange(1950, 1960)
 
-statistics = pd.DataFrame(columns=['Nodes', 'Edges', 'Density',
-                                   'AVG Clustering Coefficient', 'Trasitivity',
-                                   'Eccentricity', 'Diameter', 'Radius'])
+nodes, edges, densities, avg_cc, transitivities, eccen, diameters, rads = \
+    list(), list(), list(), list(), list(), list(), list(), list()
 
 if not os.path.isdir('../datasets/weighted_coauthors_networks/{}'
                      .format(years[0])):
@@ -39,19 +38,14 @@ for year in years:
     except Exception as e:
         eccentricity, diameter, radius = np.Inf, np.Inf, np.Inf
 
-    stats = {'Nodes': np.format_float_scientific(nodes_number, 2),
-             'Edges': np.format_float_scientific(edges_number, 2),
-             'Density': np.format_float_scientific(density, 2),
-             'AVG Clustering Coefficient': np.format_float_scientific(
-                avg_clustering_coefficient, 2),
-             'Transitivity': np.format_float_scientific(transitivity, 2),
-             'Eccentricity': eccentricity, 'Diameter': diameter,
-             'Radius': radius}
-
-    stats = pd.Series(list(stats.values()), list(stats.keys()))
-    stats.name = year
-
-    statistics = statistics.append(stats)
+    nodes.append(np.format_float_scientific(nodes_number, 2))
+    edges.append(np.format_float_scientific(edges_number, 2))
+    densities.append(np.format_float_scientific(density, 2))
+    avg_cc.append(np.format_float_scientific(avg_clustering_coefficient, 2))
+    transitivities.append(np.format_float_scientific(transitivity, 2))
+    eccen.append(eccentricity)
+    diameters.append(diameter)
+    rads.append(radius)
 
     degrees = sorted([d for n, d in g.degree(weight='weight')])
 
@@ -216,5 +210,12 @@ for year in years:
                 .format(years[0], year), format='pdf')
     plt.close(fig=fig)
 
+statistics = pd.DataFrame({'Year': years, 'Nodes': nodes, 'Edges': edges,
+                           'Density': densities,
+                           'Average Clustering Coefficient': avg_cc,
+                           'Transitivity': transitivities,
+                           'Eccentricity': eccen, 'Diameter': diameters,
+                           'Radius': rads})
+statistics.set_index('Year', inplace=True)
 statistics.to_csv('../datasets/weighted_coauthors_networks/{}/statistics_'
                   '{}_{}.csv'.format(years[0], years[0], years[-1]))
