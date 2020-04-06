@@ -51,6 +51,5 @@ with open(sys.argv[2], 'w') as edge_list:
                 weight = len(adjacency_d[magid1][magid2][year])
                 projects = ','.join(adjacency_d[magid1][magid2][year])
 
-                edge_list.write('{} {} {} {} {}\n'
-                                .format(magid1, magid2, year, weight,
-                                        projects))
+                edge_list.write('{} {} {} {}\n'
+                                .format(magid1, magid2, year, weight))
