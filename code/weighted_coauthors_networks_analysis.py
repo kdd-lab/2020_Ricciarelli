@@ -59,168 +59,168 @@ for year in years:
     diameters.append(np.format_float_scientific(diameter, 2))
     rads.append(np.format_float_scientific(radius, 2))
 
-    # degrees = sorted([d for n, d in g.degree(weight='weight')])
+    degrees = sorted([d for n, d in g.degree(weight='weight')])
 
-    # fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(10, 10))
+    fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(10, 10))
 
-    # fig.suptitle('Degree Distribution & Probability Density, Year ' +
-    #              str(year), fontsize=20)
+    fig.suptitle('Degree Distribution & Probability Density, Year ' +
+                 str(year), fontsize=20)
 
-    # axs[0].hist(degrees, log=True, zorder=2, color='#3296dc',
-    #             edgecolor='#1f77b4')
-    # axs[0].set_title('Degree Distribution Histogram', fontsize=14)
-    # axs[0].set_xlabel(r'$k$', fontsize=14)
-    # axs[0].set_ylabel(r'$N_k$', fontsize=14)
-    # axs[0].grid(axis='y', linestyle='--', color='black', zorder=1)
-    # axs[0].text(0.65, 0.75, 'mean = {}\nmax = {}\nmin = {}'
-    #             .format(round(np.mean(degrees), 2), max(degrees),
-    #                     min(degrees)),
-    #             bbox=dict(facecolor='white', edgecolor='black'),
-    #             transform=axs[0].transAxes)
+    axs[0].hist(degrees, log=True, zorder=2, color='#3296dc',
+                edgecolor='#1f77b4')
+    axs[0].set_title('Degree Distribution Histogram', fontsize=14)
+    axs[0].set_xlabel(r'$k$', fontsize=14)
+    axs[0].set_ylabel(r'$N_k$', fontsize=14)
+    axs[0].grid(axis='y', linestyle='--', color='black', zorder=1)
+    axs[0].text(0.65, 0.75, 'mean = {}\nmax = {}\nmin = {}'
+                .format(round(np.mean(degrees), 2), max(degrees),
+                        min(degrees)),
+                bbox=dict(facecolor='white', edgecolor='black'),
+                transform=axs[0].transAxes)
 
-    # c, countdict_pdf = Counter(degrees), dict()
+    c, countdict_pdf = Counter(degrees), dict()
 
-    # for deg in np.arange(min(degrees), max(degrees) + 1):
-    #     countdict_pdf[deg] = (c[deg] / len(degrees)) if deg in c.keys() else 0.
+    for deg in np.arange(min(degrees), max(degrees) + 1):
+        countdict_pdf[deg] = (c[deg] / len(degrees)) if deg in c.keys() else 0.
 
-    # axs[1].scatter(list(countdict_pdf.keys()), list(countdict_pdf.values()),
-    #                zorder=2, alpha=0.7, color='#3296dc', edgecolor='#1f77b4')
-    # axs[1].set_title('Probability Density Distribution', fontsize=14)
-    # axs[1].set_xscale('log')
-    # axs[1].set_xlim(min(countdict_pdf.keys()), max(countdict_pdf.keys()) + 50)
-    # axs[1].set_yscale('log')
-    # axs[1].set_ylim(1e-7, 1.)
-    # axs[1].set_xlabel(r'$k$', fontsize=14)
-    # axs[1].set_ylabel(r'$p_k$', fontsize=14)
-    # axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
+    axs[1].scatter(list(countdict_pdf.keys()), list(countdict_pdf.values()),
+                   zorder=2, alpha=0.7, color='#3296dc', edgecolor='#1f77b4')
+    axs[1].set_title('Probability Density Distribution', fontsize=14)
+    axs[1].set_xscale('log')
+    axs[1].set_xlim(min(countdict_pdf.keys()), max(countdict_pdf.keys()) + 50)
+    axs[1].set_yscale('log')
+    axs[1].set_ylim(1e-7, 1.)
+    axs[1].set_xlabel(r'$k$', fontsize=14)
+    axs[1].set_ylabel(r'$p_k$', fontsize=14)
+    axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
 
-    # fig.tight_layout(rect=[0, 0.03, 1, 0.90])
-    # fig.savefig('../datasets/weighted_coauthors_networks/{}/'
-    #             'degree_distribution_probability_distribution_{}.pdf'
-    #             .format(years[0], year), format='pdf')
-    # plt.close(fig=fig)
+    fig.tight_layout(rect=[0, 0.03, 1, 0.90])
+    fig.savefig('../datasets/weighted_coauthors_networks/{}/'
+                'degree_distribution_probability_distribution_{}.pdf'
+                .format(years[0], year), format='pdf')
+    plt.close(fig=fig)
 
-    # weights = sorted([edge[-1]['weight'] for edge in g.edges(data=True)])
+    weights = sorted([edge[-1]['weight'] for edge in g.edges(data=True)])
 
-    # fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(10, 10))
+    fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(10, 10))
 
-    # fig.suptitle('Weights Distribution & Probability Density, Year '
-    #              + str(year), fontsize=20)
+    fig.suptitle('Weights Distribution & Probability Density, Year '
+                 + str(year), fontsize=20)
 
-    # axs[0].hist(weights, log=True, zorder=2, color='#3296dc',
-    #             edgecolor='#1f77b4')
-    # axs[0].set_title('Weight Distribution Histogram', fontsize=14)
-    # axs[0].set_xlabel(r'$w$', fontsize=14)
-    # axs[0].set_ylabel(r'$N_w$', fontsize=14)
-    # axs[0].grid(axis='y', linestyle='--', color='black', zorder=1)
-    # axs[0].text(0.65, 0.75, 'mean = {}\nmax = {}\nmin = {}'
-    #             .format(round(np.mean(weights), 2), max(weights),
-    #                     min(weights)),
-    #             bbox=dict(facecolor='white', edgecolor='black'),
-    #             transform=axs[0].transAxes)
+    axs[0].hist(weights, log=True, zorder=2, color='#3296dc',
+                edgecolor='#1f77b4')
+    axs[0].set_title('Weight Distribution Histogram', fontsize=14)
+    axs[0].set_xlabel(r'$w$', fontsize=14)
+    axs[0].set_ylabel(r'$N_w$', fontsize=14)
+    axs[0].grid(axis='y', linestyle='--', color='black', zorder=1)
+    axs[0].text(0.65, 0.75, 'mean = {}\nmax = {}\nmin = {}'
+                .format(round(np.mean(weights), 2), max(weights),
+                        min(weights)),
+                bbox=dict(facecolor='white', edgecolor='black'),
+                transform=axs[0].transAxes)
 
-    # c, countdict_pdf = Counter(weights), dict()
+    c, countdict_pdf = Counter(weights), dict()
 
-    # for weight in np.arange(min(weights), max(weights) + 1):
-    #     countdict_pdf[weight] = (c[weight] / len(weights)) \
-    #         if weight in c.keys() else 0.
+    for weight in np.arange(min(weights), max(weights) + 1):
+        countdict_pdf[weight] = (c[weight] / len(weights)) \
+            if weight in c.keys() else 0.
 
-    # axs[1].scatter(list(countdict_pdf.keys()), list(countdict_pdf.values()),
-    #                zorder=2, alpha=0.7, color='#3296dc', edgecolor='#1f77b4')
-    # axs[1].set_title('Probability Density Distribution', fontsize=14)
-    # axs[1].set_xscale('log')
-    # axs[1].set_xlim(min(countdict_pdf.keys()), max(countdict_pdf.keys()) + 50)
-    # axs[1].set_yscale('log')
-    # axs[1].set_ylim(1e-7, 1.)
-    # axs[1].set_xlabel(r'$w$', fontsize=14)
-    # axs[1].set_ylabel(r'$p_w$', fontsize=14)
-    # axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
+    axs[1].scatter(list(countdict_pdf.keys()), list(countdict_pdf.values()),
+                   zorder=2, alpha=0.7, color='#3296dc', edgecolor='#1f77b4')
+    axs[1].set_title('Probability Density Distribution', fontsize=14)
+    axs[1].set_xscale('log')
+    axs[1].set_xlim(min(countdict_pdf.keys()), max(countdict_pdf.keys()) + 50)
+    axs[1].set_yscale('log')
+    axs[1].set_ylim(1e-7, 1.)
+    axs[1].set_xlabel(r'$w$', fontsize=14)
+    axs[1].set_ylabel(r'$p_w$', fontsize=14)
+    axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
 
-    # fig.tight_layout(rect=[0, 0.03, 1, 0.90])
-    # fig.savefig('../datasets/weighted_coauthors_networks/{}/weight_'
-    #             'distribution_probability_distribution_{}.pdf'
-    #             .format(years[0], year), format='pdf')
-    # plt.close(fig=fig)
+    fig.tight_layout(rect=[0, 0.03, 1, 0.90])
+    fig.savefig('../datasets/weighted_coauthors_networks/{}/weight_'
+                'distribution_probability_distribution_{}.pdf'
+                .format(years[0], year), format='pdf')
+    plt.close(fig=fig)
 
-    # degree_centrality = sorted([v for k, v in nx.degree_centrality(g).items()])
+    degree_centrality = sorted([v for k, v in nx.degree_centrality(g).items()])
 
-    # fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 5))
+    fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 5))
 
-    # fig.suptitle('Degree Centrality Distribution, Year ' + str(year),
-    #              fontsize=20)
+    fig.suptitle('Degree Centrality Distribution, Year ' + str(year),
+                 fontsize=20)
 
-    # axs.hist(degree_centrality, log=True, zorder=2, color='#3296dc',
-    #          edgecolor='#1f77b4')
-    # axs.set_xlabel(r'$C_D$', fontsize=14)
-    # axs.set_ylabel(r'$N_{C_D}$', fontsize=14)
-    # axs.grid(axis='y', linestyle='--', color='black', zorder=1)
-    # axs.text(0.65, 0.75, 'mean = {}\nmax = {}\nmin = {}'
-    #          .format(np.format_float_scientific(np.mean(degree_centrality), 2),
-    #                  np.format_float_scientific(max(degree_centrality), 2),
-    #                  np.format_float_scientific(min(degree_centrality), 2)),
-    #          bbox=dict(facecolor='white', edgecolor='black'),
-    #          transform=axs.transAxes)
+    axs.hist(degree_centrality, log=True, zorder=2, color='#3296dc',
+             edgecolor='#1f77b4')
+    axs.set_xlabel(r'$C_D$', fontsize=14)
+    axs.set_ylabel(r'$N_{C_D}$', fontsize=14)
+    axs.grid(axis='y', linestyle='--', color='black', zorder=1)
+    axs.text(0.65, 0.75, 'mean = {}\nmax = {}\nmin = {}'
+             .format(np.format_float_scientific(np.mean(degree_centrality), 2),
+                     np.format_float_scientific(max(degree_centrality), 2),
+                     np.format_float_scientific(min(degree_centrality), 2)),
+             bbox=dict(facecolor='white', edgecolor='black'),
+             transform=axs.transAxes)
 
-    # fig.tight_layout(rect=[0, 0.03, 1, 0.90])
-    # fig.savefig('../datasets/weighted_coauthors_networks/{}/degree_centrality'
-    #             '_distribution_{}.pdf'.format(years[0], year), format='pdf')
-    # plt.close(fig=fig)
+    fig.tight_layout(rect=[0, 0.03, 1, 0.90])
+    fig.savefig('../datasets/weighted_coauthors_networks/{}/degree_centrality'
+                '_distribution_{}.pdf'.format(years[0], year), format='pdf')
+    plt.close(fig=fig)
 
-    # closeness_centrality = sorted(
-    #     [v for k, v in nx.closeness_centrality(g).items()])
+    closeness_centrality = sorted(
+        [v for k, v in nx.closeness_centrality(g).items()])
 
-    # fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 5))
+    fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 5))
 
-    # fig.suptitle('Closeness Centrality Distribution, Year ' + str(year),
-    #              fontsize=20)
+    fig.suptitle('Closeness Centrality Distribution, Year ' + str(year),
+                 fontsize=20)
 
-    # axs.hist(closeness_centrality, log=True, zorder=2, color='#3296dc',
-    #          edgecolor='#1f77b4')
-    # axs.set_xlabel(r'$C$', fontsize=14)
-    # axs.set_ylabel(r'$N_{C}$', fontsize=14)
-    # axs.grid(axis='y', linestyle='--', color='black', zorder=1)
-    # axs.text(0.65, 0.75, 'mean = {}\nmax = {}\nmin = {}'
-    #          .format(np.format_float_scientific(np.mean(closeness_centrality),
-    #                                             2),
-    #                  np.format_float_scientific(max(closeness_centrality), 2),
-    #                  np.format_float_scientific(min(closeness_centrality), 2)),
-    #          bbox=dict(facecolor='white', edgecolor='black'),
-    #          transform=axs.transAxes)
+    axs.hist(closeness_centrality, log=True, zorder=2, color='#3296dc',
+             edgecolor='#1f77b4')
+    axs.set_xlabel(r'$C$', fontsize=14)
+    axs.set_ylabel(r'$N_{C}$', fontsize=14)
+    axs.grid(axis='y', linestyle='--', color='black', zorder=1)
+    axs.text(0.65, 0.75, 'mean = {}\nmax = {}\nmin = {}'
+             .format(np.format_float_scientific(np.mean(closeness_centrality),
+                                                2),
+                     np.format_float_scientific(max(closeness_centrality), 2),
+                     np.format_float_scientific(min(closeness_centrality), 2)),
+             bbox=dict(facecolor='white', edgecolor='black'),
+             transform=axs.transAxes)
 
-    # fig.tight_layout(rect=[0, 0.03, 1, 0.90])
-    # fig.savefig('../datasets/weighted_coauthors_networks/{}/'
-    #             'closeness_centrality_distribution_{}.pdf'
-    #             .format(years[0], year), format='pdf')
-    # plt.close(fig=fig)
+    fig.tight_layout(rect=[0, 0.03, 1, 0.90])
+    fig.savefig('../datasets/weighted_coauthors_networks/{}/'
+                'closeness_centrality_distribution_{}.pdf'
+                .format(years[0], year), format='pdf')
+    plt.close(fig=fig)
 
-    # betweenness_centrality = sorted(
-    #     [v for k, v in nx.betweenness_centrality(g, k=10, weight='weight').
-    #         items()])
+    betweenness_centrality = sorted(
+        [v for k, v in nx.betweenness_centrality(g, k=10, weight='weight').
+            items()])
 
-    # fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 5))
+    fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 5))
 
-    # fig.suptitle('Betweenness Centrality Distribution, Year ' + str(year),
-    #              fontsize=20)
+    fig.suptitle('Betweenness Centrality Distribution, Year ' + str(year),
+                 fontsize=20)
 
-    # axs.hist(betweenness_centrality, log=True, zorder=2, color='#3296dc',
-    #          edgecolor='#1f77b4')
-    # axs.set_xlabel(r'$B$', fontsize=14)
-    # axs.set_ylabel(r'$N_{B}$', fontsize=14)
-    # axs.grid(axis='y', linestyle='--', color='black', zorder=1)
-    # axs.text(0.65, 0.75, 'mean = {}\nmax = {}\nmin = {}'
-    #          .format(np.format_float_scientific(np.mean(betweenness_centrality)
-    #                                             , 2),
-    #                  np.format_float_scientific(max(betweenness_centrality), 2)
-    #                  , np.format_float_scientific(min(betweenness_centrality),
-    #                                               2)),
-    #          bbox=dict(facecolor='white', edgecolor='black'),
-    #          transform=axs.transAxes)
+    axs.hist(betweenness_centrality, log=True, zorder=2, color='#3296dc',
+             edgecolor='#1f77b4')
+    axs.set_xlabel(r'$B$', fontsize=14)
+    axs.set_ylabel(r'$N_{B}$', fontsize=14)
+    axs.grid(axis='y', linestyle='--', color='black', zorder=1)
+    axs.text(0.65, 0.75, 'mean = {}\nmax = {}\nmin = {}'
+             .format(np.format_float_scientific(np.mean(betweenness_centrality)
+                                                , 2),
+                     np.format_float_scientific(max(betweenness_centrality), 2)
+                     , np.format_float_scientific(min(betweenness_centrality),
+                                                  2)),
+             bbox=dict(facecolor='white', edgecolor='black'),
+             transform=axs.transAxes)
 
-    # fig.tight_layout(rect=[0, 0.03, 1, 0.90])
-    # fig.savefig('../datasets/weighted_coauthors_networks/{}/'
-    #             'betweenness_centrality_distribution_{}.pdf'
-    #             .format(years[0], year), format='pdf')
-    # plt.close(fig=fig)
+    fig.tight_layout(rect=[0, 0.03, 1, 0.90])
+    fig.savefig('../datasets/weighted_coauthors_networks/{}/'
+                'betweenness_centrality_distribution_{}.pdf'
+                .format(years[0], year), format='pdf')
+    plt.close(fig=fig)
 
 statistics = pd.DataFrame({'Year': years, 'Nodes': nodes, 'Edges': edges,
                            'Density': densities,

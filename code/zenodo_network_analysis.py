@@ -1,3 +1,4 @@
+import json
 import networkx as nx
 import numpy as np
 import pandas as pd
@@ -5,45 +6,70 @@ import sys
 
 from tqdm import tqdm
 
-edges_x, edges_y, years, weights = list(), list(), list(), list()
+edges_x, edges_y, years, paper_project_titles, weights = list(), \
+    list(), list(), list(), list()
 
 with open(sys.argv[1], 'r') as edge_list:
     for edge in tqdm(edge_list, desc='READING EDGE LIST'):
-        params = edge.strip().split(' ')
+        params = json.loads(edge.strip())
+        edge_x = list(params.keys())[0]
 
-        edges_x.append(params[0])
-        edges_y.append(params[1])
-        years.append(params[2])
-        weights.append(params[3])
+        for edge_y in params[edge_x]:
+            for year in params[edge_x][edge_y]:
+                edges_x.append(edge_x)
+                edges_y.append(edge_y)
+                years.append(year)
+                paper_project_titles.append(params[edge_x][edge_y][year])
+                weights.append(len(params[edge_x][edge_y][year]))
 
 df = pd.DataFrame({'X': edges_x, 'Y': edges_y, 'Year': years,
-                  'Weight': weights})
+                  'Infos': paper_project_titles, 'Weight': weights})
 
-net_2010 = df[df.Year == '2010']
 g = nx.Graph()
 
-for row in tqdm(net_2010.itertuples(), desc='BUILDING THE NETWORK'):
-    g.add_edge(row[1], row[2], year=row[3], weight=int(row[4]))
+year, nodes, edges, densities, avg_cc, transitivities, diameters, rads = \
+    list(), list(), list(), list(), list(), list(), list(), list()
 
-nodes_number = g.number_of_nodes()
-edges_number = g.number_of_edges()
-density = nx.density(g)
+for year in sorted(df.Year.unique()):
+    subgraph = df[df.Year == year]
 
-avg_clustering_coefficient = list()
-transitivity = list()
-diameter, radius = list(), list()
+    for row in tqdm(subgraph.itertuples(),
+                    desc='YEAR {}: BUILDING THE NETWORK'.format(year)):
+        g.add_edge(row[1], row[2], year=row[3], weight=int(row[5]))
 
-connected_components = list(nx.connected_components(g))
-connected_components = [cc for cc in connected_components if len(cc) > 2]
+    nodes_number = g.number_of_nodes()
+    edges_number = g.number_of_edges()
+    density = nx.density(g)
 
-for cc in tqdm(connected_components, desc='ANALYZING CONNECTED COMPONENTS'):
-    subgraph = g.subgraph(cc)
+    avg_clustering_coefficient = list()
+    transitivity = list()
+    diameter, radius = list(), list()
 
-    avg_clustering_coefficient.append(
-        nx.average_clustering(subgraph, weight='weight'))
-    transitivity.append(nx.transitivity(subgraph))
-    diameter.append(nx.diameter(subgraph))
-    radius.append(nx.radius(subgraph))
+    connected_components = list(nx.connected_components(g))
 
-print(nodes_number, edges_number, density, np.mean(avg_clustering_coefficient),
-      np.mean(transitivity), np.mean(diameter), np.mean(radius))
+    for cc in tqdm(connected_components,
+                   desc='YEAR {}: ANALYZING CONNECTED COMPONENTS'
+                   .format(year)):
+        subg = g.subgraph(cc)
+
+        avg_clustering_coefficient.append(
+            nx.average_clustering(subg, weight='weight'))
+        transitivity.append(nx.transitivity(subg))
+        diameter.append(nx.diameter(subg))
+        radius.append(nx.radius(subg))
+
+    g.clear()
+
+    years.append(year)
+    nodes.append(nodes_number)
+    edges.append(edges_number)
+    densities.append(density)
+    avg_cc.append(np.mean(avg_clustering_coefficient))
+    transitivities.append(np.mean(transitivity))
+    diameters.append(np.mean(diameter))
+    rads.append(np.mean(radius))
+
+pd.DataFrame({'Year': years, 'Nodes': nodes, 'Edges': edges,
+              'Density': densities, 'Avg Clustering Coefficient': avg_cc,
+              'Transitivity': transitivities, 'Diameter': diameters,
+              'Radius': rads}).to_csv(sys.argv[2])
