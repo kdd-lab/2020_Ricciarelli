@@ -65,7 +65,9 @@ with open(sys.argv[1], 'r') as xml_file:
                             else:
                                 adjacency_d[c1][c2][d_of_acc].append(infos)
 
-with open(sys.argv[2], 'w') as edge_list:
+framework = sys.argv[1].split('/')[-1].split('_')[1]
+
+with open('./' + framework + '_edge_list.jsonl', 'w') as edge_list:
     for i in tqdm(adjacency_d.items(), desc='WRITING EDGE LIST'):
         to_write = dict()
         to_write[i[0]] = i[1]
@@ -74,7 +76,10 @@ with open(sys.argv[2], 'w') as edge_list:
         edge_list.write('\n')
 
 if len(projects_table.keys()) != 0:
-    with open(sys.argv[3], 'w') as table:
+    save_to = '../datasets/zenodo/zenodo_' + framework + \
+        '_project_table.jsonl'
+
+    with open(save_to, 'w') as table:
         for i in tqdm(projects_table.items(), desc='WRITING PROJECTS TABLE'):
             to_write = dict()
             to_write[i[0]] = i[1]
