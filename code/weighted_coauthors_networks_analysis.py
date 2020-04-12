@@ -2,7 +2,6 @@ import gzip
 import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
-import os
 import pandas as pd
 import sys
 
@@ -11,17 +10,26 @@ from tqdm import tqdm
 
 path_to_nets = '../datasets/coauthors_networks/network_weight/'
 
-g, years = nx.Graph(), np.arange(int(sys.argv[1]), int(sys.argv[2]))
+g = nx.Graph()
 
-nodes, edges, densities, avg_cc, transitivities, eccen, diameters, rads = \
-    list(), list(), list(), list(), list(), list(), list(), list()
+years, plots = None, False
 
-if not os.path.isdir('../datasets/weighted_coauthors_networks/{}'
-                     .format(years[0])):
-    os.mkdir('../datasets/weighted_coauthors_networks/{}'.format(years[0]))
+if len(sys.argv) > 3:
+    years = np.arange(int(sys.argv[1]), int(sys.argv[2]))
+
+    if sys.argv[3] == 'Y':
+        plots = True
+else:
+    years = [int(sys.argv[1])]
+
+    if sys.argv[2] == 'Y':
+        plots = True
+
+nodes, edges, densities, avg_cc, transitivities, diameters, rads = \
+    list(), list(), list(), list(), list(), list(), list()
 
 for year in years:
-    print('PROCESSING YEAR ' + str(year))
+    print('\nPROCESSING YEAR ' + str(year))
 
     with gzip.open(path_to_nets + str(year) + '.gz', 'r') as edge_list:
         for record in tqdm(edge_list, desc='YEAR {}: BUILDING NETWORK'
@@ -38,10 +46,15 @@ for year in years:
     diameter, radius = list(), list()
 
     connected_components = nx.connected_components(g)
+    cc_counter = 0
 
-    for cc in tqdm(connected_components,
-                   desc='ANALYZING CONNECTED COMPONENTS'):
-        if len(cc) > 2 and len(cc) < 21:
+    print('ANALYZING CONNECTED COMPONENTS')
+
+    for cc in connected_components:
+        if cc_counter == 1000:
+            break
+
+        if len(cc) > 2 and len(cc) < 51:
             subgraph = g.subgraph(cc)
 
             avg_clustering_coefficient.append(
@@ -49,6 +62,8 @@ for year in years:
             transitivity.append(nx.transitivity(subgraph))
             diameter.append(nx.diameter(subgraph))
             radius.append(nx.radius(subgraph))
+
+            cc_counter += 1
 
     avg_clustering_coefficient = np.mean(avg_clustering_coefficient)
     transitivity = np.mean(transitivity)
@@ -63,7 +78,7 @@ for year in years:
     diameters.append(np.format_float_scientific(diameter, 2))
     rads.append(np.format_float_scientific(radius, 2))
 
-    if sys.argv[3] == 'Y':
+    if plots:
         degrees = sorted([d for n, d in g.degree(weight='weight')])
 
         fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(10, 10))
