@@ -53,15 +53,16 @@ for year in years:
 
         for cc in tqdm(connected_components,
                        desc='ANALYZING CONNECTED COMPONENTS'):
-            sub = g.induced_subgraph(cc)
+            if len(cc) > 2 and len(cc) <= 1000:
+                sub = g.induced_subgraph(cc)
 
-            diameter.append(sub.diameter())
-            radius.append(sub.radius())
-            avg_clustering_coefficient.append(
-                sub.transitivity_undirected())
-            transitivity.append(
-                sub.transitivity_avglocal_undirected(mode='zero',
-                                                     weights='weight'))
+                diameter.append(sub.diameter())
+                radius.append(sub.radius())
+                avg_clustering_coefficient.append(
+                    sub.transitivity_undirected())
+                transitivity.append(
+                    sub.transitivity_avglocal_undirected(mode='zero',
+                                                         weights='weight'))
 
         avg_clustering_coefficient = np.mean(avg_clustering_coefficient)
         transitivity = np.mean(transitivity)
