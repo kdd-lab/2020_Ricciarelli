@@ -44,6 +44,8 @@ for year in years:
     edges_number = g.ecount()
     density = g.density()
 
+    cc_counter = 0
+
     if sys.argv[3] == 'Y':
         avg_clustering_coefficient = list()
         transitivity = list()
@@ -54,6 +56,9 @@ for year in years:
         for cc in tqdm(connected_components,
                        desc='ANALYZING CONNECTED COMPONENTS'):
             if len(cc) > 2 and len(cc) <= 1000:
+                if cc_counter == 10000:
+                    break
+
                 sub = g.induced_subgraph(cc)
 
                 diameter.append(sub.diameter())
@@ -63,6 +68,8 @@ for year in years:
                 transitivity.append(
                     sub.transitivity_avglocal_undirected(mode='zero',
                                                          weights='weight'))
+
+                cc_counter += 1
 
         avg_clustering_coefficient = np.mean(avg_clustering_coefficient)
         transitivity = np.mean(transitivity)
