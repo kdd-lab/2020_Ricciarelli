@@ -118,7 +118,7 @@ with open('./' + framework + '_edge_list.jsonl', 'w') as edge_list:
 # WRITING THE PROJECTS' TABLE #################################################
 
 if len(projects_table.keys()) != 0:
-    save_to = '../datasets/zenodo/zenodo_' + framework + \
+    save_to = '../../datasets/zenodo/' + framework + '/zenodo_' + framework + \
         '_project_table.jsonl'
 
     with open(save_to, 'w') as table:
