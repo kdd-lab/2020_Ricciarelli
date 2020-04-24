@@ -34,17 +34,22 @@ with open(sys.argv[1], 'r') as xml_file:
 
                 for creator in creators:
                     if creator not in creators_infos:
-                        creators_infos[creator] = {country: [d_of_acc]}
+                        creators_infos[creator] = {d_of_acc: country}
                     else:
-                        if country not in creators_infos[creator]:
-                            creators_infos[creator][country] = [d_of_acc]
+                        if d_of_acc not in creators_infos[creator]:
+                            creators_infos[creator][d_of_acc] = country
                         else:
-                            if d_of_acc not in \
-                                    creators_infos[creator][country]:
-                                creators_infos[creator][country]. \
-                                    append(d_of_acc)
-                                creators_infos[creator][country] = \
-                                    sorted(creators_infos[creator][country])
+                            c = creators_infos[creator][d_of_acc]
+
+                            if type(c) == str:
+                                if c != country:
+                                    creators_infos[creator][d_of_acc] = \
+                                        [c, country]
+                            else:
+                                if country \
+                                 not in creators_infos[creator][d_of_acc]:
+                                    creators_infos[creator][d_of_acc]. \
+                                        append(country)
 
                 id_and_label = None
                 acronym = None if r.find('.//acronym') is None else \

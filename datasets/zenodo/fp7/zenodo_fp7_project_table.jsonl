@@ -1,734 +1,546 @@
 {"mes::projects::422": {"label": "Underwater coastal sea surveyor", "acronym": "UNCOSS"}}
-{"fam::projects::629": {"label": "Building a biological knowledge-base on fish lifecycles for competitive, sustainable European aquaculture", "acronym": "SFRH/BD/38236/2007"}}
 {"fam::projects::633": {"label": "Feasibility study of triploid salmon production", "acronym": "SALMOTRIP"}}
-{"mes::projects::241": {"label": "Marine ecosystem evolution in a changing environment", "acronym": "MEECE"}}
 {"mes::projects::652": {"label": "Rationally Designed Aquatic Receptors integrated in label-free biosensor platforms for remote surveillance of toxins and pollutants", "acronym": "\u039c\u0391QU\u0391"}}
 {"ee::projects::1035": {"label": "EUROpean multilevel integrated BIOREFinery design for sustainable biomass processing", "acronym": "EUROBIOREF"}}
 {"fet-h2020::proact::8dd840d37a31::641321": {"label": "Socialising Sensori-Motor Contingencies", "acronym": "GRO"}}
-{"ee::projects::877": {"label": "Hotspot Ecosystem Research and Man's Impact on European seas", "acronym": "HERMIONE"}}
-{"mes::projects::507": {"label": "Estimating the future contribution of continental ice to sea-level rise", "acronym": "ICE2SEA"}}
-{"mes::projects::30": {"label": "Towards COast to COast NETworks of marine protected areas (from the shore to the high and deep sea), coupled with sea-based wind energy potential", "acronym": "COCONET"}}
 {"fet-fp7::proactive::969::318793": {"label": "Energy-Aware Sustainable Computing on FutureTechnology \u2013 Paving the Road to Exascale Computing", "acronym": "EXA2GREEN"}}
-{"fam::projects::617": {"label": "Sustainable Approaches to Reduce Oomycete (Saprolegnia) Infections in Aquaculture", "acronym": "SAPRO"}}
 {"mes::projects::169": {"label": "Marine Microorganisms: Cultivation Methods for Improving their Biotechnological Applications", "acronym": "PROTISTWORLD"}}
-{"mes::projects::462": {"label": "Design for ship safety in extreme seas", "acronym": "EXTREME SEAS"}}
-{"fet-fp7::proactive::969::318287": {"label": "Operating ICT basic switches below the Landauer limit", "acronym": "LANDAUER"}}
-{"fet-fp7::open::301::284566": {"label": "Quantum Propagating Microwaves in Strongly Coupled Environments", "acronym": "SCALEQIT"}}
 {"mes::projects::165": {"label": "Training Network for Monitoring Mediterranean Marine Protected Areas", "acronym": "MMMPA"}}
-{"ee::projects::480": {"label": "Pan-European Gas-AeroSol-climate interaction Study", "acronym": "PEGASOS"}}
-{"ee::projects::1067": {"label": "Evaluating Economic Policy Instruments for Sustainable Water Management in Europe", "acronym": "ENHANCE"}}
-{"mes::projects::506": {"label": "Northern seas wind index database", "acronym": "NORSEWIND"}}
 {"mes::projects::307": {"label": "European project on ocean acidification", "acronym": "PHYTOCHANGE"}}
 {"fet-fp7::open::450::255827": {"label": "Computational Geometric Learning", "acronym": "CG LEARNING"}}
-{"ee::projects::192": {"label": "Status and Trends of European Pollinators", "acronym": "STEP"}}
-{"mes::projects::29": {"label": "Policy-oriented marine Environmental Research in the Southern EUropean Seas", "acronym": "PERSEUS"}}
-{"fam::projects::561": {"label": "Development of genomic tools for assessing nutrition, growth and reproduction issues in farmed crustacean species", "acronym": "DENUGREC"}}
-{"mes::projects::447": {"label": "Preparatory phase for a deep sea facility in the Mediterranean for neutrino astronomy and associated sciences", "acronym": "KM3NET-PP"}}
-{"mes::projects::496": {"label": "Hotspot ecosystem research and Man's impact on European seas", "acronym": "HERMIONE"}}
-{"ee::projects::1012": {"label": "Exact Geometry Simulation for Optimized Design of Vehicles and Vessels", "acronym": "EXCITING"}}
 {"mes::projects::195": {"label": "Analysis of biodiversity changes on structural and functional properties of marine ecosystems under cumulative human stressors", "acronym": "ECOFUN"}}
 {"mes::projects::133": {"label": "Marine Microbial Biodiversity, Bioinformatics and Biotechnology", "acronym": "MICRO B3"}}
-{"ee::projects::577": {"label": "Maximising yield of fisheries while balancing ecosystem, economic and social concerns", "acronym": "MYFISH"}}
-{"ee::projects::645": {"label": "Megacities: Emissions, urban, regional and Global Atmospheric POLlution and climate effects, and Integrated tools for assessment and mitigation", "acronym": "MEGAPOLI"}}
 {"mes::projects::353": {"label": "Plutonium bio-signature as tracer of climate changes in ocean transport", "acronym": "PLUTOTRACE"}}
-{"fet-fp7::proactive::1254::22452": {"label": "Planar Atomic and Molecular Scale devices", "acronym": "PAMS"}}
-{"mes::projects::312": {"label": "Ocean Strategic Services beyond 2015", "acronym": "OSS2015"}}
-{"fam::projects::620": {"label": "Biosensors and Sensors for the industrial biosynthesis process of widely used commercial antioxidants: nutraceuticals as additives for food and aquaculture promoting public health and safety", "acronym": "SENSBIOSYN"}}
-{"ee::projects::300": {"label": "Sensitizer Activated Nanostructured Solar Cells", "acronym": "SANS"}}
-{"ee::projects::45": {"label": "Visions Of LANd use Transitions in Europe", "acronym": "VOLANTE"}}
 {"ee::projects::1427": {"label": "Biocommodity refinery", "acronym": "BIOCORE"}}
 {"fet-fp7::open::450::255931": {"label": "Uncertainty principles versus localization properties, function systems for efficient coding schemes", "acronym": "UNLOCX"}}
 {"fet-fp7::open::450::255961": {"label": "Quantum Computer Science", "acronym": "QCS"}}
 {"fet-fp7::proactive::971::601148": {"label": "Collective Adaptive System SynThesIs with Non-zero-sum Games", "acronym": "EQUALIS"}}
-{"fet-fp7::proactive::747::270483": {"label": "Single Molecule Activation and Computing", "acronym": "FOCUS"}}
-{"fet-fp7::proactive::970::21218": {"label": "Scalable Superconducting Processors for Entangled Quantum Information Technology", "acronym": "CIRQUSS"}}
-{"fet-fp7::open::301::293431": {"label": "Innovative Robotic Artefacts Inspired by Plant Roots for Soil Monitoring", "acronym": "PLANTOID"}}
-{"ee::projects::1152": {"label": "ECOPOTENTIAL: IMPROVING FUTURE ECOSYSTEM BENEFITS THROUGH EARTH OBSERVATIONS", "acronym": "ECOPOTENTIAL"}}
-{"ee::projects::784": {"label": "Novel I\u039fnic L\u0399quid and supported ionic liquid solvents for reversible CAPture of CO2", "acronym": "IOLICAP"}}
-{"dh-ch::projects::6": {"label": "3D-COFORM", "acronym": "3D-COFORM"}}
 {"mes::projects::421": {"label": "Multilateral call for research projects within the Joint Baltic Sea Research Programme BONUS+", "acronym": "BONUS+"}}
 {"fet-fp7::open::450::271554": {"label": "Source of Electron Entanglement in Nano Devices", "acronym": "SE2ND"}}
-{"fet-fp7::open::306::618078": {"label": "Wavelength tunable Advanced Single Photon Sources", "acronym": "WASPS"}}
 {"fet-fp7::open::301::308803": {"label": "Bright Squeezed Vacuum and its Applications", "acronym": "BRISQ2"}}
 {"fet-fp7::open::306::323841": {"label": "Silicon Platform for Quantum Spintronics", "acronym": "SIAM"}}
-{"fet-fp7::open::1252::612759": {"label": "Insulator Spintronics", "acronym": "INSPIN"}}
-{"fam::projects::618": {"label": "Polymer conjugation of peptides/salmon calcitonin for increased efficacy", "acronym": "WBAWBA"}}
 {"fet-h2020::open::861c15d59710::766566": {"label": "Antiferromagntic spintronics", "acronym": "ASPIN"}}
-{"mes::projects::105": {"label": "Ice Nucleating Particles in the Marine Atmosphere", "acronym": "MarineIce"}}
-{"fet-fp7::flagship::1256::604102": {"label": "The Human Brain Project", "acronym": "HBP"}}
-{"mes::projects::207": {"label": "Association of European marine biological laboratories", "acronym": "ASSEMBLE"}}
-{"fet-fp7::open::450::270749": {"label": "Strongly anisotropic Graphite-like semiconductor/dielectric 2D nanolattices", "acronym": "2D-NANOLATTICES"}}
-{"ee::projects::1185": {"label": "Design Of customeR dRiven shOes and multi-siTe factorY", "acronym": "DOROTHY"}}
-{"mes::projects::174": {"label": "Past continental climate change: temperatures from marine and lacustrine archives", "acronym": "PACEMAKER"}}
 {"fet-fp7::flagship::1256::604391": {"label": "Graphene-Based Revolutions in ICT And Beyond", "acronym": "GRAPHENE"}}
 {"fet-fp7::proactive::1254::22574": {"label": "DIAmond Devices Enabled Metrology and Sensing", "acronym": "DIADEMS"}}
-{"fet-h2020::proact::0358697b09c5::641122": {"label": "Quantum simulations of insulators and conductors", "acronym": "OSYRIS"}}
-{"ee::projects::306": {"label": "Multi-scale data assimilation, advanced wind modeling and forecasting with emphasis to extreme weather situations for a secure large-scale wind power integration", "acronym": "SAFEWIND"}}
-{"ee::projects::57": {"label": "Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors", "acronym": "CERES"}}
-{"fet-fp7::open::301::309129": {"label": "Innovative Reliable Chip Designs from Low-Powered Unreliable Components", "acronym": "I-RISC"}}
 {"fet-fp7::proactive::967::318202": {"label": "Biological and Mathematical Basis of Interaction Computing", "acronym": "STRUCLIM"}}
+{"fet-h2020::proact::0358697b09c5::641122": {"label": "Quantum simulations of insulators and conductors", "acronym": "QUIC"}}
 {"mes::projects::336": {"label": "Citizens' observatory for coast and ocean optical monitoring", "acronym": "CITCLOPS"}}
-{"ee::projects::439": {"label": "Prevention and Restoration Actions to Combat  Desertification. An Integrated Assessment", "acronym": "PRACTICE"}}
-{"mes::projects::123": {"label": "Exploring Marine Resources for Bioactive Compounds: From Discovery to Sustainable Production and Industrial Applications", "acronym": "MAREX"}}
-{"mes::projects::656": {"label": "Engineered nanoparticle impact on aquatic environments: Structure, activity and toxicology", "acronym": "ENNSATOX"}}
 {"fet-fp7::proactive::968::318121": {"label": "Topology driven methods for complex systems", "acronym": "TOPDRIM"}}
 {"fet-fp7::open::1252::612944": {"label": "Learning from Massive, Incompletely annotated, and Structured Data", "acronym": "INNOMOL"}}
-{"ee::projects::291": {"label": "Securing the Conservation of biodiversity across Administrative Levels and spatial, temporal, and Ecological Scales", "acronym": "SCALES"}}
 {"fet-fp7::open::301::618074": {"label": "Thermodynamics of Mesoscopic Quantum Systems", "acronym": "THERMIQ"}}
+{"mes::projects::507": {"label": "Estimating the future contribution of continental ice to sea-level rise", "acronym": "ICE2SEA"}}
 {"mes::projects::196": {"label": "Role of the marine carbon cycle in the climate system", "acronym": "PALEOCARB"}}
-{"mes::projects::334": {"label": "Fluxes, interactions and environment at the land-ocean boundary. Downscaling, Assimilation and Coupling", "acronym": "FIELD_AC"}}
 {"ee::projects::1372": {"label": "Bystanders, Residents, Operators and WorkerS Exposure models for plant protection products", "acronym": "PEGASOS"}}
-{"mes::projects::217": {"label": "Innovative After-Treatment System for Marine Diesel Engine Emission Control", "acronym": "DEECON"}}
-{"mes::projects::152": {"label": "Marine Renewables Infrastructure Network for Emerging Energy Technologies", "acronym": "MARINET"}}
 {"mes::projects::141": {"label": "Calcification by marine organisms", "acronym": "CALMARO"}}
 {"fet-fp7::proactive::1253::610427": {"label": "Evolution of Evolution", "acronym": "EVOEVO"}}
 {"fet-fp7::proactive::970::21238": {"label": "Hybrid Artificial and Natural Atomic Systems", "acronym": "QD-NOMS"}}
-{"fet-fp7::proactive::747::270197": {"label": "Diamond based atomic nanotechnologies", "acronym": "DIAMANT"}}
-{"mes::projects::328": {"label": "Changes in carbon uptake and emissions by oceans in a changing climate", "acronym": "CARBOCHANGE"}}
+{"fet-fp7::proactive::970::21218": {"label": "Scalable Superconducting Processors for Entangled Quantum Information Technology", "acronym": "SCALEQIT"}}
 {"mes::projects::479": {"label": "Seasonal-to-decadal climate Prediction for the improvement of European Climate Services", "acronym": "SPECS"}}
 {"fet-fp7::proactive::970::21179": {"label": "Simulators and Interfaces with Quantum Systems", "acronym": "DELPHI"}}
 {"fam::projects::594": {"label": "Advanced Research Initiatives for Nutrition & Aquaculture", "acronym": "ARRAINA"}}
 {"fet-fp7::proactive::452::248095": {"label": "Quantum Interfaces, Sensors and Communication based on Entanglement", "acronym": "Q-ESSENCE"}}
-{"fet-fp7::proactive::313::4283": {"label": "Collective Emotions in Cyberspace", "acronym": "CYBEREMOTIONS"}}
 {"ee::projects::1044": {"label": "EU Cloud Intercomparison, Process Study and Evaluation Project", "acronym": "EUCLIPSE"}}
+{"mes::projects::29": {"label": "Policy-oriented marine Environmental Research in the Southern EUropean Seas", "acronym": "PERSEUS"}}
 {"fam::projects::671": {"label": "Investigating fatty acid metabolism for sustainable farming of cobia Rachycentron canadum L., a promising candidate for diversifying European aquaculture;01/02/2009", "acronym": "COBIAGENE"}}
-{"mes::projects::149": {"label": "Composite patch repair for marine and civil engineering infrastructure applications", "acronym": "CO-PATCH"}}
-{"ee::projects::608": {"label": "Microorganism and enzyme Immobilization: NOvel Techniques and Approaches for Upgraded Remediation of Underground-, wastewater and Soil", "acronym": "MINOTAURUS"}}
+{"mes::projects::328": {"label": "Changes in carbon uptake and emissions by oceans in a changing climate", "acronym": "CARBOCHANGE"}}
 {"ee::projects::544": {"label": "NEW INTEGRATED KNOWLEDGE BASED APPROACHES TO THE PROTECTION OF CULTURAL HERITAGE FROM EARTHQUAKE-INDUCED RISK", "acronym": "NIKER"}}
 {"ee::projects::1492": {"label": "AQUAculture infrastructures for EXCELLence in European Fish research", "acronym": "AQUAEXCEL"}}
-{"ee::projects::953": {"label": "Functional significance of forest biodiversity in Europe", "acronym": "FUNDIVEUROPE"}}
-{"mes::projects::216": {"label": "Supporting humans in knowledge gathering and question answering w.r.t. marine and environmental monitoring through analysis of multiple video streams", "acronym": "FISH4KNOWLEDGE"}}
-{"ee::projects::143": {"label": "Scientific sYnergisM of nano-Bio-Info-cOgni Science for an Integrated system to monitor meat quality and Safety during production, storage, and distribution in EU", "acronym": "SYMBIOSIS-EU"}}
 {"fet-fp7::proactive::451::249013": {"label": "Exploiting dataflow parallelism in Teradevice Computing", "acronym": "TERAFLUX"}}
-{"mes::projects::231": {"label": "Marine metagenomics for new biotechnological applications", "acronym": "MAGICPAH"}}
-{"fet-fp7::proactive::316::11078": {"label": "Co-ordinating Research Efforts Towards Zero-Power ICT", "acronym": "NANOPOWER"}}
+{"fam::projects::629": {"label": "Building a biological knowledge-base on fish lifecycles for competitive, sustainable European aquaculture", "acronym": "LIFECYCLE"}}
+{"fet-fp7::open::306::618078": {"label": "Wavelength tunable Advanced Single Photon Sources", "acronym": "WASPS"}}
 {"fam::projects::544": {"label": "Targeted disease prophylaxis in European fish farming", "acronym": "TARGETFISH"}}
-{"mes::projects::445": {"label": "Novel approaches for the development of customized skin treatments and services (test case: dead sea minerals and conventional drugs)", "acronym": "SKIN TREAT"}}
-{"mes::projects::130": {"label": "Carbonate Biomineralization in the Marine Environment: Paleo-climate proxies and the origin of vital effects", "acronym": "BIOCARB"}}
 {"fet-fp7::proactive::968::318132": {"label": "multi-LAyer SpAtiotemporal Generalized NEtworks", "acronym": "LASAGNE"}}
-{"fet-fp7::proactive::1253::610730": {"label": "General-Purpose Programmable Evolution Machine on a Chip", "acronym": "EVOPROG"}}
 {"fet-fp7::proactive::316::6926": {"label": "Trustworthy Eternal Systems via Evolving Software, Data and Knowledge", "acronym": "ETERNALS"}}
 {"mes::projects::295": {"label": "ROle of crustacean zooplankton on prokaryotic community composition in the MEsopelagic Ocean", "acronym": "ROMEO"}}
-{"ee::projects::116": {"label": "Innovative coastal technologies for safer European coasts in a changing climate", "acronym": "THESEUS"}}
-{"mes::projects::433": {"label": "North Atlantic Climate: Predictability of the climate in the North Atlantic/European sector related to North Atlantic/Arctic sea surface temperature and sea ice variability and change", "acronym": "NACLIM"}}
-{"ee::projects::1171": {"label": "European Biodiversity Observation Network; a project to design and test a biodiversity observation system integrated in time and space", "acronym": "EBONE"}}
-{"ee::projects::1326": {"label": "Pan-European coordination action on CO2 Geological Storage", "acronym": "CGS EUROPE"}}
+{"fet-fp7::flagship::1256::604102": {"label": "The Human Brain Project", "acronym": "HBP"}}
 {"fet-fp7::open::450::255914": {"label": "A Toolbox for Photon Orbital Angular Momentum Technology", "acronym": "PHORBITECH"}}
-{"fet-fp7::open::450::265578": {"label": "enHanced Interference Alignment Techniquesfor Unprecedented Spectral Efficiency", "acronym": "HIATUS"}}
 {"fet-fp7::open::303::618082": {"label": "Electrical spin manipulation in electroACtive MOLecules", "acronym": "ACMOL"}}
 {"fet-fp7::open::306::323970": {"label": "Randomness and Quantum Entanglement", "acronym": "QALGO"}}
-{"mes::projects::333": {"label": "Deterministic Forecasting of Rogue Waves in the Ocean", "acronym": "DEROGUE WAVES"}}
-{"fet-fp7::proactive::746::257856": {"label": "Semiconducting Nanowire Platform for Autonomous Sensors", "acronym": "SINAPS"}}
-{"fet-fp7::open::301::284553": {"label": "Towards new Brain-Machine Interfaces: state-dependent information coding", "acronym": "SMD"}}
-{"ee::projects::1059": {"label": "European Study of Cohorts for Air Pollution Effects", "acronym": "ESCAPE"}}
-{"fet-fp7::open::450::245410": {"label": "Mobility, Data Mining, and Privacy", "acronym": "MODAP"}}
-{"ee::projects::478": {"label": "DEMONSTRATION OF HIGH PERFORMANCE PROCESSES AND EQUIPMENTS FOR THIN FILM SILICON PHOTOVOLTAIC MODULES PRODUCED WITH LOWER ENVIRONMENTAL IMPACT AND REDUCED COST AND MATERIAL USE", "acronym": "PEPPER"}}
-{"mes::projects::242": {"label": "Marine micro-algae as global reservoir of polycyclic aromatic hydrocarbon degraders", "acronym": "MARPAH"}}
-{"ee::projects::528": {"label": "New dietary strategies addressing the specific needs of elderly population for an healthy ageing in Europe", "acronym": "NU-AGE"}}
-{"fam::projects::621": {"label": "Development of a novel production system for intensive and cost effective bivalve farming", "acronym": "SHELLPLANT"}}
-{"mes::projects::10": {"label": "Development and pre-operational validation of the Ocean Monitoring and Forecasting component of the future GMES Marine Core Service", "acronym": "MYOCEAN"}}
-{"ee::projects::1078": {"label": "Genomics biomarkers of environmental health", "acronym": "ENVIROGENOMARKERS"}}
-{"mes::projects::464": {"label": "Advancing understanding of Atlantic salmon at sea: merging genetics and ecology to resolve stock-specific migration and distribution patterns", "acronym": "SALSEA-MERGE"}}
-{"mes::projects::250": {"label": "BIogeochemical cycles, Sea Ice and CLimate in the Polar Oceans", "acronym": "BISICLO"}}
-{"fet-fp7::proactive::748::269921": {"label": "Brain-inspired multiscale computation in neuromorphic hybrid systems", "acronym": "BRAINSCALES"}}
-{"mes::projects::142": {"label": "Multidisciplinary training in evo-devo and neurobiology of marine animal models", "acronym": "NEPTUNE"}}
-{"ee::projects::1568": {"label": "Sustainable Solutions for Small Ruminants", "acronym": "3SR"}}
-{"ee::projects::39": {"label": "Water Availability and Security in Southern EuRope and the Mediterranean", "acronym": "WASSERMED"}}
-{"ee::projects::1305": {"label": "Water Detoxification Using Innovative vi-Nanocatalysts", "acronym": "CLEAN WATER"}}
-{"ee::projects::740": {"label": "Land and Ecosystem Degradation and Desertification: Assessing the Fit of Responses", "acronym": "LEDDRA"}}
-{"fet-fp7::proactive::745::257414": {"label": "Autonomic Service-Component Ensembles", "acronym": "ASCENS"}}
-{"mes::projects::377": {"label": "Assessing the causes and developing measures to prevent the escape of fish from sea-cage aquaculture", "acronym": "PREVENT ESCAPE"}}
-{"fet-fp7::proactive::971::601074": {"label": "Animal and robot Societies Self-organise and Integrate by Social Interaction", "acronym": "ASSISI_BF"}}
-{"fet-fp7::proactive::968::317672": {"label": "Dynamics and COevolution in Multi-Level Strategic INteraction GAmeS", "acronym": "MULTIPLEX"}}
-{"mes::projects::457": {"label": "Productivity tools: Automated tools to measure primary productivity in European seas. A new autonomous monitoring tool to measure the primary production of major European seas", "acronym": "PROTOOL"}}
+{"ee::projects::300": {"label": "Sensitizer Activated Nanostructured Solar Cells", "acronym": "SANS"}}
+{"mes::projects::30": {"label": "Towards COast to COast NETworks of marine protected areas (from the shore to the high and deep sea), coupled with sea-based wind energy potential", "acronym": "COCONET"}}
+{"fet-fp7::proactive::748::269921": {"label": "Brain-inspired multiscale computation in neuromorphic hybrid systems", "acronym": "HBP"}}
 {"fet-fp7::open::301::297861": {"label": "Optimal Control Technologies in Quantum Information Processing", "acronym": "QUAINT"}}
 {"fet-fp7::open::450::265522": {"label": "Light-Matter interfaces in absence of cavities", "acronym": "MALICIA"}}
 {"fam::projects::664": {"label": "REsearch to improve PROduction of SEED of established and emerging bivalve species in European hatcheries", "acronym": "REPROSEED"}}
 {"fet-fp7::proactive::970::21186": {"label": "Quantum Algorithmics", "acronym": "QALGO"}}
 {"fet-fp7::proactive::968::317532": {"label": "Foundational Research on MULTIlevel comPLEX networks and systems", "acronym": "MULTIPLEX"}}
-{"fet-fp7::proactive::311::1502": {"label": "Symbiotic Evolutionary Robot Organisms", "acronym": "SYMBRION"}}
 {"mes::projects::516": {"label": "Acquiring competencies in neuroendocrinology by an aquaculture researcher through investigating gonadotropin-inhibitory hormone & kisspeptin as mediators between environmental cues & fish reproduction", "acronym": "NEUROBASS"}}
-{"mes::projects::465": {"label": "Sea Ice Downstream Services for Arctic and Antarctic Users and Stakeholders", "acronym": "SIDARUS"}}
 {"mes::projects::132": {"label": "BlueGenics From gene to bioactive product: Exploiting marine genomics for an innovative and sustainable European blue biotechnology industry", "acronym": "NATPHARMA"}}
 {"fet-fp7::proactive::972::600785": {"label": "Spatial Cognition", "acronym": "SPACECOG"}}
-{"ee::projects::850": {"label": "In situ monitoring of oxygen depletion in hypoxic ecosystems of coastal and open seas, and land-locked water bodies", "acronym": "HYPOX"}}
 {"fet-h2020::proact::0358697b09c5::640378": {"label": "Rydberg Quantum Simulators", "acronym": "COLDSIM"}}
-{"mes::projects::297": {"label": "Stochastic Assimilation for the Next Generation Ocean Model Applications", "acronym": "SANGOMA"}}
-{"ee::projects::376": {"label": "Adaptive Strategies to Mitigate the Impacts of Climate Change on European Freshwater Ecosystems", "acronym": "REFRESH"}}
-{"ee::projects::312": {"label": "Living with landslide risk in Europe: Assessment, effects of global change, and risk management strategies", "acronym": "SAFELAND"}}
-{"fet-fp7::open::1252::613055": {"label": "GErmanium MId-infrared plasmoNIcs for sensing", "acronym": "GEMINI"}}
-{"ee::projects::1189": {"label": "Direct Normal Irradiance Nowcasting methods for optimized operation of concentrating solar technologies", "acronym": "DNICAST"}}
-{"ee::projects::765": {"label": "Contaminant-specific isotope analyses as sharp environmental-forensics tools for site characterisation, monitoring and source apportionment of pollutants in soil", "acronym": "ISOSOIL"}}
-{"mes::projects::54": {"label": "Indo-European Research Facilities for Studies on Marine Ecosystem and Climate in India", "acronym": "INDO-MARECLIM"}}
+{"mes::projects::174": {"label": "Past continental climate change: temperatures from marine and lacustrine archives", "acronym": "PACEMAKER"}}
+{"ee::projects::1059": {"label": "European Study of Cohorts for Air Pollution Effects", "acronym": "ESCAPE"}}
 {"mes::projects::236": {"label": "The influence of multiple global change stressors on marine communities: a novel field approach", "acronym": "CC AND MARINE LIFE"}}
-{"ee::projects::1454": {"label": "AdVanced Aerodynamic Tools for lArge Rotors", "acronym": "AVATAR"}}
-{"aginfra::projects::50": {"label": "An Earth obseRvation Model based RicE information Service", "acronym": "ERMES"}}
+{"fet-fp7::open::1252::612759": {"label": "Insulator Spintronics", "acronym": "INSPIN"}}
 {"fet-fp7::proactive::313::4276": {"label": "Quality Collectives: Socially Intelligent Systems for Quality", "acronym": "QLECTIVES"}}
-{"fet-fp7::proactive::969::318490": {"label": "Self Energy-Supporting Autonomous Computation", "acronym": "SENSATION"}}
-{"mes::projects::112": {"label": "Increasing Value and Flow in the Marine Biodiscovery Pipeline", "acronym": "PHARMASEA"}}
-{"mes::projects::153": {"label": "Sustainable production of biologically active molecules of marine based origin", "acronym": "BAMMBO"}}
 {"fet-fp7::proactive::454::257695": {"label": "Virtual Embodiment and Robotic Re-Embodiment", "acronym": "KOROIBOT"}}
 {"fet-fp7::proactive::1253::611687": {"label": "NEurocontrolled BIdirectional Artificial upper limb and hand prosthesiS", "acronym": "NEBIAS"}}
 {"mes::projects::335": {"label": "New approaches for understanding oceanic carbon uptake", "acronym": "CARBON EXPORT"}}
-{"fet-fp7::proactive::312::1469": {"label": "Life-like Artefact for Motor-Postural Experiments and Development of new Control Technologies inspired by Rapid Animal locomotion", "acronym": "LAMPETRA"}}
-{"ee::projects::416": {"label": "Development and application of standardized methodology for the PROspective SUstaInability assessment of TEchnologies", "acronym": "PROSUITE"}}
-{"ee::projects::957": {"label": "Food Refrigeration Innovations for Safety, consumer Benefit, Environmental impact and Energy optimization along cold chain in Europe", "acronym": "FRISBEE"}}
-{"fet-fp7::proactive::972::600847": {"label": "Retina-inspired ENcoding for advanced VISION tasks", "acronym": "RENVISION"}}
-{"fet-fp7::open::450::270780": {"label": "Incorporating Laughter into Human-Avatar Interactions: Research and Evaluation", "acronym": "ILHAIRE"}}
 {"fet-fp7::proactive::313::4282": {"label": "Complex Socio-Technical System in Ambient Intelligence", "acronym": "SOCIONICAL"}}
 {"mes::projects::402": {"label": "Open Sea Operating Experience to Reduce Wave Energy Cost", "acronym": "OCEANET"}}
-{"mes::projects::483": {"label": "MEDiterranean Sea Acidification in a changing climate", "acronym": "MEDSEA"}}
-{"ee::projects::518": {"label": "On the reduction of health effects from combined exposure to indoor air pollutants in modern offices", "acronym": "OFFICAIR"}}
-{"fet-fp7::open::306::323901": {"label": "Phonon-Assisted Processes for Energy Transfer and Sensing", "acronym": "QUANTUM VIBES"}}
-{"fet-fp7::proactive::314::4304": {"label": "Variable Impedance Actuation Systems Embodying AdvancedInteraction Behaviours", "acronym": "VIACTORS"}}
-{"mes::projects::176": {"label": "Open service network for marine environmental data", "acronym": "NETMAR"}}
-{"ee::projects::421": {"label": "Protection of consumers by microbial risk mitigation through combating segregation of expertise", "acronym": "PROMISE"}}
 {"fet-fp7::open::307::323945": {"label": "Fast two-photon in vivo imaging and stimulation with simultaneous three-dimensional random-access scanning in multiple brain regions", "acronym": "3X3D IMAGING"}}
-{"fet-fp7::open::1252::612985": {"label": "From Inherent Concurrency to Massive Parallelism through Type-based Optimizations", "acronym": "UPSCALE"}}
+{"mes::projects::656": {"label": "Engineered nanoparticle impact on aquatic environments: Structure, activity and toxicology", "acronym": "ENNSATOX"}}
 {"fet-fp7::open::308::618083": {"label": "Curved nanomembranes for Topological Quantum Computation", "acronym": "CNTQC"}}
-{"mes::projects::448": {"label": "MARine Litter in Europe Seas: Social AwarenesS and CO-Responsability", "acronym": "MARLISCO"}}
-{"fam::projects::580": {"label": "Fishing for Medicines and their targets using Zebrafish models of human diseases", "acronym": "FISHMED"}}
-{"fet-fp7::open::301::296590": {"label": "Biomimiking the brain - towards 3D neuronal network dynamics", "acronym": "3DNEURON"}}
-{"mes::projects::318": {"label": "Calibration of extreme wave measurement on the ocean surface", "acronym": "MULTIWAVE"}}
+{"ee::projects::1078": {"label": "Genomics biomarkers of environmental health", "acronym": "LIFEPATH"}}
+{"ee::projects::57": {"label": "Vectors of Change in Oceans and Seas Marine Life, Impact on Economic Sectors", "acronym": "VECTORS"}}
 {"ee::projects::1404": {"label": "Development of the next generation bioreactor system", "acronym": "BIONEXGEN"}}
 {"aginfra::projects::59": {"label": "Aerial Data Collection and Analysis, and Automated Ground Intervention for Precision Farming", "acronym": "EUROC"}}
-{"ee::projects::997": {"label": "Financialisation, economy, society and sustainable development", "acronym": "FESSUD"}}
-{"fet-fp7::proactive::968::318493": {"label": "Topological Complex Systems", "acronym": "TOPOSYS"}}
-{"ee::projects::574": {"label": "European Network on the Health and Environmental Impact of Nanomaterials", "acronym": "NANOIMPACTNET"}}
-{"fet-fp7::proactive::454::258749": {"label": "The Collective Experience of Empathic Data Systems", "acronym": "PSYCHE"}}
-{"ee::projects::955": {"label": "Understanding food-gut-brain mechanisms across the lifespan in the regulation of hunger and satiety for health", "acronym": "FULL4HEALTH"}}
+{"mes::projects::105": {"label": "Ice Nucleating Particles in the Marine Atmosphere", "acronym": "BACCHUS"}}
+{"ee::projects::645": {"label": "Megacities: Emissions, urban, regional and Global Atmospheric POLlution and climate effects, and Integrated tools for assessment and mitigation", "acronym": "MEGAPOLI"}}
 {"mes::projects::512": {"label": "Ice ages, Sea level, and Magmatism: Coupled oscillations", "acronym": "ISMAGIC"}}
 {"ee::projects::1296": {"label": "Climate Local Information in the Mediterranean region: Responding to User Needs", "acronym": "CLIM-RUN"}}
 {"fet-fp7::proactive::745::257906": {"label": "Engineering Proprioception in Computing Systems", "acronym": "EPICS"}}
-{"fam::projects::645": {"label": "European Eels in the Atlantic: Assessment of Their Decline", "acronym": "EELIAD"}}
-{"fet-fp7::proactive::1253::611640": {"label": "Technological Evolution of Synergy Between Physicochemical and Living Systems", "acronym": "SMART-POM"}}
+{"ee::projects::480": {"label": "Pan-European Gas-AeroSol-climate interaction Study", "acronym": "C8"}}
 {"fet-fp7::open::301::284743": {"label": "Spin-Photon Angular Momentum Transfer for Quantum-Enabled Technologies", "acronym": "SPANGL4Q"}}
 {"ee::projects::823": {"label": "IMproving PRedictions and management of hydrological EXtremes", "acronym": "ENHANCE"}}
-{"mes::projects::449": {"label": "Sea Border Surveillance", "acronym": "SEABILLA"}}
 {"mes::projects::326": {"label": "Ocean Food-web Patrol - Climate Effects: Reducing Targeted Uncertainties with an Interactive Network", "acronym": "OCEAN-CERTAIN"}}
-{"fet-fp7::open::301::309191": {"label": "Generic and Highly Organic, Shape-changing inTerfaces", "acronym": "GHOST"}}
 {"mes::projects::146": {"label": "Integrated Biotechnological Solutions for Combating Marine Oil Spills", "acronym": "KILL\u25cfSPILL"}}
-{"mes::projects::641": {"label": "Network of leading mesocosm facilities to advance the studies of future aquatic ecosystems from the Arctic to the Mediterranean", "acronym": "MESOAQUA"}}
-{"fet-fp7::open::450::270773": {"label": "100 Gb/s Optical RAM on-chip:Silicon-based, integrated Optical RAM enabling High-Speed Applications in Computing and Communications", "acronym": "RAMPLAS"}}
-{"ee::projects::954": {"label": "Forest fires under climate, social and economic changes in Europe, the Mediterranean and other fire-affected areas of the world", "acronym": "FUME"}}
 {"mes::projects::188": {"label": "DEVelopment Of innovative Tools for understanding marine biodiversity and assessing good Environmental Status", "acronym": "DEVOTES"}}
 {"mes::projects::128": {"label": "Genome-enabled dissection of marine diatom ecophysiology", "acronym": "DIATOMITE"}}
 {"ee::projects::357": {"label": "Redox Materials-based Structured Reactors/Heat Exchangers for Thermo-Chemical Heat Storage Systems in Concentrated Solar Power Plants", "acronym": "RESTRUCTURE"}}
+{"ee::projects::421": {"label": "Protection of consumers by microbial risk mitigation through combating segregation of expertise", "acronym": "FOODSEG"}}
 {"mes::projects::15": {"label": "Hardwiring the ocean floor: the impact of microbial electrical circuitry on biogeochemical cycling in marine sediments", "acronym": "SEDBIOGEOCHEM2.0"}}
-{"fet-fp7::open::308::618091": {"label": "Speed of Adaptation in Population Genetics and Evolutionary Computation", "acronym": "SAGE"}}
-{"fet-fp7::proactive::745::256873": {"label": "Self-aware Pervasive Service Ecosystems", "acronym": "HC2"}}
-{"ee::projects::1161": {"label": "Effective use of ecosystem and biological knowledge in fisheries", "acronym": "ECOKNOWS"}}
 {"fet-h2020::hpc::aa969decfd0f::671698": {"label": "An Exascale Hyperbolic PDE Engine", "acronym": "BLACKHOLECAM"}}
 {"mes::projects::302": {"label": "Interdisciplinary Ocean wave for geophysical and other applications", "acronym": "IOWAGA"}}
-{"mes::projects::51": {"label": "Sub-seabed CO2 Storage: Impact on Marine Ecosystems (ECO2)", "acronym": "ECO2"}}
-{"fet-fp7::proactive::318::13739": {"label": "European Coordinated Research on Long-term Challenges in Information and Communication Sciences and Technologies - II", "acronym": "CHIST-ERA II"}}
 {"ee::projects::938": {"label": "Groundwater and dependent Ecosystems: NEw Scientific basIS on climate change and land-use impacts for the update of the EU Groundwater Directive", "acronym": "GENESIS"}}
 {"fet-h2020::proact::0358697b09c5::641039": {"label": "Quantum Simulation on a Photonic Chip", "acronym": "3D-QUEST"}}
 {"fet-fp7::open::303::284772": {"label": "Linking biological and artificial neuronal assemblies to restore lost brain functions: towards the design of innovative bi-directional neuroprostheses", "acronym": "BRAINBOW"}}
 {"ee::projects::973": {"label": "Safe Food for Europe \u2013 Coordination of research activities and Dissemination of research results of EC funded research on food safety", "acronym": "FOODSEG"}}
-{"mes::projects::2": {"label": "SeaDataNet II: Pan-European infrastructure for ocean and marine data management", "acronym": "SEADATANET II"}}
-{"fet-fp7::open::450::250026": {"label": "Social Interaction and Entrainment using Music PeRformance Experimentation", "acronym": "SIEMPRE"}}
-{"fet-fp7::proactive::970::21246": {"label": "A Guided Matter-Wave Interferometer on a Atom-Chip", "acronym": "MATTERWAVE"}}
-{"fet-fp7::proactive::314::4330": {"label": "ANGuilliform robot with ELectric Sense", "acronym": "ANGELS"}}
-{"fet-fp7::open::450::255987": {"label": "Forecasting Financial Crises", "acronym": "FOC-II"}}
+{"fet-fp7::open::450::270749": {"label": "Strongly anisotropic Graphite-like semiconductor/dielectric 2D nanolattices", "acronym": "SMARTGATE"}}
+{"mes::projects::483": {"label": "MEDiterranean Sea Acidification in a changing climate", "acronym": "EPOCA"}}
 {"fet-fp7::proactive::313::4326": {"label": "Developing the Framework for an Epidemic Forecast Infrastructure", "acronym": "EPIWORK"}}
 {"fet-fp7::proactive::311::1364": {"label": "Foundations of Adaptive Networked Societies of Tiny Artefacts", "acronym": "FRONTS"}}
-{"fet-fp7::proactive::312::1587": {"label": "Biologically inspired computation for chemical sensing", "acronym": "NEUROCHEM"}}
 {"fet-fp7::open::1252::612862": {"label": "Hybrid Architecture for quantum Information using Rydberg ensembles and Superconductors", "acronym": "HAIRS"}}
-{"fam::projects::639": {"label": "Assessment of the interaction between corals, fish and fisheries, in order to develop monitoring and predictive modelling tools for ecosystem based management in the deep waters of Europe and beyond", "acronym": "CORALFISH"}}
-{"fet-fp7::proactive::967::318597": {"label": "SYnaptic MOlecular NEtworks for Bio-inspired Information Processing", "acronym": "SYMONE"}}
-{"mes::projects::513": {"label": "Knowledge-based Sustainable Management for Europe's Seas", "acronym": "KNOWSEAS"}}
+{"mes::projects::496": {"label": "Hotspot ecosystem research and Man's impact on European seas", "acronym": "HERMIONE"}}
 {"mes::projects::272": {"label": "Optimizing and Enhancing the Integrated Atlantic Ocean Observing System", "acronym": "CARBOCHANGE"}}
-{"mes::projects::158": {"label": "Designation and Management of Marine Reserve Networks", "acronym": "DEMARN"}}
-{"ee::projects::1252": {"label": "Customer-Oriented Product Engineering of Micro and Nano Devices", "acronym": "CORONA"}}
-{"fet-fp7::proactive::969::318397": {"label": "Towards Low Power ICT", "acronym": "MOS-QUITO"}}
 {"fet-fp7::open::301::284625": {"label": "Emergence by Design", "acronym": "MD"}}
-{"ee::projects::1119": {"label": "European Liaison on Electricity Committed Towards long-term Research Activities for Smart Grids", "acronym": "ELECTRA"}}
-{"fet-h2020::proact::700613cd60fb::640772": {"label": "Distributed Global Financial Systems for Society", "acronym": "SIMPOL"}}
-{"ee::projects::422": {"label": "Nano-particle products from new mineral resources in Europe", "acronym": "PROMINE"}}
-{"ee::projects::1187": {"label": "Development of Pre-operational Services for Highly Innovative Maritime Surveillance Capabilities", "acronym": "DOLPHIN"}}
+{"ee::projects::116": {"label": "Innovative coastal technologies for safer European coasts in a changing climate", "acronym": "MARURBE"}}
 {"mes::projects::249": {"label": "Improvement of the Tropical Sea sciences research potential in Western Indian Ocean, and of the technology capacities in La Reunion Island", "acronym": "RUN SEA SCIENCE"}}
 {"ee::projects::1136": {"label": "EERA Design Tools for Offshore Wind Farm Cluster", "acronym": "EERA-DTOC"}}
-{"fet-fp7::proactive::315::4263": {"label": "LivingKnowledge \u2013 Facts, Opinions and Bias in Time", "acronym": "LIVINGKNOWLEDGE"}}
-{"fet-fp7::proactive::315::4270": {"label": "Emergent Connectors for Eternal Software Intensive Networked Systems", "acronym": "CONNECT"}}
 {"ee::projects::1275": {"label": "COllaborative Management Platform for detection and Analyses of (Re-)emerging and foodborne outbreaks in Europe", "acronym": "PREPARE"}}
 {"fet-fp7::proactive::968::317534": {"label": "Self-Organised information PrOcessing, CriticaLity and Emergence in multilevel Systems", "acronym": "SOPHOCLES"}}
-{"fet-fp7::proactive::968::317614": {"label": "Mathematical framework for multiplex networks", "acronym": "PLEXMATH"}}
-{"mes::projects::597": {"label": "Fish population structure and traceability", "acronym": "FISHPOPTRACE"}}
 {"fet-fp7::open::306::323567": {"label": "Harvesting Dynamic 3D Worlds from Commodity Sensor Clouds", "acronym": "VISLIM"}}
-{"ee::projects::570": {"label": "Setting up research intensive clusters across the EU on characterization of polymer nanostructures", "acronym": "NAPOLYNET"}}
-{"fam::projects::663": {"label": "Reproduction of European Eel: Towards a Self-sustained Aquaculture", "acronym": "PRO-EEL"}}
+{"ee::projects::577": {"label": "Maximising yield of fisheries while balancing ecosystem, economic and social concerns", "acronym": "MYFISH"}}
 {"mes::projects::495": {"label": "Sea-level change due to climate change", "acronym": "SEACHANGE"}}
-{"fet-fp7::open::450::249858": {"label": "Emotional interaction grounded in realistic context", "acronym": "TANGO"}}
-{"fet-fp7::open::1252::613044": {"label": "Parallel computing based on designed networks explored by self-propelled, biological agents", "acronym": "ABACUS"}}
-{"ee::projects::1567": {"label": "Future Crops for Food, Feed, Fiber and Fuel", "acronym": "4F CROPS"}}
 {"fet-fp7::proactive::971::600708": {"label": "A Quantitative Approach to Management and Design of Collective and Adaptive Behaviours", "acronym": "QUANTICOL"}}
+{"fet-fp7::proactive::968::317614": {"label": "Mathematical framework for multiplex networks", "acronym": "PLEXMATH"}}
 {"aginfra::projects::14": {"label": "Robot Fleets for Highly Effective Agriculture and Forestry Management", "acronym": "RHEA"}}
-{"fet-fp7::open::450::270833": {"label": "Data Science for Simulating the Era of Electric Vehicles", "acronym": "DATA SIM"}}
-{"fet-fp7::proactive::967::318671": {"label": "Microscale Chemically Reactive Electronic Agents", "acronym": "MICREAGENTS"}}
 {"mes::projects::532": {"label": "Development of new techniques in hatchery rearing, fishery enhancement and aquaculture for Nephrops", "acronym": "NEPHROPS"}}
 {"mes::projects::364": {"label": "Fixed Point Open Ocean Observatories Network", "acronym": "FIXO3"}}
 {"mes::projects::340": {"label": "Oceanic exploration with seismic reflection data", "acronym": "OCEANSEIS"}}
-{"mes::projects::440": {"label": "Fostering sustainability and uptake of research results through Networking activities in Black Sea & Mediterranean areas", "acronym": "IASON"}}
-{"mes::projects::343": {"label": "People for Ecosystem Based Governance in Assessing Sustainable Development of Ocean and Coast", "acronym": "AWARE"}}
 {"fet-fp7::proactive::311::1209": {"label": "Pervasive Adaptation Network for the Organisation of the Research Agenda and the Management of Activities", "acronym": "PANORAMA"}}
+{"mes::projects::433": {"label": "North Atlantic Climate: Predictability of the climate in the North Atlantic/European sector related to North Atlantic/Arctic sea surface temperature and sea ice variability and change", "acronym": "NACLIM"}}
 {"mes::projects::137": {"label": "Interactions between marine algae and bacteria", "acronym": "ALGBACT"}}
-{"fet-fp7::proactive::1253::612146": {"label": "Engineering multicellular biocircuits: programming cell-cell communication using plasmids as wires", "acronym": "PLASWIRES"}}
+{"fet-fp7::proactive::968::317672": {"label": "Dynamics and COevolution in Multi-Level Strategic INteraction GAmeS", "acronym": "CONGAS"}}
 {"mes::projects::508": {"label": "The forcing of sea level rise in the Arctic, the North Atlantic and the Mediterranean Sea", "acronym": "FORSEANAM"}}
-{"fet-fp7::proactive::967::317707": {"label": "MULTI-valued and parallel molecular logic", "acronym": "MULTI"}}
-{"ee::projects::188": {"label": "High temperature thermal energy Storage by Reversible thermochemical Reaction", "acronym": "STORRE"}}
 {"mes::projects::455": {"label": "Unravelling and exploiting Mediterranean Sea microbial diversity and ecology for xenobiotics' and pollutants' clean up", "acronym": "MAGICPAH"}}
-{"mes::projects::625": {"label": "Microbes as positive actors for more sustainable aquaculture", "acronym": "PROMICROBE"}}
 {"mes::projects::324": {"label": "Transatlantic fluxes of Saharan dust: changing climate through fertilising the ocean?", "acronym": "DUSTTRAFFIC"}}
-{"ee::projects::972": {"label": "Forest Resource Sustainability through Bio-Based-Composite Development", "acronym": "FORBIOPLAST"}}
-{"fet-fp7::proactive::972::600806": {"label": "Computations and Organization of Retes Through the Interaction ofComputational, Optical and Neurophysiological Investigations of the Cerebral cortex", "acronym": "CORTICONIC"}}
-{"mes::projects::662": {"label": "Tara Oceans", "acronym": "MICRO B3"}}
+{"mes::projects::112": {"label": "Increasing Value and Flow in the Marine Biodiscovery Pipeline", "acronym": "PHARMASEA"}}
+{"mes::projects::10": {"label": "Development and pre-operational validation of the Ocean Monitoring and Forecasting component of the future GMES Marine Core Service", "acronym": "MYOCEAN"}}
+{"fet-fp7::open::301::309191": {"label": "Generic and Highly Organic, Shape-changing inTerfaces", "acronym": "GHOST"}}
 {"fet-fp7::open::450::270843": {"label": "Integrated Quantum Information Technology", "acronym": "IQIT"}}
-{"ee::projects::1310": {"label": "megaCITY - Zoom for the ENvironment", "acronym": "CITYZEN"}}
-{"mes::projects::127": {"label": "Multi-proxy approach of marine Silicon and Carbon biogeochemical Cycles", "acronym": "MUSICC"}}
 {"fet-fp7::proactive::746::256959": {"label": "Nanoscale energy management for powering ICT devices", "acronym": "NANOCTM"}}
+{"fet-fp7::open::308::618091": {"label": "Speed of Adaptation in Population Genetics and Evolutionary Computation", "acronym": "SAGE"}}
 {"fet-fp7::proactive::453::248919": {"label": "Bacterial Computing with Engineered Populations", "acronym": "BACTOCOM"}}
-{"mes::projects::198": {"label": "Marine robots and dexterous manipulation for enabling autonomous underwater multipurpose intervention missions", "acronym": "TRIDENT"}}
 {"fet-fp7::proactive::453::248992": {"label": "Artificial Wet Neuronal Networks fromCompartmentalised Excitable Chemical Media", "acronym": "NEUNEU"}}
-{"mes::projects::561": {"label": "Forage fish interactions", "acronym": "FACTS"}}
-{"mes::projects::491": {"label": "Building Capacity for a Black Sea Catchment Observation and Assessment System supporting Sustainable Development", "acronym": "ENVIROGRIDS"}}
-{"fet-h2020::open::99a93fcc1900::662629": {"label": "NanoSmells: Artificial remote-controlled odorants", "acronym": "NEUROCHEMS"}}
-{"aginfra::projects::22": {"label": "None", "acronym": "ENVRI PLUS"}}
+{"fet-fp7::proactive::967::318597": {"label": "SYnaptic MOlecular NEtworks for Bio-inspired Information Processing", "acronym": "SYMONE"}}
 {"ee::projects::170": {"label": "Sustainable Urban Metabolism for Europe", "acronym": "SUME"}}
-{"ee::projects::237": {"label": "Smart Resilience Technology, Systems and Tools", "acronym": "SMARTEST"}}
+{"ee::projects::1152": {"label": "ECOPOTENTIAL: IMPROVING FUTURE ECOSYSTEM BENEFITS THROUGH EARTH OBSERVATIONS", "acronym": "CESAR"}}
 {"ee::projects::1510": {"label": "Assessment of Climate Change Mitigation Pathways and Evaluation of the Robustness of Mitigation Cost Estimates", "acronym": "AMPERE"}}
 {"fet-fp7::open::301::288956": {"label": "New tools and Algorithms for Directed NEtwork Analysis", "acronym": "NADINE"}}
-{"fet-fp7::open::301::618024": {"label": "Bottom-up Approaches to Machines dedicated to Bayesian Inference", "acronym": "BAMBI"}}
-{"mes::projects::240": {"label": "The impacts of global environmental change for marine biotic interactions and ecosystem functioning", "acronym": "GLOBEF"}}
+{"fam::projects::645": {"label": "European Eels in the Atlantic: Assessment of Their Decline", "acronym": "EELIAD"}}
 {"mes::projects::452": {"label": "ARchaeological RObot systems for the World's Seas", "acronym": "ARROWS"}}
-{"fet-h2020::proact::8dd840d37a31::640891": {"label": "Deferred Restructuring of Experience in Autonomous Machines", "acronym": "DREAM"}}
-{"mes::projects::368": {"label": "Integration and enhancement of key existing European deep-ocean observatories", "acronym": "EUROSITES"}}
+{"fet-fp7::proactive::968::318493": {"label": "Topological Complex Systems", "acronym": "TOPOSYS"}}
 {"fet-fp7::proactive::970::21203": {"label": "Quantum Waveguides Application and Development", "acronym": "QUOWSS"}}
 {"ee::projects::258": {"label": "Maximizing the EU shale gas potential by minimizing its environmental footprint", "acronym": "ShaleXenvironmenT"}}
 {"mes::projects::147": {"label": "Experimental and Computational Tools for Combustion Optimization in Marine and Automotive Engines", "acronym": "NET"}}
-{"fet-fp7::open::450::250072": {"label": "Integrated Quantum Sensors", "acronym": "FACT"}}
-{"fet-fp7::proactive::451::248789": {"label": "TERASCALE RELIABLE ADAPTIVE MEMORY SYSTEMS", "acronym": "TRAMS"}}
+{"fet-fp7::proactive::1254::22452": {"label": "Planar Atomic and Molecular Scale devices", "acronym": "SURFINK"}}
 {"mes::projects::136": {"label": "Marine nanobiotechnology: Manganese oxide-containing core-shell materials formed by proteins from marine organisms for biomedical and environmental applications", "acronym": "MEM-S"}}
-{"ee::projects::64": {"label": "Urban Reduction of GHG Emissions in China and Europe", "acronym": "URGENCHE"}}
-{"ee::projects::588": {"label": "Multi-scale Service for Monitoring NATURA 2000 Habitats of European Community Interest", "acronym": "MS.MONINA"}}
+{"ee::projects::1161": {"label": "Effective use of ecosystem and biological knowledge in fisheries", "acronym": "ECOKNOWS"}}
+{"ee::projects::955": {"label": "Understanding food-gut-brain mechanisms across the lifespan in the regulation of hunger and satiety for health", "acronym": "FULL4HEALTH"}}
 {"fet-fp7::proactive::971::601062": {"label": "A theoretical framework for swarms of GRN-controlled agents which display adaptive tissue-like organisation", "acronym": "SIMBIONT"}}
 {"mes::projects::459": {"label": "Past Interglacial Climates at Key Sites: Sea Surface Temperature and Salinity Reconstructions from the Northern North Atlantic during MIS 5e and MIS 11", "acronym": "PICKS"}}
 {"mes::projects::63": {"label": "Marine Energy Research Innovation and Knowledge Accelerator", "acronym": "MERIKA"}}
-{"ee::projects::471": {"label": "Performance-based approach to the earthquake protection of cultural heritage in European and Mediterranean countries", "acronym": "PERPETUATE"}}
-{"mes::projects::591": {"label": "A new integrative framework for the study of fish welfare based on the concepts of allostasis, appraisal and coping styles", "acronym": "COPEWELL"}}
 {"fet-h2020::open::99a93fcc1900::664878": {"label": "Redesigning 2D Materials for the Formulation of Semiconducting Inks", "acronym": "2D-INK"}}
 {"fet-fp7::open::301::284715": {"label": "Inductive Constraint Programming", "acronym": "ICON"}}
-{"fet-fp7::proactive::315::4308": {"label": "Highly Adaptable and Trustworthy Software using Formal Models", "acronym": "HATS"}}
-{"mes::projects::279": {"label": "Host-virus chemical arms race during algal bloom in the ocean at a single cell resolution", "acronym": "INFOTROPHIC"}}
 {"fet-fp7::proactive::1254::22453": {"label": "Molecular Quantum Spintronics", "acronym": "MOQUAS"}}
 {"mes::projects::155": {"label": "Physiological Interactions between Marine Cyanobacteria and their Viruses", "acronym": "PIMCYV"}}
-{"mes::projects::375": {"label": "Reconstructing abrupt Changes in Chemistry and Circulation of the Equatorial Atlantic Ocean: Implications for global Climate and deep-water Habitats", "acronym": "CACH"}}
 {"mes::projects::172": {"label": "Phosphorus dynamics in low-oxygen marine systems: quantifying the nutrient-climate connection in Earths past, present and future", "acronym": "PHOXY"}}
-{"ee::projects::85": {"label": "Transitions to the Urban Water Services of Tomorrow", "acronym": "TRUST"}}
-{"ee::projects::51": {"label": "Impact of climate change on the transport, fate and risk management of viral pathogens in water", "acronym": "VIROCLIME"}}
+{"fet-fp7::open::301::284566": {"label": "Quantum Propagating Microwaves in Strongly Coupled Environments", "acronym": "PROMISCE"}}
 {"mes::projects::371": {"label": "New Directions Linking Ocean Geochemistry, Biomineralization and Palaeoclimate", "acronym": "NEWLOG"}}
 {"fet-h2020::open::99a93fcc1900::665095": {"label": "Magnetic Skyrmions for Future Nanospintronic Devices", "acronym": "MAGicSky"}}
-{"fet-fp7::proactive::319::13750": {"label": "Collaborative Research into Exascale Systemware, Tools and Applications", "acronym": "CRESTA"}}
-{"fet-fp7::proactive::314::4314": {"label": "Robust Robot Locomotion and Movements Through Morphology and Morphosis", "acronym": "LOCOMORPH"}}
+{"mes::projects::241": {"label": "Marine ecosystem evolution in a changing environment", "acronym": "MEECE"}}
 {"fet-fp7::open::450::266722": {"label": "Supermodeling by combining imperfect models", "acronym": "SUMO"}}
+{"ee::projects::312": {"label": "Living with landslide risk in Europe: Assessment, effects of global change, and risk management strategies", "acronym": "SAFELAND"}}
 {"fet-h2020::proact::0358697b09c5::641277": {"label": "Quantum Probes for Complex Systems", "acronym": "QuProCS"}}
-{"mes::projects::305": {"label": "Prototype Operational Continuity for the GMES Ocean Monitoring and Forecasting Service", "acronym": "MYOCEAN2"}}
 {"fet-fp7::proactive::314::4307": {"label": "Novel Design Principles and Technologies for a New Generation of High Dexterity Soft-bodied Robots Inspired by the Morphology and Behaviour of the Octopus", "acronym": "OCTOPUS"}}
-{"fet-fp7::open::1252::613024": {"label": "GRAPHENE-BASED SINGLE-PHOTON NONLINEAR OPTICAL DEVICES", "acronym": "GRASP"}}
+{"fet-fp7::open::301::618024": {"label": "Bottom-up Approaches to Machines dedicated to Bayesian Inference", "acronym": "BAMBI"}}
 {"ee::projects::1086": {"label": "Enhancing resilience of communities and territories facing natural and na-tech hazards", "acronym": "MTVEGMOD"}}
-{"ee::projects::606": {"label": "Mediterranean Intermittent River Management", "acronym": "MIRAGE"}}
+{"mes::projects::333": {"label": "Deterministic Forecasting of Rogue Waves in the Ocean", "acronym": "DEROGUE WAVES"}}
+{"fet-fp7::open::1252::613024": {"label": "GRAPHENE-BASED SINGLE-PHOTON NONLINEAR OPTICAL DEVICES", "acronym": "GRASP"}}
+{"ee::projects::45": {"label": "Visions Of LANd use Transitions in Europe", "acronym": "VOLANTE"}}
 {"fam::projects::585": {"label": "The development of tools for tracing and evaluating the genetic impact of fish from aquaculture: \u201cAquaTrace\u201d", "acronym": "AQUATRACE"}}
-{"fam::projects::628": {"label": "Sustainable trade in ethical aquaculture", "acronym": "SEAT"}}
 {"mes::projects::473": {"label": "Climate Change and Inland Seas: Phenomena, Feedback and Uncertainties. The Physical Science Basis.", "acronym": "CLIMSEAS"}}
 {"fet-h2020::proact::8405e7d841a4::731868": {"label": "Optomechanics for Virology", "acronym": "NANOFORCELLS"}}
-{"mes::projects::37": {"label": "IMARINE", "acronym": "EUBRAZILOPENBIO"}}
-{"fet-fp7::proactive::453::249032": {"label": "Matrix for Chemical IT", "acronym": "THE GRAIL"}}
+{"fet-fp7::proactive::745::257414": {"label": "Autonomic Service-Component Ensembles", "acronym": "ASCENS"}}
+{"ee::projects::1119": {"label": "European Liaison on Electricity Committed Towards long-term Research Activities for Smart Grids", "acronym": "SENSIBLE"}}
 {"fam::projects::584": {"label": "Benthic ecosystem fisheries Impact Study", "acronym": "BENTHIS"}}
-{"mes::projects::140": {"label": "Marine robotic system of self-organizing, logically linked physical nodes", "acronym": "MORPH"}}
-{"fet-fp7::proactive::452::248629": {"label": "Solid State Systems for Quantum Information Processing", "acronym": "SOLID"}}
-{"fet-fp7::open::306::618075": {"label": "TWO!EARS", "acronym": "TWO!EARS"}}
-{"ee::projects::1225": {"label": "Management and monitoring of deep-sea fisheries and stocks", "acronym": "DEEPFISHMAN"}}
+{"fet-fp7::proactive::969::318490": {"label": "Self Energy-Supporting Autonomous Computation", "acronym": "SENSATION"}}
+{"fet-fp7::proactive::969::318287": {"label": "Operating ICT basic switches below the Landauer limit", "acronym": "ZEROPOWER"}}
+{"dh-ch::projects::6": {"label": "3D-COFORM", "acronym": "VARCITY"}}
+{"ee::projects::953": {"label": "Functional significance of forest biodiversity in Europe", "acronym": "FUNDIVEUROPE"}}
+{"ee::projects::192": {"label": "Status and Trends of European Pollinators", "acronym": "STEP"}}
 {"fet-fp7::proactive::748::270434": {"label": "Realistic Real-time Networks: computation dynamics in the cerebellum", "acronym": "CEREBNET"}}
 {"fet-h2020::hpc::aa969decfd0f::671697": {"label": "Mont-Blanc 3, European scalable and power efficient HPC platform based on low-power embedded technology", "acronym": "ROMOL"}}
-{"ee::projects::903": {"label": "Advanced ground source heat pump systems for heating and cooling in Mediterranean climate", "acronym": "GROUND-MED"}}
-{"ee::projects::264": {"label": "Semantic Sensor Grids for Rapid Application Development for Environmental Management", "acronym": "SEMSORGRID4ENV"}}
-{"fet-fp7::proactive::451::247846": {"label": "European Reference Tiled Architecture Experiment", "acronym": "EURETILE"}}
-{"fet-fp7::proactive::745::257756": {"label": "Relevance and cognition for self-awareness in a content-centric Internet", "acronym": "RECOGNITION"}}
 {"fet-h2020::flag::c02338ba9695::785219": {"label": "Graphene Flagship Core Project 2", "acronym": "INTEGRADE"}}
 {"fet-fp7::proactive::452::247687": {"label": "Atomic QUantum TEchnologies", "acronym": "PTDC/EEA-TEL/103402/2008"}}
 {"mes::projects::461": {"label": "Arctic Sea Ice and Greenland Ice Sheet Sensitivity", "acronym": "ICE2ICE"}}
 {"fet-fp7::open::450::249958": {"label": "The physics of Ion Coulomb Crystals: Thermodynamics, Quantum control,  and Quantum Simulators.", "acronym": "PICC"}}
 {"fam::projects::547": {"label": "Controlling infectious diseases in oysters and mussels in Europe", "acronym": "BIVALIFE"}}
-{"mes::projects::429": {"label": "Sea For Society", "acronym": "SFS"}}
-{"fet-fp7::proactive::451::248465": {"label": "Service-oriented Operating Systems", "acronym": "IRMOS"}}
+{"mes::projects::462": {"label": "Design for ship safety in extreme seas", "acronym": "DEROGUE WAVES"}}
 {"fet-fp7::proactive::748::270324": {"label": "Seeing Better with Hybrid BSI Spatio-Temporal Silicon Retina", "acronym": "SEEBETTER"}}
+{"ee::projects::1012": {"label": "Exact Geometry Simulation for Optimized Design of Vehicles and Vessels", "acronym": "EXCITING"}}
 {"fet-fp7::proactive::312::1543": {"label": "Self-Constructing Computing Systems", "acronym": "SECO"}}
 {"aginfra::projects::41": {"label": "Innovine Project", "acronym": "INNOVINE"}}
-{"fet-fp7::open::450::256230": {"label": "The Listening Talker", "acronym": "LISTA"}}
 {"mes::projects::631": {"label": "Managing Aquatic ecosystems and water Resources under multiple Stress", "acronym": "OPENNESS"}}
-{"ee::projects::774": {"label": "Integrated Research Programme on Wind Energy", "acronym": "IRPWIND"}}
+{"fet-fp7::proactive::967::317707": {"label": "MULTI-valued and parallel molecular logic", "acronym": "MULTI"}}
+{"fet-fp7::proactive::1253::612146": {"label": "Engineering multicellular biocircuits: programming cell-cell communication using plasmids as wires", "acronym": "PLASWIRES"}}
 {"fet-fp7::open::306::323714": {"label": "Emulators of Quantum Frustrated Magnetism", "acronym": "EQUAM"}}
-{"ee::projects::30": {"label": "Water Treatment by Molecularly Imprinted Materials", "acronym": "WATERMIM"}}
 {"fet-fp7::open::301::308874": {"label": "Extensive UNIfied-domain SimulatiON of the human voice", "acronym": "EUNISON"}}
-{"mes::projects::143": {"label": "High Pressure Electronically controlled gas injection for marine two-stroke diesel engines", "acronym": "HELIOS"}}
-{"mes::projects::446": {"label": "Corals and global warming: The Mediterranean versus the Red Sea", "acronym": "CORALWARM"}}
+{"fet-fp7::proactive::312::1587": {"label": "Biologically inspired computation for chemical sensing", "acronym": "NEUROCHEM"}}
 {"fet-h2020::open::99a93fcc1900::686547": {"label": "Mass spectrometric technology for next generation proteomics in systems medicine", "acronym": "WNTSAPP"}}
 {"mes::projects::481": {"label": "Understanding seagrass effects on biodiversity levels", "acronym": "USEABLE"}}
-{"ee::projects::1309": {"label": "Climate Change and Marine Ecosystem Research Results", "acronym": "CLAMER"}}
 {"mes::projects::28": {"label": "The importance of submarine groundwater discharge for the southwestern Baltic Sea", "acronym": "SGDBALTIC"}}
+{"fet-fp7::open::301::293431": {"label": "Innovative Robotic Artefacts Inspired by Plant Roots for Soil Monitoring", "acronym": "PLANTOID"}}
 {"fet-h2020::open::99a93fcc1900::713481": {"label": "Spintronic-Photonic Integrated Circuit platform for novel Electronics", "acronym": "SPICE"}}
-{"fet-fp7::proactive::971::600654": {"label": "DIVERSIFY : Ecology-inspired software diversity for distributed adaptation in CAS", "acronym": "DIVERSIFY"}}
-{"fet-h2020::open::99a93fcc1900::665044": {"label": "Data Learning on Manifolds and Future Challenges", "acronym": "MDEPUGS"}}
 {"mes::projects::311": {"label": "Remotely sensed biogeochemical cycles in the ocean", "acronym": "LAC"}}
 {"ee::projects::754": {"label": "TOWARDS A JOINT EUROPEAN RESEARCH INFRASTRUCTURE NETWORK FOR COASTAL OBSERVATORIES", "acronym": "JERICO"}}
+{"mes::projects::207": {"label": "Association of European marine biological laboratories", "acronym": "ASSEMBLE"}}
 {"fet-fp7::open::306::618025": {"label": "CARbon nanoTube phOtONic devices on silicon", "acronym": "CARTOON"}}
-{"fet-fp7::proactive::967::316366": {"label": "Physarum Chip: Growing Computers from Slime Mould", "acronym": "PHYCHIP"}}
-{"fet-fp7::open::301::296679": {"label": "Magnetic Nano Actuators for Quantitative Analysis", "acronym": "MANAQA"}}
-{"ee::projects::256": {"label": "Seismic Hazard Harmonization in Europe", "acronym": "SHARE"}}
+{"mes::projects::130": {"label": "Carbonate Biomineralization in the Marine Environment: Paleo-climate proxies and the origin of vital effects", "acronym": "BIOCARB"}}
+{"mes::projects::375": {"label": "Reconstructing abrupt Changes in Chemistry and Circulation of the Equatorial Atlantic Ocean: Implications for global Climate and deep-water Habitats", "acronym": "UNPACK CLIMATE"}}
 {"fet-fp7::flagship::966::284709": {"label": "The FuturICT Knowledge Accelerator: Creating Socially Interactive Information Technologies for a Sustainable Future", "acronym": "FUTURICT"}}
 {"ee::projects::498": {"label": "Organising dissemination on Results of projects on Chemical Evaluation, Spreading Techniques for Risk Assessment", "acronym": "ORCHESTRA"}}
 {"fet-fp7::proactive::1254::22488": {"label": "Silicon at the Atomic and Molecular scale", "acronym": "SIAM"}}
 {"mes::projects::119": {"label": "The new players in the marine nitrogen cycle: benthic foraminifera", "acronym": "NITROFORAM"}}
-{"mes::projects::50": {"label": "The Changing Arctic and Sub-Arctic Environment: A Research and Training Programme On Marine Biotic Indicators of Recent Climate Changes in the High Latitudes of the North Atlantic", "acronym": "CASE"}}
-{"ee::projects::246": {"label": "SUSTAINABLE USE OF IRRGATION WATER IN THE MEDITERRANEAN REGION", "acronym": "SIRRIMED"}}
+{"ee::projects::528": {"label": "New dietary strategies addressing the specific needs of elderly population for an healthy ageing in Europe", "acronym": "NU-AGE"}}
 {"ee::projects::975": {"label": "Personalised nutrition: An integrated analysis of opportunities and challenges", "acronym": "FOOD4ME"}}
-{"ee::projects::224": {"label": "Conflicting demands of land use, soil biodiversity and the sustainable delivery of ecosystem goods and services in Europe", "acronym": "SOILSERVICE"}}
 {"fet-fp7::open::306::323924": {"label": "Interfacing Quantum Optical, Electrical, and Mechanical Systems", "acronym": "IQUOEMS"}}
 {"mes::projects::156": {"label": "Red-Med Marine Bioinvasion", "acronym": "REDMEDINV"}}
-{"fet-fp7::open::450::265496": {"label": "Statistical Mechanics Inspired Methods for Green AutonomousNetworking", "acronym": "SPARCS"}}
 {"mes::projects::649": {"label": "New methods of aquatic hyperspectral light field analysis for concurrent characterisation of physical and bio-optical processes at small scales", "acronym": "AQUALIGHT"}}
-{"mes::projects::341": {"label": "Multi-level assessment of ocean-climate dynamics: A gateway to interdisciplinary training and analysis", "acronym": "GATEWAYS"}}
-{"fet-fp7::proactive::311::1610": {"label": "Social Networking for Pervasive Adaptation", "acronym": "SOCIALNETS"}}
-{"fet-fp7::proactive::311::1136": {"label": "Adaptable Pervasive Flows", "acronym": "ALLOW"}}
-{"fet-fp7::proactive::972::600925": {"label": "Investigation of local and global cortical circuits with advanced neural probes for high-resolution electrophysiological monitoring and optogenetic stimulation", "acronym": "NEUROSEEKER"}}
-{"mes::projects::417": {"label": "Future Deep Sea Wind Turbine Technologies", "acronym": "DEEPWIND"}}
-{"ee::projects::277": {"label": "Towards integrated European marine research strategy and programmes", "acronym": "SEAS ERA"}}
-{"mes::projects::219": {"label": "Annually-resolved archives of marine climate change - development of molluscan sclerochronology for marine environmental monitoring and climatology", "acronym": "ARAMACC"}}
-{"fet-fp7::proactive::314::4290": {"label": "EVolving morphologies for human-Robot sYmbiotic interactiON", "acronym": "EVRYON"}}
+{"mes::projects::343": {"label": "People for Ecosystem Based Governance in Assessing Sustainable Development of Ocean and Coast", "acronym": "PEGASO"}}
+{"fet-fp7::open::301::296590": {"label": "Biomimiking the brain - towards 3D neuronal network dynamics", "acronym": "3DNEURON"}}
+{"mes::projects::561": {"label": "Forage fish interactions", "acronym": "CONPELHAB"}}
 {"mes::projects::314": {"label": "Deposition of atmospheric particles on the ocean : A process study", "acronym": "DAPOP"}}
-{"fet-fp7::open::301::304886": {"label": "Nanoparticles in Quantum Experiments: Exploring the scientific basis of future innovative quantum technologies", "acronym": "NANOQUESTFIT"}}
 {"mes::projects::511": {"label": "Bridging continents across the sea: Multi-disciplinary perspectives on the emergence of long-distance maritime contacts in prehistory", "acronym": "UNDEAD"}}
-{"ee::projects::764": {"label": "Interactive Soil Quality Assessment in Europe and China for Agricultural Productivity and Environmental Resilience", "acronym": "iSQAPER"}}
+{"ee::projects::1305": {"label": "Water Detoxification Using Innovative vi-Nanocatalysts", "acronym": "CLEAN WATER"}}
 {"fet-fp7::open::301::308850": {"label": "Information, Fluctuations, and Energy Control in Small Systems", "acronym": "INFERNOS"}}
-{"mes::projects::135": {"label": "Natural products from marine fungi for the treatment of cancer", "acronym": "MARINE FUNGI"}}
-{"mes::projects::262": {"label": "Gliders for Research, Ocean Observation and Management", "acronym": "GROOM"}}
-{"mes::projects::384": {"label": "Search and monitoring of Harmful contaminants, other pollutants and leaks in vessels in port using a swarm of robotic fish", "acronym": "SHOAL"}}
+{"mes::projects::591": {"label": "A new integrative framework for the study of fish welfare based on the concepts of allostasis, appraisal and coping styles", "acronym": "COPEWELL"}}
+{"ee::projects::1326": {"label": "Pan-European coordination action on CO2 Geological Storage", "acronym": "CGS EUROPE"}}
+{"ee::projects::850": {"label": "In situ monitoring of oxygen depletion in hypoxic ecosystems of coastal and open seas, and land-locked water bodies", "acronym": "HYPOX"}}
 {"fet-fp7::proactive::971::600854": {"label": "Hybrid and Diversity-Aware Collective Adaptive Systems: When People Meet Machines to Build a Smarter Society", "acronym": "SMARTSOCIETY"}}
 {"fet-fp7::open::450::265432": {"label": "Enhance environmental awareness through social information technologies", "acronym": "EVERYAWARE"}}
 {"mes::projects::40": {"label": "Pace of life syndromes in fish: harvesting effects and the role of marine reserves", "acronym": "BE-FISH"}}
-{"fet-fp7::proactive::748::269459": {"label": "Choreographing neural networks: coupling attractor dynamics and state-dependent computations across biomimetic brain interfaces with neuromorphic VLSI", "acronym": "CORONET"}}
-{"fet-fp7::proactive::747::270028": {"label": "Atomic Scale and single Molecule Logic gate Technologies", "acronym": "PAMS"}}
 {"fet-fp7::open::306::323944": {"label": "Heterogeneous Ad-hoc Networks for Distributed, Cooperative, and Adaptive Multimedia Signal Processing", "acronym": "HANDICAMS"}}
 {"ee::projects::756": {"label": "Improved Water efficiency through ICT technologies for integrated supply-Demand side manaGEmenT", "acronym": "IWIDGET"}}
 {"fet-h2020::proact::8405e7d841a4::732631": {"label": "Open transPREcision COMPuting", "acronym": "OPRECOMP"}}
 {"mes::projects::530": {"label": "Biosynthesis of very long-chain fatty acids in fish: Molecular and biochemical basis and implications in aquaculture", "acronym": "LONGFA"}}
-{"mes::projects::52": {"label": "European-Chinese Research Staff Exchange Cluster on Marine Biotechnology", "acronym": "MEM-S"}}
-{"fet-fp7::proactive::319::13912": {"label": "Mont-Blanc, European scalable and power efficient HPC platform based on low-power embedded technology", "acronym": "MONT-BLANC"}}
-{"fet-fp7::open::1252::612933": {"label": "RECALL: Enhanced Human Memory", "acronym": "RECALL"}}
-{"ee::projects::984": {"label": "Food Labelling to Advance Better Education for Life", "acronym": "FLABEL"}}
+{"ee::projects::416": {"label": "Development and application of standardized methodology for the PROspective SUstaInability assessment of TEchnologies", "acronym": "PROSUITE"}}
+{"fet-fp7::proactive::316::11078": {"label": "Co-ordinating Research Efforts Towards Zero-Power ICT", "acronym": "NANOPOWER"}}
 {"fet-fp7::proactive::312::1448": {"label": "BIOmimetic Technology for vibrissal ACtive Touch", "acronym": "BIOTACT"}}
-{"mes::projects::337": {"label": "Cost-effective sensors, interoperable with international existing ocean observing systems, to meet eu policies requirements", "acronym": "COMMON SENSE"}}
+{"mes::projects::457": {"label": "Productivity tools: Automated tools to measure primary productivity in European seas. A new autonomous monitoring tool to measure the primary production of major European seas", "acronym": "PROTOOL"}}
 {"fet-fp7::open::301::308943": {"label": "INSIGHT - DARWINIAN NEURODYNAMICS", "acronym": "INSIGHT"}}
-{"ee::projects::1062": {"label": "The European network for observing our changing planet", "acronym": "ERA-PLANET"}}
-{"fet-h2020::proact::8405e7d841a4::732344": {"label": "Biofunctionalised Electroconducting Microfibres for the Treatment of Spinal Cord Injury", "acronym": "INSTABILITIES"}}
-{"mes::projects::456": {"label": "Breakthrough Solutions for the Sustainable Exploration and Extraction of Deep Sea Mineral Resources", "acronym": "BLUE MINING"}}
+{"fet-fp7::proactive::452::248629": {"label": "Solid State Systems for Quantum Information Processing", "acronym": "SEMISPINNET"}}
+{"fet-fp7::open::301::304886": {"label": "Nanoparticles in Quantum Experiments: Exploring the scientific basis of future innovative quantum technologies", "acronym": "NANOQUESTFIT"}}
+{"fet-fp7::open::306::323901": {"label": "Phonon-Assisted Processes for Energy Transfer and Sensing", "acronym": "PAPETS"}}
 {"mes::projects::467": {"label": "Demographic strategies under climate variation: A study on Arctic and Antarctic seabirds", "acronym": "EVOLBIRD"}}
 {"mes::projects::593": {"label": "Parasite risk assesment with integrated tools in EU fish production value chains", "acronym": "PARASITE"}}
-{"fet-h2020::open::861c15d59710::736876": {"label": "VisorSurf - A Hardware Platform for Software-driven Functional Metasurfaces", "acronym": "VISORSURF"}}
 {"mes::projects::18": {"label": "Life beneath the ocean floor: The subsurface sink of carbon in the marine environment", "acronym": "CARBONSINK"}}
-{"ee::projects::894": {"label": "Determining factors and critical periods in food habit formation and breaking in early childhood: a multidisciplinary approach", "acronym": "HABEAT"}}
+{"fet-fp7::proactive::313::4283": {"label": "Collective Emotions in Cyberspace", "acronym": "CYBEREMOTIONS"}}
+{"fet-fp7::proactive::454::258749": {"label": "The Collective Experience of Empathic Data Systems", "acronym": "CCFIB"}}
+{"fet-fp7::open::450::250072": {"label": "Integrated Quantum Sensors", "acronym": "ISENSE"}}
 {"ee::projects::1279": {"label": "Quality assurance concepts for adhesive bonding of aircraft composite structures by advanced NDT", "acronym": "ComBoNDT"}}
 {"fet-fp7::open::302::296582": {"label": "PLants Employed As SEnsor Devices", "acronym": "flora robotica"}}
 {"mes::projects::203": {"label": "The role of phylogenetic relatedness in invasion success: A multidisciplinary study of marine biological invasions", "acronym": "MARINVASPHYLOGEN"}}
-{"ee::projects::635": {"label": "Innovative Multi-purpose off-shore platforms: planning, Design and operation", "acronym": "MERMAID"}}
 {"mes::projects::484": {"label": "Effects of global warming and alien species invasions on high diverse communities of NW Mediterranean Sea", "acronym": "CORALCHANGE"}}
-{"fet-fp7::proactive::969::318337": {"label": "Whole-Systems Energy Transparency", "acronym": "ENTRA"}}
 {"ee::projects::1461": {"label": "Atmospheric Organic Particulate Matter, Air Quality and Climate Change Studies", "acronym": "ATMOPACS"}}
-{"mes::projects::606": {"label": "Development of a biosensor technology for environmental monitoring and disease prevention in aquaculture ensuring food safety", "acronym": "ENVIGUARD"}}
-{"mes::projects::215": {"label": "Cenozoic evolution of the Indonesian throughflow and the origins of Indo-Pacific marine biodiversity: Mapping the biotic response to environmental change", "acronym": "THROUGHFLOW"}}
+{"fet-fp7::proactive::748::269459": {"label": "Choreographing neural networks: coupling attractor dynamics and state-dependent computations across biomimetic brain interfaces with neuromorphic VLSI", "acronym": "HBP"}}
 {"mes::projects::139": {"label": "Marine protected areas for the conservation of marine top predators", "acronym": "MPACONTOP"}}
+{"fet-fp7::proactive::970::21246": {"label": "A Guided Matter-Wave Interferometer on a Atom-Chip", "acronym": "MATTERWAVE"}}
 {"fet-fp7::proactive::967::317662": {"label": "NAnoSCale Engineering for Novel Computation using Evolution (NASCENCE)", "acronym": "NASCENCE"}}
-{"ee::projects::632": {"label": "Monitoring and Evaluation of Spatially Managed Areas (MESMA)", "acronym": "MESMA"}}
-{"fet-fp7::flagship::966::285609": {"label": "IT Future of Medicine", "acronym": "ITFOM"}}
-{"fet-fp7::open::303::295293": {"label": "Quantum Integrated Light Matter Interface", "acronym": "QUILMI"}}
+{"fet-fp7::open::301::284553": {"label": "Towards new Brain-Machine Interfaces: state-dependent information coding", "acronym": "STOMMAC"}}
 {"ee::projects::487": {"label": "Advanced Tools and Research Strategies for Parasite Control in European farmed fish", "acronym": "ParaFishControl"}}
+{"fet-fp7::proactive::747::270483": {"label": "Single Molecule Activation and Computing", "acronym": "FOCUS"}}
 {"fet-h2020::open::99a93fcc1900::687089": {"label": "PROtein SEQuencing using Optical single molecule real-time detection", "acronym": "NEURO-PLASMONICS"}}
 {"fet-h2020::open::99a93fcc1900::665207": {"label": "volumetric medical x-ray imaging at extremely low dose", "acronym": "VOXEL"}}
-{"ee::projects::226": {"label": "Soil Care for profitable and sustainable crop production in Europe", "acronym": "RECARE"}}
-{"mes::projects::138": {"label": "Sensory-motor circuits in marine zooplankton and early evolution of the nervous system", "acronym": "PROTOBRAIN"}}
-{"mes::projects::607": {"label": "Implementing DNA barcoding into aquatic biodiversity research in Portugal and priming new macrobenthos monitoring tools", "acronym": "LUSOAQUABARCODE"}}
+{"fet-fp7::proactive::747::270028": {"label": "Atomic Scale and single Molecule Logic gate Technologies", "acronym": "ATMOL"}}
+{"fet-fp7::open::450::265496": {"label": "Statistical Mechanics Inspired Methods for Green AutonomousNetworking", "acronym": "STAMINA"}}
 {"mes::projects::487": {"label": "Environmental risk assessment of four pharmaceutical compounds employing genomic tools and the seabream, Sparus aurata", "acronym": "ERA4PHARM"}}
-{"fet-fp7::open::302::284833": {"label": "Physically unclonable functions found in standard PC components", "acronym": "PUFFIN"}}
-{"fet-h2020::open::99a93fcc1900::665233": {"label": "Super-resolution visualisation and manipulation of metaphase chromosomes", "acronym": "CELL-O-MATIC"}}
-{"mes::projects::663": {"label": "ATLAS", "acronym": "BLUE MINING"}}
-{"ee::projects::1010": {"label": "Efficient exploitation of EU perlite resources for the development of a new generation of innovative and high added value micro-perlite based materials for  Chemical, Construction and Manufacturing", "acronym": "EXPERL"}}
-{"fet-fp7::open::306::323849": {"label": "Cheap, textile based whole body sensor sensing system for interaction, physiological monitoring and activity recognition", "acronym": "SIMPLESKIN"}}
-{"mes::projects::164": {"label": "Marine Ecosystem Dynamics and Indicators for North Africa", "acronym": "MEDINA"}}
+{"fet-fp7::proactive::972::600925": {"label": "Investigation of local and global cortical circuits with advanced neural probes for high-resolution electrophysiological monitoring and optogenetic stimulation", "acronym": "NEUROSEEKER"}}
+{"fet-h2020::proact::8dd840d37a31::640891": {"label": "Deferred Restructuring of Experience in Autonomous Machines", "acronym": "DREAM"}}
 {"mes::projects::369": {"label": "Quantifying Aerobic Methane Oxidation in the Ocean: Calibration and palaeo application of a novel proxy", "acronym": "AMOPROX"}}
-{"aginfra::projects::7": {"label": "Future Internet Business Collaboration Networks in Agri-Food, Transport and Logistics", "acronym": "FISPACE"}}
+{"mes::projects::597": {"label": "Fish population structure and traceability", "acronym": "SYNCOM"}}
 {"mes::projects::363": {"label": "Drivers of trends and regime shifts in ocean phytoplankton and zooplankton", "acronym": "TROPHYZ"}}
-{"mes::projects::502": {"label": "Understanding the physics of first-year sea-ice growth using theoretical and computational fluid dynamics", "acronym": "SEA ICE CFD"}}
+{"mes::projects::140": {"label": "Marine robotic system of self-organizing, logically linked physical nodes", "acronym": "EUROFLEETS2"}}
 {"ee::projects::670": {"label": "NOVEL, SUSTAINABLE MARINE BIO-SURFACTANT / BIO-EMULSIFIERS FOR COMMERCIAL EXPLOITATION", "acronym": "HARWIN"}}
+{"aginfra::projects::50": {"label": "An Earth obseRvation Model based RicE information Service", "acronym": "ERMES"}}
 {"mes::projects::345": {"label": "The Coevolution of Life and Arsenic in Precambrian Oceans", "acronym": "CLAPO"}}
-{"ee::projects::141": {"label": "Systemic Seismic Vulnerability and Risk Analysis for Buildings, Lifeline Networks and Infrastructures Safety Gain", "acronym": "SYNER-G"}}
-{"mes::projects::64": {"label": "Strategic Research For Innovative Marine Propulsion Concepts", "acronym": "STREAMLINE"}}
-{"fet-fp7::open::301::618067": {"label": "Sketching Audio Technologies using Vocalizations and Gestures", "acronym": "SKAT-VG"}}
 {"fet-fp7::open::301::618045": {"label": "Miniature Insect Model for Active Learning", "acronym": "EXPL/BEX-BID/0497/2013"}}
-{"mes::projects::256": {"label": "A coupled ice sheet ocean model for calibrated prediction of the future contribution to sea level change from the Pine Island Glacier, Antarctica", "acronym": "CRAG"}}
+{"mes::projects::51": {"label": "Sub-seabed CO2 Storage: Impact on Marine Ecosystems (ECO2)", "acronym": "ECO2"}}
 {"fet-fp7::open::306::323872": {"label": "Significance-Based Computing for Reliability and Power Optimization", "acronym": "SCORPIO"}}
-{"fet-fp7::open::450::265505": {"label": "Paving the Way for Future Emerging DNA-based Technologies: Computer-Aided Design and Manufacturing of DNA libraries", "acronym": "CADMAD"}}
-{"mes::projects::199": {"label": "Marine renewable integrated application platform", "acronym": "MARINA PLATFORM"}}
-{"fet-fp7::flagship::966::284941": {"label": "Human Brain Project", "acronym": "BRAINSCALES"}}
-{"fet-fp7::proactive::317::11065": {"label": "INtegral BIOmathics Support Action", "acronym": "INBIOSA"}}
-{"fam::projects::634": {"label": "Bivalve conditioning and settlement \u2013 keys to competitive hatchery production", "acronym": "SETTLE"}}
-{"ee::projects::1000": {"label": "New \u00b5-CHP network technologies for energy efficient and sustainable districts", "acronym": "FC-DISTRICT"}}
+{"ee::projects::784": {"label": "Novel I\u039fnic L\u0399quid and supported ionic liquid solvents for reversible CAPture of CO2", "acronym": "IOLICAP"}}
+{"fet-fp7::open::301::618067": {"label": "Sketching Audio Technologies using Vocalizations and Gestures", "acronym": "SKAT-VG"}}
 {"fam::projects::589": {"label": "Quantifying Environmental and Social Interactions for Tuna fisheries Management", "acronym": "QUAESITUM"}}
 {"fet-h2020::proact::8dd840d37a31::640959": {"label": "Flora Robotica: Societies of Symbiotic Robot-Plant Bio-Hybrids as Social Architectural Artifacts", "acronym": "E-SWARM"}}
 {"ee::projects::735": {"label": "Linking Impact Assessment Instruments to Sustainability Expertise", "acronym": "LIAISE"}}
 {"mes::projects::252": {"label": "Shearwaters' Olfaction: a comparative study of sensory ecology in the Mediterranean Sea and Atlantic Ocean", "acronym": "SOMA"}}
-{"mes::projects::329": {"label": "A pan-European concerted and integrated approach to operational wave modelling and forecasting a complement to GMES MyOcean services", "acronym": "MYWAVE"}}
 {"mes::projects::636": {"label": "Photoacoustic instrument for quantification of photosynthesis and health of corals and aquatic plants", "acronym": "ECHOGREEN"}}
-{"mes::projects::173": {"label": "CoLlAborative eMbedded networks for submarine surveillance", "acronym": "CLAM"}}
-{"ee::projects::445": {"label": "Polygeneration through gasification utilising secondary fuels  derived from MSW", "acronym": "POLYSTABILAT"}}
-{"aginfra::projects::60": {"label": "Integration of Farm Management Information Systems to support real-time management decisions and compliance of management standards", "acronym": "FUTUREFARM"}}
+{"fet-fp7::proactive::315::4308": {"label": "Highly Adaptable and Trustworthy Software using Formal Models", "acronym": "HATS"}}
+{"fet-fp7::open::1252::612985": {"label": "From Inherent Concurrency to Massive Parallelism through Type-based Optimizations", "acronym": "UPSCALE"}}
+{"fet-fp7::proactive::319::13750": {"label": "Collaborative Research into Exascale Systemware, Tools and Applications", "acronym": "CRESTA"}}
 {"fet-h2020::flag::85792436c02c::785907": {"label": "Human Brain Project Specific Grant Agreement 2", "acronym": "HBP SGA2"}}
-{"mes::projects::6": {"label": "Pre-Operational Marine Service Continuity in Transition towards Copernicus", "acronym": "MyOcean FO"}}
 {"fet-fp7::open::301::284584": {"label": "Quantum Interferometry with Bose-Einstein Condensates", "acronym": "QIBEC"}}
 {"fet-fp7::proactive::969::318693": {"label": "Parallel Distributed Infrastructure for Minimization of Energy", "acronym": "PARADIME"}}
-{"aginfra::projects::62": {"label": "A web-based system for real-time Monitoring and Decision Making for Integrated Vineyard Management", "acronym": "MODEM_IVM"}}
-{"mes::projects::161": {"label": "Sensing toxicants in Marine waters makes Sense using biosensors", "acronym": "SMS"}}
-{"fet-h2020::proact::700613cd60fb::641191": {"label": "Bringing CItizens, Models and Data together in Participatory, Interactive SociaL EXploratories", "acronym": "CIMPLEX"}}
+{"fet-fp7::open::450::250026": {"label": "Social Interaction and Entrainment using Music PeRformance Experimentation", "acronym": "SIEMPRE"}}
+{"ee::projects::997": {"label": "Financialisation, economy, society and sustainable development", "acronym": "FESSUD"}}
+{"mes::projects::138": {"label": "Sensory-motor circuits in marine zooplankton and early evolution of the nervous system", "acronym": "PROTOBRAIN"}}
 {"fet-fp7::proactive::311::1447": {"label": "Responsive Flexible Collaborating Ambient", "acronym": "REFLECT"}}
-{"ee::projects::1295": {"label": "Climate change integrated assessment methodology for cross-sectoral adaptation and vulnerability in Europe", "acronym": "CLIMSAVE"}}
-{"mes::projects::514": {"label": "Seaweed derived anti-inflammatory agents and antioxidants", "acronym": "SWAFAX"}}
-{"ee::projects::99": {"label": "Training Requirements And Careers for Knowledge-based Food Science and Technology in Europe", "acronym": "TRACK_FAST"}}
+{"fet-fp7::proactive::451::248465": {"label": "Service-oriented Operating Systems", "acronym": "S(O)OS"}}
+{"mes::projects::262": {"label": "Gliders for Research, Ocean Observation and Management", "acronym": "GROOM"}}
+{"fam::projects::580": {"label": "Fishing for Medicines and their targets using Zebrafish models of human diseases", "acronym": "FISHMED"}}
 {"mes::projects::574": {"label": "Ecosystem-based Responsive Fisheries Management in Europe", "acronym": "ECOFISHMAN"}}
-{"ee::projects::156": {"label": "Sustainable agri-food systems and rural development in the Mediterranean Partner Countries", "acronym": "SUSTAINMED"}}
 {"fet-fp7::proactive::320::17790": {"label": "The Global Dynamics of Extortion Racket Systems", "acronym": "GLODERS"}}
+{"fet-fp7::proactive::969::318337": {"label": "Whole-Systems Energy Transparency", "acronym": "ENTRA"}}
 {"dh-ch::projects::7": {"label": "GRAVITATE", "acronym": "EXPRESSIVE"}}
 {"fet-h2020::proact::0358697b09c5::640800": {"label": "Analog quantum simulators for many-body dynamics", "acronym": "PINQUAR"}}
-{"fet-h2020::hpc::aa969decfd0f::671657": {"label": "Runtime Exploitation of Application Dynamism for Energy-efficient eXascale computing", "acronym": "READEX"}}
-{"ee::projects::1450": {"label": "Sustainable exploitation of bioactive components from the Black Sea Area traditional foods", "acronym": "BASEFOOD"}}
+{"fet-fp7::open::450::255987": {"label": "Forecasting Financial Crises", "acronym": "CRISIS"}}
 {"mes::projects::431": {"label": "Air-Sea Exchanges driven by Light", "acronym": "AIRSEA"}}
-{"fam::projects::586": {"label": "Priority environmental contaminants in seafood: safety assessment, impact and public perception", "acronym": "ECSAFESEAFOOD"}}
 {"fet-fp7::open::308::618086": {"label": "Graphene-enabled on-chip supercontinuum light sources", "acronym": "NEXCENTRIC"}}
 {"mes::projects::526": {"label": "Interaction in coastal waters: A roadmap to sustainable integration of aquaculture and fisheries", "acronym": "COEXIST"}}
-{"mes::projects::497": {"label": "Air-Sea Interaction under Stormy and Hurricane Conditions: Physical Models and Applications to Remote Sensing", "acronym": "ASIST"}}
 {"fet-fp7::proactive::972::600954": {"label": "VISUAL MODELLING USING GANGLION CELLS", "acronym": "VISUALISE"}}
-{"fet-fp7::proactive::316::7202": {"label": "The Convergent Science Network for biohybrid and biomimetic systems", "acronym": "IM-CLEVER"}}
 {"mes::projects::57": {"label": "Air-sea fluxes of climatically relevant gases in the marine atmospheric boundary layer", "acronym": "AIRSEA"}}
+{"mes::projects::153": {"label": "Sustainable production of biologically active molecules of marine based origin", "acronym": "BAMMBO"}}
+{"ee::projects::606": {"label": "Mediterranean Intermittent River Management", "acronym": "MIRAGE"}}
 {"fet-h2020::open::861c15d59710::766975": {"label": "Microbial deployment of new-to-nature chemistries for refactoring the barriers between living and non-living matter", "acronym": "MADONNA"}}
-{"ee::projects::267": {"label": "From capture based to SELF-sustained aquaculture and Domestication Of bluefin tuna, Thunnus thynnus", "acronym": "SELFDOTT"}}
-{"mes::projects::299": {"label": "Preparing Land and Ocean Take Up from Sentinel-3", "acronym": "LOTUS"}}
-{"ee::projects::559": {"label": "New Service Capabilities for Integrated and Advanced Maritime Surveillance", "acronym": "NEREIDS"}}
+{"mes::projects::297": {"label": "Stochastic Assimilation for the Next Generation Ocean Model Applications", "acronym": "SANGOMA"}}
 {"mes::projects::567": {"label": "Fish community structure and ecosystem properties in a global change context", "acronym": "FISHECO"}}
-{"ee::projects::113": {"label": "Thin Si film based hybrid solar cells on low-cost substrates", "acronym": "THINSI"}}
-{"mes::projects::330": {"label": "Acoustic technology for observing the interior of the Arctic Ocean", "acronym": "ACOBAR"}}
-{"ee::projects::1369": {"label": "Advanced Technologies for the Production of Cement and Clean Aggregates from Construction and Demolition Waste", "acronym": "C2CA"}}
 {"ee::projects::1439": {"label": "Building-integrated fibre-reinforced solar technology", "acronym": "BFIRST"}}
-{"ee::projects::1091": {"label": "European Network on Noise And Health", "acronym": "ENNAH"}}
-{"ee::projects::444": {"label": "POLYSYS: Direct 100G connectivity with optoelectronic POLYmer-InP integration for data center SYstems", "acronym": "POLYSYS"}}
-{"fet-fp7::proactive::972::600730": {"label": "Electromagnetic detection of neural activity at cellular resolution", "acronym": "MAGNETRODES"}}
-{"fet-fp7::proactive::311::1577": {"label": "Adaptive and Trusted Ambient Ecologies", "acronym": "ATRACO"}}
-{"ee::projects::638": {"label": "Marine Ecosystem Restoration in Changing European Seas", "acronym": "MIDAS"}}
-{"ee::projects::685": {"label": "Mitigating ADverse Ecological impacts of open ocean fisheries", "acronym": "MADE"}}
-{"fet-fp7::proactive::746::257750": {"label": "Generate Renewable Energy Efficiently using Nanofabricated Silicon", "acronym": "GREEN SILICON"}}
+{"ee::projects::1189": {"label": "Direct Normal Irradiance Nowcasting methods for optimized operation of concentrating solar technologies", "acronym": "DNICAST"}}
+{"fet-h2020::proact::700613cd60fb::641191": {"label": "Bringing CItizens, Models and Data together in Participatory, Interactive SociaL EXploratories", "acronym": "CIMPLEX"}}
+{"ee::projects::1225": {"label": "Management and monitoring of deep-sea fisheries and stocks", "acronym": "DEEPFISHMAN"}}
+{"mes::projects::318": {"label": "Calibration of extreme wave measurement on the ocean surface", "acronym": "WAVEMEASUREMENT"}}
 {"ee::projects::29": {"label": "Water Enhanced Resource Planning Where water supply meets demand", "acronym": "SMARTWATER"}}
-{"mes::projects::348": {"label": "Biosensors, Reporters and Algal Autonomous Vessels for Ocean Operation", "acronym": "BRAAVOO"}}
+{"mes::projects::447": {"label": "Preparatory phase for a deep sea facility in the Mediterranean for neutrino astronomy and associated sciences", "acronym": "KM3NET-PP"}}
+{"fet-fp7::open::450::249858": {"label": "Emotional interaction grounded in realistic context", "acronym": "TANGO"}}
 {"mes::projects::360": {"label": "PAst Links in the Evolution of Ocean\u2019s Global ENvIronment and Ecology", "acronym": "PALEOGENIE"}}
-{"fet-fp7::proactive::972::601167": {"label": "Convergence Science Network of Biomimetics and NeuroTechnology", "acronym": "WYSIWYD"}}
+{"mes::projects::625": {"label": "Microbes as positive actors for more sustainable aquaculture", "acronym": "PROMICROBE"}}
+{"ee::projects::957": {"label": "Food Refrigeration Innovations for Safety, consumer Benefit, Environmental impact and Energy optimization along cold chain in Europe", "acronym": "FRISBEE"}}
+{"mes::projects::341": {"label": "Multi-level assessment of ocean-climate dynamics: A gateway to interdisciplinary training and analysis", "acronym": "GATEWAYS"}}
 {"mes::projects::301": {"label": "Achieve QUieter Oceans by shipping noise footprint reduction", "acronym": "AQUO"}}
-{"ee::projects::13": {"label": "An Exercise to Assess Research Needs and Policy Choices in Areas of Drought", "acronym": "XEROCHORE"}}
+{"mes::projects::123": {"label": "Exploring Marine Resources for Bioactive Compounds: From Discovery to Sustainable Production and Industrial Applications", "acronym": "IMBRAIN"}}
+{"ee::projects::291": {"label": "Securing the Conservation of biodiversity across Administrative Levels and spatial, temporal, and Ecological Scales", "acronym": "SCALES"}}
 {"ee::projects::987": {"label": "Improving European aquaculture by advancing selective breeding to the next level for the six main finfish species", "acronym": "FISHBOOST"}}
 {"fet-fp7::proactive::314::4292": {"label": "Event\u2013Driven Morphological Computation for Embodied Systems", "acronym": "EMORPH"}}
-{"mes::projects::563": {"label": "Artificial fish locomotion and sensing", "acronym": "FILOSE"}}
-{"fet-h2020::open::99a93fcc1900::686637": {"label": "CellViewer: super-resolution systems microscopy to assess pluripotency and differentiation of stem cells at single cell level", "acronym": "CellViewer"}}
-{"fet-h2020::open::99a93fcc1900::665148": {"label": "Quantum Controlled Ultrafast Multimode Entanglement and Measurement", "acronym": "EVENT"}}
+{"aginfra::projects::7": {"label": "Future Internet Business Collaboration Networks in Agri-Food, Transport and Logistics", "acronym": "FISPACE"}}
 {"mes::projects::437": {"label": "Comparative assessment of coastal vulnerability to sea-level rise at continental scale", "acronym": "COMPASS"}}
-{"ee::projects::1167": {"label": "Enabling CLimate Information Services for Europe - ECLISE", "acronym": "ECLISE"}}
-{"mes::projects::108": {"label": "Strategies for Environmental Monitoring of Marine Carbon Capture and Storage", "acronym": "ECO2"}}
-{"aginfra::projects::39": {"label": "Improve performance of organic agriculture by boosting organic seed and plant breeding efforts across Europe", "acronym": "LIVESEED"}}
+{"mes::projects::6": {"label": "Pre-Operational Marine Service Continuity in Transition towards Copernicus", "acronym": "MyOcean FO"}}
+{"mes::projects::50": {"label": "The Changing Arctic and Sub-Arctic Environment: A Research and Training Programme On Marine Biotic Indicators of Recent Climate Changes in the High Latitudes of the North Atlantic", "acronym": "CASE"}}
 {"fet-fp7::proactive::747::270369": {"label": "ELectric Field control Over Spin molecules", "acronym": "CHEMHEAT"}}
 {"mes::projects::654": {"label": "The effect of emergent compounds and climate change in aquatic organisms with different early life history strategies", "acronym": "EARL"}}
-{"fet-fp7::open::301::284801": {"label": "Exploring the neural coding in behaving animals by novel optogenetic, high-density microrecordings and computational approaches: Towards cognitive Brain-Computer Interfaces", "acronym": "ENLIGHTENMENT"}}
-{"fet-fp7::proactive::1253::612058": {"label": "Real neurons-nanoelectronics Architecture with Memristive Plasticity", "acronym": "RAMP"}}
-{"fet-fp7::proactive::320::18189": {"label": "Evolutive User-centric Networks for Intraurban Accessibility", "acronym": "EUNOIA"}}
+{"mes::projects::607": {"label": "Implementing DNA barcoding into aquatic biodiversity research in Portugal and priming new macrobenthos monitoring tools", "acronym": "LUSOAQUABARCODE"}}
+{"mes::projects::152": {"label": "Marine Renewables Infrastructure Network for Emerging Energy Technologies", "acronym": "MARINET"}}
+{"ee::projects::685": {"label": "Mitigating ADverse Ecological impacts of open ocean fisheries", "acronym": "SFRH/BPD/66532/2009"}}
 {"mes::projects::430": {"label": "Isotope constraints on the contribution of metal-rich magmatic fluids to back-arc seafloor hydrothermal systems", "acronym": "ISOBAB"}}
-{"fet-h2020::proact::8405e7d841a4::732482": {"label": "Parallel network-based biocomputation: technological baseline, scale-up and innovation ecosystem", "acronym": "ABACUS"}}
-{"fet-h2020::open::99a93fcc1900::686764": {"label": "Studying, Measuring and Altering Consciousness through information theory in the electrical brain", "acronym": "CENTER-TBI"}}
+{"fet-fp7::open::450::256230": {"label": "The Listening Talker", "acronym": "LISTA"}}
 {"ee::projects::1370": {"label": "Low-toxic cost-efficient environment-friendly antifouling materials", "acronym": "BYEFOULING"}}
-{"fet-fp7::open::301::306502": {"label": "A quantum leap: from a spike-centered brain universe to its underlying synaptic landscape", "acronym": "BRAINLEAP"}}
-{"fam::projects::600": {"label": "Bridging the gap between science, stakeholders and policy makers Phase 2:Integration of evidence-based knowledge and its application to science and management of fisheries and the marine environment", "acronym": "GAP2"}}
 {"fet-fp7::open::302::618080": {"label": "HypErspectraL Imaging Cancer Detection", "acronym": "HELICOID"}}
+{"mes::projects::135": {"label": "Natural products from marine fungi for the treatment of cancer", "acronym": "MARINE FUNGI"}}
 {"dh-ch::projects::29": {"label": "ITN-DCH", "acronym": "ITN-DCH"}}
 {"fet-h2020::open::7fb1d8297f44::737135": {"label": "NANOARCHITECTRONICS", "acronym": "COMEDIA"}}
-{"mes::projects::490": {"label": "Atmospheric Exchange of Persistent Chemicals in Bothnian Bay, Northern Baltic Sea", "acronym": "BAYEX"}}
-{"mes::projects::472": {"label": "Carbon dioxide variability in the Gulf of Trieste (GOT) in the Northern Adriatic Sea", "acronym": "CO2 GULF OF TRIESTE"}}
+{"fet-fp7::proactive::1253::611640": {"label": "Technological Evolution of Synergy Between Physicochemical and Living Systems", "acronym": "SMART-POM"}}
 {"fet-fp7::open::450::249867": {"label": "Optogenetic Neural stimulation platform", "acronym": "OPTONEURO"}}
 {"mes::projects::251": {"label": "Seabirds, tuna, climate change functional relationships in the tropical indian ocean and sustainable use of its resources", "acronym": "SEAFUTURE"}}
 {"mes::projects::148": {"label": "Marine Electrical Initiative", "acronym": "MARINELIVE"}}
 {"ee::projects::934": {"label": "Coordinating and integRating state-of-the-art Earth Observation Activities in the regions of North Africa, Middle East, and Balkans and Developing Links with GEO related initiatives towards GEOSS", "acronym": "REQUA"}}
-{"mes::projects::33": {"label": "From sea-bed to test-bed: harvesting the potential of marine microbes for industrial biotechnology", "acronym": "SEABIOTECH"}}
-{"fet-fp7::proactive::312::1573": {"label": "Rehabilitation of a discrete sensory motor learning function by a prosthetic chip", "acronym": "RENACHIP"}}
-{"fam::projects::602": {"label": "Coordinating research in support to application of EAF (Ecosystem Approach to Fisheries) and management advice in the Mediterranean and Black Seas", "acronym": "CREAM"}}
+{"ee::projects::1568": {"label": "Sustainable Solutions for Small Ruminants", "acronym": "3SR"}}
 {"ee::projects::101": {"label": "Multifactorial evidence based approach using behavioural models in understanding and promoting fun, healthy food, play and policy for the prevention of obesity in early childhood: ToyBox", "acronym": "TOYBOX"}}
 {"mes::projects::167": {"label": "Automatic oil-spill recognition and geopositioning integrated in a marine monitoring network", "acronym": "ARGOMARINE"}}
-{"mes::projects::382": {"label": "Coordinating research in support to application of EAF (Ecosystem Approach to Fisheries) and management advice in the Mediterranean and Black Seas", "acronym": "CREAM"}}
+{"ee::projects::954": {"label": "Forest fires under climate, social and economic changes in Europe, the Mediterranean and other fire-affected areas of the world", "acronym": "FUME"}}
 {"fet-h2020::open::99a93fcc1900::664732": {"label": "Towards a nuclear clock with Thorium-229", "acronym": "nuClock"}}
+{"fet-fp7::flagship::966::284941": {"label": "Human Brain Project", "acronym": "HBP"}}
+{"mes::projects::2": {"label": "SeaDataNet II: Pan-European infrastructure for ocean and marine data management", "acronym": "SEADATANET II"}}
 {"ee::projects::1024": {"label": "EuroMix", "acronym": "PREDICT-IV"}}
 {"ee::projects::328": {"label": "Delivery of sustainable supply of non-food biomass to support a \u201cresource-efficient\u201d Bioeconomy in Europe", "acronym": "S2BIOM"}}
-{"mes::projects::243": {"label": "Marine inspired biosilica-filled hydrogels", "acronym": "DIADOM"}}
-{"mes::projects::454": {"label": "European multidisciplinary seafloor observation", "acronym": "EMSO"}}
+{"fet-fp7::proactive::311::1502": {"label": "Symbiotic Evolutionary Robot Organisms", "acronym": "SYMBRION"}}
 {"mes::projects::208": {"label": "Biological Invasions in Marine Ecosystems ? the Role of Phenotypic Plasticity", "acronym": "ALIEN SPECIES"}}
 {"fet-fp7::proactive::318::21180": {"label": "Promoting the Scientific Exploration of Computational Creativity", "acronym": "WHIM"}}
+{"ee::projects::256": {"label": "Seismic Hazard Harmonization in Europe", "acronym": "SHARE"}}
 {"mes::projects::126": {"label": "Sources and biogeochemical cycling of iron isotopes in marine environments", "acronym": "ISOMAR"}}
 {"mes::projects::474": {"label": "Artificial night lights and seabirds: solutions to a fatal attraction", "acronym": "ECOLIGHTSFORSEABIRDS"}}
-{"fam::projects::611": {"label": "ASEM Aquaculture Platform", "acronym": "ASEM-AQUACULTURE09"}}
-{"ee::projects::1133": {"label": "Efficient Energy Integrated Solutions for Manufacturing Industries", "acronym": "EFENIS"}}
 {"mes::projects::201": {"label": "Structure and dynamics of marine rocky benthic communities: Reactions and perspectives facing the global change", "acronym": "MAREA"}}
+{"fet-fp7::open::450::265578": {"label": "enHanced Interference Alignment Techniquesfor Unprecedented Spectral Efficiency", "acronym": "HIATUS"}}
+{"ee::projects::1310": {"label": "megaCITY - Zoom for the ENvironment", "acronym": "CITYZEN"}}
 {"mes::projects::306": {"label": "Interactions between nitrogen-fixers (diazotrophs) and dissolved organic matter in the ocean", "acronym": "DIADOM"}}
+{"fet-fp7::open::301::284801": {"label": "Exploring the neural coding in behaving animals by novel optogenetic, high-density microrecordings and computational approaches: Towards cognitive Brain-Computer Interfaces", "acronym": "ENLIGHTENMENT"}}
 {"fet-h2020::open::99a93fcc1900::665158": {"label": "Ultrashort Pulse Generation from Terahertz Quantum Cascade Lasers", "acronym": "TOSCA"}}
-{"fam::projects::610": {"label": "Forage Fish Interactions", "acronym": "FACTS"}}
-{"fet-h2020::open::861c15d59710::737017": {"label": "Mid- and far-IR optoelectronic devices based on Bose-Einstein condensation", "acronym": "MIR-BOSE"}}
 {"fet-fp7::open::301::296703": {"label": "Machine Understanding for interactive StorytElling", "acronym": "MUSE"}}
 {"fet-fp7::open::303::309056": {"label": "bottom-UP blueprinting GRAphene baseD Electronics", "acronym": "UPGRADE"}}
-{"aginfra::projects::42": {"label": "None", "acronym": "EXCELMEAT"}}
+{"fet-fp7::open::301::306502": {"label": "A quantum leap: from a spike-centered brain universe to its underlying synaptic landscape", "acronym": "BRAINLEAP"}}
 {"dh-ch::projects::5": {"label": "CENDARI", "acronym": "SPECTRESS"}}
-{"fet-fp7::proactive::972::600725": {"label": "Grid cells: From brains to technical implementation", "acronym": "GRIDMAP"}}
+{"ee::projects::64": {"label": "Urban Reduction of GHG Emissions in China and Europe", "acronym": "URGENCHE"}}
 {"fet-h2020::open::99a93fcc1900::687008": {"label": "New technological advances for the third generation of Solar cells", "acronym": "EPFL FELLOWS"}}
 {"fet-h2020::proact::8405e7d841a4::731957": {"label": "Mechanical control of biological function", "acronym": "MECPATH"}}
 {"ee::projects::805": {"label": "Integrating National Research Agendas on Solar Heat for Industrial Processes", "acronym": "SUNFUELS"}}
-{"ee::projects::1089": {"label": "ENVIRONMENTAL HEALTH RISKS IN EUROPEAN BIRTH COHORTS", "acronym": "ENRIECO"}}
-{"ee::projects::413": {"label": "PROcedures for TESTing and measuring wind energy systems", "acronym": "PROTEST"}}
-{"fet-fp7::open::450::250056": {"label": "Terahertz room-temperature integrated parametric source", "acronym": "TREASURE"}}
-{"ee::projects::1435": {"label": "BIOdiversity Multi-Source Monitoring System: from Space TO Species", "acronym": "BIO_SOS"}}
+{"ee::projects::877": {"label": "Hotspot Ecosystem Research and Man's Impact on European seas", "acronym": "CODEMAP"}}
+{"fet-fp7::proactive::315::4270": {"label": "Emergent Connectors for Eternal Software Intensive Networked Systems", "acronym": "CONNECT"}}
+{"mes::projects::329": {"label": "A pan-European concerted and integrated approach to operational wave modelling and forecasting a complement to GMES MyOcean services", "acronym": "MYWAVE"}}
+{"ee::projects::85": {"label": "Transitions to the Urban Water Services of Tomorrow", "acronym": "TRUST"}}
 {"fet-h2020::open::99a93fcc1900::664823": {"label": "Fabricating colloidal materials with microfluidics", "acronym": "Microflusa"}}
 {"mes::projects::220": {"label": "MEiobenthos in Shallow-water Marine ECosystems: A Monitoring, Experimental and Modelling Study to Understand Shallow-Water Meiobenthic Function in Marine Ecosystems and Assess its Economic Value", "acronym": "MESMEC"}}
+{"ee::projects::984": {"label": "Food Labelling to Advance Better Education for Life", "acronym": "FLABEL"}}
 {"aginfra::projects::81": {"label": "AGINFRA", "acronym": "AGINFRA"}}
+{"ee::projects::51": {"label": "Impact of climate change on the transport, fate and risk management of viral pathogens in water", "acronym": "VIROCLIME"}}
 {"ee::projects::1373": {"label": "BRIdges the GAp for Innovations in Disaster resilience", "acronym": "RAIN"}}
+{"fet-fp7::proactive::972::600806": {"label": "Computations and Organization of Retes Through the Interaction ofComputational, Optical and Neurophysiological Investigations of the Cerebral cortex", "acronym": "CORTICONIC"}}
+{"fet-fp7::open::450::270833": {"label": "Data Science for Simulating the Era of Electric Vehicles", "acronym": "DATA SIM"}}
+{"ee::projects::246": {"label": "SUSTAINABLE USE OF IRRGATION WATER IN THE MEDITERRANEAN REGION", "acronym": "SIRRIMED"}}
 {"mes::projects::520": {"label": "Support to Aquaculture and Fishery Industry", "acronym": "PEst-C/MAR/LA0015/2013"}}
 {"mes::projects::426": {"label": "Meso and Sub-mesoscale Physico-biogeochemical Dynamics in a Coastal NW Mediterranean Sea: Quantifying and Understanding Ecosystem Structure and Transport", "acronym": "SEAQUEST"}}
+{"mes::projects::242": {"label": "Marine micro-algae as global reservoir of polycyclic aromatic hydrocarbon degraders", "acronym": "MARPAH"}}
 {"ee::projects::576": {"label": "Merging Hydrologic models and EO data for reliable information on Water", "acronym": "MYWATER"}}
 {"mes::projects::569": {"label": "Titanium dioxide - the silent killer: finding the relevant biological target for exposure characterization and risk assessment of nanoparticles toxicity in fish model", "acronym": "FISHTIO2"}}
+{"fet-fp7::proactive::314::4304": {"label": "Variable Impedance Actuation Systems Embodying AdvancedInteraction Behaviours", "acronym": "CONTEST"}}
 {"mes::projects::349": {"label": "Noble gases in ocean sediments as proxies for fluid transport at subduction zones and past climate conditions", "acronym": "NOGOS"}}
 {"aginfra::projects::9": {"label": "Metrics, Models and Foresight for European SUStainable Food And Nutrition Security", "acronym": "FOODSECURE"}}
 {"mes::projects::357": {"label": "Chronic Ocean Noise: Cetacean Ecology and Acoustic habitat Loss", "acronym": "CONCEAL"}}
-{"fam::projects::567": {"label": "Exploring the biological and socio-economic potential of new/emerging candidate fish species for the expansion of the European aquaculture industry", "acronym": "DIVERSIFY"}}
-{"fet-fp7::open::303::296676": {"label": "Networked energy-aware visual analysis", "acronym": "GREENEYES"}}
-{"ee::projects::649": {"label": "MEDiterranean Sea Acidification in a changing climate", "acronym": "MEDSEA"}}
 {"mes::projects::418": {"label": "Impact of Climate Change on Wintering Arctic Seabirds ? An Inter-population Study on Little Auks", "acronym": "LIAK&CC"}}
-{"ee::projects::1240": {"label": "Non-Food Crops-to-Industry schemes in EU27", "acronym": "CROPS2INDUSTRY"}}
-{"aginfra::projects::64": {"label": "Linked Open Earth Observation Data for Precision Farming", "acronym": "TELEIOS"}}
-{"fet-fp7::open::308::323987": {"label": "Programming cellular networks and community behaviour with synthetic RNA-based devices", "acronym": "RIBONETS"}}
-{"mes::projects::170": {"label": "Towards a Clean, Litter-Free European Marine Environment through Scientific Evidence, Innovative Tools and Good Governance", "acronym": "CLEANSEA"}}
-{"mes::projects::573": {"label": "Co-creating Ecosystem-based Fisheries Management Solutions", "acronym": "MAREFRAME"}}
+{"mes::projects::215": {"label": "Cenozoic evolution of the Indonesian throughflow and the origins of Indo-Pacific marine biodiversity: Mapping the biotic response to environmental change", "acronym": "THROUGHFLOW"}}
+{"mes::projects::465": {"label": "Sea Ice Downstream Services for Arctic and Antarctic Users and Stakeholders", "acronym": "EURUCAS"}}
+{"ee::projects::1089": {"label": "ENVIRONMENTAL HEALTH RISKS IN EUROPEAN BIRTH COHORTS", "acronym": "ENRIECO"}}
+{"fam::projects::639": {"label": "Assessment of the interaction between corals, fish and fisheries, in order to develop monitoring and predictive modelling tools for ecosystem based management in the deep waters of Europe and beyond", "acronym": "CORALFISH"}}
+{"fet-fp7::open::301::309129": {"label": "Innovative Reliable Chip Designs from Low-Powered Unreliable Components", "acronym": "I-RISC"}}
+{"ee::projects::376": {"label": "Adaptive Strategies to Mitigate the Impacts of Climate Change on European Freshwater Ecosystems", "acronym": "REFRESH"}}
+{"ee::projects::635": {"label": "Innovative Multi-purpose off-shore platforms: planning, Design and operation", "acronym": "MERMAID"}}
+{"fam::projects::617": {"label": "Sustainable Approaches to Reduce Oomycete (Saprolegnia) Infections in Aquaculture", "acronym": "SAPRO"}}
 {"mes::projects::296": {"label": "High spatial and temporal resolution Ocean Colour coastal water products and services", "acronym": "HIGHROC"}}
-{"ee::projects::879": {"label": "HIGHER-EFFICIENCY ENGINE WITH ULTRA - LOW EMISSIONS FOR SHIPS", "acronym": "HERCULES-C"}}
 {"fet-fp7::open::301::296500": {"label": "Quantum Cascade Lasers Based TERAhertz Frequency COMB", "acronym": "TERACOMB"}}
 {"ee::projects::1321": {"label": "Cost-reduction through material optimisation and Higher EnErgy outpuT of solAr pHotovoltaic modules - joining Europe\u2019s Research and Development efforts in support of its PV industry", "acronym": "CHEETAH"}}
 {"ee::projects::604": {"label": "Risk of brain cancer from exposure to radiofrequency fields in childhood and adolescence", "acronym": "MOBI-KIDS"}}
-{"fet-fp7::proactive::968::318723": {"label": "MATHEmatics of Multi-level Anticipatory Complex Systems", "acronym": "MATHEMACS"}}
 {"mes::projects::175": {"label": "Ecological and evolutionary dynamics of juvenescent marine populations: a comparative study of the European hake in the Atlantic and the Mediterranean", "acronym": "EVOLHAKE"}}
-{"mes::projects::191": {"label": "Marine Aerosol Nucleations", "acronym": "MANU"}}
+{"fet-fp7::open::450::270780": {"label": "Incorporating Laughter into Human-Avatar Interactions: Research and Evaluation", "acronym": "ILHAIRE"}}
 {"mes::projects::594": {"label": "Gastrointestinal and neuropeptides regulating food intake in fish in response to dietary lipid composition", "acronym": "GASTRONEUROPEP"}}
 {"mes::projects::65": {"label": "Disease and immunity in marine brown algae", "acronym": "DIMBA"}}
-{"fet-fp7::open::301::296391": {"label": "GRAPHENE ON SILICON FREE ELECTRON LASER", "acronym": "GOSFEL"}}
 {"mes::projects::571": {"label": "The identification and mapping of Essential Fish Habitats using Geographic Information Systems", "acronym": "EFH-GIS"}}
+{"fet-fp7::proactive::314::4330": {"label": "ANGuilliform robot with ELectric Sense", "acronym": "ANGELS"}}
 {"mes::projects::416": {"label": "Late Holocene climate and sea ice variability in the southwestern Labrador sea", "acronym": "ICEPROXY"}}
-{"mes::projects::313": {"label": "Global ocean observing infrastructure", "acronym": "EURO ARGO"}}
+{"fam::projects::663": {"label": "Reproduction of European Eel: Towards a Self-sustained Aquaculture", "acronym": "PRO-EEL"}}
+{"fet-fp7::proactive::968::318723": {"label": "MATHEmatics of Multi-level Anticipatory Complex Systems", "acronym": "MATHEMACS"}}
+{"fet-fp7::proactive::312::1573": {"label": "Rehabilitation of a discrete sensory motor learning function by a prosthetic chip", "acronym": "RENACHIP"}}
+{"fam::projects::561": {"label": "Development of genomic tools for assessing nutrition, growth and reproduction issues in farmed crustacean species", "acronym": "DENUGREC"}}
+{"fam::projects::634": {"label": "Bivalve conditioning and settlement \u2013 keys to competitive hatchery production", "acronym": "SETTLE"}}
 {"fam::projects::573": {"label": "The role of the behavioural interactions between fish and fishers on fisheries sustainability", "acronym": "FISH&FISHERS"}}
+{"ee::projects::638": {"label": "Marine Ecosystem Restoration in Changing European Seas", "acronym": "MERCES"}}
 {"ee::projects::947": {"label": "GALACTICO:\\nblendinG diverse photonics And eLectronics on silicon for integrAted and fully funCTIonal COherent Tb Ethernet", "acronym": "GALACTICO"}}
-{"dh-ch::projects::1": {"label": "Pooling Activities, Resources and Tools for Heritage E-research Networking, Optimization and Synergies", "acronym": "PARTHENOS"}}
+{"fet-h2020::open::99a93fcc1900::686637": {"label": "CellViewer: super-resolution systems microscopy to assess pluripotency and differentiation of stem cells at single cell level", "acronym": "CellViewer"}}
 {"ee::projects::839": {"label": "ICT Solutions for Efficient Water Resources Management", "acronym": "ICEWATER"}}
 {"ee::projects::440": {"label": "Specification, Implementation, Field Trial, and Standardisation of the Vehicle-2-Grid Interface", "acronym": "POWERUP"}}
+{"fet-fp7::proactive::320::18189": {"label": "Evolutive User-centric Networks for Intraurban Accessibility", "acronym": "EUNOIA"}}
+{"mes::projects::606": {"label": "Development of a biosensor technology for environmental monitoring and disease prevention in aquaculture ensuring food safety", "acronym": "AllerScreening"}}
 {"fet-fp7::proactive::321::22547": {"label": "Co-ordinating Research Efforts of the ICT-Energy Community", "acronym": "ENTRA"}}
 {"fet-h2020::open::99a93fcc1900::686865": {"label": "Breaking the Nonuniqueness Barrier in Electromagnetic Neuroimaging", "acronym": "MULTISENSE"}}
 {"fet-fp7::proactive::971::600792": {"label": "ALLOW Ensembles", "acronym": "ALLOW ENSEMBLES"}}
+{"fet-fp7::proactive::745::257756": {"label": "Relevance and cognition for self-awareness in a content-centric Internet", "acronym": "RECOGNITION"}}
+{"mes::projects::142": {"label": "Multidisciplinary training in evo-devo and neurobiology of marine animal models", "acronym": "MESODERM EVOLUTION"}}
 {"mes::projects::486": {"label": "Impact of temperature on the vulnerability of Mediterranean seagrasses to phatogens", "acronym": "TEMSPATH"}}
-{"ee::projects::449": {"label": "Novel Processing approaches for the development of food products Low in fAt, Salt and sUgar", "acronym": "PLEASURE"}}
-{"ee::projects::780": {"label": "Infrastructure Roadmap for Energy Networks in Europe", "acronym": "IRENE-40"}}
-{"fam::projects::641": {"label": "Making the European Fisheries Ecosystem Operational", "acronym": "MEFEPO"}}
+{"mes::projects::191": {"label": "Marine Aerosol Nucleations", "acronym": "BACCHUS"}}
+{"ee::projects::1295": {"label": "Climate change integrated assessment methodology for cross-sectoral adaptation and vulnerability in Europe", "acronym": "IMPRESSIONS"}}
+{"fet-fp7::open::301::296679": {"label": "Magnetic Nano Actuators for Quantitative Analysis", "acronym": "MANAQA"}}
+{"mes::projects::33": {"label": "From sea-bed to test-bed: harvesting the potential of marine microbes for industrial biotechnology", "acronym": "SEABIOTECH"}}
+{"mes::projects::446": {"label": "Corals and global warming: The Mediterranean versus the Red Sea", "acronym": "CORALWARM"}}
+{"fet-h2020::proact::700613cd60fb::640772": {"label": "Distributed Global Financial Systems for Society", "acronym": "DOLFINS"}}
 {"mes::projects::268": {"label": "Mathematical study of Boundary Layers in Oceanic Motions", "acronym": "BLOC"}}
-{"fet-fp7::proactive::317::8966": {"label": "New Principles of Unbound Embodied Evolution", "acronym": "EVOBODY"}}
-{"fet-fp7::proactive::972::601215": {"label": "Emulating the C. elegans nervous system: A blueprint for brain-inspired computational architectures", "acronym": "SI ELEGANS"}}
 {"mes::projects::182": {"label": "Physiological and Behavioural Photoprotective Processes against Oxidative Stress in Marine Photosynthetic Symbioses", "acronym": "SFRH/BD/73205/2010"}}
 {"fet-fp7::proactive::319::13711": {"label": "Dynamical Exascale Entry Platform", "acronym": "DEEP-EST"}}
-{"mes::projects::221": {"label": "SenseOCEAN: Marine sensors for the 21st Century", "acronym": "SENSEOCEAN"}}
-{"fet-fp7::open::306::323734": {"label": "Breaking the Barrier on Optical Integration", "acronym": "BBOI"}}
 {"mes::projects::439": {"label": "Climate effects on the deep-sea ecosystem functioning of the Mediterranean Sea", "acronym": "CEFMED"}}
-{"ee::projects::204": {"label": "Intelligent Management System to integrate and control energy generation, consumption and exchange for European Sport and Recreation Buildings", "acronym": "SPORTE2"}}
-{"fet-fp7::proactive::969::318013": {"label": "Ultra-Low-Power Holistic Design for Smart Biosignals Computing Platforms", "acronym": "PHIDIAS"}}
+{"ee::projects::574": {"label": "European Network on the Health and Environmental Impact of Nanomaterials", "acronym": "NANOIMPACTNET"}}
+{"mes::projects::662": {"label": "Tara Oceans", "acronym": "METACARDIS"}}
 {"mes::projects::492": {"label": "Dynamic Response and Instability of Seabed-Coastal Structure Systems under Waves", "acronym": "DRISCS"}}
-{"fet-fp7::open::302::296257": {"label": "The Body-on-a-Chip (BoC)", "acronym": "BOC"}}
-{"mes::projects::258": {"label": "Solubility of aerosol iron in Open-ocean seawater", "acronym": "SOLAIROS"}}
+{"mes::projects::663": {"label": "ATLAS", "acronym": "ATLAS"}}
 {"fam::projects::658": {"label": "Network for the development of phage therapy in aquaculture", "acronym": "AQUAPHAGE"}}
+{"fet-fp7::proactive::967::316366": {"label": "Physarum Chip: Growing Computers from Slime Mould", "acronym": "PHYCHIP"}}
 {"mes::projects::168": {"label": "Biodiversity and connectivity in the resilience of coastal marine communities", "acronym": "BIOCONNECTENCE"}}
 {"aginfra::projects::37": {"label": "Traditional tomato varieties and cultural practices: a case for agricultural diversification with impact on food security and health of European population", "acronym": "EUSOL"}}
-{"fet-fp7::proactive::315::3455": {"label": "Security Engineering for lifelong Evolvable Systems", "acronym": "SECURECHANGE"}}
-{"fet-fp7::open::301::296777": {"label": "Non-Equilibrium Social Science in ICT and Economics", "acronym": "NESS"}}
 {"mes::projects::408": {"label": "PLIOcene TRANSient Climate Modelling: Towards a global consensus between ice volume, temperature and relative sea level for the Late Pliocene", "acronym": "PLIO-ESS"}}
+{"mes::projects::198": {"label": "Marine robots and dexterous manipulation for enabling autonomous underwater multipurpose intervention missions", "acronym": "TRIDENT"}}
 {"fet-h2020::open::861c15d59710::737093": {"label": "Spinoptical nanoantenna-assisted magnetic storage at few nanometers on femtosecond timescale", "acronym": "MAGNETIC-SPEED-LIMIT"}}
 {"mes::projects::187": {"label": "Reef ECOlogy and design of Marine PRotected Areas", "acronym": "RECOMPRA"}}
-{"ee::projects::905": {"label": "Green growth and win-win strategies for sustainable climate action", "acronym": "RISES-AM-"}}
-{"mes::projects::194": {"label": "Greening of surface transport through an innovative and competitive CARGO-VESSEL Concept connecting marine and fluvial intermodal ports", "acronym": "EU-CARGOXPRESS"}}
-{"fet-fp7::open::450::268478": {"label": "REVerse engineering of audio-VIsual coNtent Data", "acronym": "REWIND"}}
-{"mes::projects::640": {"label": "A novel bioprocess coupling wastewater treatment with electricity production to remediate metal polluted aquatic environments", "acronym": "SEFCUMPAQ"}}
+{"fet-fp7::proactive::1253::610730": {"label": "General-Purpose Programmable Evolution Machine on a Chip", "acronym": "ARISYS"}}
+{"fet-fp7::proactive::1253::612058": {"label": "Real neurons-nanoelectronics Architecture with Memristive Plasticity", "acronym": "RAMP"}}
+{"mes::projects::54": {"label": "Indo-European Research Facilities for Studies on Marine Ecosystem and Climate in India", "acronym": "INDO-MARECLIM"}}
 {"mes::projects::13": {"label": "Effect of ocean Acidification on Marine Invertebrates CALcification in sensitive ecosystems", "acronym": "AMICAL"}}
-{"fet-h2020::open::99a93fcc1900::665440": {"label": "Magnetically actuated bio-inspired metamaterials", "acronym": "ABIOMATER"}}
-{"mes::projects::551": {"label": "Co-creating a decision support framework to ensure sustainable fish production in Europe under climate change", "acronym": "ClimeFish"}}
 {"ee::projects::810": {"label": "Industrial Applications of Marine Enzymes: Innovative screening and expression platforms to discover and use the functional protein diversity from the sea", "acronym": "BIOCLEAN"}}
 {"mes::projects::78": {"label": "Marine Stratocumulus Cloud Cover and Climate", "acronym": "MSCCC"}}
-{"fet-fp7::proactive::968::316705": {"label": "Hierarchical Analysis of Complex Dynamical Systems", "acronym": "RGGC"}}
+{"mes::projects::221": {"label": "SenseOCEAN: Marine sensors for the 21st Century", "acronym": "OXYGEN"}}
 {"mes::projects::38": {"label": "Fish speciation and the origin of marine biodiversity: a comparative genomics approach", "acronym": "FELLOWSEA"}}
-{"mes::projects::178": {"label": "Marine Biotechnology ERA-NET", "acronym": "ERA-MBT"}}
+{"mes::projects::506": {"label": "Northern seas wind index database", "acronym": "VSABLA"}}
 {"fam::projects::564": {"label": "SEAWEEDS FROM SUSTAINABLE AQUACULTURE AS FEEDSTOCK FOR BIODEGRADABLE BIOPLASTICS", "acronym": "SEABIOPLAS"}}
+{"mes::projects::491": {"label": "Building Capacity for a Black Sea Catchment Observation and Assessment System supporting Sustainable Development", "acronym": "GEOWOW"}}
+{"mes::projects::513": {"label": "Knowledge-based Sustainable Management for Europe's Seas", "acronym": "KNOWSEAS"}}
 {"mes::projects::415": {"label": "Comparative genetic patterns in parasite populations and species: the search for structuring forces", "acronym": "PARAPOPGENE"}}
 {"fam::projects::549": {"label": "The use of potentially protective bacteria in aquaculture against fish pathogenic Flavobacterium spp", "acronym": "AQUABAC"}}
 {"fet-h2020::open::d80feb6128d0::712689": {"label": "SC-square - Satisfiability Checking and Symbolic Computation: uniting two communities to solve real problems", "acronym": "GRAPH GAMES"}}
+{"aginfra::projects::22": {"label": "None", "acronym": "ENVRI PLUS"}}
+{"mes::projects::127": {"label": "Multi-proxy approach of marine Silicon and Carbon biogeochemical Cycles", "acronym": "MUSICC"}}
+{"ee::projects::1454": {"label": "AdVanced Aerodynamic Tools for lArge Rotors", "acronym": "AVATAR"}}
 {"mes::projects::202": {"label": "Modular Multi-use Deep Water Offshore Platform Harnessing and Servicing Mediterranean, Subtropical and Tropical Marine and Maritime Resources", "acronym": "TROPOS"}}
-{"fet-fp7::open::450::286370": {"label": "European Network for Social Intelligence", "acronym": "PRAISE"}}
 {"mes::projects::32": {"label": "Strategies for the protection of shipwrecks in the Baltic Sea against forthcoming attack by wood degrading marine borers. A synthesis and information project based on the effects of climatic changes.", "acronym": "WRECKPROTECT"}}
-{"ee::projects::859": {"label": "Development and laboratory testing of improved action and Matrix hydro turbines designed by advanced analysis and optimization tools", "acronym": "HYDROACTION"}}
-{"mes::projects::134": {"label": "European Academy for Marine and Underwater Robotics", "acronym": "MORPH"}}
+{"ee::projects::1167": {"label": "Enabling CLimate Information Services for Europe - ECLISE", "acronym": "ECLISE"}}
 {"mes::projects::499": {"label": "Determining the Impact of Seawater Chemistry on the Solubility of Atmospheric Trace metals", "acronym": "DISCOSAT"}}
 {"fet-h2020::proact::8405e7d841a4::732894": {"label": "Hybrid Optomechanical Technologies", "acronym": "CAVITYQPD"}}
 {"mes::projects::162": {"label": "A forward genetic screen in the marine planktonic diatom Pseudo-nitzschia multistriata", "acronym": "GYPSY"}}
-{"fam::projects::627": {"label": "Management and monitoring of deep-sea fisheries and stocks", "acronym": "DEEPFISHMAN"}}
-{"fet-h2020::open::99a93fcc1900::713450": {"label": "All-Phononic circuits Enabled by Opto-mechanics", "acronym": "PHENOMEN"}}
-{"fet-fp7::open::302::284731": {"label": "Usable and Efficient Secure Multiparty Computation", "acronym": "UAESMC"}}
-{"fam::projects::665": {"label": "Development of best practice and new technology for grading, handling, transportation, conditioning and storage of mussels for SMEs in the European mussel industry", "acronym": "MUSSELSALIVE"}}
-{"mes::projects::598": {"label": "Fish intestinal nutrigenomics in response to fish oil replacement in Atlantic salmon diets", "acronym": "FISHINUTRIGEN"}}
-{"ee::projects::854": {"label": "Scale Up of Thermochemical HYDROgen Production in a SOLar Monolithic Reactor: a 3rd Generation Design Study", "acronym": "HYDROSOL-3D"}}
+{"fet-fp7::proactive::967::318671": {"label": "Microscale Chemically Reactive Electronic Agents", "acronym": "MICREAGENTS"}}
+{"mes::projects::563": {"label": "Artificial fish locomotion and sensing", "acronym": "FILOSE"}}
+{"fet-fp7::proactive::319::13912": {"label": "Mont-Blanc, European scalable and power efficient HPC platform based on low-power embedded technology", "acronym": "MONT-BLANC"}}
+{"fet-fp7::open::308::323987": {"label": "Programming cellular networks and community behaviour with synthetic RNA-based devices", "acronym": "RIBONETS"}}
+{"fet-fp7::proactive::972::600847": {"label": "Retina-inspired ENcoding for advanced VISION tasks", "acronym": "RENVISION"}}
 {"fet-h2020::open::861c15d59710::800923": {"label": "Thermoelectric detector based on superconductor-ferromagnet heterostructures", "acronym": "SUPERTED"}}
-{"fet-fp7::flagship::966::284951": {"label": "Coordination Action for the design and description of the FET Flagship candidate Robot Companions for Citizens", "acronym": "CA-ROBOCOM"}}
+{"fet-fp7::open::303::295293": {"label": "Quantum Integrated Light Matter Interface", "acronym": "QUILMI"}}
+{"ee::projects::608": {"label": "Microorganism and enzyme Immobilization: NOvel Techniques and Approaches for Upgraded Remediation of Underground-, wastewater and Soil", "acronym": "MINOTAURUS"}}
+{"ee::projects::1187": {"label": "Development of Pre-operational Services for Highly Innovative Maritime Surveillance Capabilities", "acronym": "DOLPHIN"}}
+{"fet-h2020::open::99a93fcc1900::665148": {"label": "Quantum Controlled Ultrafast Multimode Entanglement and Measurement", "acronym": "QCUMbER"}}
 {"fet-h2020::hpc::aa969decfd0f::671578": {"label": "European Exascale Processor Memory Node Design", "acronym": "OPRECOMP"}}
-{"mes::projects::458": {"label": "Up-Grade Black Sea Scientific Network", "acronym": "UP-GRADE BS-SCENE"}}
-{"fam::projects::681": {"label": "Aquaculture Smart and Open Data Analytics as a Service", "acronym": "AquaSmart"}}
+{"mes::projects::199": {"label": "Marine renewable integrated application platform", "acronym": "MARINA PLATFORM"}}
 {"fet-h2020::open::861c15d59710::737071": {"label": "Ultrasensitive chiral detection by signal-reversing cavity polarimetry: applications to in-situ proteomics, single-molecule chirality, HPLC analysis, medical diagnostics, and atmospheric studies", "acronym": "ICFONESTPLUS"}}
-{"fet-fp7::open::306::619319": {"label": "A Coordination Action for Soft Robotics", "acronym": "ROBOSOFT"}}
-{"ee::projects::521": {"label": "Options for Delivering Ecosystem-Based Marine Management", "acronym": "ODEMM"}}
-{"ee::projects::1525": {"label": "Air Quality Monitoring Technologies for Urban Areas", "acronym": "AIRMONTECH"}}
-{"fet-h2020::hpc::aa969decfd0f::671627": {"label": "Energy-efficient SCalable Algorithms for weather Prediction at Exascale", "acronym": "ESiWACE"}}
-{"fam::projects::605": {"label": "AQUAculture infrastructures for EXCELLence in European Fish research", "acronym": "AQUAEXCEL"}}
-{"mes::projects::630": {"label": "Molecular Targets of Uranium in some Aquatic Organisms", "acronym": "MOTAUR"}}
-{"mes::projects::434": {"label": "Air-sea gas exchange PArameterization of the Sea-Surface Microlayer Effect", "acronym": "PASSME"}}
+{"fet-fp7::proactive::972::600730": {"label": "Electromagnetic detection of neural activity at cellular resolution", "acronym": "HBP SGA1"}}
+{"ee::projects::1450": {"label": "Sustainable exploitation of bioactive components from the Black Sea Area traditional foods", "acronym": "BASEFOOD"}}
+{"ee::projects::894": {"label": "Determining factors and critical periods in food habit formation and breaking in early childhood: a multidisciplinary approach", "acronym": "HABEAT"}}
+{"fet-fp7::proactive::969::318397": {"label": "Towards Low Power ICT", "acronym": "TOLOP"}}
+{"ee::projects::267": {"label": "From capture based to SELF-sustained aquaculture and Domestication Of bluefin tuna, Thunnus thynnus", "acronym": "SELFDOTT"}}
+{"fet-h2020::open::99a93fcc1900::665233": {"label": "Super-resolution visualisation and manipulation of metaphase chromosomes", "acronym": "CHROMAVISION"}}
+{"fet-fp7::proactive::314::4290": {"label": "EVolving morphologies for human-Robot sYmbiotic interactiON", "acronym": "EVRYON"}}
+{"fet-fp7::open::302::296257": {"label": "The Body-on-a-Chip (BoC)", "acronym": "BOC"}}
 {"ee::projects::1382": {"label": "Blueprints for Smart Cities: Developing the methodology for a coordinated approach to the integration of the water and waste sectors within the EIP Smart Cities and Communities", "acronym": "BlueSCities"}}
 {"ee::projects::400": {"label": "COMPREHENSIVE APPROACH TO ENHANCE QUALITY AND SAFETY OF READY TO EAT FRESH PRODUCTS", "acronym": "QUAFETY"}}
+{"fam::projects::586": {"label": "Priority environmental contaminants in seafood: safety assessment, impact and public perception", "acronym": "ECSAFESEAFOOD"}}
 {"mes::projects::233": {"label": "Inferring adaptation, population size and lifecycle, from population genomics in a marine picoplanktonic species : Ostreococcus tauri (Chlorophyta)", "acronym": "PICOPOP"}}
+{"mes::projects::641": {"label": "Network of leading mesocosm facilities to advance the studies of future aquatic ecosystems from the Arctic to the Mediterranean", "acronym": "MESOAQUA"}}
 {"fet-h2020::hpc::aa969decfd0f::671564": {"label": "Computing Patterns for High Performance Multiscale Computing", "acronym": "DEISA2"}}
 {"aginfra::projects::29": {"label": "European Open Science Cloud - pilot", "acronym": "VIALACTEA"}}
-{"fet-fp7::open::303::308830": {"label": "Architecture-driven verification of systems software", "acronym": "ADVENT"}}
+{"fet-fp7::proactive::972::600725": {"label": "Grid cells: From brains to technical implementation", "acronym": "GRIDMAP"}}
+{"mes::projects::454": {"label": "European multidisciplinary seafloor observation", "acronym": "EMSO"}}
 {"fam::projects::655": {"label": "Maximizing marine omega-3 retention in farmed fish: sustainable production of healthy food", "acronym": "OMEGA3MAX"}}
-{"mes::projects::588": {"label": "Novel fish pathogens of the chlamydiae: genomic, proteomic and metabolomic investigations", "acronym": "CHLAFISH"}}
 {"mes::projects::581": {"label": "Zebrafish as Novel Model for Exercise-enhanced Skeletal and Cardiac Muscle Growth and Immune Functioning", "acronym": "REPRO-SWIM"}}
+{"fam::projects::567": {"label": "Exploring the biological and socio-economic potential of new/emerging candidate fish species for the expansion of the European aquaculture industry", "acronym": "DIVERSIFY"}}
+{"fam::projects::641": {"label": "Making the European Fisheries Ecosystem Operational", "acronym": "MEFEPO"}}
 {"ee::projects::946": {"label": "Gasification of Biofuels and Recovered Fuels", "acronym": "GAS BIOREF"}}
+{"ee::projects::518": {"label": "On the reduction of health effects from combined exposure to indoor air pollutants in modern offices", "acronym": "OFFICAIR"}}
 {"mes::projects::92": {"label": "Boosting scientific excellence and innovation capacity in biorefineries based on marine resources", "acronym": "BLUEandGREEN"}}
-{"ee::projects::534": {"label": "Novel marine biomolecules against biofilm. Application to medical devices.", "acronym": "NOMORFILM"}}
+{"fam::projects::620": {"label": "Biosensors and Sensors for the industrial biosynthesis process of widely used commercial antioxidants: nutraceuticals as additives for food and aquaculture promoting public health and safety", "acronym": "E-LIFT"}}
+{"ee::projects::1369": {"label": "Advanced Technologies for the Production of Cement and Clean Aggregates from Construction and Demolition Waste", "acronym": "C2CA"}}
 {"fam::projects::577": {"label": "Breaking frontiers for the use of plant-derived feeds in fish farming through nutritional programming of fish larvae", "acronym": "FISHPROG"}}
-{"fet-h2020::open::99a93fcc1900::662725": {"label": "Bridging the gap: from Individual Behaviour to the Socio-tEchnical MaN", "acronym": "MULTIPLEX"}}
-{"fet-fp7::proactive::312::1399": {"label": "On-chip simultaneous intracellular recording and stimulation of electrical and biochemical activities from hundreds of neurons", "acronym": "BRAIN STORM"}}
+{"fet-fp7::proactive::315::4263": {"label": "LivingKnowledge \u2013 Facts, Opinions and Bias in Time", "acronym": "MIESON"}}
+{"ee::projects::143": {"label": "Scientific sYnergisM of nano-Bio-Info-cOgni Science for an Integrated system to monitor meat quality and Safety during production, storage, and distribution in EU", "acronym": "SYMBIOSIS-EU"}}
+{"mes::projects::312": {"label": "Ocean Strategic Services beyond 2015", "acronym": "AtlantOS"}}
 {"mes::projects::229": {"label": "OPerational ECology: Ecosystem forecast products to enhance marine GMES applications", "acronym": "OPEC"}}
 {"mes::projects::285": {"label": "Biogeochemical and ecosystem interactions with socio-economic activity in the global ocean", "acronym": "BIGSEA"}}
-{"fam::projects::669": {"label": "ENRICHMENT OF AQUACULTURE IMPLANTS BY INTRODUCTION OF NEW MARINE SPECIES FROM THE WILD TO BREEDING", "acronym": "ENRICH"}}
 {"mes::projects::476": {"label": "Climate change and sea turtles", "acronym": "SEATURTLES"}}
-{"dh-ch::projects::2": {"label": "ARIADNE", "acronym": "FUNGIBRAIN"}}
