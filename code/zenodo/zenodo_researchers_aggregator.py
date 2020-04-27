@@ -51,7 +51,7 @@ with open(sys.argv[2] + 'researchers_with_MAG.jsonl', 'w') as \
         to_write[creator[0]] = creator[1]
 
         json.dump(to_write, creators_with_MAG_jsonl)
-        jsonl_file.write('\n')
+        creators_with_MAG_jsonl.write('\n')
 
 with open(sys.argv[2] + 'researchers_without_MAG.jsonl', 'w') as \
         creators_without_MAG_jsonl:
@@ -61,4 +61,4 @@ with open(sys.argv[2] + 'researchers_without_MAG.jsonl', 'w') as \
         to_write[creator[0]] = creator[1]
 
         json.dump(to_write, creators_without_MAG_jsonl)
-        jsonl_file.write('\n')
+        creators_without_MAG_jsonl.write('\n')
