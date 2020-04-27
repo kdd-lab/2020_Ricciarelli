@@ -91,8 +91,7 @@ pd.DataFrame(data=d, index=[0]).to_csv(
     path_or_buf='../../datasets/zenodo/{}/zenodo_{}_statistics.csv'
     .format(framework, framework), index=False)
 
-with open('../../datasets/zenodo/{}/zenodo_{}_researchers.jsonl'
-          .format(framework, framework), 'w') as jsonl_file:
+with open(sys.argv[2], 'w') as jsonl_file:
     for creator in tqdm(creators_dict.items(), desc='WRITING JSONL'):
         to_write = dict()
         to_write[creator[0]] = creator[1]
