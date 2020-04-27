@@ -23,6 +23,16 @@ with open(sys.argv[1], 'r') as xml_file:
         year = r.find('.//dateofacceptance').text.split('-')[0] if \
             r.find('.//dateofacceptance').text is not None else None
 
+        affiliation = r.find(".//rel[@inferenceprovenance = "
+                             "'iis::document_affiliations']")
+
+        if affiliation is not None:
+            if affiliation.find('country') is not None:
+                affiliation = affiliation.find('country')\
+                    .attrib['classname'].lower()
+            else:
+                affiliation = None
+
         creators_per_project.append(len(crtrs))
 
         for creator in crtrs:
@@ -64,12 +74,14 @@ with open(sys.argv[1], 'r') as xml_file:
                         {'attributes': attributes,
                          'projects': [{'title': title,
                                        'keywords': None,
-                                       'year': year}]}
+                                       'year': year,
+                                       'affiliation': affiliation}]}
 
                     creators += 1
                 else:
                     creators_dict[identifier]['projects'].append(
-                        {'title': title, 'keywords': None, 'year': year})
+                        {'title': title, 'keywords': None, 'year': year,
+                         'affiliation': affiliation})
 
                 if year is not None:
                     records_with_year += 1
@@ -95,6 +107,10 @@ with open(sys.argv[2], 'w') as jsonl_file:
     for creator in tqdm(creators_dict.items(), desc='WRITING JSONL'):
         to_write = dict()
         to_write[creator[0]] = creator[1]
+        try:
+            json.dump(to_write, jsonl_file)
+            jsonl_file.write('\n')
+        except Exception as e:
+            import ipdb
+            ipdb.set_trace()
 
-        json.dump(to_write, jsonl_file)
-        jsonl_file.write('\n')
