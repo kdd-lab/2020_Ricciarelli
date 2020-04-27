@@ -107,10 +107,6 @@ with open(sys.argv[2], 'w') as jsonl_file:
     for creator in tqdm(creators_dict.items(), desc='WRITING JSONL'):
         to_write = dict()
         to_write[creator[0]] = creator[1]
-        try:
-            json.dump(to_write, jsonl_file)
-            jsonl_file.write('\n')
-        except Exception as e:
-            import ipdb
-            ipdb.set_trace()
 
+        json.dump(to_write, jsonl_file)
+        jsonl_file.write('\n')
