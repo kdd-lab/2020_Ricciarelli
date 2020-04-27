@@ -95,9 +95,10 @@ for year in sorted(df.Year.unique()):
                  for k in affiliations_types]
 
             to_add = dict()
-            to_add['entropy'] = np.round(entropy(affiliations_types), 2) \
+            to_add['entropy'] = np.round(entropy(affiliations_types, base=2),
+                                         2) \
                 if monst_common_class == 'same' else \
-                np.round(entropy(affiliations_types), 2) * -1
+                np.round(entropy(affiliations_types, base=2), 2) * -1
             to_add['class'] = monst_common_class
 
             if node['name'] not in entropies:
