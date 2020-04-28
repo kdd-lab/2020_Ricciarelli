@@ -5,6 +5,7 @@ import sys
 from tqdm import tqdm
 
 creators_with_MAG, creators_without_MAG = dict(), dict()
+projects = dict()
 
 for jsonl_file in os.listdir(sys.argv[1]):
     if jsonl_file.split('.')[-1] == 'jsonl':
@@ -16,32 +17,45 @@ for jsonl_file in os.listdir(sys.argv[1]):
                 creator_dict = json.loads(creator.strip())
                 identifier = list(creator_dict.keys())[0]
                 attributes = creator_dict[identifier]['attributes']
-                projects = creator_dict[identifier]['projects']
+                papers = creator_dict[identifier]['papers']
 
                 if 'MAGIdentifier' in attributes:
                     if identifier not in creators_with_MAG:
                         creators_with_MAG[identifier] = \
                             {'attributes': attributes,
-                             'projects': {framework: projects}}
+                             'papers': {framework: papers}}
                     elif framework not in creators_with_MAG[identifier][
-                            'projects']:
-                        creators_with_MAG[identifier]['projects'][
-                            framework] = projects
+                            'papers']:
+                        creators_with_MAG[identifier]['papers'][
+                            framework] = papers
                     else:
-                        creators_with_MAG[identifier]['projects'][framework]\
-                            .append(projects)
+                        creators_with_MAG[identifier]['papers'][framework]\
+                            .append(papers)
                 else:
                     if identifier not in creators_without_MAG:
                         creators_without_MAG[identifier] = \
                             {'attributes': attributes,
-                             'projects': {framework: projects}}
+                             'papers': {framework: papers}}
                     elif framework not in creators_without_MAG[identifier][
-                            'projects']:
-                        creators_without_MAG[identifier]['projects'][
-                            framework] = projects
+                            'papers']:
+                        creators_without_MAG[identifier]['papers'][
+                            framework] = papers
                     else:
-                        creators_without_MAG[identifier]['projects'][
-                            framework].append(projects)
+                        creators_without_MAG[identifier]['papers'][
+                            framework].append(papers)
+
+for jsonl_file in os.listdir(sys.argv[3]):
+    if jsonl_file.split('.')[-1] == 'jsonl':
+        framework = jsonl_file.split('_')[3]
+
+        with open(sys.argv[3] + jsonl_file, 'r') as projects_jsonl:
+            for project in tqdm(projects_jsonl,
+                                desc='READING FRAMEWORK {}'.format(framework)):
+                project_dict = json.loads(project.strip())
+                identifier = list(project_dict.keys())[0]
+
+                if identifier not in projects:
+                    projects[identifier] = project_dict[identifier]
 
 with open(sys.argv[2] + 'researchers_with_MAG.jsonl', 'w') as \
         creators_with_MAG_jsonl:
@@ -62,3 +76,11 @@ with open(sys.argv[2] + 'researchers_without_MAG.jsonl', 'w') as \
 
         json.dump(to_write, creators_without_MAG_jsonl)
         creators_without_MAG_jsonl.write('\n')
+
+with open(sys.argv[4] + 'projects.jsonl', 'w') as projects_jsonl:
+    for project in tqdm(projects.items(), desc='WRITING PROJECTS'):
+        to_write = dict()
+        to_write[projects[0]] = projects[1]
+
+        json.dump(to_write, projects_jsonl)
+        projects_jsonl.write('\n')
