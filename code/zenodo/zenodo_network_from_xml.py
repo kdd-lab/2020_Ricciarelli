@@ -11,7 +11,7 @@ node_dict, adjacency_d = dict(), dict()
 framework = sys.argv[1].split('/')[-1].split('_')[1]
 
 with open(sys.argv[1], 'r') as xml_file:
-    for record in tqdm(xml_file, desc='BUILDING ADJANCENCY MATRIX'):
+    for record in tqdm(xml_file, desc='BUILDING NODE LIST AND EDGE LIST'):
         r = etree.XML(record)
 
         creators = r.findall('.//creator')
