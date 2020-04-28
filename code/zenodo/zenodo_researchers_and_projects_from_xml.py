@@ -4,13 +4,14 @@ import pandas as pd
 import sys
 
 from lxml import etree
+from scipy.stats import mode
 from tqdm import tqdm
 
 framework = sys.argv[1].split('/')[-1].split('_')[1]
 
 creators, creators_with_MAG, records_with_year, unknown_creators = 0, 0, 0, 0
 projects_per_creator, creators_per_project = list(), list()
-creators_dict = dict()
+creators_dict, projects_dict = dict(), dict()
 
 with open(sys.argv[1], 'r') as xml_file:
     for record in tqdm(xml_file,
@@ -23,15 +24,40 @@ with open(sys.argv[1], 'r') as xml_file:
         year = r.find('.//dateofacceptance').text.split('-')[0] if \
             r.find('.//dateofacceptance').text is not None else None
 
-        affiliation = r.find(".//rel[@inferenceprovenance = "
-                             "'iis::document_affiliations']")
+        affiliations = r.findall(".//rel[@inferenceprovenance = "
+                                 "'iis::document_affiliations']")
+        affiliations_list = list()
+        affiliation = None
 
-        if affiliation is not None:
-            if affiliation.find('country') is not None:
-                affiliation = affiliation.find('country')\
-                    .attrib['classname'].lower()
-            else:
-                affiliation = None
+        if len(affiliations) != 0:
+            for aff in affiliations:
+                if aff.find('country') is not None:
+                    affiliations_list.append(aff.find('country').
+                                             attrib['classname'].lower())
+
+            if len(affiliations_list) != 0:
+                affiliation = mode(affiliations_list)[0][0]
+
+        context = r.find(".//context[@type = 'community']")
+        project_id = None
+
+        if context is not None:
+            project_ids = list()
+
+            for concept in context.findall('.//concept'):
+                project_ids.append(concept.attrib['id'])
+
+            if len(project_ids) != 0:
+                project_id = max(project_ids, key=len)
+                label = context.find(".//concept[@id = '{}']"
+                                     .format(project_id))
+                label = label.attrib['label']
+                acronym = r.find('.//acronym').text if r.find('.//acronym') \
+                    is not None else None
+
+                if project_id not in projects_dict:
+                    projects_dict[project_id] = {'label': label,
+                                                 'acronym': acronym}
 
         creators_per_project.append(len(crtrs))
 
@@ -72,22 +98,23 @@ with open(sys.argv[1], 'r') as xml_file:
                 if identifier not in creators_dict:
                     creators_dict[identifier] = \
                         {'attributes': attributes,
-                         'projects': [{'title': title,
-                                       'keywords': None,
-                                       'year': year,
-                                       'affiliation': affiliation}]}
+                         'papers': [{'title': title,
+                                     'keywords': None,
+                                     'year': year,
+                                     'project': project_id,
+                                     'affiliation': affiliation}]}
 
                     creators += 1
                 else:
-                    creators_dict[identifier]['projects'].append(
+                    creators_dict[identifier]['papers'].append(
                         {'title': title, 'keywords': None, 'year': year,
-                         'affiliation': affiliation})
+                         'project': project_id, 'affiliation': affiliation})
 
                 if year is not None:
                     records_with_year += 1
 
 for creator in creators_dict:
-    projects_per_creator.append(len(creators_dict[creator]['projects']))
+    projects_per_creator.append(len(creators_dict[creator]['papers']))
 
 creators_per_project = np.round(np.mean(creators_per_project), 2)
 projects_per_creator = np.round(np.mean(projects_per_creator), 2)
@@ -110,3 +137,11 @@ with open(sys.argv[2], 'w') as jsonl_file:
 
         json.dump(to_write, jsonl_file)
         jsonl_file.write('\n')
+
+with open(sys.argv[3], 'w') as projects_jsonl_file:
+    for project in tqdm(projects_dict.items(), desc='WRITING PROJECTS JSONL'):
+        to_write = dict()
+        to_write[project[0]] = project[1]
+
+        json.dump(to_write, projects_jsonl_file)
+        projects_jsonl_file.write('\n')
