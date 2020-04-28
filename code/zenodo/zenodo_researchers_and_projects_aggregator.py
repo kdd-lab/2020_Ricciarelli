@@ -46,7 +46,7 @@ for jsonl_file in os.listdir(sys.argv[1]):
 
 for jsonl_file in os.listdir(sys.argv[2]):
     if jsonl_file.split('.')[-1] == 'jsonl':
-        framework = jsonl_file.split('_')[2]
+        framework = jsonl_file.split('_')[1]
 
         with open(sys.argv[2] + jsonl_file, 'r') as projects_jsonl:
             for project in tqdm(projects_jsonl,
@@ -80,7 +80,7 @@ with open(sys.argv[1] + 'researchers_without_MAG.jsonl', 'w') as \
 with open(sys.argv[2] + 'projects.jsonl', 'w') as projects_jsonl:
     for project in tqdm(projects.items(), desc='WRITING PROJECTS'):
         to_write = dict()
-        to_write[projects[0]] = projects[1]
+        to_write[project[0]] = project[1]
 
         json.dump(to_write, projects_jsonl)
         projects_jsonl.write('\n')
