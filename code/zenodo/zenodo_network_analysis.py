@@ -23,6 +23,8 @@ for year in sorted(dirs):
 
             g.add_vertex(n[0], affiliation=n[1])
 
+    edges_list, weights_list = list(), list()
+
     with open(sys.argv[1] + year + '/' + 'edge_list.jsonl', 'r') as edge_list:
         for edge in tqdm(edge_list,
                          desc='YEAR {}: READING EDGE LIST'.format(year)):
@@ -30,7 +32,11 @@ for year in sorted(dirs):
 
             for node_1 in e:
                 for node_2 in e[node_1]:
-                    g.add_edge(node_1, node_2, weight=len(e[node_1][node_2]))
+                    edges_list.append((node_1, node_2))
+                    weights_list.append(len(e[node_1][node_2]))
+
+    g.add_edges(edges_list)
+    g.es['weight'] = weights_list
 
     nodes_number = len(g.vs)
     edges_number = len(g.es)
