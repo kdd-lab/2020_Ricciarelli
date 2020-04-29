@@ -6,7 +6,8 @@ from tqdm import tqdm
 
 entropies_by_framework = dict()
 
-dirs = [d for d in os.listdir(sys.argv[1]) if d != '.DS_Store']
+dirs = [d for d in os.listdir(sys.argv[1])
+        if os.path.isdir(sys.argv[1] + d)]
 
 for year in sorted(dirs):
     if os.path.exists(sys.argv[1] + year + '/' + 'node_list.jsonl') and \
