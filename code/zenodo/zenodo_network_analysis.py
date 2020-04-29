@@ -40,7 +40,7 @@ for year in sorted(dirs):
 
     nodes_number = len(g.vs)
     edges_number = len(g.es)
-    density = np.round(g.density(), 2)
+    density = g.density()
 
     avg_clustering_coefficient = list()
     transitivity = list()
