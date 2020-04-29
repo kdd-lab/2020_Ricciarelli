@@ -8,11 +8,10 @@ from collections import Counter
 from scipy.stats import entropy
 from tqdm import tqdm
 
-creators, entropies = dict(), dict()
-
 dirs = [d for d in os.listdir(sys.argv[1]) if d != '.DS_Store']
 
 for year in sorted(dirs):
+    entropies = dict()
     g = ig.Graph()
 
     if os.path.exists(sys.argv[1] + year + '/' + 'node_list.jsonl') and \
@@ -79,6 +78,7 @@ for year in sorted(dirs):
                         np.round(entropy(affiliations_types, base=2), 2) * -1
 
                 to_add['class'] = monst_common_class
+                to_add['affiliation'] = ego_country
 
                 entropies[node['name']] = to_add
 

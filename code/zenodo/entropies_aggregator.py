@@ -5,12 +5,12 @@ import sys
 from tqdm import tqdm
 
 entropies_by_framework = dict()
+
 dirs = [d for d in os.listdir(sys.argv[1]) if d != '.DS_Store']
 
 for year in sorted(dirs):
     if os.path.exists(sys.argv[1] + year + '/' + 'node_list.jsonl') and \
        os.path.exists(sys.argv[1] + year + '/' + 'edge_list.jsonl'):
-
         file_name = sys.argv[1] + year + '/' + 'entropies.jsonl'
 
         with open(file_name, 'r') as entropies_by_year:
@@ -21,10 +21,15 @@ for year in sorted(dirs):
                 for identifier in creator:
                     if identifier not in entropies_by_framework:
                         entropies_by_framework[identifier] = \
-                            {year: creator[identifier]}
+                            {year: {'entropy': creator[identifier]['entropy'],
+                                    'class': creator[identifier]['class'],
+                                    'affiliation':
+                                        creator[identifier]['affiliation']}}
                     else:
                         entropies_by_framework[identifier][year] = \
-                            creator[identifier]
+                            {'entropy': creator[identifier]['entropy'],
+                             'class': creator[identifier]['class'],
+                             'affiliation': creator[identifier]['affiliation']}
 
 to_save = sys.argv[1] + 'entropies_by_researcher.jsonl'
 
