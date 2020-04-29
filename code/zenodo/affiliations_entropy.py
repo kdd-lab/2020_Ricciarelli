@@ -8,7 +8,8 @@ from collections import Counter
 from scipy.stats import entropy
 from tqdm import tqdm
 
-dirs = [d for d in os.listdir(sys.argv[1]) if os.path.isdir(d)]
+dirs = [d for d in os.listdir(sys.argv[1])
+        if os.path.isdir(sys.argv[1] + d)]
 
 for year in sorted(dirs):
     entropies = dict()
