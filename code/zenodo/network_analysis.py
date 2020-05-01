@@ -1,16 +1,22 @@
 import igraph as ig
 import json
+import matplotlib.pyplot as plt
 import numpy as np
 import os
 import pandas as pd
 import sys
+import warnings
 
+from collections import Counter
 from tqdm import tqdm
+
+warnings.filterwarnings("ignore")
 
 years, nodes, edges, densities, avg_cc, transitivities, diameters, rads = \
     list(), list(), list(), list(), list(), list(), list(), list()
 
-dirs = [d for d in os.listdir(sys.argv[1]) if d != '.DS_Store']
+dirs = [d for d in os.listdir(sys.argv[1])
+        if os.path.isdir(sys.argv[1] + d)]
 
 for year in sorted(dirs):
     g = ig.Graph()
@@ -71,6 +77,94 @@ for year in sorted(dirs):
         transitivities.append(np.round(np.mean(transitivity), 2))
         diameters.append(np.round(np.mean(diameter), 2))
         rads.append(np.round(np.mean(radius), 2))
+
+        degrees = sorted(g.degree())
+
+        fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(10, 10))
+
+        fig.suptitle('Degree Distribution & Probability Density, Year ' +
+                     str(year), fontsize=20)
+
+        axs[0].hist(degrees, log=True, zorder=2, color='#3296dc',
+                    edgecolor='#1f77b4')
+        axs[0].set_title('Degree Distribution Histogram', fontsize=14)
+        axs[0].set_xlabel(r'$k$', fontsize=14)
+        axs[0].set_ylabel(r'$N_k$', fontsize=14)
+        axs[0].grid(axis='y', linestyle='--', color='black', zorder=1)
+        axs[0].text(0.65, 0.75, 'mean = {}\nmax = {}\nmin = {}'
+                    .format(round(np.mean(degrees), 2), max(degrees),
+                            min(degrees)),
+                    bbox=dict(facecolor='white', edgecolor='black'),
+                    transform=axs[0].transAxes)
+
+        c, countdict_pdf = Counter(degrees), dict()
+
+        for deg in np.arange(min(degrees), max(degrees) + 1):
+            countdict_pdf[deg] = (c[deg] / len(degrees)) if deg in c.keys() \
+                else 0.
+
+        axs[1].scatter(list(countdict_pdf.keys()),
+                       list(countdict_pdf.values()), zorder=2, alpha=0.7,
+                       color='#3296dc', edgecolor='#1f77b4')
+        axs[1].set_title('Probability Density Distribution', fontsize=14)
+        axs[1].set_xscale('log')
+        axs[1].set_xlim(min(countdict_pdf.keys()),
+                        max(countdict_pdf.keys()) + 50)
+        axs[1].set_yscale('log')
+        axs[1].set_ylim(1e-7, 1.)
+        axs[1].set_xlabel(r'$k$', fontsize=14)
+        axs[1].set_ylabel(r'$p_k$', fontsize=14)
+        axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
+
+        fig.tight_layout(rect=[0, 0.03, 1, 0.90])
+        fig.savefig(sys.argv[1] + year + '/'
+                    'degree_distribution_probability_distribution.pdf',
+                    format='pdf')
+        plt.close(fig=fig)
+
+        weights = sorted(weights_list)
+
+        fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(10, 10))
+
+        fig.suptitle('Weights Distribution & Probability Density, Year '
+                     + str(year), fontsize=20)
+
+        axs[0].hist(weights, log=True, zorder=2, color='#3296dc',
+                    edgecolor='#1f77b4')
+        axs[0].set_title('Weight Distribution Histogram', fontsize=14)
+        axs[0].set_xlabel(r'$w$', fontsize=14)
+        axs[0].set_ylabel(r'$N_w$', fontsize=14)
+        axs[0].grid(axis='y', linestyle='--', color='black', zorder=1)
+        axs[0].text(0.65, 0.75, 'mean = {}\nmax = {}\nmin = {}'
+                    .format(round(np.mean(weights), 2), max(weights),
+                            min(weights)),
+                    bbox=dict(facecolor='white', edgecolor='black'),
+                    transform=axs[0].transAxes)
+
+        c, countdict_pdf = Counter(weights), dict()
+
+        for weight in np.arange(min(weights), max(weights) + 1):
+            countdict_pdf[weight] = (c[weight] / len(weights)) \
+                if weight in c.keys() else 0.
+
+        axs[1].scatter(list(countdict_pdf.keys()),
+                       list(countdict_pdf.values()), zorder=2, alpha=0.7,
+                       color='#3296dc', edgecolor='#1f77b4')
+        axs[1].set_title('Probability Density Distribution', fontsize=14)
+        axs[1].set_xscale('log')
+        axs[1].set_xlim(min(countdict_pdf.keys()),
+                        max(countdict_pdf.keys()) + 50)
+        axs[1].set_yscale('log')
+        axs[1].set_ylim(1e-7, 1.)
+        axs[1].set_xlabel(r'$w$', fontsize=14)
+        axs[1].set_ylabel(r'$p_w$', fontsize=14)
+        axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
+
+        fig.tight_layout(rect=[0, 0.03, 1, 0.90])
+        fig.savefig(sys.argv[1] + year + '/'
+                    'weight_distribution_probability_distribution_{}.pdf'
+                    .format(years[0], year), format='pdf')
+        plt.close(fig=fig)
 
 to_save = sys.argv[1] + 'networks_statistics.csv'
 
