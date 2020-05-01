@@ -99,7 +99,7 @@ for year in sorted(dirs):
 
         c, countdict_pdf = Counter(degrees), dict()
 
-        for deg in np.arange(min(degrees), max(degrees) + 1):
+        for deg in np.arange(0, max(degrees) + 1):
             countdict_pdf[deg] = (c[deg] / len(degrees)) if deg in c.keys() \
                 else 0.
 
