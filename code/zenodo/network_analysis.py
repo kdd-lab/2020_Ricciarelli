@@ -98,20 +98,35 @@ for year in sorted(dirs):
                     transform=axs[0].transAxes)
 
         c, countdict_pdf = Counter(degrees), dict()
+        left_y_lim, right_x_lim = None, None
 
         for deg in np.arange(0, max(degrees) + 1):
             countdict_pdf[deg] = (c[deg] / len(degrees)) if deg in c.keys() \
                 else 0.
+
+        min_prob = [i for i in sorted(countdict_pdf.values()) if i != 0.0][0]
+        max_degree = max(countdict_pdf.keys())
+        es_1 = [1e-7, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1e0]
+        es_2 = [1e0, 1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7]
+
+        for i, v in enumerate(es_1):
+            if min_prob < v:
+                left_y_lim = es_1[i - 1]
+                break
+
+        for i, v in enumerate(es_2):
+            if max_degree < v:
+                right_x_lim = es_2[i]
+                break
 
         axs[1].scatter(list(countdict_pdf.keys()),
                        list(countdict_pdf.values()), zorder=2, alpha=0.7,
                        color='#3296dc', edgecolor='#1f77b4')
         axs[1].set_title('Probability Density Distribution', fontsize=14)
         axs[1].set_xscale('log')
-        axs[1].set_xlim(min(countdict_pdf.keys()),
-                        max(countdict_pdf.keys()) + 50)
+        axs[1].set_xlim(0.5, right_x_lim)
         axs[1].set_yscale('log')
-        axs[1].set_ylim(1e-7, 1.)
+        axs[1].set_ylim(left_y_lim, 1.)
         axs[1].set_xlabel(r'$k$', fontsize=14)
         axs[1].set_ylabel(r'$p_k$', fontsize=14)
         axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
@@ -142,20 +157,33 @@ for year in sorted(dirs):
                     transform=axs[0].transAxes)
 
         c, countdict_pdf = Counter(weights), dict()
+        left_y_lim, right_x_lim = None, None
 
         for weight in np.arange(min(weights), max(weights) + 1):
             countdict_pdf[weight] = (c[weight] / len(weights)) \
                 if weight in c.keys() else 0.
+
+        min_prob = [i for i in sorted(countdict_pdf.values()) if i != 0.0][0]
+        max_degree = max(countdict_pdf.keys())
+
+        for i, v in enumerate(es_1):
+            if min_prob < v:
+                left_y_lim = es_1[i - 1]
+                break
+
+        for i, v in enumerate(es_2):
+            if max_degree < v:
+                right_x_lim = es_2[i]
+                break
 
         axs[1].scatter(list(countdict_pdf.keys()),
                        list(countdict_pdf.values()), zorder=2, alpha=0.7,
                        color='#3296dc', edgecolor='#1f77b4')
         axs[1].set_title('Probability Density Distribution', fontsize=14)
         axs[1].set_xscale('log')
-        axs[1].set_xlim(min(countdict_pdf.keys()),
-                        max(countdict_pdf.keys()) + 50)
+        axs[1].set_xlim(0.5, right_x_lim)
         axs[1].set_yscale('log')
-        axs[1].set_ylim(1e-7, 1.)
+        axs[1].set_ylim(left_y_lim, 1.)
         axs[1].set_xlabel(r'$w$', fontsize=14)
         axs[1].set_ylabel(r'$p_w$', fontsize=14)
         axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
