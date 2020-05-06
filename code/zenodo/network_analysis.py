@@ -1,6 +1,7 @@
 import igraph as ig
 import json
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 import numpy as np
 import os
 import pandas as pd
@@ -200,17 +201,18 @@ df = pd.DataFrame({'Year': years, 'Nodes': nodes, 'Edges': edges,
                    'Density': densities, 'Avg Clustering Coefficient': avg_cc,
                    'Transitivity': transitivities, 'Diameter': diameters,
                    'Radius': rads})
+pos_list = [i * 2 for i in np.arange(0, len(df['Year'].values))]
 
 fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 10))
 
 fig.suptitle('Nodes and Edges growth by Year', fontsize=20)
 
+axs.xaxis.set_major_locator(ticker.FixedLocator((pos_list)))
+axs.xaxis.set_major_formatter(ticker.FixedFormatter((df['Year'].values)))
 df.plot(kind='line', x='Year', y='Nodes', grid=True, logy=True,
         color='#3296dc', linewidth=2, ax=axs)
 df.plot(kind='line', x='Year', y='Edges', grid=True, logy=True,
         color='#dc3241', linewidth=2, ax=axs)
-axs.set_xticks([i * 2 for i in np.arange(0, len(df['Year'].values))])
-axs.set_xticklabels(df['Year'].values)
 axs.set_xlabel('Year', fontsize=14)
 
 fig.savefig(sys.argv[1] + '/' + 'nodes_and_edges_growth_by_year.pdf',
