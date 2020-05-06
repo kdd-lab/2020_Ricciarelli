@@ -195,6 +195,60 @@ for year in sorted(dirs):
                     format='pdf')
         plt.close(fig=fig)
 
+        betweenness = g.betweenness(directed=False)
+
+        fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 10))
+
+        fig.suptitle("Node's Betweenness Distribution, Year "
+                     + str(year), fontsize=20)
+
+        axs.hist(betweenness, log=True, zorder=2, color='#3296dc',
+                 edgecolor='#1f77b4')
+        axs.set_xlabel(r'$g$', fontsize=14)
+        axs.set_ylabel(r'$N_g$', fontsize=14)
+        axs.grid(axis='y', linestyle='--', color='black', zorder=1)
+        axs.text(1.05, 0.9, 'mean = {}\nmax = {}\nmin = {}'
+                 .format(np.format_float_scientific(np.mean(betweenness),
+                                                    precision=2),
+                         np.format_float_scientific(max(betweenness),
+                                                    precision=2),
+                         np.format_float_scientific(min(betweenness),
+                                                    precision=2)),
+                 bbox=dict(facecolor='white', edgecolor='black'),
+                 transform=axs.transAxes, fontsize=14)
+
+        fig.tight_layout(rect=[0, 0.03, 1, 0.90])
+        fig.savefig(sys.argv[1] + year + '/'
+                    'node_betweenness_distribution.pdf', format='pdf')
+        plt.close(fig=fig)
+
+        closeness = g.closeness()
+
+        fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 10))
+
+        fig.suptitle("Node's Closeness Distribution, Year "
+                     + str(year), fontsize=20)
+
+        axs.hist(closeness, log=True, zorder=2, color='#3296dc',
+                 edgecolor='#1f77b4')
+        axs.set_xlabel(r'$C$', fontsize=14)
+        axs.set_ylabel(r'$N_C$', fontsize=14)
+        axs.grid(axis='y', linestyle='--', color='black', zorder=1)
+        axs.text(1.05, 0.9, 'mean = {}\nmax = {}\nmin = {}'
+                 .format(np.format_float_scientific(np.mean(closeness),
+                                                    precision=2),
+                         np.format_float_scientific(max(closeness),
+                                                    precision=2),
+                         np.format_float_scientific(min(closeness),
+                                                    precision=2)),
+                 bbox=dict(facecolor='white', edgecolor='black'),
+                 transform=axs.transAxes, fontsize=14)
+
+        fig.tight_layout(rect=[0, 0.03, 1, 0.90])
+        fig.savefig(sys.argv[1] + year + '/'
+                    'node_closeness_distribution.pdf', format='pdf')
+        plt.close(fig=fig)
+
 to_save = sys.argv[1] + 'networks_statistics.csv'
 
 df = pd.DataFrame({'Year': years, 'Nodes': nodes, 'Edges': edges,
@@ -215,8 +269,7 @@ df.plot(kind='line', x='Year', y='Edges', grid=True, logy=True,
         color='#dc3241', linewidth=2, ax=axs)
 axs.set_xlabel('Year', fontsize=14)
 
-fig.savefig(sys.argv[1] + '/' + 'nodes_and_edges_growth_by_year.pdf',
-            format='pdf')
+fig.savefig(sys.argv[1] + '/nodes_and_edges_growth_by_year.pdf', format='pdf')
 plt.close(fig=fig)
 
 df.to_csv(to_save, index=False)
