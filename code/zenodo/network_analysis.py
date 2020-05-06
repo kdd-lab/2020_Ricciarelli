@@ -209,6 +209,8 @@ df.plot(kind='line', x='Year', y='Nodes', grid=True, logy=True,
         color='#3296dc', linewidth=2, ax=axs)
 df.plot(kind='line', x='Year', y='Edges', grid=True, logy=True,
         color='#dc3241', linewidth=2, ax=axs)
+axs.set_xticks(np.arange(0, len(df['Year'].values)))
+axs.set_xticklabels(df['Year'].values)
 axs.set_xlabel('Year', fontsize=14)
 
 fig.savefig(sys.argv[1] + '/' + 'nodes_and_edges_growth_by_year.pdf',
