@@ -196,7 +196,23 @@ for year in sorted(dirs):
 
 to_save = sys.argv[1] + 'networks_statistics.csv'
 
-pd.DataFrame({'Year': years, 'Nodes': nodes, 'Edges': edges,
-              'Density': densities, 'Avg Clustering Coefficient': avg_cc,
-              'Transitivity': transitivities, 'Diameter': diameters,
-              'Radius': rads}).to_csv(to_save, index=False)
+df = pd.DataFrame({'Year': years, 'Nodes': nodes, 'Edges': edges,
+                   'Density': densities, 'Avg Clustering Coefficient': avg_cc,
+                   'Transitivity': transitivities, 'Diameter': diameters,
+                   'Radius': rads})
+
+fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 10))
+
+fig.suptitle('Nodes and Edges growth by Year', fontsize=20)
+
+df.plot(kind='line', x='Year', y='Nodes', grid=True, logy=True,
+        color='#3296dc', linewidth=2, ax=axs)
+df.plot(kind='line', x='Year', y='Edges', grid=True, logy=True,
+        color='#dc3241', linewidth=2, ax=axs)
+axs.set_xlabel('Year', fontsize=14)
+
+fig.savefig(sys.argv[1] + '/' + 'nodes_and_edges_growth_by_year.pdf',
+            format='pdf')
+plt.close(fig=fig)
+
+df.to_csv(to_save, index=False)
