@@ -190,8 +190,8 @@ for year in sorted(dirs):
 
         fig.tight_layout(rect=[0, 0.03, 1, 0.90])
         fig.savefig(sys.argv[1] + year + '/'
-                    'weight_distribution_probability_distribution_{}.pdf'
-                    .format(years[0], year), format='pdf')
+                    'weight_distribution_probability_distribution.pdf',
+                    format='pdf')
         plt.close(fig=fig)
 
 to_save = sys.argv[1] + 'networks_statistics.csv'
