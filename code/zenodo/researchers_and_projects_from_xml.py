@@ -62,9 +62,10 @@ with open(sys.argv[1], 'r') as xml_file:
         creators_per_project.append(len(crtrs))
 
         keywords = [
-            k.lower() for k in r.findall(".//subject[@classid = 'keyword']")
+            k.text.lower()
+            for k in r.findall(".//subject[@classid = 'keyword']")
             if k.text is not None]
-        keywords = set(keywords)
+        keywords = list(set(keywords))
 
         for creator in crtrs:
             identifier = None
@@ -104,7 +105,7 @@ with open(sys.argv[1], 'r') as xml_file:
                     creators_dict[identifier] = \
                         {'attributes': attributes,
                          'papers': [{'title': title,
-                                     'keywords': list(keywords),
+                                     'keywords': keywords,
                                      'year': year,
                                      'project': project_id,
                                      'affiliation': affiliation}]}
@@ -112,7 +113,7 @@ with open(sys.argv[1], 'r') as xml_file:
                     creators += 1
                 else:
                     creators_dict[identifier]['papers'].append(
-                        {'title': title, 'keywords': list(keywords),
+                        {'title': title, 'keywords': keywords,
                          'year': year, 'project': project_id,
                          'affiliation': affiliation})
 
