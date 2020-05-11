@@ -18,6 +18,8 @@ years, nodes, edges, densities, avg_cc, transitivities, diameters, rads = \
 
 betweennesses, closenesses = list(), list()
 
+to_remove = list()
+
 dirs = [d for d in os.listdir(sys.argv[1])
         if os.path.isdir(sys.argv[1] + d)]
 
@@ -200,6 +202,11 @@ for year in sorted(dirs):
         betweennesses.append(g.betweenness(directed=False))
 
         closenesses.append(g.closeness())
+    else:
+        to_remove.append(year)
+
+for year in to_remove:
+    dirs.remove(year)
 
 fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 10))
 
