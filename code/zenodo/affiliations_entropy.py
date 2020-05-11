@@ -15,12 +15,10 @@ for framework in os.listdir(sys.argv[1]):
              if os.path.isdir(sys.argv[1] + framework + '/' + y)]
 
     for year in years:
-        if framework not in frameworks_by_year:
-            frameworks_by_year[framework] = [year]
+        if year not in frameworks_by_year:
+            frameworks_by_year[year] = [framework]
         else:
-            frameworks_by_year[framework].append(years)
-            frameworks_by_year[framework] = \
-                sorted(frameworks_by_year[framework])
+            frameworks_by_year[year].append(framework)
 
 print(frameworks_by_year)
 
