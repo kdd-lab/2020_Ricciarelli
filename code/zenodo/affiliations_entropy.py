@@ -57,8 +57,7 @@ for year in frameworks_by_year:
                         edges_list.append((node_1, node_2))
                         weights_list.append(len(e[node_1][node_2]))
                         frameworks_list.append(framework)
-    import ipdb
-    ipdb.set_trace()
+
     for node in tqdm(nodes, desc='YEAR {}: ADDING NODES'.format(year)):
         affiliation = Counter(nodes[node])
 
@@ -67,6 +66,9 @@ for year in frameworks_by_year:
     g.add_edges(edges_list)
     g.es['weight'] = weights_list
     g.es['framework'] = frameworks_list
+
+    import ipdb
+    ipdb.set_trace()
 
     for node in tqdm(g.vs, desc='YEAR {}: COMPUTING ENTROPIES'.format(year)):
         if len(g.neighborhood(node['name'], mindist=1)) != 0:
