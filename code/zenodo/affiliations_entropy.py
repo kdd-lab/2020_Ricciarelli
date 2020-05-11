@@ -20,8 +20,6 @@ for framework in os.listdir(sys.argv[1]):
         else:
             frameworks_by_year[year].append(framework)
 
-print(frameworks_by_year)
-
 for year in frameworks_by_year:
     entropies = dict()
     g = ig.Graph()
@@ -29,7 +27,7 @@ for year in frameworks_by_year:
     nodes = dict()
     edges_list, weights_list, frameworks_list = list(), list(), list()
 
-    for framework in frameworks_by_year[framework]:
+    for framework in frameworks_by_year[year]:
         file_name = sys.argv[1] + framework + '/' + year + '/' + \
             'node_list.jsonl'
 
@@ -43,7 +41,7 @@ for year in frameworks_by_year:
                 if n[0] not in nodes:
                     nodes[n[0]] = [n[1]]
                 else:
-                    nodes[n[0]].append([n[1]])
+                    nodes[n[0]].append(n[1])
 
         file_name = sys.argv[1] + framework + '/' + year + '/' + \
             'edge_list.jsonl'
@@ -59,7 +57,8 @@ for year in frameworks_by_year:
                         edges_list.append((node_1, node_2))
                         weights_list.append(len(e[node_1][node_2]))
                         frameworks_list.append(framework)
-
+    import ipdb
+    ipdb.set_trace()
     for node in tqdm(nodes, desc='YEAR {}: ADDING NODES'.format(year)):
         affiliation = Counter(nodes[node])
 
