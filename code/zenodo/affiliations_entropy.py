@@ -67,9 +67,6 @@ for year in frameworks_by_year:
     g.es['weight'] = weights_list
     g.es['framework'] = frameworks_list
 
-    import ipdb
-    ipdb.set_trace()
-
     for node in tqdm(g.vs, desc='YEAR {}: COMPUTING ENTROPIES'.format(year)):
         if len(g.neighborhood(node['name'], mindist=1)) != 0:
             ego_net = g.induced_subgraph(g.neighborhood(node['name'],
@@ -106,7 +103,10 @@ for year in frameworks_by_year:
             to_add['class'] = monst_common_class
             to_add['affiliation'] = ego_country
 
-            entropies[node['name']] = to_add
+            if node['name'] not in entropies:
+                entropies[node['name']] = {year: to_add}
+            else:
+                entropies[node['name']][year] = to_add
 
 # dirs = [d for d in os.listdir(sys.argv[1])
 #         if os.path.isdir(sys.argv[1] + d)]
