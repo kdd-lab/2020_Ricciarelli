@@ -67,6 +67,10 @@ with open(sys.argv[1], 'r') as xml_file:
             if k.text is not None]
         keywords = list(set(keywords))
 
+        doi = [d.text for d in r.findall(".//pid[@classid = 'doi']")
+               if d.text is not None]
+        doi = max(doi, key=len) if len(doi) != 0 else None
+
         for creator in crtrs:
             identifier = None
             attributes = dict()
@@ -108,14 +112,15 @@ with open(sys.argv[1], 'r') as xml_file:
                                      'keywords': keywords,
                                      'year': year,
                                      'project': project_id,
-                                     'affiliation': affiliation}]}
+                                     'affiliation': affiliation,
+                                     'doi': doi}]}
 
                     creators += 1
                 else:
                     creators_dict[identifier]['papers'].append(
                         {'title': title, 'keywords': keywords,
                          'year': year, 'project': project_id,
-                         'affiliation': affiliation})
+                         'affiliation': affiliation, 'doi': doi})
 
                 if year is not None:
                     records_with_year += 1
