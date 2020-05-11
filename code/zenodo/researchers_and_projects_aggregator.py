@@ -7,6 +7,11 @@ from tqdm import tqdm
 creators_with_MAG, creators_without_MAG = dict(), dict()
 projects = dict()
 
+if os.path.exists(sys.argv[1] + 'researchers_with_MAG.jsonl'):
+    os.remove(sys.argv[1] + 'researchers_with_MAG.jsonl')
+    os.remove(sys.argv[1] + 'researchers_without_MAG.jsonl')
+    os.remove(sys.argv[2] + 'projects.jsonl')
+
 for jsonl_file in os.listdir(sys.argv[1]):
     if jsonl_file.split('.')[-1] == 'jsonl':
         framework = jsonl_file.split('_')[1]
