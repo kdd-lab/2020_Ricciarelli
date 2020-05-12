@@ -20,7 +20,7 @@ for framework in os.listdir(sys.argv[1]):
         else:
             frameworks_by_year[year].append(framework)
 
-for year in frameworks_by_year:
+for year in sorted(list(frameworks_by_year.keys())):
     entropies = dict()
     g = ig.Graph()
 
