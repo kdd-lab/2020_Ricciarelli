@@ -15,7 +15,7 @@ for framework in os.listdir(sys.argv[1]):
              if os.path.isdir(sys.argv[1] + framework + '/' + y)]
 
     for year in years:
-        to_check = sys.argv[1] + framework + '/' + y + '/edge_list.jsonl'
+        to_check = sys.argv[1] + framework + '/' + year + '/edge_list.jsonl'
 
         if os.path.exists(to_check):
             if year not in frameworks_by_year:
