@@ -23,8 +23,9 @@ for framework in os.listdir(sys.argv[1]):
             else:
                 frameworks_by_year[year].append(framework)
 
+entropies = dict()
+
 for year in sorted(list(frameworks_by_year.keys())):
-    entropies = dict()
     g = ig.Graph()
 
     nodes = dict()
@@ -114,9 +115,7 @@ for year in sorted(list(frameworks_by_year.keys())):
 to_save = sys.argv[1] + '/entropies.jsonl'
 
 with open(to_save, 'w') as entropies_file:
-    for creator in tqdm(entropies.items(),
-                        desc='YEAR {}: WRITING ENTROPIES JSONL'
-                        .format(year)):
+    for creator in tqdm(entropies.items(), desc='WRITING ENTROPIES JSONL'):
         to_write = dict()
         to_write[creator[0]] = creator[1]
 
