@@ -15,10 +15,13 @@ for framework in os.listdir(sys.argv[1]):
              if os.path.isdir(sys.argv[1] + framework + '/' + y)]
 
     for year in years:
-        if year not in frameworks_by_year:
-            frameworks_by_year[year] = [framework]
-        else:
-            frameworks_by_year[year].append(framework)
+        to_check = sys.argv[1] + framework + '/' + y + '/edge_list.jsonl'
+
+        if os.path.exists(to_check):
+            if year not in frameworks_by_year:
+                frameworks_by_year[year] = [framework]
+            else:
+                frameworks_by_year[year].append(framework)
 
 for year in sorted(list(frameworks_by_year.keys())):
     entropies = dict()
@@ -27,7 +30,7 @@ for year in sorted(list(frameworks_by_year.keys())):
     nodes = dict()
     edges_list, weights_list, frameworks_list = list(), list(), list()
 
-    for framework in frameworks_by_year[year]:
+    for framework in sorted(frameworks_by_year[year]):
         file_name = sys.argv[1] + framework + '/' + year + '/' + \
             'node_list.jsonl'
 
