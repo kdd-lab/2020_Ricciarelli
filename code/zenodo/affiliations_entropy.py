@@ -111,6 +111,18 @@ for year in sorted(list(frameworks_by_year.keys())):
             else:
                 entropies[node['name']][year] = to_add
 
+to_save = sys.argv[1] + '/entropies.jsonl'
+
+with open(to_save, 'w') as entropies_file:
+    for creator in tqdm(entropies.items(),
+                        desc='YEAR {}: WRITING ENTROPIES JSONL'
+                        .format(year)):
+        to_write = dict()
+        to_write[creator[0]] = creator[1]
+
+        json.dump(to_write, entropies_file)
+        entropies_file.write('\n')
+
 # dirs = [d for d in os.listdir(sys.argv[1])
 #         if os.path.isdir(sys.argv[1] + d)]
 
