@@ -70,14 +70,15 @@ for year in sorted(years):
     for node in tqdm(nodes_list, desc='YEAR {}: ADDING NODES'.format(year)):
         affiliation = list()
 
-        for affiliation_id in authors_affiliations[node]['affiliations']:
-            years_range = np\
-                .arange(authors_affiliations[node][affiliation_id]['from'],
-                        authors_affiliations[node][affiliation_id]['to'] + 1)
+        for a_id in authors_affiliations[node]['affiliations']:
+            _from = authors_affiliations[node]['affiliations'][a_id]['from']
+            _to = \
+                authors_affiliations[node]['affiliations'][a_id]['to'] + 1
 
-            if int(year) in years_range and \
-               affiliation_id in affiliations_countries:
-                affiliation.append(affiliations_countries[affiliation_id])
+            years_range = np.arange(_from, _to)
+
+            if int(year) in years_range and a_id in affiliations_countries:
+                affiliation.append(affiliations_countries[a_id])
 
         if len(affiliation) != 0:
             affiliation = Counter(affiliation)
