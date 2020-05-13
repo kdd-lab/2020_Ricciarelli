@@ -19,7 +19,7 @@ nodes, edges, densities, avg_cc, transitivities, diameters, rads = \
 
 betweennesses, closenesses = list(), list()
 
-years = [d for d in os.listdir(sys.argv[1]) if os.path.isdir(sys.argv[1] + d)]
+years = np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10)
 
 authors_affiliations = dict()
 
@@ -48,10 +48,10 @@ with open(file_name, 'r') as affiliations_countries_file:
 
         affiliations_countries[a[0]] = a[1]
 
-for year in sorted(years):
+for year in years:
     g = ig.Graph()
 
-    file_name = sys.argv[1] + year + '/' + year + '.gz'
+    file_name = '{}/{}/{}.gz'.format(sys.argv[1], year, year)
 
     nodes_list, edges_list, weights_list = list(), list(), list()
 
@@ -79,7 +79,7 @@ for year in sorted(years):
 
                 years_range = np.arange(_from, _to)
 
-                if int(year) in years_range and a_id in affiliations_countries:
+                if year in years_range and a_id in affiliations_countries:
                     affiliation.append(affiliations_countries[a_id])
 
             if len(affiliation) != 0:
@@ -184,7 +184,7 @@ for year in sorted(years):
     axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
 
     fig.tight_layout(rect=[0, 0.03, 1, 0.90])
-    fig.savefig(sys.argv[1] + year + '/'
+    fig.savefig(sys.argv[1] + str(year) + '/'
                 'degree_distribution_probability_distribution.pdf',
                 format='pdf')
     plt.close(fig=fig)
@@ -241,7 +241,7 @@ for year in sorted(years):
     axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
 
     fig.tight_layout(rect=[0, 0.03, 1, 0.90])
-    fig.savefig(sys.argv[1] + year + '/'
+    fig.savefig(sys.argv[1] + str(year) + '/'
                 'weight_distribution_probability_distribution.pdf',
                 format='pdf')
     plt.close(fig=fig)
@@ -263,7 +263,10 @@ axs.set_xlabel('Year', fontsize=14)
 axs.grid(axis='y', linestyle='--', color='black', zorder=1)
 
 fig.tight_layout(rect=[0, 0.03, 1, 0.90])
-fig.savefig(sys.argv[1] + 'betweenness_distribution.pdf', format='pdf')
+fig.savefig('{}betweenness_distribution_{}_{}.pdf'.format(sys.argv[1],
+                                                          years[0],
+                                                          years[-1]),
+            format='pdf')
 plt.close(fig=fig)
 
 fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 10))
@@ -275,7 +278,9 @@ axs.set_xlabel('Year', fontsize=14)
 axs.grid(axis='y', linestyle='--', color='black', zorder=1)
 
 fig.tight_layout(rect=[0, 0.03, 1, 0.90])
-fig.savefig(sys.argv[1] + 'closeness_distribution.pdf', format='pdf')
+fig.savefig('{}closeness_distribution_{}_{}.pdf'.format(sys.argv[1], years[0],
+                                                        years[-1]),
+            format='pdf')
 plt.close(fig=fig)
 
 to_save = sys.argv[1] + 'networks_statistics.csv'
