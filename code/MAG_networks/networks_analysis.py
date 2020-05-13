@@ -70,31 +70,35 @@ for year in sorted(years):
     for node in tqdm(nodes_list, desc='YEAR {}: ADDING NODES'.format(year)):
         affiliation = list()
 
-        for a_id in authors_affiliations[node]['affiliations']:
-            _from = authors_affiliations[node]['affiliations'][a_id]['from']
-            _to = \
-                authors_affiliations[node]['affiliations'][a_id]['to'] + 1
+        if node in authors_affiliations:
+            for a_id in authors_affiliations[node]['affiliations']:
+                _from = \
+                    authors_affiliations[node]['affiliations'][a_id]['from']
+                _to = \
+                    authors_affiliations[node]['affiliations'][a_id]['to'] + 1
 
-            years_range = np.arange(_from, _to)
+                years_range = np.arange(_from, _to)
 
-            if int(year) in years_range and a_id in affiliations_countries:
-                affiliation.append(affiliations_countries[a_id])
+                if int(year) in years_range and a_id in affiliations_countries:
+                    affiliation.append(affiliations_countries[a_id])
 
-        if len(affiliation) != 0:
-            affiliation = Counter(affiliation)
+            if len(affiliation) != 0:
+                affiliation = Counter(affiliation)
 
-            g.add_vertex(node, affiliation=affiliation.most_common(1)[0][0])
+                g.add_vertex(node,
+                             affiliation=affiliation.most_common(1)[0][0])
 
-            authors_affiliations[node]['valid'] = True
+                authors_affiliations[node]['valid'] = True
 
     valid_edges, valid_weights = list(), list()
 
     for idx, val in tqdm(enumerate(edges_list),
                          desc='YEAR {}: VALIDATING EDGES'.format(year)):
-        if authors_affiliations[val[0]]['valid'] and \
-           authors_affiliations[val[1]]['valid']:
-            valid_edges.append(edges_list[idx])
-            valid_weights.append(weights_list[idx])
+        if val[0] in authors_affiliations and val[1] in authors_affiliations:
+            if authors_affiliations[val[0]]['valid'] and \
+               authors_affiliations[val[1]]['valid']:
+                valid_edges.append(edges_list[idx])
+                valid_weights.append(weights_list[idx])
 
     g.add_edges(valid_edges)
     g.es['weight'] = valid_weights
