@@ -31,8 +31,11 @@ with open(file_name, 'r') as authors_affiliations_file:
         if len(json.loads(affiliation.strip())) != 0:
             a = list(json.loads(affiliation.strip()).items())[0]
 
-            a[1]['valid'] = False
-            authors_affiliations[a[0]] = a[1]
+            to_add = dict()
+            to_add['affiliations'] = a[1]
+            to_add['valid'] = False
+
+            authors_affiliations[a[0]] = to_add
 
 affiliations_countries = dict()
 
@@ -67,7 +70,7 @@ for year in sorted(years):
     for node in tqdm(nodes_list, desc='YEAR {}: ADDING NODES'.format(year)):
         affiliation = list()
 
-        for affiliation_id in authors_affiliations[node]:
+        for affiliation_id in authors_affiliations[node]['affiliations']:
             years_range = np\
                 .arange(authors_affiliations[node][affiliation_id]['from'],
                         authors_affiliations[node][affiliation_id]['to'] + 1)
