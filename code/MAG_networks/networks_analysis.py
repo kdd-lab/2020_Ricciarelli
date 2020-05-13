@@ -54,8 +54,7 @@ for year in sorted(years):
     with gzip.open(file_name, 'r') as es_list:
         for edge in tqdm(es_list,
                          desc='YEAR {}: READING EDGES LIST'.format(year)):
-
-            e = edge.strip().split(',')
+            e = edge.decode().strip().split(',')
 
             nodes_list.append(e[0])
             nodes_list.append(e[1])
@@ -65,6 +64,9 @@ for year in sorted(years):
     nodes_list = list(set(nodes_list))
 
     for node in tqdm(nodes_list, desc='YEAR {}: ADDING NODES'.format(year)):
+        import ipdb
+        ipdb.set_trace()
+
         affiliation = list()
 
         for affiliation_id in authors_affiliations[node]:
@@ -72,12 +74,13 @@ for year in sorted(years):
                 .arange(authors_affiliations[node][affiliation_id]['from'],
                         authors_affiliations[node][affiliation_id]['to'] + 1)
 
-            if year in years_range:
+            if int(year) in years_range:
                 affiliation.append(affiliations_countries[affiliation_id])
 
-        affiliation = Counter(affiliation)
+        if len(affiliation) != 0:
+            affiliation = Counter(affiliation)
 
-        g.add_vertex(node, affiliation=affiliation.most_common(1)[0][0])
+            g.add_vertex(node, affiliation=affiliation.most_common(1)[0][0])
 
     g.add_edges(edges_list)
     g.es['weight'] = weights_list
