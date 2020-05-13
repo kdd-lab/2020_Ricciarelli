@@ -82,7 +82,8 @@ for year in sorted(years):
 
     valid_edges, valid_weights = list(), list()
 
-    for idx, val in enumerate(edges_list):
+    for idx, val in tqdm(enumerate(edges_list),
+                         desc='YEAR {}: VALIDATING EDGES'.format(year)):
         if val[0] in g.vs['name'] and val[1] in g.vs['name']:
             valid_edges.append(edges_list[idx])
             valid_weights.append(weights_list[idx])
