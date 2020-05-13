@@ -71,7 +71,8 @@ for year in sorted(years):
                 .arange(authors_affiliations[node][affiliation_id]['from'],
                         authors_affiliations[node][affiliation_id]['to'] + 1)
 
-            if int(year) in years_range:
+            if int(year) in years_range and \
+               affiliation_id in affiliations_countries:
                 affiliation.append(affiliations_countries[affiliation_id])
 
         if len(affiliation) != 0:
