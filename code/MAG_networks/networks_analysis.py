@@ -64,9 +64,6 @@ for year in sorted(years):
     nodes_list = list(set(nodes_list))
 
     for node in tqdm(nodes_list, desc='YEAR {}: ADDING NODES'.format(year)):
-        import ipdb
-        ipdb.set_trace()
-
         affiliation = list()
 
         for affiliation_id in authors_affiliations[node]:
@@ -82,8 +79,15 @@ for year in sorted(years):
 
             g.add_vertex(node, affiliation=affiliation.most_common(1)[0][0])
 
-    g.add_edges(edges_list)
-    g.es['weight'] = weights_list
+    valid_edges, valid_weights = list(), list()
+
+    for idx, val in enumerate(edges_list):
+        if val[0] in g.vs['name'] and val[1] in g.vs['name']:
+            valid_edges.append(edges_list[idx])
+            valid_weights.append(weights_list[idx])
+
+    g.add_edges(valid_edges)
+    g.es['weight'] = valid_weights
 
     nodes_number = len(g.vs)
     edges_number = len(g.es)
