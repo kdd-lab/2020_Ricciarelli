@@ -251,7 +251,8 @@ for year in sorted(years):
     closenesses.append(g.closeness())
 
     for node in nodes_list:
-        authors_affiliations[node]['valid'] = False
+        if node in authors_affiliations:
+            authors_affiliations[node]['valid'] = False
 
 fig, axs = plt.subplots(nrows=1, ncols=1, figsize=(10, 10))
 
