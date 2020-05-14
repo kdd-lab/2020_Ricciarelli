@@ -133,6 +133,10 @@ for year in np.arange(1980, 2020):
             else:
                 entropies[node['name']][year] = to_add
 
+    for node in nodes_list:
+        if node in authors_affiliations:
+            authors_affiliations[node]['valid'] = False
+
 to_save = sys.argv[1] + 'entropies.jsonl'
 
 with open(to_save, 'w') as entropies_file:
