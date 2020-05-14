@@ -246,9 +246,10 @@ for year in years:
                 format='pdf')
     plt.close(fig=fig)
 
-    betweennesses.append(g.betweenness(directed=False))
+    betweennesses.append(g.betweenness(directed=False,
+                                       cutoff=None if years[0] == 1980 else 5))
 
-    closenesses.append(g.closeness())
+    closenesses.append(g.closeness(cutoff=None if years[0] == 1980 else 5))
 
     for node in nodes_list:
         if node in authors_affiliations:
@@ -283,7 +284,8 @@ fig.savefig('{}closeness_distribution_{}_{}.pdf'.format(sys.argv[1], years[0],
             format='pdf')
 plt.close(fig=fig)
 
-to_save = sys.argv[1] + 'networks_statistics.csv'
+to_save = sys.argv[1] + 'networks_statistics_{}_{}.csv'.format(years[0],
+                                                               years[-1])
 
 df = pd.DataFrame({'Year': sorted(years), 'Nodes': nodes, 'Edges': edges,
                    'Density': densities, 'Avg Clustering Coefficient': avg_cc,
@@ -303,7 +305,10 @@ df.plot(kind='line', x='Year', y='Edges', grid=True, logy=True,
         color='#dc3241', linewidth=2, ax=axs)
 axs.set_xlabel('Year', fontsize=14)
 
-fig.savefig(sys.argv[1] + 'nodes_and_edges_growth_by_year.pdf', format='pdf')
+fig.savefig('{}nodes_and_edges_growth_by_year_{}_{}.pdf'.format(sys.argv[1],
+                                                                years[0],
+                                                                years[-1]),
+            format='pdf')
 plt.close(fig=fig)
 
 df.to_csv(to_save, index=False)
