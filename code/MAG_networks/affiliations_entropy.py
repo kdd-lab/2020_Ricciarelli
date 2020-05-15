@@ -37,7 +37,7 @@ with open(file_name, 'r') as affiliations_countries_file:
 
 entropies = dict()
 
-for year in np.arange(sys.argv[2], sys.argv[2] + 10):
+for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
     g = ig.Graph()
 
     file_name = '{}/{}/{}.gz'.format(sys.argv[1], year, year)
@@ -129,16 +129,16 @@ for year in np.arange(sys.argv[2], sys.argv[2] + 10):
             to_add['affiliation'] = ego_country
 
             if node['name'] not in entropies:
-                entropies[node['name']] = {year: to_add}
+                entropies[node['name']] = {int(year): to_add}
             else:
-                entropies[node['name']][year] = to_add
+                entropies[node['name']][int(year)] = to_add
 
     for node in nodes_list:
         if node in authors_affiliations:
             authors_affiliations[node]['valid'] = False
 
 to_save = '{}entropies_{}_{}.jsonl'.format(sys.argv[1], sys.argv[2],
-                                           sys.argv[2] + 9)
+                                           int(sys.argv[2]) + 9)
 
 with open(to_save, 'w') as entropies_file:
     for creator in tqdm(entropies.items(), desc='WRITING ENTROPIES JSONL'):
