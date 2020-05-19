@@ -2,6 +2,8 @@ import json
 import numpy as np
 import sys
 
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
 from tqdm import tqdm
 
 entropies_matrix = list()
@@ -24,10 +26,16 @@ entropies_matrix = np.array(entropies_matrix)
 
 means = [np.nanmean(entropies_matrix[:, idx]) for idx in np.arange(0, 30)]
 
-import ipdb
-ipdb.set_trace()
-
 for i, row in tqdm(enumerate(entropies_matrix), desc='PREPROCESSING'):
     for j, val in enumerate(np.isnan(row)):
         if val == 1:
             entropies_matrix[i, j] = means[j]
+
+for clusters_number in np.arange(2, 11):
+    classifier = KMeans(n_clusters=clusters_number)
+    labels = classifier.fit_predict(entropies_matrix)
+
+    silhouette_avg = silhouette_score(entropies_matrix, labels)
+
+    print("n_clusters: {}, average silhouette_score: {}"
+          .format(clusters_number, silhouette_avg))
