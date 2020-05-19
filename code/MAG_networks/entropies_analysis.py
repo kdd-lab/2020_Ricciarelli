@@ -1,10 +1,13 @@
 import json
+import logging
 import numpy as np
 import sys
 
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 from tqdm import tqdm
+
+logging.basicConfig(filename='kmeans_log.log', level=logging.DEBUG)
 
 entropies_matrix = list()
 
@@ -37,5 +40,5 @@ for clusters_number in np.arange(2, 11):
 
     silhouette_avg = silhouette_score(entropies_matrix, labels)
 
-    print("n_clusters: {}, average silhouette_score: {}"
-          .format(clusters_number, silhouette_avg))
+    logging.info("n_clusters: {}, average silhouette_score: {}"
+                 .format(clusters_number, silhouette_avg))
