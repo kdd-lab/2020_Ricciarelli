@@ -35,7 +35,7 @@ for clusters_number in np.arange(2, 11):
     classifier = KMeans(n_clusters=clusters_number)
     labels = classifier.fit_predict(entropies_matrix)
 
-    silhouette_avg = silhouette_score(entropies_matrix, labels)
+    silhouette_avg = silhouette_score(entropies_matrix, labels, sample_size=100000)
 
     print("n_clusters: {}, average silhouette_score: {}"
           .format(clusters_number, silhouette_avg))
