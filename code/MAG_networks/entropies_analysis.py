@@ -14,7 +14,7 @@ with open(sys.argv[1], 'r') as entropies_file:
 
         for year in np.arange(1980, 2010):
             if str(year) in creator[1]:
-                entropies_row.append(creator[1][str(year)])
+                entropies_row.append(creator[1][str(year)]['entropy'])
             else:
                 entropies_row.append(np.nan)
 
@@ -22,7 +22,12 @@ with open(sys.argv[1], 'r') as entropies_file:
 
 entropies_matrix = np.array(entropies_matrix)
 
-for i, row in enumerate(entropies_matrix):
+means = [np.nanmean(entropies_matrix[:, idx]) for idx in np.arange(0, 30)]
+
+import ipdb
+ipdb.set_trace()
+
+for i, row in tqdm(enumerate(entropies_matrix), desc='PREPROCESSING'):
     for j, val in enumerate(np.isnan(row)):
-        if val is True:
-            entropies_matrix[i, j] = np.nanmean(entropies_matrix[:, j])
+        if val == 1:
+            entropies_matrix[i, j] = means[j]
