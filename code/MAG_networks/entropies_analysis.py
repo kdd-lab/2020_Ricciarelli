@@ -32,10 +32,10 @@ for i, row in tqdm(enumerate(entropies_matrix), desc='PREPROCESSING'):
             entropies_matrix[i, j] = means[j]
 
 for clusters_number in np.arange(2, 11):
-    classifier = KMeans(n_clusters=clusters_number)
+    classifier = KMeans(n_clusters=clusters_number, max_iter=100)
     labels = classifier.fit_predict(entropies_matrix)
 
-    silhouette_avg = silhouette_score(entropies_matrix, labels, sample_size=100000)
+    silhouette_avg = silhouette_score(entropies_matrix, labels)
 
     print("n_clusters: {}, average silhouette_score: {}"
           .format(clusters_number, silhouette_avg))
