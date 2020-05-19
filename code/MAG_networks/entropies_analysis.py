@@ -20,3 +20,9 @@ with open(sys.argv[1], 'r') as entropies_file:
 
         entropies_matrix.append(entropies_row)
 
+entropies_matrix = np.array(entropies_matrix)
+
+for i, row in enumerate(entropies_matrix):
+    for j, val in enumerate(np.isnan(row)):
+        if val is True:
+            entropies_matrix[i, j] = np.nanmean(entropies_matrix[:, j])
