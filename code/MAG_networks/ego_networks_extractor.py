@@ -54,10 +54,8 @@ for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
                     if node in affiliations_from_file:
                         for a_id in \
                          affiliations_from_file[node]['affiliations']:
-                            _from = affiliations_from_file
-                            [node]['affiliations'][a_id]['from']
-                            _to = affiliations_from_file
-                            [node]['affiliations'][a_id]['to'] + 1
+                            _from = affiliations_from_file[node]['affiliations'][a_id]['from']
+                            _to = affiliations_from_file[node]['affiliations'][a_id]['to'] + 1
 
                             years_range = np.arange(_from, _to)
 
