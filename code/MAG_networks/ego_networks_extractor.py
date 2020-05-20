@@ -2,6 +2,7 @@ import gzip
 import json
 import numpy as np
 import os
+import shutil
 import sys
 
 from collections import Counter
@@ -33,14 +34,17 @@ with open(file_name, 'r') as affiliations_countries_file:
 
         affiliations_countries[a[0]] = a[1]
 
-affiliations = dict()
-
 for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
     file_name = '{}/{}/{}.gz'.format(sys.argv[1], year, year)
     ego_nets = sys.argv[1] + str(year) + '/ego_networks'
 
     if not os.path.isdir(ego_nets):
         os.mkdir(ego_nets)
+    else:
+        shutil.rmtree(ego_nets)
+        os.mkdir(ego_nets)
+
+    affiliations = dict()
 
     with gzip.open(file_name, 'r') as es_list:
         for edge in tqdm(es_list,
