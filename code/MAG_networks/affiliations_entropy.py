@@ -8,7 +8,7 @@ from collections import Counter
 from scipy.stats import entropy
 from tqdm import tqdm
 
-authors_affiliations = dict()
+affiliations_from_file = dict()
 
 file_name = sys.argv[1] + 'authors_affiliation.json'
 
@@ -22,7 +22,7 @@ with open(file_name, 'r') as authors_affiliations_file:
             to_add['affiliations'] = a[1]
             to_add['valid'] = False
 
-            authors_affiliations[a[0]] = to_add
+            affiliations_from_file[a[0]] = to_add
 
 affiliations_countries = dict()
 
@@ -35,14 +35,12 @@ with open(file_name, 'r') as affiliations_countries_file:
 
         affiliations_countries[a[0]] = a[1]
 
-entropies = dict()
+entropies, affiliations = dict(), dict()
 
 for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
-    g = ig.Graph()
-
     file_name = '{}/{}/{}.gz'.format(sys.argv[1], year, year)
 
-    nodes_list, edges_list, weights_list = list(), list(), list()
+    nodes_list, edges_list = list(), list()
 
     with gzip.open(file_name, 'r') as es_list:
         for edge in tqdm(es_list,
@@ -52,52 +50,62 @@ for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
             nodes_list.append(e[0])
             nodes_list.append(e[1])
             edges_list.append((e[0], e[1]))
-            weights_list.append(int(e[2]))
 
     nodes_list = list(set(nodes_list))
 
     for node in tqdm(nodes_list, desc='YEAR {}: ADDING NODES'.format(year)):
-        affiliation = list()
+        g = ig.Graph()
 
-        if node in authors_affiliations:
-            for a_id in authors_affiliations[node]['affiliations']:
-                _from = \
-                    authors_affiliations[node]['affiliations'][a_id]['from']
-                _to = \
-                    authors_affiliations[node]['affiliations'][a_id]['to'] + 1
+        founded_nodes, founded_edges = list(), list()
+        founded_nodes.append(node)
 
-                years_range = np.arange(_from, _to)
+        for edge in edges_list:
+            if node in edge:
+                founded_edges.append(edge)
 
-                if year in years_range and a_id in affiliations_countries:
-                    affiliation.append(affiliations_countries[a_id])
+                if edge[0] != node:
+                    founded_nodes.append(edge[0])
+                else:
+                    founded_nodes.append(edge[1])
 
-            if len(affiliation) != 0:
-                affiliation = Counter(affiliation)
+        for f_node in founded_nodes:
+            if f_node in affiliations:
+                g.add_vertex(node, affiliation=affiliations[f_node])
+            elif f_node in affiliations_from_file:
+                for a_id in affiliations_from_file[f_node]['affiliations']:
+                    _from = \
+                        affiliations_from_file[f_node]['affiliations'][a_id]['from']
+                    _to = \
+                        affiliations_from_file[f_node]['affiliations'][a_id]['to'] + 1
 
-                g.add_vertex(node,
-                             affiliation=affiliation.most_common(1)[0][0])
+                    years_range = np.arange(_from, _to)
 
-                authors_affiliations[node]['valid'] = True
+                    if year in years_range and a_id in affiliations_countries:
+                        affiliation.append(affiliations_countries[a_id])
 
-    valid_edges, valid_weights = list(), list()
+                if len(affiliation) != 0:
+                    affiliation = Counter(affiliation)
 
-    for idx, val in tqdm(enumerate(edges_list),
-                         desc='YEAR {}: VALIDATING EDGES'.format(year)):
-        if val[0] in authors_affiliations and val[1] in authors_affiliations:
-            if authors_affiliations[val[0]]['valid'] and \
-               authors_affiliations[val[1]]['valid']:
-                valid_edges.append(edges_list[idx])
-                valid_weights.append(weights_list[idx])
+                    affiliations[f_node] = affiliation.most_common(1)[0][0]
 
-    g.add_edges(valid_edges)
-    g.es['weight'] = valid_weights
+                    g.add_vertex(f_node, affiliation=affiliations[f_node])
 
-    for node in tqdm(g.vs, desc='YEAR {}: COMPUTING ENTROPIES'.format(year)):
+                    affiliations_from_file[f_node]['valid'] = True
+
+        valid_edges, valid_weights = list(), list()
+
+        for idx, val in enumerate(founded_edges):
+            if val[0] in affiliations and val[1] in affiliations:
+                if affiliations_from_file[val[0]]['valid'] and \
+                   affiliations_from_file[val[1]]['valid']:
+                    valid_edges.append(edges_list[idx])
+
+        g.add_edges(valid_edges)
+
         if len(g.neighborhood(node['name'], mindist=1)) != 0:
-            ego_net = g.induced_subgraph(g.neighborhood(node['name'],
-                                                        mindist=1))
+            ego_net = g.induced_subgraph(g.neighborhood(node, mindist=1))
 
-            ego_country = node['affiliation']
+            ego_country = affiliations[node]
 
             affiliations_types = list()
             monst_common_class = None
@@ -128,14 +136,14 @@ for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
             to_add['class'] = monst_common_class
             to_add['affiliation'] = ego_country
 
-            if node['name'] not in entropies:
-                entropies[node['name']] = {int(year): to_add}
+            if node not in entropies:
+                entropies[node] = {int(year): to_add}
             else:
-                entropies[node['name']][int(year)] = to_add
+                entropies[node][int(year)] = to_add
 
-    for node in nodes_list:
-        if node in authors_affiliations:
-            authors_affiliations[node]['valid'] = False
+        for f_node in founded_nodes:
+            if f_node in affiliations_from_file:
+                affiliations_from_file[f_node]['valid'] = False
 
 to_save = '{}entropies_{}_{}.jsonl'.format(sys.argv[1], sys.argv[2],
                                            int(sys.argv[2]) + 9)
