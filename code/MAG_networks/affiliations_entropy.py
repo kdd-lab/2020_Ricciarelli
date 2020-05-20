@@ -53,7 +53,8 @@ for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
 
     nodes_list = list(set(nodes_list))
 
-    for node in tqdm(nodes_list, desc='YEAR {}: ADDING NODES'.format(year)):
+    for node in tqdm(nodes_list,
+                     desc='YEAR {}: PROCESSING NODES'.format(year)):
         g = ig.Graph()
 
         founded_nodes, founded_edges = list(), list()
