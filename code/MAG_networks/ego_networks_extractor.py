@@ -72,14 +72,18 @@ for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
                         affiliations[node] = affiliation.most_common(1)[0][0]
 
             if e[0] in affiliations and e[1] in affiliations:
-                with open(ego_nets + '/' + e[0], 'a+') as ego_net_file:
+                to_open = ego_nets + '/' + e[0] + '.txt'
+
+                with open(to_open, 'a+') as ego_net_file:
                     to_write = '{},{},{},{}'.format(e[0],
                                                     affiliations[e[0]], e[1],
                                                     affiliations[e[1]])
 
                     ego_net_file.write(to_write + '\n')
 
-                with open(ego_nets + '/' + e[1], 'a+') as ego_net_file:
+                to_open = ego_nets + '/' + e[1] + '.txt'
+
+                with open(to_open, 'a+') as ego_net_file:
                     to_write = '{},{},{},{}'.format(e[1],
                                                     affiliations[e[1]], e[0],
                                                     affiliations[e[0]])
