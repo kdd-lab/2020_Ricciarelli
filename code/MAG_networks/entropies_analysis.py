@@ -46,6 +46,6 @@ for clusters_number in tqdm(np.arange(2, 11), desc='GRID SEARCH'):
     silhouette_avg = silhouette_score(entropies_matrix, labels,
                                       sample_size=100000)
 
-    logging.info("KMEANS' N_CLUSTERS GRID SEARCH - N_CLUSTERS: {}, "
+    logging.info("KMEANS' N_CLUSTERS GRID SEARCH -- N_CLUSTERS: {}, "
                  "AVERAGE SILHOUETTE SCORE: {}".format(clusters_number,
                                                        silhouette_avg))
