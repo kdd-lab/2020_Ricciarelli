@@ -1,5 +1,6 @@
 import igraph as ig
 import json
+import logging
 import numpy as np
 import os
 import sys
@@ -8,10 +9,19 @@ from collections import Counter
 from scipy.stats import entropy
 from tqdm import tqdm
 
+log_path = '~/mydata/2020_Ricciarelli/code/MAG_networks/logs/'
+
+logging.basicConfig(filename=log_path + 'affiliations_entropy.log',
+                    level=logging.INFO,
+                    format='%(asctime)s -- %(message)s',
+                    datefmt='%d-%m-%y %H:%M:%S')
+
 entropies = dict()
 
 for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
     dir_name = '{}{}/ego_networks/'.format(sys.argv[1], year)
+
+    neighborhood_length = list()
 
     for ego_n in tqdm(os.listdir(dir_name),
                       desc='PROCESSING YEAR {}'.format(year)):
@@ -72,6 +82,12 @@ for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
                 entropies[ego] = {int(year): to_add}
             else:
                 entropies[ego][int(year)] = to_add
+
+            neighborhood_length.append(len(g.neighborhood(ego, mindist=1)))
+
+    logging.info("YEAR {} -- EGO NETWORKS: {}, AVERAGE NEIGHBORHOOD'S "
+                 "LENGTH: {}".format(year, len(os.listdir(dir_name)),
+                                     np.mean(neighborhood_length)))
 
 to_save = '{}entropies/entropies_{}_{}.jsonl'.format(sys.argv[1], sys.argv[2],
                                                      int(sys.argv[2]) + 9)

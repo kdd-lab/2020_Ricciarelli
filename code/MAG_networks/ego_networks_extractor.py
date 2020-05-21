@@ -1,5 +1,6 @@
 import gzip
 import json
+import logging
 import numpy as np
 import os
 import shutil
@@ -7,6 +8,13 @@ import sys
 
 from collections import Counter
 from tqdm import tqdm
+
+log_path = '~/mydata/2020_Ricciarelli/code/MAG_networks/logs/'
+
+logging.basicConfig(filename=log_path + 'ego_networks_extractor.log',
+                    level=logging.INFO,
+                    format='%(asctime)s -- %(message)s',
+                    datefmt='%d-%m-%y %H:%M:%S')
 
 affiliations_from_file = dict()
 
@@ -91,3 +99,6 @@ for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
                                                     affiliations[e[0]])
 
                     ego_net_file.write(to_write + '\n')
+
+    logging.info('YEAR {} -- VALID RESEARCHERS: {}'.format(year,
+                                                           len(affiliations)))
