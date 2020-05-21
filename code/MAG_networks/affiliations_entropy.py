@@ -1,112 +1,43 @@
-import gzip
 import igraph as ig
 import json
 import numpy as np
+import os
 import sys
 
 from collections import Counter
 from scipy.stats import entropy
 from tqdm import tqdm
 
-affiliations_from_file = dict()
-
-file_name = sys.argv[1] + 'authors_affiliation.json'
-
-with open(file_name, 'r') as authors_affiliations_file:
-    for affiliation in tqdm(authors_affiliations_file,
-                            desc='READING AFFILIATIONS FILE'):
-        if len(json.loads(affiliation.strip())) != 0:
-            a = list(json.loads(affiliation.strip()).items())[0]
-
-            to_add = dict()
-            to_add['affiliations'] = a[1]
-            to_add['valid'] = False
-
-            affiliations_from_file[a[0]] = to_add
-
-affiliations_countries = dict()
-
-file_name = sys.argv[1] + 'affiliations_geo.txt'
-
-with open(file_name, 'r') as affiliations_countries_file:
-    for affiliation in tqdm(affiliations_countries_file,
-                            desc='READING AFFILIATION COUNTRIES FILE'):
-        a = affiliation.strip().split('\t')
-
-        affiliations_countries[a[0]] = a[1]
-
-entropies, affiliations = dict(), dict()
+entropies = dict()
 
 for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
-    file_name = '{}/{}/{}.gz'.format(sys.argv[1], year, year)
+    dir_name = '{}/{}/ego_networks/'.format(sys.argv[1], year)
 
-    nodes_list, edges_list = list(), list()
-
-    with gzip.open(file_name, 'r') as es_list:
-        for edge in tqdm(es_list,
-                         desc='YEAR {}: READING EDGES LIST'.format(year)):
-            e = edge.decode().strip().split(',')
-
-            nodes_list.append(e[0])
-            nodes_list.append(e[1])
-            edges_list.append((e[0], e[1]))
-
-    nodes_list = list(set(nodes_list))
-
-    for node in tqdm(nodes_list,
-                     desc='YEAR {}: PROCESSING NODES'.format(year)):
+    for ego_n in tqdm(os.listdir(dir_name),
+                      desc='PROCESSING YEAR {}'.format(year)):
         g = ig.Graph()
 
-        founded_nodes, founded_edges = list(), list()
-        founded_nodes.append(node)
+        ego, ego_country, added_ego = None, None, False
 
-        for edge in edges_list:
-            if node in edge:
-                founded_edges.append(edge)
+        edges = list()
 
-                if edge[0] != node:
-                    founded_nodes.append(edge[0])
-                else:
-                    founded_nodes.append(edge[1])
+        with open(dir_name + ego_n, 'r') as ego_n_file:
+            for edge in ego_n_file:
+                e = edge.strip().split(',')
 
-        for f_node in founded_nodes:
-            if f_node in affiliations:
-                g.add_vertex(node, affiliation=affiliations[f_node])
-            elif f_node in affiliations_from_file:
-                for a_id in affiliations_from_file[f_node]['affiliations']:
-                    _from = \
-                        affiliations_from_file[f_node]['affiliations'][a_id]['from']
-                    _to = \
-                        affiliations_from_file[f_node]['affiliations'][a_id]['to'] + 1
+                if not added_ego:
+                    ego, ego_country, added_ego = e[0], e[1], True
 
-                    years_range = np.arange(_from, _to)
+                    g.add_vertex(e[0], affiliation=e[1])
 
-                    if year in years_range and a_id in affiliations_countries:
-                        affiliation.append(affiliations_countries[a_id])
+                g.add_vertex(e[2], affiliation=e[3])
 
-                if len(affiliation) != 0:
-                    affiliation = Counter(affiliation)
+                edges.append((e[0], e[2]))
 
-                    affiliations[f_node] = affiliation.most_common(1)[0][0]
+        g.add_edges(edges)
 
-                    g.add_vertex(f_node, affiliation=affiliations[f_node])
-
-                    affiliations_from_file[f_node]['valid'] = True
-
-        valid_edges, valid_weights = list(), list()
-
-        for idx, val in enumerate(founded_edges):
-            if val[0] in affiliations and val[1] in affiliations:
-                if affiliations_from_file[val[0]]['valid'] and \
-                   affiliations_from_file[val[1]]['valid']:
-                    valid_edges.append(edges_list[idx])
-
-        g.add_edges(valid_edges)
-
-        if len(g.neighborhood(node['name'], mindist=1)) != 0:
-            ego_net = g.induced_subgraph(g.neighborhood(node, mindist=1))
-
-            ego_country = affiliations[node]
+        if len(g.neighborhood(ego['name'], mindist=1)) != 0:
+            ego_net = g.induced_subgraph(g.neighborhood(ego, mindist=1))
 
             affiliations_types = list()
             monst_common_class = None
@@ -137,17 +68,13 @@ for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
             to_add['class'] = monst_common_class
             to_add['affiliation'] = ego_country
 
-            if node not in entropies:
-                entropies[node] = {int(year): to_add}
+            if ego not in entropies:
+                entropies[ego] = {int(year): to_add}
             else:
-                entropies[node][int(year)] = to_add
+                entropies[ego][int(year)] = to_add
 
-        for f_node in founded_nodes:
-            if f_node in affiliations_from_file:
-                affiliations_from_file[f_node]['valid'] = False
-
-to_save = '{}entropies_{}_{}.jsonl'.format(sys.argv[1], sys.argv[2],
-                                           int(sys.argv[2]) + 9)
+to_save = '{}entropies/entropies_{}_{}.jsonl'.format(sys.argv[1], sys.argv[2],
+                                                     int(sys.argv[2]) + 9)
 
 with open(to_save, 'w') as entropies_file:
     for creator in tqdm(entropies.items(), desc='WRITING ENTROPIES JSONL'):
