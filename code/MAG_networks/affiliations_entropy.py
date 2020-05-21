@@ -11,7 +11,7 @@ from tqdm import tqdm
 entropies = dict()
 
 for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
-    dir_name = '{}/{}/ego_networks/'.format(sys.argv[1], year)
+    dir_name = '{}{}/ego_networks/'.format(sys.argv[1], year)
 
     for ego_n in tqdm(os.listdir(dir_name),
                       desc='PROCESSING YEAR {}'.format(year)):
@@ -36,7 +36,7 @@ for year in np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10):
 
         g.add_edges(edges)
 
-        if len(g.neighborhood(ego['name'], mindist=1)) != 0:
+        if len(g.neighborhood(ego, mindist=1)) != 0:
             ego_net = g.induced_subgraph(g.neighborhood(ego, mindist=1))
 
             affiliations_types = list()
