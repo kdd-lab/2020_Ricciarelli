@@ -9,9 +9,7 @@ from collections import Counter
 from scipy.stats import entropy
 from tqdm import tqdm
 
-log_path = '~/mydata/2020_Ricciarelli/code/MAG_networks/logs/'
-
-logging.basicConfig(filename=log_path + 'affiliations_entropy.log',
+logging.basicConfig(filename='./logs/affiliations_entropy.log',
                     filemode='w', level=logging.INFO,
                     format='%(asctime)s -- %(message)s',
                     datefmt='%d-%m-%y %H:%M:%S')

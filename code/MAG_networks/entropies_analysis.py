@@ -7,9 +7,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 from tqdm import tqdm
 
-log_path = '~/mydata/2020_Ricciarelli/code/MAG_networks/logs/'
-
-logging.basicConfig(filename=log_path + 'entropies_analysis.log',
+logging.basicConfig(filename='./logs/entropies_analysis.log',
                     level=logging.INFO,
                     format='%(asctime)s -- %(message)s',
                     datefmt='%d-%m-%y %H:%M:%S')

@@ -9,9 +9,7 @@ import sys
 from collections import Counter
 from tqdm import tqdm
 
-log_path = '~/mydata/2020_Ricciarelli/code/MAG_networks/logs/'
-
-logging.basicConfig(filename=log_path + 'ego_networks_extractor.log',
+logging.basicConfig(filename='./logs/ego_networks_extractor.log',
                     filemode='w', level=logging.INFO,
                     format='%(asctime)s -- %(message)s',
                     datefmt='%d-%m-%y %H:%M:%S')
