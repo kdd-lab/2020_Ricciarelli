@@ -9,7 +9,7 @@ from collections import Counter
 from scipy.stats import entropy
 from tqdm import tqdm
 
-logging.basicConfig(filename='./logs/affiliations_entropy.log',
+logging.basicConfig(filename='affiliations_entropy_{}_{}.log'.format(sys.argv[2], int(sys.argv[2]) + 9),
                     filemode='w', level=logging.INFO,
                     format='%(asctime)s -- %(message)s',
                     datefmt='%d-%m-%y %H:%M:%S')

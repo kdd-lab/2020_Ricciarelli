@@ -9,7 +9,7 @@ import sys
 from collections import Counter
 from tqdm import tqdm
 
-logging.basicConfig(filename='./logs/ego_networks_extractor.log',
+logging.basicConfig(filename='ego_networks_extractor_{}_{}.log'.format(sys.argv[2], int(sys.argv[2]) + 9),
                     filemode='w', level=logging.INFO,
                     format='%(asctime)s -- %(message)s',
                     datefmt='%d-%m-%y %H:%M:%S')
