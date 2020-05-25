@@ -1,0 +1,9 @@
+INFO:root:n_clusters: 2, average silhouette_score: 0.5708718466623689
+INFO:root:n_clusters: 3, average silhouette_score: 0.5546845153582718
+INFO:root:n_clusters: 4, average silhouette_score: 0.5462117417007912
+INFO:root:n_clusters: 5, average silhouette_score: 0.5544857585910439
+INFO:root:n_clusters: 6, average silhouette_score: 0.5622489351083763
+INFO:root:n_clusters: 7, average silhouette_score: 0.5650771938239749
+INFO:root:n_clusters: 8, average silhouette_score: 0.5674154327185709
+INFO:root:n_clusters: 9, average silhouette_score: 0.5629489623394651
+INFO:root:n_clusters: 10, average silhouette_score: 0.5668620217216641
