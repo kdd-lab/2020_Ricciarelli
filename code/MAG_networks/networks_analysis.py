@@ -23,7 +23,7 @@ years = np.arange(int(sys.argv[2]), int(sys.argv[2]) + 10)
 
 authors_affiliations = dict()
 
-file_name = sys.argv[1] + '/' + 'authors_affiliation.json'
+file_name = sys.argv[1] + 'authors_affiliation.json'
 
 with open(file_name, 'r') as authors_affiliations_file:
     for affiliation in tqdm(authors_affiliations_file,
@@ -39,7 +39,7 @@ with open(file_name, 'r') as authors_affiliations_file:
 
 affiliations_countries = dict()
 
-file_name = sys.argv[1] + '/' + 'affiliations_geo.txt'
+file_name = sys.argv[1] + 'affiliations_geo.txt'
 
 with open(file_name, 'r') as affiliations_countries_file:
     for affiliation in tqdm(affiliations_countries_file,
