@@ -12,27 +12,34 @@ logging.basicConfig(filename='entropies_analysis.log',
                     format='%(asctime)s -- %(message)s',
                     datefmt='%d-%m-%y %H:%M:%S')
 
-entropies_matrix = list()
+entropies_dict, years = dict()
 
 with open(sys.argv[1], 'r') as entropies_file:
     for row in tqdm(entropies_file, desc='READING ENTROPIES FILE'):
-        creator = list(json.loads(row.strip()).items())[0]
+        creator = json.loads(row)
 
-        entropies_row = list()
+        entropies_dict.update(creator)
 
-        for year in np.arange(1980, 2020):
-            if str(year) in creator[1]:
-                entropies_row.append(creator[1][str(year)]['entropy'])
-            else:
-                entropies_row.append(np.nan)
+entropies_matrix = list()
 
-        entropies_matrix.append(entropies_row)
+for MAG_id in tqdm(sorted(entropies_dict), desc='BUILDING ENTROPIES MATRIX'):
+    row = list()
+
+    for year in np.arange(1980, 2020):
+        if str(year) in entropies_dict[MAG_id]:
+            row.append(entropies_dict[MAG_id][year]['entropy'])
+        else:
+            row.append(np.nan)
+
+    entropies_matrix.append(row)
 
 entropies_matrix = np.array(entropies_matrix)
 
-means = [np.nanmean(entropies_matrix[:, idx]) for idx in np.arange(0, 30)]
+means = [np.nanmean(entropies_matrix[:, idx])
+         for idx in np.arange(0, entropies_matrix.shape[1])]
 
-for i, row in tqdm(enumerate(entropies_matrix), desc='PREPROCESSING'):
+for i, row in tqdm(enumerate(entropies_matrix), desc='PREPROCESSING',
+                   total=entropies_matrix.shape[0]):
     for j, val in enumerate(np.isnan(row)):
         if val == 1:
             entropies_matrix[i, j] = means[j]
