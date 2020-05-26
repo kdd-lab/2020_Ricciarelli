@@ -12,7 +12,7 @@ logging.basicConfig(filename='entropies_analysis.log',
                     format='%(asctime)s -- %(message)s',
                     datefmt='%d-%m-%y %H:%M:%S')
 
-entropies_dict, years = dict()
+entropies_dict = dict()
 
 with open(sys.argv[1], 'r') as entropies_file:
     for row in tqdm(entropies_file, desc='READING ENTROPIES FILE'):
@@ -27,7 +27,7 @@ for MAG_id in tqdm(sorted(entropies_dict), desc='BUILDING ENTROPIES MATRIX'):
 
     for year in np.arange(1980, 2020):
         if str(year) in entropies_dict[MAG_id]:
-            row.append(entropies_dict[MAG_id][year]['entropy'])
+            row.append(entropies_dict[MAG_id][str(year)]['entropy'])
         else:
             row.append(np.nan)
 
