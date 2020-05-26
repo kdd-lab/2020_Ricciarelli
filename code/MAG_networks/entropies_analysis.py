@@ -20,7 +20,7 @@ with open(sys.argv[1], 'r') as entropies_file:
 
         entropies_row = list()
 
-        for year in np.arange(1980, 2010):
+        for year in np.arange(1980, 2020):
             if str(year) in creator[1]:
                 entropies_row.append(creator[1][str(year)]['entropy'])
             else:
