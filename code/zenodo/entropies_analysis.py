@@ -102,11 +102,12 @@ for cluster in sorted(clustering_dataframe.cluster.unique()):
     DFCs = \
         clustering_dataframe[clustering_dataframe.cluster == cluster]['DFC']
 
-    record = clustering_dataframe\
+    records = clustering_dataframe\
         .query('cluster == {} and DFC == {}'.format(cluster, min(DFCs)))\
-        .iloc[0]
+        .iloc[0:5]
 
-    representative_records.append(entropies_dict[record.values[0]])
+    for record in records.values:
+        representative_records.append(entropies_dict[record[0]])
 
 creators_per_cluster = Counter(list(labels))
 
@@ -115,11 +116,13 @@ for cluster in sorted(creators_per_cluster):
         np.round((creators_per_cluster[cluster] / len(entropies_dict)) * 100,
                  2)
 
-    logging.info('CLUSTER {}:\n\t{}% OF THE RESEARCHERS\n'
-                 .format(cluster, percentage))
+    logging.info('CLUSTER {}:\n\t{} RESEARCHERS, {}% OF THE TOTAL\n'
+                 .format(cluster, creators_per_cluster[cluster], percentage))
     logging.info('\tYEARS: {}\n'
                  .format(sorted(clusters_infos[cluster]['years'])))
     logging.info('\tCOUNTRIES: {}\n'
                  .format(sorted(clusters_infos[cluster]['countries'])))
-    logging.info('\tREPRESENTATIVE RECORD: {}\n'
-                 .format(representative_records[int(cluster)]))
+    logging.info('\tREPRESENTATIVE RECORDS:\n')
+    for record in representative_records[int(cluster) * 5:
+                                         (int(cluster) * 5) + 5]:
+        logging.info('\t\t{}'.format(record))
