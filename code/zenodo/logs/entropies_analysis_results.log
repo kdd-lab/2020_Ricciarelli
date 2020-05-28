@@ -1,3 +1,5 @@
+Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+NumExpr defaulting to 8 threads.
 CLUSTER 0:
 	407869 RESEARCHERS, 86.81% OF THE TOTAL
 
@@ -7,11 +9,11 @@ CLUSTER 0:
 
 	REPRESENTATIVE RECORDS:
 
-		{'2015': {'entropy': 0.0, 'class': 'same', 'affiliation': 'france'}}
-		{'2012': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united states'}, '2016': {'entropy': 0.0, 'class': 'same', 'affiliation': 'germany'}, '2018': {'entropy': 0.0, 'class': 'same', 'affiliation': 'germany'}}
-		{'2014': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united states'}}
-		{'2010': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}}
-		{'2010': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}}
+		{'100027360': {'2015': {'entropy': 0.0, 'class': 'same', 'affiliation': 'france'}}}
+		{'1000435454': {'2012': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united states'}, '2016': {'entropy': 0.0, 'class': 'same', 'affiliation': 'germany'}, '2018': {'entropy': 0.0, 'class': 'same', 'affiliation': 'germany'}}}
+		{'100047651': {'2014': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united states'}}}
+		{'1000482616': {'2010': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}}}
+		{'100049798': {'2010': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}}}
 CLUSTER 1:
 	24412 RESEARCHERS, 5.2% OF THE TOTAL
 
@@ -21,11 +23,11 @@ CLUSTER 1:
 
 	REPRESENTATIVE RECORDS:
 
-		{'2013': {'entropy': -0.89, 'class': 'different', 'affiliation': 'sweden'}, '2016': {'entropy': 0.0, 'class': 'same', 'affiliation': 'sweden'}, '2017': {'entropy': 0.75, 'class': 'same', 'affiliation': 'united kingdom'}}
-		{'2017': {'entropy': 0.54, 'class': 'same', 'affiliation': 'germany'}, '2018': {'entropy': 0.0, 'class': 'same', 'affiliation': 'sweden'}}
-		{'2017': {'entropy': 0.54, 'class': 'same', 'affiliation': 'france'}}
-		{'2017': {'entropy': 0.44, 'class': 'same', 'affiliation': 'switzerland'}}
-		{'2015': {'entropy': -1.0, 'class': 'different', 'affiliation': 'austria'}, '2016': {'entropy': 0.5, 'class': 'same', 'affiliation': 'austria'}, '2017': {'entropy': 0.92, 'class': 'same', 'affiliation': 'austria'}, '2018': {'entropy': 0.0, 'class': 'same', 'affiliation': 'austria'}}
+		{'100112964': {'2013': {'entropy': -0.89, 'class': 'different', 'affiliation': 'sweden'}, '2016': {'entropy': 0.0, 'class': 'same', 'affiliation': 'sweden'}, '2017': {'entropy': 0.75, 'class': 'same', 'affiliation': 'united kingdom'}}}
+		{'100408920': {'2017': {'entropy': 0.54, 'class': 'same', 'affiliation': 'germany'}, '2018': {'entropy': 0.0, 'class': 'same', 'affiliation': 'sweden'}}}
+		{'1009761877': {'2017': {'entropy': 0.54, 'class': 'same', 'affiliation': 'france'}}}
+		{'1014544980': {'2017': {'entropy': 0.44, 'class': 'same', 'affiliation': 'switzerland'}}}
+		{'1015463353': {'2015': {'entropy': -1.0, 'class': 'different', 'affiliation': 'austria'}, '2016': {'entropy': 0.5, 'class': 'same', 'affiliation': 'austria'}, '2017': {'entropy': 0.92, 'class': 'same', 'affiliation': 'austria'}, '2018': {'entropy': 0.0, 'class': 'same', 'affiliation': 'austria'}}}
 CLUSTER 2:
 	17231 RESEARCHERS, 3.67% OF THE TOTAL
 
@@ -35,11 +37,11 @@ CLUSTER 2:
 
 	REPRESENTATIVE RECORDS:
 
-		{'2014': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}, '2016': {'entropy': 0.81, 'class': 'same', 'affiliation': 'united kingdom'}}
-		{'2016': {'entropy': 0.54, 'class': 'same', 'affiliation': 'slovenia'}}
-		{'2016': {'entropy': 0.81, 'class': 'same', 'affiliation': 'canada'}}
-		{'2008': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2009': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2011': {'entropy': 0.54, 'class': 'same', 'affiliation': 'netherlands'}, '2012': {'entropy': -0.65, 'class': 'different', 'affiliation': 'netherlands'}, '2013': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2014': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2015': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2016': {'entropy': 0.65, 'class': 'same', 'affiliation': 'netherlands'}, '2017': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}}
-		{'2014': {'entropy': 0.0, 'class': 'same', 'affiliation': 'uganda'}, '2015': {'entropy': 0.47, 'class': 'same', 'affiliation': 'belgium'}, '2016': {'entropy': 0.59, 'class': 'same', 'affiliation': 'united kingdom'}}
+		{'1002942167': {'2014': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}, '2016': {'entropy': 0.81, 'class': 'same', 'affiliation': 'united kingdom'}}}
+		{'1003198780': {'2016': {'entropy': 0.54, 'class': 'same', 'affiliation': 'slovenia'}}}
+		{'100962695': {'2016': {'entropy': 0.81, 'class': 'same', 'affiliation': 'canada'}}}
+		{'1010524495': {'2008': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2009': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2011': {'entropy': 0.54, 'class': 'same', 'affiliation': 'netherlands'}, '2012': {'entropy': -0.65, 'class': 'different', 'affiliation': 'netherlands'}, '2013': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2014': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2015': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2016': {'entropy': 0.65, 'class': 'same', 'affiliation': 'netherlands'}, '2017': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}}}
+		{'1014838496': {'2014': {'entropy': 0.0, 'class': 'same', 'affiliation': 'uganda'}, '2015': {'entropy': 0.47, 'class': 'same', 'affiliation': 'belgium'}, '2016': {'entropy': 0.59, 'class': 'same', 'affiliation': 'united kingdom'}}}
 CLUSTER 3:
 	6344 RESEARCHERS, 1.35% OF THE TOTAL
 
@@ -49,11 +51,11 @@ CLUSTER 3:
 
 	REPRESENTATIVE RECORDS:
 
-		{'2011': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2013': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2015': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2016': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2017': {'entropy': -0.75, 'class': 'different', 'affiliation': 'netherlands'}}
-		{'2015': {'entropy': -0.57, 'class': 'different', 'affiliation': 'denmark'}, '2016': {'entropy': -0.78, 'class': 'different', 'affiliation': 'germany'}, '2017': {'entropy': -0.86, 'class': 'different', 'affiliation': 'united states'}, '2018': {'entropy': 0.0, 'class': 'same', 'affiliation': 'germany'}}
-		{'2017': {'entropy': -1.0, 'class': 'different', 'affiliation': 'germany'}}
-		{'2014': {'entropy': 0.0, 'class': 'same', 'affiliation': 'italy'}, '2016': {'entropy': 0.09, 'class': 'same', 'affiliation': 'germany'}, '2017': {'entropy': -1.0, 'class': 'different', 'affiliation': 'canada'}}
-		{'2015': {'entropy': -0.92, 'class': 'different', 'affiliation': 'norway'}, '2016': {'entropy': 0.0, 'class': 'same', 'affiliation': 'norway'}, '2017': {'entropy': -0.75, 'class': 'different', 'affiliation': 'germany'}}
+		{'100532589': {'2011': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2013': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2015': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2016': {'entropy': 0.0, 'class': 'same', 'affiliation': 'netherlands'}, '2017': {'entropy': -0.75, 'class': 'different', 'affiliation': 'netherlands'}}}
+		{'100734421': {'2015': {'entropy': -0.57, 'class': 'different', 'affiliation': 'denmark'}, '2016': {'entropy': -0.78, 'class': 'different', 'affiliation': 'germany'}, '2017': {'entropy': -0.86, 'class': 'different', 'affiliation': 'united states'}, '2018': {'entropy': 0.0, 'class': 'same', 'affiliation': 'germany'}}}
+		{'1019291497': {'2017': {'entropy': -1.0, 'class': 'different', 'affiliation': 'germany'}}}
+		{'10209326': {'2014': {'entropy': 0.0, 'class': 'same', 'affiliation': 'italy'}, '2016': {'entropy': 0.09, 'class': 'same', 'affiliation': 'germany'}, '2017': {'entropy': -1.0, 'class': 'different', 'affiliation': 'canada'}}}
+		{'1026746713': {'2015': {'entropy': -0.92, 'class': 'different', 'affiliation': 'norway'}, '2016': {'entropy': 0.0, 'class': 'same', 'affiliation': 'norway'}, '2017': {'entropy': -0.75, 'class': 'different', 'affiliation': 'germany'}}}
 CLUSTER 4:
 	14002 RESEARCHERS, 2.98% OF THE TOTAL
 
@@ -63,8 +65,8 @@ CLUSTER 4:
 
 	REPRESENTATIVE RECORDS:
 
-		{'2015': {'entropy': 0.72, 'class': 'same', 'affiliation': 'united kingdom'}}
-		{'2010': {'entropy': 0.0, 'class': 'same', 'affiliation': 'sweden'}, '2011': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}, '2013': {'entropy': 0.59, 'class': 'same', 'affiliation': 'united kingdom'}, '2014': {'entropy': -0.78, 'class': 'different', 'affiliation': 'denmark'}, '2015': {'entropy': 1.0, 'class': 'same', 'affiliation': 'denmark'}, '2016': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}, '2018': {'entropy': 0.54, 'class': 'same', 'affiliation': 'sweden'}}
-		{'2015': {'entropy': 0.5, 'class': 'same', 'affiliation': 'norway'}}
-		{'2013': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}, '2015': {'entropy': 0.92, 'class': 'same', 'affiliation': 'russia'}, '2016': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}}
-		{'2015': {'entropy': 0.72, 'class': 'same', 'affiliation': 'portugal'}}
+		{'100047927': {'2015': {'entropy': 0.72, 'class': 'same', 'affiliation': 'united kingdom'}}}
+		{'1002266716': {'2010': {'entropy': 0.0, 'class': 'same', 'affiliation': 'sweden'}, '2011': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}, '2013': {'entropy': 0.59, 'class': 'same', 'affiliation': 'united kingdom'}, '2014': {'entropy': -0.78, 'class': 'different', 'affiliation': 'denmark'}, '2015': {'entropy': 1.0, 'class': 'same', 'affiliation': 'denmark'}, '2016': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}, '2018': {'entropy': 0.54, 'class': 'same', 'affiliation': 'sweden'}}}
+		{'1003260168': {'2015': {'entropy': 0.5, 'class': 'same', 'affiliation': 'norway'}}}
+		{'1008527861': {'2013': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}, '2015': {'entropy': 0.92, 'class': 'same', 'affiliation': 'russia'}, '2016': {'entropy': 0.0, 'class': 'same', 'affiliation': 'united kingdom'}}}
+		{'100864498': {'2015': {'entropy': 0.72, 'class': 'same', 'affiliation': 'portugal'}}}
