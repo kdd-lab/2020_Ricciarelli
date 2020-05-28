@@ -103,7 +103,7 @@ for cluster in sorted(clustering_dataframe.cluster.unique()):
         .iloc[0:5]
 
     for record in records.values:
-        representative_records.append(entropies_dict[record[0]])
+        representative_records.append({record[0]: entropies_dict[record[0]]})
 
 creators_per_cluster = Counter(list(labels))
 
