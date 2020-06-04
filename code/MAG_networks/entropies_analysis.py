@@ -4,9 +4,9 @@ import numpy as np
 import pandas as pd
 import sys
 
-from collections import Counter
+from collections import Counter, defaultdict
 from sklearn.cluster import KMeans
-from sklearn.metrics import silhouette_score
+# from sklearn.metrics import silhouette_score
 from tqdm import tqdm
 
 # UNCOMMENT FOR GRID SEARCHING THE OPTIMAL NUMBER OF CLUSTERS
@@ -25,6 +25,21 @@ with open(sys.argv[1], 'r') as entropies_file:
         creator = json.loads(row)
 
         entropies_dict.update(creator)
+
+dataframe_dict = defaultdict(list)
+
+import ipdb
+ipdb.set_trace()
+
+for MAG_id in tqdm(sorted(entropies_dict), desc='BUILDING ENTROPIES MATRIX'):
+    dataframe_dict['MAG_id'].append(MAG_id)
+
+    for year in np.arange(1980, 2020):
+        if str(year) in entropies_dict[MAG_id]:
+            dataframe_dict[str(year)]\
+                .append(entropies_dict[MAG_id][str(year)]['entropy'])
+        else:
+            dataframe_dict[str(year)].append(np.nan)
 
 entropies_matrix = list()
 
