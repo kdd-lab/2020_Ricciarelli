@@ -24,9 +24,10 @@ with open(sys.argv[1], 'r') as entropies_file:
     for row in tqdm(entropies_file, desc='READING ENTROPIES FILE'):
         creator = json.loads(row)
 
-        for year in np.arange(1980, 2020):
-            if str(year) not in creator:
-                creator[str(year)] = {'entropy': np.nan}
+        for MAG_id in creator:
+            for year in np.arange(1980, 2020):
+                if str(year) not in creator[MAG_id]:
+                    creator[MAG_id][str(year)] = {'entropy': np.nan}
 
         entropies_dict.update(creator)
 
