@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import sys
 
-from collections import Counter, defaultdict
+from collections import Counter
 from sklearn.cluster import KMeans
 # from sklearn.metrics import silhouette_score
 from tqdm import tqdm
@@ -24,26 +24,7 @@ with open(sys.argv[1], 'r') as entropies_file:
     for row in tqdm(entropies_file, desc='READING ENTROPIES FILE'):
         creator = json.loads(row)
 
-        for MAG_id in creator:
-            for year in np.arange(1980, 2020):
-                if str(year) not in creator[MAG_id]:
-                    creator[MAG_id][str(year)] = {'entropy': np.nan}
-
         entropies_dict.update(creator)
-
-entropies_dataframe = defaultdict(list)
-
-for MAG_id in tqdm(sorted(entropies_dict), desc='BUILDING ENTROPIES MATRIX'):
-    entropies_dataframe['MAG_id'].append(MAG_id)
-
-    for year in np.arange(1980, 2020):
-        entropies_dataframe[str(year)]\
-            .append(entropies_dict[MAG_id][str(year)]['entropy'])
-
-entropies_dataframe = pd.DataFrame(entropies_dataframe)
-
-import ipdb
-ipdb.set_trace()
 
 entropies_matrix = list()
 
