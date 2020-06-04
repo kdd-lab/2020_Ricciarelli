@@ -1,5 +1,6 @@
 import json
 import logging
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import sys
@@ -69,6 +70,7 @@ centroids = classifier.cluster_centers_
 
 clusters_infos = dict()
 dataframe_infos = [[], [], []]
+clusters_records = [[], [], []]
 
 for idx, MAG_id in tqdm(enumerate(sorted(entropies_dict)),
                         desc='ASSIGNING CLUSTERS', total=len(entropies_dict)):
@@ -87,6 +89,8 @@ for idx, MAG_id in tqdm(enumerate(sorted(entropies_dict)),
     dataframe_infos[1].append(labels[idx])
     dataframe_infos[2].append(
         np.linalg.norm(entropies_matrix[labels[idx]] - centroids[labels[idx]]))
+
+    clusters_records[labels[idx]].append(entropies_matrix[idx])
 
 clustering_dataframe = pd.DataFrame({'MAG_id': dataframe_infos[0],
                                      'cluster': dataframe_infos[1],
@@ -122,3 +126,15 @@ for cluster in sorted(creators_per_cluster):
     for record in representative_records[int(cluster) * 5:
                                          (int(cluster) * 5) + 5]:
         logging.info('\t\t{}'.format(record))
+
+fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(10, 10))
+
+fig.suptitle("Entropies' Distribution per Cluster", fontsize=20)
+
+ax.boxplot(clusters_records, labels=['0', '1', '2'], zorder=2)
+ax.set_xlabel('Cluster', fontsize=14)
+ax.grid(axis='y', linestyle='--', color='black', zorder=1)
+
+fig.tight_layout(rect=[0, 0.03, 1, 0.90])
+fig.savefig('entropies_distribution_per_cluster.pdf', format='pdf')
+plt.close(fig=fig)
