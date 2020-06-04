@@ -24,22 +24,25 @@ with open(sys.argv[1], 'r') as entropies_file:
     for row in tqdm(entropies_file, desc='READING ENTROPIES FILE'):
         creator = json.loads(row)
 
+        for year in np.arange(1980, 2020):
+            if str(year) not in creator:
+                creator[str(year)] = {'entropy': np.nan}
+
         entropies_dict.update(creator)
 
-dataframe_dict = defaultdict(list)
+entropies_dataframe = defaultdict(list)
+
+for MAG_id in tqdm(sorted(entropies_dict), desc='BUILDING ENTROPIES MATRIX'):
+    entropies_dataframe['MAG_id'].append(MAG_id)
+
+    for year in np.arange(1980, 2020):
+        entropies_dataframe[str(year)]\
+            .append(entropies_dict[MAG_id][str(year)]['entropy'])
+
+entropies_dataframe = pd.DataFrame(entropies_dataframe)
 
 import ipdb
 ipdb.set_trace()
-
-for MAG_id in tqdm(sorted(entropies_dict), desc='BUILDING ENTROPIES MATRIX'):
-    dataframe_dict['MAG_id'].append(MAG_id)
-
-    for year in np.arange(1980, 2020):
-        if str(year) in entropies_dict[MAG_id]:
-            dataframe_dict[str(year)]\
-                .append(entropies_dict[MAG_id][str(year)]['entropy'])
-        else:
-            dataframe_dict[str(year)].append(np.nan)
 
 entropies_matrix = list()
 
