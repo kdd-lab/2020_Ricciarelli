@@ -90,7 +90,7 @@ for idx, MAG_id in tqdm(enumerate(sorted(entropies_dict)),
     dataframe_infos[2].append(
         np.linalg.norm(entropies_matrix[labels[idx]] - centroids[labels[idx]]))
 
-    clusters_records[labels[idx]].append(entropies_matrix[idx])
+    clusters_records[labels[idx]].append(np.mean(entropies_matrix[idx]))
 
 clustering_dataframe = pd.DataFrame({'MAG_id': dataframe_infos[0],
                                      'cluster': dataframe_infos[1],
