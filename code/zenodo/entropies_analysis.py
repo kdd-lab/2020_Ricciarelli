@@ -156,6 +156,6 @@ axs[1].set_xlabel('Cluster', fontsize=14)
 axs[1].set_ylabel('Silhouette Score', fontsize=14)
 axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
 
-fig.tight_layout(rect=[0, 0.03, 1, 0.90])
+fig.tight_layout()
 fig.savefig('./images/entropies_distribution_per_cluster.pdf', format='pdf')
 plt.close(fig=fig)
