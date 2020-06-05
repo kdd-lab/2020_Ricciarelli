@@ -135,22 +135,20 @@ for cluster in sorted(creators_per_cluster):
                                          (int(cluster) * 5) + 5]:
         logging.info('\t\t{}'.format(record))
 
-import ipdb
-ipdb.set_trace()
-
 fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(10, 10))
 
 axs[0].set_title("Entropies' Distribution per Cluster with Mean Values",
                  fontsize=20)
-axs[0].boxplot(clusters_records, labels=['0', '1', '2'], zorder=2)
+axs[0].boxplot(clusters_records, labels=['0', '1', '2'], showfliers=False,
+               zorder=2)
 axs[0].set_xlabel('Cluster', fontsize=14)
 axs[0].set_ylabel('Silhouette Score', fontsize=14)
 axs[0].grid(axis='y', linestyle='--', color='black', zorder=1)
 
 axs[1].set_title("Entropies' Distribution per Cluster without Mean Values",
                  fontsize=20)
-axs[1].boxplot(clusters_records_without_mean,
-               labels=['0', '1', '2'], zorder=2)
+axs[1].boxplot(clusters_records_without_mean, labels=['0', '1', '2'],
+               showfliers=False, zorder=2)
 axs[1].set_xlabel('Cluster', fontsize=14)
 axs[1].set_ylabel('Silhouette Score', fontsize=14)
 axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
