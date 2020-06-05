@@ -113,11 +113,13 @@ for cluster in sorted(clustering_dataframe.cluster.unique()):
     for record in records.values:
         representative_records.append({record[0]: entropies_dict[record[0]]})
 
-    import ipdb
-    ipdb.set_trace()
-
     for MAG_id in cluster_dataframe['MAG_id']:
-        clusters_records_without_mean[cluster].append()
+        entropies = list()
+
+        for year in entropies_dict[MAG_id]:
+            entropies.append(entropies_dict[MAG_id][year]['entropy'])
+
+        clusters_records_without_mean[cluster].append(np.mean(entropies))
 
 creators_per_cluster = Counter(list(labels))
 
