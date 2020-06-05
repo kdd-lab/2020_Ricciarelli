@@ -72,9 +72,9 @@ classifier = KMeans(n_clusters=5, random_state=42)
 labels = classifier.fit_predict(entropies_matrix)
 centroids = classifier.cluster_centers_
 
-clusters_infos = dict()
-dataframe_infos = [[], [], []]
+clusters_infos, dataframe_infos = dict(), [[], [], []]
 clusters_records = [[], [], [], [], []]
+clusters_records_without_mean = [[], [], [], [], []]
 
 for idx, MAG_id in tqdm(enumerate(sorted(entropies_dict)),
                         desc='ASSIGNING CLUSTERS', total=len(entropies_dict)):
@@ -95,6 +95,8 @@ for idx, MAG_id in tqdm(enumerate(sorted(entropies_dict)),
         np.linalg.norm(entropies_matrix[labels[idx]] - centroids[labels[idx]]))
 
     clusters_records[labels[idx]].append(np.mean(entropies_matrix[idx]))
+    clusters_records_without_mean[labels[idx]].append(
+        np.mean([e for e in entropies_matrix[idx] if e not in means]))
 
 clustering_dataframe = pd.DataFrame({'MAG_id': dataframe_infos[0],
                                      'cluster': dataframe_infos[1],
@@ -131,14 +133,20 @@ for cluster in sorted(creators_per_cluster):
                                          (int(cluster) * 5) + 5]:
         logging.info('\t\t{}'.format(record))
 
-fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(10, 10))
+fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(10, 10))
 
-fig.suptitle("Entropies' Distribution per Cluster", fontsize=20)
+axs[0].set_title("Entropies' Distribution per Cluster with Mean Values",
+                 fontsize=20)
+axs[0].boxplot(clusters_records, labels=['0', '1', '2', '3', '4'], zorder=2)
+axs[0].set_xlabel('Cluster', fontsize=14)
+axs[0].grid(axis='y', linestyle='--', color='black', zorder=1)
 
-ax.boxplot(clusters_records, labels=['0', '1', '2', '3', '4'], zorder=2)
-ax.set_xlabel('Cluster', fontsize=14)
-ax.grid(axis='y', linestyle='--', color='black', zorder=1)
+axs[1].set_title("Entropies' Distribution per Cluster without Mean Values",
+                 fontsize=20)
+axs[1].boxplot(clusters_records, labels=['0', '1', '2', '3', '4'], zorder=2)
+axs[1].set_xlabel('Cluster', fontsize=14)
+axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
 
 fig.tight_layout(rect=[0, 0.03, 1, 0.90])
-fig.savefig('entropies_distribution_per_cluster.pdf', format='pdf')
+fig.savefig('./images/entropies_distribution_per_cluster.pdf', format='pdf')
 plt.close(fig=fig)
