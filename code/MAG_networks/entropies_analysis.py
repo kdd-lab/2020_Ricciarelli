@@ -135,6 +135,9 @@ for cluster in sorted(creators_per_cluster):
                                          (int(cluster) * 5) + 5]:
         logging.info('\t\t{}'.format(record))
 
+import ipdb
+ipdb.set_trace()
+
 fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(10, 10))
 
 axs[0].set_title("Entropies' Distribution per Cluster with Mean Values",
