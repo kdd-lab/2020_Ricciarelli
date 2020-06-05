@@ -95,8 +95,6 @@ for idx, MAG_id in tqdm(enumerate(sorted(entropies_dict)),
         np.linalg.norm(entropies_matrix[labels[idx]] - centroids[labels[idx]]))
 
     clusters_records[labels[idx]].append(np.mean(entropies_matrix[idx]))
-    clusters_records_without_mean[labels[idx]].append(
-        np.mean([e for e in entropies_matrix[idx] if e not in means]))
 
 clustering_dataframe = pd.DataFrame({'MAG_id': dataframe_infos[0],
                                      'cluster': dataframe_infos[1],
@@ -105,15 +103,21 @@ clustering_dataframe = pd.DataFrame({'MAG_id': dataframe_infos[0],
 representative_records = list()
 
 for cluster in sorted(clustering_dataframe.cluster.unique()):
-    DFCs = \
-        clustering_dataframe[clustering_dataframe.cluster == cluster]['DFC']
+    cluster_dataframe = \
+        clustering_dataframe[clustering_dataframe.cluster == cluster]
 
     records = clustering_dataframe\
-        .query('cluster == {} and DFC == {}'.format(cluster, min(DFCs)))\
-        .iloc[0:5]
+        .query('cluster == {} and DFC == {}'
+               .format(cluster, min(cluster_dataframe['DFC']))).iloc[0:5]
 
     for record in records.values:
         representative_records.append({record[0]: entropies_dict[record[0]]})
+
+    import ipdb
+    ipdb.set_trace()
+
+    for MAG_id in cluster_dataframe['MAG_id']:
+        clusters_records_without_mean[cluster].append()
 
 creators_per_cluster = Counter(list(labels))
 
@@ -139,12 +143,15 @@ axs[0].set_title("Entropies' Distribution per Cluster with Mean Values",
                  fontsize=20)
 axs[0].boxplot(clusters_records, labels=['0', '1', '2', '3', '4'], zorder=2)
 axs[0].set_xlabel('Cluster', fontsize=14)
+axs[0].set_ylabel('Silhouette Score', fontsize=14)
 axs[0].grid(axis='y', linestyle='--', color='black', zorder=1)
 
 axs[1].set_title("Entropies' Distribution per Cluster without Mean Values",
                  fontsize=20)
-axs[1].boxplot(clusters_records, labels=['0', '1', '2', '3', '4'], zorder=2)
+axs[1].boxplot(clusters_records_without_mean,
+               labels=['0', '1', '2', '3', '4'], zorder=2)
 axs[1].set_xlabel('Cluster', fontsize=14)
+axs[1].set_ylabel('Silhouette Score', fontsize=14)
 axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
 
 fig.tight_layout(rect=[0, 0.03, 1, 0.90])
