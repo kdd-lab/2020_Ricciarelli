@@ -157,3 +157,4 @@ fig.tight_layout()
 fig.savefig('./images/entropies_distribution_per_cluster.pdf', format='pdf')
 plt.close(fig=fig)
 
+clustering_dataframe.to_csv('./clustering_data.csv', index=False)
