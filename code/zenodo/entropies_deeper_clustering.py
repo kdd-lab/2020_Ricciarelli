@@ -11,11 +11,12 @@ from tqdm import tqdm
 logging.basicConfig(filename='./logs/entropies_deeper_clustering_results.log',
                     filemode='w', level=logging.INFO, format='%(message)s')
 
-clustering_dataframe = pd.read_csv(sys.argv[2], dtype={'MAG_id': str, 'cluster': int})
+clustering_dataframe = pd.read_csv(sys.argv[2],
+                                   dtype={'MAG_id': str, 'cluster': int})
 clustering_dataframe = \
     clustering_dataframe[clustering_dataframe.cluster != int(sys.argv[3])]
 
-entropies_dict, years = dict(), set()
+entropies_dict, total_years = dict(), set()
 valid_MAG_ids = sorted(clustering_dataframe['MAG_id'].values.tolist())
 
 with open(sys.argv[1], 'r') as entropies_file:
@@ -26,14 +27,20 @@ with open(sys.argv[1], 'r') as entropies_file:
 
         for MAG_id in creator:
             for year in creator[MAG_id]:
-                years.add(year)
+                total_years.add(year)
 
-entropies_matrix, years = list(), sorted(years)
+entropies_matrix, total_years, local_years = list(), sorted(total_years), set()
+
+for MAG_id in valid_MAG_ids:
+    for year in entropies_dict[MAG_id]:
+        local_years.add(year)
+
+local_years = sorted(local_years)
 
 for MAG_id in tqdm(valid_MAG_ids, desc='BUILDING ENTROPIES MATRIX'):
     row = list()
 
-    for year in years:
+    for year in local_years:
         if year in entropies_dict[MAG_id]:
             row.append(entropies_dict[MAG_id][year]['entropy'])
         else:
@@ -57,8 +64,7 @@ for iteration in tqdm(np.arange(0, sys.argv[4]), desc='GRID SEARCH ITERATION'):
         classifier = KMeans(n_clusters=clusters_number, max_iter=100)
         labels = classifier.fit_predict(entropies_matrix)
 
-        silhouette_avg = silhouette_score(entropies_matrix, labels,
-                                          sample_size=100000)
+        silhouette_avg = silhouette_score(entropies_matrix, labels)
 
         logging.info("KMEANS' N_CLUSTERS GRID SEARCH -- N_CLUSTERS: {}, "
                      "AVERAGE SILHOUETTE SCORE: {}".format(clusters_number,
