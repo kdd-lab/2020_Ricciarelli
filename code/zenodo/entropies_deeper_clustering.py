@@ -11,12 +11,12 @@ from tqdm import tqdm
 logging.basicConfig(filename='./logs/entropies_deeper_clustering_results.log',
                     filemode='w', level=logging.INFO, format='%(message)s')
 
-clustering_dataframe = pd.read_csv(sys.argv[2])
+clustering_dataframe = pd.read_csv(sys.argv[2], dtype={'MAG_id': str, 'cluster': int})
 clustering_dataframe = \
     clustering_dataframe[clustering_dataframe.cluster != int(sys.argv[3])]
 
 entropies_dict, years = dict(), set()
-valid_MAG_ids = sorted(list(clustering_dataframe['MAG_id'].values))
+valid_MAG_ids = sorted(clustering_dataframe['MAG_id'].values.tolist())
 
 with open(sys.argv[1], 'r') as entropies_file:
     for row in tqdm(entropies_file, desc='READING ENTROPIES FILE'):
