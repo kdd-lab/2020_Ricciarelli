@@ -16,22 +16,21 @@ clustering_dataframe = \
     clustering_dataframe[clustering_dataframe.cluster != int(sys.argv[3])]
 
 entropies_dict, years = dict(), set()
-valid_MAG_ids = list(clustering_dataframe['MAG_id'].values)
+valid_MAG_ids = sorted(list(clustering_dataframe['MAG_id'].values))
 
 with open(sys.argv[1], 'r') as entropies_file:
     for row in tqdm(entropies_file, desc='READING ENTROPIES FILE'):
         creator = json.loads(row)
 
-        for MAG_id in creator:
-            if MAG_id in valid_MAG_ids:
-                entropies_dict.update(creator)
+        entropies_dict.update(creator)
 
-                for year in creator[MAG_id]:
-                    years.add(year)
+        for MAG_id in creator:
+            for year in creator[MAG_id]:
+                years.add(year)
 
 entropies_matrix, years = list(), sorted(years)
 
-for MAG_id in tqdm(sorted(entropies_dict), desc='BUILDING ENTROPIES MATRIX'):
+for MAG_id in tqdm(valid_MAG_ids, desc='BUILDING ENTROPIES MATRIX'):
     row = list()
 
     for year in years:
