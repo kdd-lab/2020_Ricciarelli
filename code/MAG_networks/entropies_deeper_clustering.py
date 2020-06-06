@@ -16,7 +16,7 @@ clustering_dataframe = pd.read_csv(sys.argv[2],
 clustering_dataframe = \
     clustering_dataframe[clustering_dataframe.cluster != int(sys.argv[3])]
 
-entropies_dict, total_years = dict(), set()
+entropies_dict = dict()
 valid_MAG_ids = sorted(clustering_dataframe['MAG_id'].values.tolist())
 
 with open(sys.argv[1], 'r') as entropies_file:
@@ -25,11 +25,7 @@ with open(sys.argv[1], 'r') as entropies_file:
 
         entropies_dict.update(creator)
 
-        for MAG_id in creator:
-            for year in creator[MAG_id]:
-                total_years.add(year)
-
-entropies_matrix, total_years, local_years = list(), sorted(total_years), set()
+entropies_matrix, local_years = list(), set()
 
 for MAG_id in valid_MAG_ids:
     for year in entropies_dict[MAG_id]:
