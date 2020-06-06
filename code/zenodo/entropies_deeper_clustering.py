@@ -59,7 +59,7 @@ for i, row in tqdm(enumerate(entropies_matrix), desc='PREPROCESSING',
         if val == 1:
             entropies_matrix[i, j] = means[j]
 
-for iteration in tqdm(np.arange(0, sys.argv[4]), desc='GRID SEARCH ITERATION'):
+for iteration in tqdm(np.arange(0, int(sys.argv[4])), desc='GRID SEARCH ITERATION'):
     for clusters_number in tqdm(np.arange(2, 11), desc='GRID SEARCH'):
         classifier = KMeans(n_clusters=clusters_number, max_iter=100)
         labels = classifier.fit_predict(entropies_matrix)
