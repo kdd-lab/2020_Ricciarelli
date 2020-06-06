@@ -61,7 +61,8 @@ for iteration in tqdm(np.arange(0, int(sys.argv[4])),
         classifier = KMeans(n_clusters=clusters_number, max_iter=100)
         labels = classifier.fit_predict(entropies_matrix)
 
-        silhouette_avg = silhouette_score(entropies_matrix, labels)
+        silhouette_avg = silhouette_score(entropies_matrix, labels,
+                                          sample_size=100000)
 
         logging.info("KMEANS' N_CLUSTERS GRID SEARCH -- N_CLUSTERS: {}, "
                      "AVERAGE SILHOUETTE SCORE: {}".format(clusters_number,
