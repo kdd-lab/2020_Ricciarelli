@@ -48,14 +48,16 @@ with open(sys.argv[1], 'r') as entropies_file:
 
 entropies_matrix, total_years, local_years = list(), sorted(total_years), set()
 
-if sys.argv > 3:
+if len(sys.argv) > 3:
     for MAG_id in valid_MAG_ids:
         for year in entropies_dict[MAG_id]:
             local_years.add(year)
 
     local_years = sorted(local_years)
+else:
+    local_years = total_years
 
-for MAG_id in tqdm(valid_MAG_ids if sys.argv > 3 else sorted(entropies_dict),
+for MAG_id in tqdm(valid_MAG_ids if len(sys.argv) > 3 else sorted(entropies_dict),
                    desc='BUILDING ENTROPIES MATRIX'):
     row = list()
 
@@ -79,7 +81,7 @@ for i, row in tqdm(enumerate(entropies_matrix), desc='PREPROCESSING',
             entropies_matrix[i, j] = means[j]
 
 if len(sys.argv) == 3 or len(sys.argv) == 5:
-    iterations = int(sys.argv[2]) if len(sys.argv) == 2 else int(sys.argv[4])
+    iterations = int(sys.argv[2]) if len(sys.argv) == 3 else int(sys.argv[4])
 
     for iteration in tqdm(np.arange(0, iterations),
                           desc='GRID SEARCH ITERATION'):
