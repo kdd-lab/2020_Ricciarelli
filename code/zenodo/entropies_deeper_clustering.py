@@ -1,5 +1,6 @@
 import json
 import logging
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import sys
@@ -137,7 +138,8 @@ else:
             for year in entropies_dict[MAG_id]:
                 entropies.append(entropies_dict[MAG_id][year]['entropy'])
 
-            clusters_records_without_mean[cluster - 1].append(np.mean(entropies))
+            clusters_records_without_mean[cluster - 1]\
+                .append(np.mean(entropies))
 
     creators_per_cluster = Counter(labels)
 
@@ -157,3 +159,24 @@ else:
         for record in representative_records[int(cluster - 1) * 5:
                                              (int(cluster - 1) * 5) + 5]:
             logging.info('\t\t{}'.format(record))
+
+    fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(10, 10))
+
+    axs[0].set_title("Entropies' Distribution per Cluster with Mean Values",
+                     fontsize=20)
+    axs[0].boxplot(clusters_records, labels=['1', '2'], zorder=2)
+    axs[0].set_xlabel('Cluster', fontsize=14)
+    axs[0].set_ylabel('Silhouette Score', fontsize=14)
+    axs[0].grid(axis='y', linestyle='--', color='black', zorder=1)
+
+    axs[1].set_title("Entropies' Distribution per Cluster without Mean Values",
+                     fontsize=20)
+    axs[1].boxplot(clusters_records_without_mean, labels=['1', '2'], zorder=2)
+    axs[1].set_xlabel('Cluster', fontsize=14)
+    axs[1].set_ylabel('Silhouette Score', fontsize=14)
+    axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
+
+    fig.tight_layout()
+    fig.savefig('./images/entropies_distribution_per_deeper_cluster.pdf',
+                format='pdf')
+    plt.close(fig=fig)
