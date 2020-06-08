@@ -184,4 +184,4 @@ else:
 
     for row in clustering_df.itertuples():
         if row.cluster != 0:
-            clustering_df.loc[clustering_df.MAG_id == row.MAG_id] = row.cluster
+            clustering_df.loc[clustering_df.MAG_id == row.MAG_id, 'cluster'] = row.cluster
