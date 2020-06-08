@@ -57,7 +57,8 @@ if len(sys.argv) > 3:
 else:
     local_years = total_years
 
-for MAG_id in tqdm(valid_MAG_ids if len(sys.argv) > 3 else sorted(entropies_dict),
+for MAG_id in tqdm(valid_MAG_ids if len(sys.argv) > 3
+                   else sorted(entropies_dict),
                    desc='BUILDING ENTROPIES MATRIX'):
     row = list()
 
@@ -98,7 +99,8 @@ if len(sys.argv) == 3 or len(sys.argv) == 5:
                          "AVERAGE SILHOUETTE SCORE: {}".format(clusters_number,
                                                                silhouette_avg))
 else:
-    classifier = KMeans(n_clusters=2, random_state=42)
+    classifier = KMeans(n_clusters=5 if len(sys.argv) == 2 else 2,
+                        random_state=42)
     labels = classifier.fit_predict(entropies_matrix).tolist()
 
     if len(sys.argv) > 3:
@@ -194,27 +196,6 @@ else:
 
         for record in representative_records[step * 5:(step * 5) + 5]:
             logging.info('\t\t{}'.format(record))
-
-    # fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(10, 10))
-
-    # axs[0].set_title("Entropies' Distribution per Cluster with Mean Values",
-    #                  fontsize=20)
-    # axs[0].boxplot(clusters_records, labels=['1', '2'], zorder=2)
-    # axs[0].set_xlabel('Cluster', fontsize=14)
-    # axs[0].set_ylabel('Silhouette Score', fontsize=14)
-    # axs[0].grid(axis='y', linestyle='--', color='black', zorder=1)
-
-    # axs[1].set_title("Entropies' Distribution per Cluster without Mean Values",
-    #                  fontsize=20)
-    # axs[1].boxplot(clusters_records_without_mean, labels=['1', '2'], zorder=2)
-    # axs[1].set_xlabel('Cluster', fontsize=14)
-    # axs[1].set_ylabel('Silhouette Score', fontsize=14)
-    # axs[1].grid(axis='y', linestyle='--', color='black', zorder=1)
-
-    # fig.tight_layout()
-    # fig.savefig('./images/entropies_distribution_per_deeper_cluster.pdf',
-    #             format='pdf')
-    # plt.close(fig=fig)
 
     if len(sys.argv) == 2:
         new_clustering_df[['MAG_id', 'cluster']].to_csv(
