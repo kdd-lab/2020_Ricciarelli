@@ -179,18 +179,8 @@ else:
                 format='pdf')
     plt.close(fig=fig)
 
-    import ipdb
-    ipdb.set_trace()
+    clustering_df.loc[
+        clustering_df.query('MAG_id in {}'.format(valid_MAG_ids)).index,
+        'cluster'] = labels
 
-    id, cluster = list(), list()
-
-    for row in tqdm(clustering_df.itertuples(), desc='WRITING FINAL CLUSTERING', total=clustering_df.values.shape[0]):
-        id.append(row.MAG_id)
-
-        if row.cluster == 0:
-            cluster.append(row.cluster)
-        else:
-            cluster.append(new_clustering_df[new_clustering_df.MAG_id == row.MAG_id]['cluster'])
-
-    updated_clustering_df = pd.DataFrame({'MAG_id': id, 'cluster': cluster})
-    print(updated_clustering_df.cluster.unique())
+    print(clustering_df.head())
