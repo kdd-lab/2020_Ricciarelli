@@ -74,8 +74,14 @@ if len(sys.argv) == 5:
                                                                silhouette_avg))
 else:
     classifier = KMeans(n_clusters=2, random_state=42)
-    labels = classifier.fit_predict(entropies_matrix)
-    labels = [1 for label in labels if label == 0 else 2]
+    labels = classifier.fit_predict(entropies_matrix).tolist()
+
+    for idx, label in enumerate(labels):
+        if label == 0:
+            labels[idx] = 1
+        else:
+            labels[idx] = 2
+
     centroids = classifier.cluster_centers_
 
     clusters_infos, dataframe_infos = dict(), [[], [], []]
@@ -83,8 +89,8 @@ else:
 
     for idx, MAG_id in tqdm(enumerate(valid_MAG_ids),
                             desc='ASSIGNING CLUSTERS',
-                            total=len(entropies_dict)):
-        clustering_df[clustering_df.MAG_id == MAG_id]['cluster'] = labels[idx]
+                            total=len(valid_MAG_ids)):
+        clustering_df.loc[clustering_df.MAG_id == MAG_id, 'cluster'] = labels[idx]
 
         if labels[idx] not in clusters_infos:
             clusters_infos[labels[idx]] = \
@@ -101,10 +107,12 @@ else:
         dataframe_infos[1].append(labels[idx])
         dataframe_infos[2].append(
             np.linalg.norm(entropies_matrix[labels[idx]] -
-                           centroids[labels[idx]]))
+                           centroids[labels[idx] - 1]))
 
         clusters_records[labels[idx] - 1].append(
             np.mean(entropies_matrix[idx]))
+    import ipdb
+    ipdb.set_trace()
 
     new_clustering_df = pd.DataFrame({'MAG_id': dataframe_infos[0],
                                       'cluster': dataframe_infos[1],
