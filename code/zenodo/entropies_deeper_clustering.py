@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import sys
 
+from collections import Counter
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 from tqdm import tqdm
@@ -90,7 +91,7 @@ else:
     for idx, MAG_id in tqdm(enumerate(valid_MAG_ids),
                             desc='ASSIGNING CLUSTERS',
                             total=len(valid_MAG_ids)):
-        clustering_df.loc[clustering_df.MAG_id == MAG_id, 'cluster'] = labels[idx]
+        # clustering_df.loc[clustering_df.MAG_id == MAG_id, 'cluster'] = labels[idx]
 
         if labels[idx] not in clusters_infos:
             clusters_infos[labels[idx]] = \
@@ -111,8 +112,6 @@ else:
 
         clusters_records[labels[idx] - 1].append(
             np.mean(entropies_matrix[idx]))
-    import ipdb
-    ipdb.set_trace()
 
     new_clustering_df = pd.DataFrame({'MAG_id': dataframe_infos[0],
                                       'cluster': dataframe_infos[1],
@@ -138,7 +137,7 @@ else:
             for year in entropies_dict[MAG_id]:
                 entropies.append(entropies_dict[MAG_id][year]['entropy'])
 
-            clusters_records_without_mean[cluster].append(np.mean(entropies))
+            clusters_records_without_mean[cluster - 1].append(np.mean(entropies))
 
     creators_per_cluster = Counter(labels)
 
@@ -155,6 +154,6 @@ else:
         logging.info('\tCOUNTRIES: {}\n'
                      .format(sorted(clusters_infos[cluster]['countries'])))
         logging.info('\tREPRESENTATIVE RECORDS:\n')
-        for record in representative_records[int(cluster) * 5:
-                                             (int(cluster) * 5) + 5]:
+        for record in representative_records[int(cluster - 1) * 5:
+                                             (int(cluster - 1) * 5) + 5]:
             logging.info('\t\t{}'.format(record))
