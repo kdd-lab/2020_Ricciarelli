@@ -183,4 +183,5 @@ else:
         clustering_df.query('MAG_id in {}'.format(valid_MAG_ids)).index,
         'cluster'] = labels
 
-    print(clustering_df.head())
+    clustering_df.to_csv('~/mydata/zenodo/clustering/deeper_clustering.csv',
+                         index=False)
