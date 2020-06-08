@@ -92,8 +92,6 @@ else:
     for idx, MAG_id in tqdm(enumerate(valid_MAG_ids),
                             desc='ASSIGNING CLUSTERS',
                             total=len(valid_MAG_ids)):
-        # clustering_df.loc[clustering_df.MAG_id == MAG_id, 'cluster'] = labels[idx]
-
         if labels[idx] not in clusters_infos:
             clusters_infos[labels[idx]] = \
                 {'years': set(list(entropies_dict[MAG_id])),
@@ -180,3 +178,10 @@ else:
     fig.savefig('./images/entropies_distribution_per_deeper_cluster.pdf',
                 format='pdf')
     plt.close(fig=fig)
+
+    import ipdb
+    ipdb.set_trace()
+
+    for row in clustering_df.itertuples():
+        if row.cluster != 0:
+            clustering_df.loc[clustering_df.MAG_id == row.MAG_id] = row.cluster
