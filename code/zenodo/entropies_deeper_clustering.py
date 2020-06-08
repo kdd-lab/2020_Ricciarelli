@@ -179,9 +179,9 @@ else:
                 format='pdf')
     plt.close(fig=fig)
 
-    import ipdb
-    ipdb.set_trace()
-
     for row in clustering_df.itertuples():
         if row.cluster != 0:
-            clustering_df.loc[clustering_df.MAG_id == row.MAG_id, 'cluster'] = row.cluster
+            clustering_df.loc[
+                clustering_df.MAG_id == row.MAG_id, 'cluster'] = row.cluster
+
+    print(clustering_df.cluster.unique())
