@@ -51,7 +51,8 @@ elif sys.argv[1] == 'boxplot':
 
             entropies_dict.update(creator)
 
-    cl_df = pd.read_csv(sys.argv[3])
+    cl_df = pd.read_csv(sys.argv[3],
+                        dtype={'MAG_id': str, 'cluster': int})
 
     entropies_per_cluster = [[] for cluster in cl_df.cluster.unique()]
 
