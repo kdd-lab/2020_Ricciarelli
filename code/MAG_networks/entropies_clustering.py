@@ -58,8 +58,8 @@ for MAG_id in tqdm(valid_MAG_ids if len(sys.argv) > 3
     row = list()
 
     for year in local_years:
-        if year in entropies_dict[MAG_id]:
-            row.append(entropies_dict[MAG_id][year]['entropy'])
+        if str(year) in entropies_dict[MAG_id]:
+            row.append(entropies_dict[MAG_id][str(year)]['entropy'])
         else:
             row.append(np.nan)
 
