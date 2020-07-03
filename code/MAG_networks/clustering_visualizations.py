@@ -1,4 +1,5 @@
 import json
+import geopandas as gpd
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -42,7 +43,7 @@ if sys.argv[1] == 'lineplot':
                 format='pdf', bbox_inches='tight')
 
     plt.close(fig)
-elif sys.argv[1] == 'boxplot':
+else:
     entropies_dict = dict()
 
     with open(sys.argv[2], 'r') as entropies_file:
@@ -54,28 +55,48 @@ elif sys.argv[1] == 'boxplot':
     cl_df = pd.read_csv(sys.argv[3],
                         dtype={'MAG_id': str, 'cluster': int})
 
-    entropies_per_cluster = [[] for cluster in cl_df.cluster.unique()]
+    if sys.argv[1] == 'boxplot':
+        entropies_per_cluster = [[] for cluster in cl_df.cluster.unique()]
 
-    for cluster in sorted(cl_df.cluster.unique()):
-        for MAG_id in cl_df[cl_df.cluster == cluster]['MAG_id']:
-            entropies = list()
+        for cluster in sorted(cl_df.cluster.unique()):
+            for MAG_id in cl_df[cl_df.cluster == cluster]['MAG_id']:
+                entropies = list()
 
-            for year in entropies_dict[MAG_id]:
-                entropies.append(entropies_dict[MAG_id][year]['entropy'])
+                for year in entropies_dict[MAG_id]:
+                    entropies.append(entropies_dict[MAG_id][year]['entropy'])
 
-            entropies_per_cluster[cluster].append(np.mean(entropies))
+                entropies_per_cluster[cluster].append(np.mean(entropies))
 
-    fig, ax = plt.subplots(figsize=(10, 10))
-    ax.boxplot(entropies_per_cluster,
-               labels=[str(c) for c in sorted(cl_df.cluster.unique())],
-               showfliers=False, showmeans=True)
-    ax.grid(linestyle='--', color='black', alpha=0.4)
-    ax.set_title("Entropies' Distribution per Clusteron a Deeper Level"
-                 if 'deeper' in sys.argv[3] else
-                 "Entropies' Distribution per Cluster", fontsize=20)
-    ax.set_xlabel('Cluster', fontsize=14)
-    ax.set_ylabel('Silhouette Score', fontsize=14)
+        fig, ax = plt.subplots(figsize=(10, 10))
+        ax.boxplot(entropies_per_cluster,
+                   labels=[str(c) for c in sorted(cl_df.cluster.unique())],
+                   showfliers=False, showmeans=True)
+        ax.grid(linestyle='--', color='black', alpha=0.4)
+        ax.set_title("Entropies' Distribution per Clusteron a Deeper Level"
+                     if 'deeper' in sys.argv[3] else
+                     "Entropies' Distribution per Cluster", fontsize=20)
+        ax.set_xlabel('Cluster', fontsize=14)
+        ax.set_ylabel('Silhouette Score', fontsize=14)
 
-    fig.savefig('./images/entropies_distribution_deeper.pdf' if 'deeper'
-                in sys.argv[3] else './images/entropies_distribution.pdf',
-                format='pdf', bbox_inches='tight')
+        fig.savefig('./images/entropies_distribution_deeper.pdf' if 'deeper'
+                    in sys.argv[3] else './images/entropies_distribution.pdf',
+                    format='pdf', bbox_inches='tight')
+    elif sys.argv[1] == 'geoplot':
+        for cluster in [1, 2]:
+            entropies_per_country = defaultdict(list)
+
+            for MAG_id in cl_df[cl_df.cluster == cluster]['MAG_id']:
+                for year in entropies_dict[MAG_id]:
+                    country = entropies_dict[MAG_id][year]['affiliation']
+                    entropy = entropies_dict[MAG_id][year]['entropy']
+
+                    entropies_per_country[country].append(entropy)
+
+            for country in entropies_per_country:
+                entropies_per_country[country] = \
+                    np.mean(entropies_per_country[country])
+
+            world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+            world['entropy'] = world['name'].map(entropies_per_country)
+
+
