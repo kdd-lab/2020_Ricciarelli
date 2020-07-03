@@ -90,11 +90,23 @@ else:
                     country = entropies_dict[MAG_id][year]['affiliation']
                     entropy = entropies_dict[MAG_id][year]['entropy']
 
+                    if country == 'United States':
+                        country = 'United States of America'
+                    elif country == 'Korea':
+                        country = 'South Korea'
+                    elif country == 'Russian Federation':
+                        country = 'Russia'
+                    elif country == 'Dominican Republic':
+                        country = 'Dominican Rep.'
+
                     entropies_per_country[country].append(entropy)
 
             for country in entropies_per_country:
                 entropies_per_country[country] = \
                     np.mean(entropies_per_country[country])
+
+            import ipdb
+            ipdb.set_trace()
 
             world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
             world['entropy'] = world['name'].map(entropies_per_country)
