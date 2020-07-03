@@ -115,5 +115,18 @@ else:
 
             world['entropy'] = world['name'].map(entropies_per_country)
 
-            import ipdb
-            ipdb.set_trace()
+            fig, ax = plt.subplots(figsize=(10, 10))
+
+            world.plot(column='entropy', ax=ax, legend=True,
+                       legend_kwds={'label': "Population by Country",
+                                    'orientation': "horizontal"})
+            ax.set_title("Entropies' Distribution per Country - Cluster {}"
+                         .format(cluster), fontsize=20)
+            ax.axes.xaxis.set_visible(False)
+            ax.axes.yaxis.set_visible(False)
+
+            save_n = \
+                './images/entropies_distribution_country_cluster_{}.pdf'\
+                .format(cluster)
+
+            fig.savefig(save_n, format='pdf', bbox_inches='tight')
