@@ -85,6 +85,7 @@ else:
         for cluster in [1, 2]:
             entropies_per_country = defaultdict(list)
             world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+            world = world[world.name != "Antarctica"]
 
             for MAG_id in cl_df[cl_df.cluster == cluster]['MAG_id']:
                 for year in entropies_dict[MAG_id]:
