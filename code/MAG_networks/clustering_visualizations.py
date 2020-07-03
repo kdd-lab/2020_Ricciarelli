@@ -84,6 +84,7 @@ else:
     elif sys.argv[1] == 'geoplot':
         for cluster in [1, 2]:
             entropies_per_country = defaultdict(list)
+            world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
 
             for MAG_id in cl_df[cl_df.cluster == cluster]['MAG_id']:
                 for year in entropies_dict[MAG_id]:
@@ -105,10 +106,14 @@ else:
                 entropies_per_country[country] = \
                     np.mean(entropies_per_country[country])
 
-            import ipdb
-            ipdb.set_trace()
+            not_in_dict = [c for c in set(world.name.to_list()) if c not in
+                           set(world.name.to_list())
+                           .intersection(set(entropies_per_country.keys()))]
 
-            world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+            for country in not_in_dict:
+                entropies_per_country[country] = 0.0
+
             world['entropy'] = world['name'].map(entropies_per_country)
 
-
+            import ipdb
+            ipdb.set_trace()
