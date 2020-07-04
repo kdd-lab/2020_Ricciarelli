@@ -107,20 +107,14 @@ else:
                 entropies_per_country[country] = \
                     np.mean(entropies_per_country[country])
 
-            not_in_dict = [c for c in set(world.name.to_list()) if c not in
-                           set(world.name.to_list())
-                           .intersection(set(entropies_per_country.keys()))]
-
-            for country in not_in_dict:
-                entropies_per_country[country] = 0.0
-
             world['entropy'] = world['name'].map(entropies_per_country)
 
             fig, ax = plt.subplots(figsize=(10, 10))
 
-            world.plot(column='entropy', ax=ax, legend=True,
-                       legend_kwds={'label': "Population by Country",
-                                    'orientation': "horizontal"})
+            world.plot(column='entropy', ax=ax, legend=True, cmpa='RdYlGn',
+                       legend_kwds={'label': "Entropy by Country",
+                                    'orientation': "horizontal"}, vmin=-1.0,
+                       vmax=1.0, missing_kwds={'color': 'lightgrey'})
             ax.set_title("Entropies' Distribution per Country - Cluster {}"
                          .format(cluster), fontsize=20)
             ax.axes.xaxis.set_visible(False)
