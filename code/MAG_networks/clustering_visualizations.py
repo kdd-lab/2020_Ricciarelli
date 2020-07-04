@@ -109,12 +109,13 @@ else:
 
             world['entropy'] = world['name'].map(dict(entropies_per_country))
 
-            fig, ax = plt.subplots(figsize=(10, 10))
+            fig, ax = plt.subplots()
 
             world.plot(column='entropy', ax=ax, legend=True, cmap='RdYlGn',
                        legend_kwds={'label': "Entropy by Country",
                                     'orientation': "horizontal"}, vmin=-1.0,
-                       vmax=1.0, missing_kwds={'color': 'lightgrey'})
+                       vmax=1.0, missing_kwds={'color': 'lightgrey'},
+                       figsize=(10, 10))
             ax.set_title("Entropies' Distribution per Country - Cluster {}"
                          .format(cluster), fontsize=20)
             ax.axes.xaxis.set_visible(False)
