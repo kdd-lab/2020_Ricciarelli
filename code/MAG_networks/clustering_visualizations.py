@@ -115,7 +115,7 @@ else:
                        legend_kwds={'label': "Entropy by Country",
                                     'orientation': "horizontal"}, vmin=-1.0,
                        vmax=1.0, missing_kwds={'color': 'lightgrey'},
-                       edgecolor='black', linewidth=0.5, figsize=(10, 10))
+                       edgecolor='black', linewidth=0.3, figsize=(10, 10))
             ax.set_title("Entropies' Distribution per Country - Cluster {}"
                          .format(cluster), fontsize=10)
             ax.axes.xaxis.set_visible(False)
