@@ -117,7 +117,7 @@ else:
                        vmax=1.0, missing_kwds={'color': 'lightgrey'},
                        figsize=(10, 10))
             ax.set_title("Entropies' Distribution per Country - Cluster {}"
-                         .format(cluster), fontsize=20)
+                         .format(cluster), fontsize=14)
             ax.axes.xaxis.set_visible(False)
             ax.axes.yaxis.set_visible(False)
 
