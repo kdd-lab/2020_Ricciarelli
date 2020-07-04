@@ -107,11 +107,11 @@ else:
                 entropies_per_country[country] = \
                     np.mean(entropies_per_country[country])
 
-            world['entropy'] = world['name'].map(entropies_per_country)
+            world['entropy'] = world['name'].map(dict(entropies_per_country))
 
             fig, ax = plt.subplots(figsize=(10, 10))
 
-            world.plot(column='entropy', ax=ax, legend=True, cmpa='RdYlGn',
+            world.plot(column='entropy', ax=ax, legend=True, cmap='RdYlGn',
                        legend_kwds={'label': "Entropy by Country",
                                     'orientation': "horizontal"}, vmin=-1.0,
                        vmax=1.0, missing_kwds={'color': 'lightgrey'})
