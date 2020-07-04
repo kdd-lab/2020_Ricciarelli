@@ -43,6 +43,47 @@ if sys.argv[1] == 'lineplot':
                 format='pdf', bbox_inches='tight')
 
     plt.close(fig)
+elif sys.argv[1] == 'yearplot':
+    log_file = open('./logs/entropies_deeper_clustering_results.log', 'r')
+    log_file = log_file.readlines()
+
+    years_c1 = log_file[5].split(': ')[-1].strip().replace('[', '')\
+        .replace(']', '').replace("'", '').split(', ')
+    years_c2 = log_file[19].split(': ')[-1].strip().replace('[', '')\
+        .replace(']', '').replace("'", '').split(', ')
+    years_in_c1, years_in_c2 = list(), list()
+
+    for year in np.arange(1980, 2020):
+        if str(year) in years_c1:
+            if str(year) in years_c2:
+                years_in_c2.append(-1.)
+            else:
+                years_in_c2.append(0.)
+            years_in_c1.append(1.)
+        elif str(year) in years_c2:
+            years_in_c1.append(0.)
+            years_in_c2.append(-1.)
+        else:
+            years_in_c1.append(0.)
+            years_in_c2.append(0.)
+
+    fig, ax = plt.subplots(figsize=(10, 10))
+    ax.plot(np.arange(0, 40), years_in_c1, linewidth=2, color='#46B4AF',
+            label='Cluster 1')
+    ax.plot(np.arange(0, 40), years_in_c2, linewidth=2, color='#b4464b',
+            label='Cluster 2')
+    ax.set_xticks(np.arange(0, 40))
+    ax.set_xticklabels([str(year) for year in np.arange(1980, 2020)],
+                       rotation='vertical')
+    ax.set_yticks([-1.0, 0.0, 1.0])
+    ax.set_yticklabels(['Yes', 'No', 'Yes'])
+    ax.set_title('Years per Cluster', fontsize=20)
+    ax.set_xlabel('Year', fontsize=14)
+    ax.set_ylabel('Represented', fontsize=14)
+    ax.legend()
+
+    fig.savefig('./images/years_per_cluster.pdf', format='pdf',
+                bbox_inches='tight')
 else:
     entropies_dict = dict()
 
@@ -110,7 +151,6 @@ else:
             world['entropy'] = world['name'].map(dict(entropies_per_country))
 
             fig, ax = plt.subplots()
-
             world.plot(column='entropy', ax=ax, legend=True, cmap='RdYlGn',
                        legend_kwds={'label': "Entropy by Country",
                                     'orientation': "horizontal"}, vmin=-1.0,
