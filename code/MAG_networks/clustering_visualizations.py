@@ -199,13 +199,11 @@ else:
 
             plt.close(fig)
 
-            import ipdb
-            ipdb.set_trace()
-
             for country in entropies_per_country:
                 entropies = [entropies_per_country[country][year] for year
                              in entropies_per_country[country]]
-                entropies_per_country[country] = np.mean(entropies)
+                entropies_per_country[country] = \
+                   np.mean(np.concatenate(entropies))
 
             world['entropy'] = world['name'].map(dict(entropies_per_country))
 
