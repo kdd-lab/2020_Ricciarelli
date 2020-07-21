@@ -156,10 +156,14 @@ else:
             for decade in [1980, 1990, 2000, 2010]:
                 entropies_by_decade = defaultdict(list)
 
+                import ipdb
+                ipdb.set_trace()
+
                 for country in entropies_per_country:
                     for year in np.arange(decade, decade + 10):
                         entropies_by_decade[country] \
-                            .append(np.mean(entropies_per_country[country][str(year)]))
+                            .append(np.mean(entropies_per_country[country]
+                                            [str(year)]))
 
                 for country in entropies_by_decade:
                     entropies_by_decade[country] = \
