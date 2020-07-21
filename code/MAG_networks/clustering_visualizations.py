@@ -147,7 +147,8 @@ else:
 
                     entropies_per_country[country][year].append(entropy)
 
-            fig, ax, ax_index = plt.subplots(nrows=2, ncols=2), 0
+            fig, ax = plt.subplots(nrows=2, ncols=2)
+            ax_index = 0
 
             fig.suptitle('Mean Entropy per Country over the Decades '
                          '- Cluster {}'.format(cluster), fontsize=10)
@@ -158,11 +159,11 @@ else:
                 for country in entropies_per_country:
                     for year in np.arange(decade, decade + 10):
                         entropies_by_decade[country] \
-                            .append(entropies_per_country[country][str(year)])
+                            .append(np.mean(entropies_per_country[country][str(year)]))
 
-                    for country in entropies_by_decade:
-                        entropies_by_decade[country] = \
-                            np.mean(entropies_by_decade[country])
+                for country in entropies_by_decade:
+                    entropies_by_decade[country] = \
+                        np.mean(entropies_by_decade[country])
 
                 world['entropy'] = world['name']\
                     .map(dict(entropies_by_decade))
