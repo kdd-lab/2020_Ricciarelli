@@ -82,8 +82,8 @@ elif sys.argv[1] == 'yearplot':
     ax.set_ylabel('Is represented?', fontsize=14)
     ax.legend()
 
-    fig.savefig('./images/years_per_cluster.pdf', format='pdf',
-                bbox_inches='tight')
+    fig.savefig('./images/clustering/years_per_cluster.pdf',
+                format='pdf', bbox_inches='tight')
 else:
     entropies_dict = dict()
 
@@ -162,7 +162,7 @@ else:
             ax.axes.yaxis.set_visible(False)
 
             save_n = \
-                './images/mean_entropy_per_country_cluster_{}.pdf'\
+                './images/clustering/mean_entropy_per_country_cluster_{}.pdf'\
                 .format(cluster)
 
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
