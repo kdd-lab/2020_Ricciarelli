@@ -77,9 +77,9 @@ elif sys.argv[1] == 'yearplot':
                        rotation='vertical')
     ax.set_yticks([-1.0, 0.0, 1.0])
     ax.set_yticklabels(['Yes', 'No', 'Yes'])
-    ax.set_title('Years per Cluster', fontsize=20)
+    ax.set_title('Years represented in each Cluster', fontsize=20)
     ax.set_xlabel('Year', fontsize=14)
-    ax.set_ylabel('Represented', fontsize=14)
+    ax.set_ylabel('Is represented?', fontsize=14)
     ax.legend()
 
     fig.savefig('./images/years_per_cluster.pdf', format='pdf',
@@ -156,13 +156,13 @@ else:
                                     'orientation': "horizontal"}, vmin=-1.0,
                        vmax=1.0, missing_kwds={'color': 'lightgrey'},
                        edgecolor='black', linewidth=0.1, figsize=(10, 10))
-            ax.set_title("Entropies' Distribution per Country - Cluster {}"
+            ax.set_title("Mean Entropy per Country - Cluster {}"
                          .format(cluster), fontsize=10)
             ax.axes.xaxis.set_visible(False)
             ax.axes.yaxis.set_visible(False)
 
             save_n = \
-                './images/entropies_distribution_country_cluster_{}.pdf'\
+                './images/mean_entropy_per_country_cluster_{}.pdf'\
                 .format(cluster)
 
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
