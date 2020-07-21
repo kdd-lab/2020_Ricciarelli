@@ -173,7 +173,7 @@ else:
                            cmap='RdYlGn',
                            legend_kwds={'label': "Entropy",
                                         'orientation': "horizontal",
-                                        'shrink': 0.3},
+                                        'shrink': 0.2},
                            vmin=-1.0, vmax=1.0,
                            missing_kwds={'color': 'lightgrey'},
                            edgecolor='black', linewidth=0.1)
@@ -198,6 +198,9 @@ else:
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
             plt.close(fig)
+
+            import ipdb
+            ipdb.set_trace()
 
             for country in entropies_per_country:
                 entropies = [entropies_per_country[country][year] for year
