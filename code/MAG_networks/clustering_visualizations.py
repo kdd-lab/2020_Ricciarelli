@@ -173,10 +173,10 @@ else:
                            cmap='RdYlGn',
                            legend_kwds={'label': "Entropy",
                                         'orientation': "horizontal",
-                                        'shrink': 0.2},
+                                        'shrink': 0.5},
                            vmin=-1.0, vmax=1.0,
                            missing_kwds={'color': 'lightgrey'},
-                           edgecolor='black', linewidth=0.1)
+                           edgecolor='black', linewidth=0.1, figsize=(10, 10))
                 ax[x][y].set_title("From {} to {}"
                                    .format(decade, decade + 9),
                                    fontsize=8)
@@ -203,7 +203,7 @@ else:
                 entropies = [entropies_per_country[country][year] for year
                              in entropies_per_country[country]]
                 entropies_per_country[country] = \
-                   np.mean(np.concatenate(entropies))
+                    np.mean(np.concatenate(entropies))
 
             world['entropy'] = world['name'].map(dict(entropies_per_country))
 
@@ -211,7 +211,7 @@ else:
             world.plot(column='entropy', ax=ax, legend=True, cmap='RdYlGn',
                        legend_kwds={'label': "Entropy",
                                     'orientation': "horizontal",
-                                    'shrink': 0.3}, vmin=-1.0,
+                                    'shrink': 0.5}, vmin=-1.0,
                        vmax=1.0, missing_kwds={'color': 'lightgrey'},
                        edgecolor='black', linewidth=0.1, figsize=(10, 10))
             ax.set_title("Mean Entropy per Country - Cluster {}"
