@@ -4,9 +4,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import sys
+import warnings
 
 from collections import defaultdict
 from tqdm import tqdm
+
+warnings.filterwarnings("ignore")
 
 if sys.argv[1] == 'lineplot':
     f = open(sys.argv[2], 'r').readlines()
