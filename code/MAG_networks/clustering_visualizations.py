@@ -124,7 +124,7 @@ else:
                     format='pdf', bbox_inches='tight')
     elif sys.argv[1] == 'geoplot':
         for cluster in [1, 2]:
-            entropies_per_country = defaultdict(list)
+            entropies_per_country = dict()
             world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
             world = world[world.name != "Antarctica"]
 
@@ -142,18 +142,68 @@ else:
                     elif country == 'Dominican Republic':
                         country = 'Dominican Rep.'
 
-                    entropies_per_country[country].append(entropy)
+                    if country not in entropies_per_country:
+                        entropies_per_country[country] = defaultdict(list)
+
+                    entropies_per_country[country][year].append(entropy)
+
+            fig, ax, ax_index = plt.subplots(nrows=2, ncols=2), 0
+
+            fig.suptitle('Mean Entropy per Country over the Decades '
+                         '- Cluster {}'.format(cluster), fontsize=10)
+
+            for decade in [1980, 1990, 2000, 2010]:
+                entropies_by_decade = defaultdict(list)
+
+                for country in entropies_per_country:
+                    for year in np.arange(decade, decade + 10):
+                        entropies_by_decade[country] \
+                            .append(entropies_per_country[country][str(year)])
+
+                    for country in entropies_by_decade:
+                        entropies_by_decade[country] = \
+                            np.mean(entropies_by_decade[country])
+
+                world['entropy'] = world['name']\
+                    .map(dict(entropies_by_decade))
+
+                world.plot(column='entropy', ax=ax[ax_index], legend=True,
+                           cmap='RdYlGn',
+                           legend_kwds={'label': "Entropy",
+                                        'orientation': "horizontal",
+                                        'shrink': 0.3},
+                           vmin=-1.0, vmax=1.0,
+                           missing_kwds={'color': 'lightgrey'},
+                           edgecolor='black', linewidth=0.1)
+                ax[ax_index].set_title("From {} to {}"
+                                       .format(decade, decade + 9),
+                                       fontsize=8)
+                ax[ax_index].axes.xaxis.set_visible(False)
+                ax[ax_index].axes.yaxis.set_visible(False)
+
+                world.drop(['entropy'], axis=1, inplace=True)
+                ax_index += 1
+
+            save_n = \
+                './images/clustering/mean_entropy_per_decade_cluster_{}.pdf'\
+                .format(cluster)
+
+            fig.savefig(save_n, format='pdf', bbox_inches='tight')
+
+            plt.close(fig)
 
             for country in entropies_per_country:
-                entropies_per_country[country] = \
-                    np.mean(entropies_per_country[country])
+                entropies = [entropies_per_country[country][year] for year
+                             in entropies_per_country[country]]
+                entropies_per_country[country] = np.mean(entropies)
 
             world['entropy'] = world['name'].map(dict(entropies_per_country))
 
             fig, ax = plt.subplots()
             world.plot(column='entropy', ax=ax, legend=True, cmap='RdYlGn',
-                       legend_kwds={'label': "Entropy by Country",
-                                    'orientation': "horizontal"}, vmin=-1.0,
+                       legend_kwds={'label': "Entropy",
+                                    'orientation': "horizontal",
+                                    'shrink': 0.3}, vmin=-1.0,
                        vmax=1.0, missing_kwds={'color': 'lightgrey'},
                        edgecolor='black', linewidth=0.1, figsize=(10, 10))
             ax.set_title("Mean Entropy per Country - Cluster {}"
