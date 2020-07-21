@@ -148,16 +148,13 @@ else:
                     entropies_per_country[country][year].append(entropy)
 
             fig, ax = plt.subplots(nrows=2, ncols=2)
-            ax_index = 0
+            x, y = 0, 0
 
             fig.suptitle('Mean Entropy per Country over the Decades '
                          '- Cluster {}'.format(cluster), fontsize=10)
 
             for decade in [1980, 1990, 2000, 2010]:
                 entropies_by_decade = defaultdict(list)
-
-                import ipdb
-                ipdb.set_trace()
 
                 for country in entropies_per_country:
                     for year in np.arange(decade, decade + 10):
@@ -172,7 +169,7 @@ else:
                 world['entropy'] = world['name']\
                     .map(dict(entropies_by_decade))
 
-                world.plot(column='entropy', ax=ax[ax_index], legend=True,
+                world.plot(column='entropy', ax=ax[x][y], legend=True,
                            cmap='RdYlGn',
                            legend_kwds={'label': "Entropy",
                                         'orientation': "horizontal",
@@ -180,14 +177,19 @@ else:
                            vmin=-1.0, vmax=1.0,
                            missing_kwds={'color': 'lightgrey'},
                            edgecolor='black', linewidth=0.1)
-                ax[ax_index].set_title("From {} to {}"
-                                       .format(decade, decade + 9),
-                                       fontsize=8)
-                ax[ax_index].axes.xaxis.set_visible(False)
-                ax[ax_index].axes.yaxis.set_visible(False)
+                ax[x][y].set_title("From {} to {}"
+                                   .format(decade, decade + 9),
+                                   fontsize=8)
+                ax[x][y].axes.xaxis.set_visible(False)
+                ax[x][y].axes.yaxis.set_visible(False)
 
                 world.drop(['entropy'], axis=1, inplace=True)
-                ax_index += 1
+
+                if x == y or x == 1:
+                    y += 1
+                else:
+                    x += 1
+                    y -= 1
 
             save_n = \
                 './images/clustering/mean_entropy_per_decade_cluster_{}.pdf'\
