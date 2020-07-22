@@ -177,7 +177,7 @@ else:
                 world.plot(column='entropy', ax=ax[x][y],
                            cmap='GnBu', vmin=-1.0, vmax=1.0,
                            missing_kwds={'color': 'lightgrey'},
-                           edgecolor='black', linewidth=0.1, figsize=(10, 10))
+                           edgecolor='black', linewidth=0.1)
                 ax[x][y].set_title("From {} to {}"
                                    .format(decade, decade + 9),
                                    fontsize=8)
@@ -201,7 +201,7 @@ else:
                                                                   vmax=1.0)),
                          ax=ax[1][:], shrink=0.7, label='Entropy',
                          location='bottom')
-            fig.tight_layout(pad=1.0)
+            fig.tight_layout(pad=2.0)
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
             plt.close(fig)
