@@ -173,7 +173,7 @@ else:
                 world['entropy'] = world['name']\
                     .map(dict(entropies_by_decade))
 
-                world.plot(column='entropy', ax=ax[x][y], legend=True,
+                world.plot(column='entropy', ax=ax[x][y],
                            cmap='GnBu', vmin=-1.0, vmax=1.0,
                            missing_kwds={'color': 'lightgrey'},
                            edgecolor='black', linewidth=0.1, figsize=(10, 10))
