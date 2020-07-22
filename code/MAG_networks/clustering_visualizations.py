@@ -193,7 +193,7 @@ else:
             fig.colorbar(plt.cm.ScalarMappable(cmap='GnBu',
                                                norm=plt.Normalize(vmin=-1.0,
                                                                   vmax=1.0)),
-                         ax=ax[1, :], shrink=0.7, label='Entropy',
+                         ax=ax[1, :], shrink=0.5, label='Entropy',
                          location='bottom')
             fig.tight_layout(pad=2.0)
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
@@ -227,8 +227,8 @@ else:
                            cmap='GnBu', vmin=-1.0, vmax=1.0,
                            missing_kwds={'color': 'lightgrey'},
                            edgecolor='black', linewidth=0.1)
-                ax[coord[0], coord[1]].set_title("From {} to {}"
-                                                 .format(decade, decade + 9),
+                ax[coord[0], coord[1]].set_title("From 1980 to {}"
+                                                 .format(decade + 9),
                                                  fontsize=8)
                 ax[coord[0], coord[1]].axes.xaxis.set_visible(False)
                 ax[coord[0], coord[1]].axes.yaxis.set_visible(False)
@@ -242,7 +242,7 @@ else:
             fig.colorbar(plt.cm.ScalarMappable(cmap='GnBu',
                                                norm=plt.Normalize(vmin=-1.0,
                                                                   vmax=1.0)),
-                         ax=ax[1, :], shrink=0.7, label='Entropy',
+                         ax=ax[1, :], shrink=0.5, label='Entropy',
                          location='bottom')
             fig.tight_layout(pad=2.0)
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
