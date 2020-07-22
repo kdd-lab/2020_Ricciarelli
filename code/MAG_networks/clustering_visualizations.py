@@ -151,7 +151,8 @@ else:
 
                     entropies_per_country[country][year].append(entropy)
 
-            fig, ax = plt.subplots(nrows=2, ncols=2)
+            fig, ax = plt.subplots(nrows=2, ncols=2,
+                                   constrained_layout=True)
             x, y = 0, 0
 
             fig.suptitle('Mean Entropy per Country over the Decades '
