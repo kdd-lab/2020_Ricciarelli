@@ -79,13 +79,6 @@ elif sys.argv[1] == 'yearplot':
     ax.set_xlim(1979, 2020)
     ax.set_xticks(np.arange(1980, 2020, 10))
     ax.set_xticks(np.arange(1980, 2020), minor=True)
-    # ax.xaxis.set_major_locator(ticker.LinearLocator(5))
-    # ax.xaxis.set_minor_locator(ticker.LinearLocator(36))
-    # ax.xaxis.set_major_formatter(ticker.FixedFormatter([1980, 1990, 2000,
-    #                                                    2010, 2020]))
-    # ax.set_xticks(np.arange(0, 40))
-    # ax.set_xticklabels([str(year) for year in np.arange(1980, 2020)],
-    #                    rotation='vertical')
     ax.set_yticks([-1.0, 0.0, 1.0])
     ax.set_yticklabels(['Yes', 'No', 'Yes'])
     ax.set_title('Years represented in each Cluster', fontsize=20)
@@ -180,11 +173,8 @@ else:
                 world['entropy'] = world['name']\
                     .map(dict(entropies_by_decade))
 
-                world.plot(column='entropy', ax=ax[x][y], legend=True,
+                world.plot(column='entropy', ax=ax[x][y],
                            cmap='GnBu',
-                           legend_kwds={'label': "Entropy",
-                                        'orientation': "horizontal",
-                                        'shrink': 0.5},
                            vmin=-1.0, vmax=1.0,
                            missing_kwds={'color': 'lightgrey'},
                            edgecolor='black', linewidth=0.1, figsize=(10, 10))
