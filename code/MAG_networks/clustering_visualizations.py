@@ -196,6 +196,7 @@ else:
                 './images/clustering/mean_entropy_per_decade_cluster_{}.pdf'\
                 .format(cluster)
 
+            fig.tight_layout(pad=1.0)
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
             plt.close(fig)
