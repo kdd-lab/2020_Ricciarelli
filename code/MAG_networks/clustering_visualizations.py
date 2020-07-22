@@ -174,11 +174,7 @@ else:
                     .map(dict(entropies_by_decade))
 
                 world.plot(column='entropy', ax=ax[x][y], legend=True,
-                           cmap='GnBu',
-                           legend_kwds={'label': "Entropy",
-                                        'orientation': "horizontal",
-                                        'shrink': 0.7},
-                           vmin=-1.0, vmax=1.0,
+                           cmap='GnBu', vmin=-1.0, vmax=1.0,
                            missing_kwds={'color': 'lightgrey'},
                            edgecolor='black', linewidth=0.1, figsize=(10, 10))
                 ax[x][y].set_title("From {} to {}"
@@ -199,7 +195,12 @@ else:
                 './images/clustering/mean_entropy_per_decade_cluster_{}.pdf'\
                 .format(cluster)
 
-            fig.tight_layout(pad=1.0)
+            fig.colorbar(plt.cm.ScalarMappable(cmap='GnBu',
+                                               norm=plt.Normalize(vmin=-1.0,
+                                                                  vmax=1.0)),
+                         ax=ax[:, :], shrink=0.7, label='Entropy',
+                         orientation='horizontal')
+            fig.tight_layout(pad=2.0)
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
             plt.close(fig)
