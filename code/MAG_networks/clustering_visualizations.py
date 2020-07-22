@@ -198,8 +198,8 @@ else:
             fig.colorbar(plt.cm.ScalarMappable(cmap='GnBu',
                                                norm=plt.Normalize(vmin=-1.0,
                                                                   vmax=1.0)),
-                         ax=ax[1][:], shrink=0.7, label='Entropy',
-                         location='bottom')
+                         ax=[ax[0][1]], shrink=0.7, label='Entropy',
+                         location='right')
             fig.tight_layout(pad=2.0)
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
