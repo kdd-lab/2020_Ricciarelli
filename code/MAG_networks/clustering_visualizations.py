@@ -153,12 +153,12 @@ else:
 
             fig, ax = plt.subplots(nrows=2, ncols=2,
                                    constrained_layout=True)
-            x, y = 0, 0
 
             fig.suptitle('Mean Entropy per Country over the Decades '
                          '- Cluster {}'.format(cluster), fontsize=10)
 
-            for decade in [1980, 1990, 2000, 2010]:
+            for coord, decade in zip([[0, 0], [0, 1], [1, 0], [1, 1]],
+                                     [1980, 1990, 2000, 2010]):
                 entropies_by_decade = defaultdict(list)
 
                 for country in entropies_per_country:
@@ -174,23 +174,17 @@ else:
                 world['entropy'] = world['name']\
                     .map(dict(entropies_by_decade))
 
-                world.plot(column='entropy', ax=ax[x][y],
+                world.plot(column='entropy', ax=ax[coord[0], coord[1]]
                            cmap='GnBu', vmin=-1.0, vmax=1.0,
                            missing_kwds={'color': 'lightgrey'},
                            edgecolor='black', linewidth=0.1)
-                ax[x][y].set_title("From {} to {}"
-                                   .format(decade, decade + 9),
-                                   fontsize=8)
-                ax[x][y].axes.xaxis.set_visible(False)
-                ax[x][y].axes.yaxis.set_visible(False)
+                ax[coord[0], coord[1]].set_title("From {} to {}"
+                                                 .format(decade, decade + 9),
+                                                 fontsize=8)
+                ax[coord[0], coord[1]].axes.xaxis.set_visible(False)
+                ax[coord[0], coord[1]].axes.yaxis.set_visible(False)
 
                 world.drop(['entropy'], axis=1, inplace=True)
-
-                if x == y or x == 1:
-                    y += 1
-                else:
-                    x += 1
-                    y -= 1
 
             save_n = \
                 './images/clustering/mean_entropy_per_decade_cluster_{}.pdf'\
@@ -199,7 +193,56 @@ else:
             fig.colorbar(plt.cm.ScalarMappable(cmap='GnBu',
                                                norm=plt.Normalize(vmin=-1.0,
                                                                   vmax=1.0)),
-                         ax=ax[1][:], shrink=0.7, label='Entropy',
+                         ax=ax[1, :], shrink=0.7, label='Entropy',
+                         location='bottom')
+            fig.tight_layout(pad=2.0)
+            fig.savefig(save_n, format='pdf', bbox_inches='tight')
+
+            plt.close(fig)
+
+            fig, ax = plt.subplots(nrows=2, ncols=2,
+                                   constrained_layout=True)
+
+            fig.suptitle('Changes in the Mean Entropy over the Decades '
+                         '- Cluster {}'.format(cluster), fontsize=10)
+
+            for coord, decade in zip([[0, 0], [0, 1], [1, 0], [1, 1]],
+                                     [1980, 1990, 2000, 2010]):
+                entropies_by_decade = defaultdict(list)
+
+                for country in entropies_per_country:
+                    for year in np.arange(1980, decade + 10):
+                        entropies_by_decade[country] \
+                            .append(np.mean(entropies_per_country[country]
+                                            [str(year)]))
+
+                for country in entropies_by_decade:
+                    entropies_by_decade[country] = \
+                        np.mean(entropies_by_decade[country])
+
+                world['entropy'] = world['name']\
+                    .map(dict(entropies_by_decade))
+
+                world.plot(column='entropy', ax=ax[coord[0], coord[1]]
+                           cmap='GnBu', vmin=-1.0, vmax=1.0,
+                           missing_kwds={'color': 'lightgrey'},
+                           edgecolor='black', linewidth=0.1)
+                ax[coord[0], coord[1]].set_title("From {} to {}"
+                                                 .format(decade, decade + 9),
+                                                 fontsize=8)
+                ax[coord[0], coord[1]].axes.xaxis.set_visible(False)
+                ax[coord[0], coord[1]].axes.yaxis.set_visible(False)
+
+                world.drop(['entropy'], axis=1, inplace=True)
+
+            save_n = \
+                './images/clustering/changes_over_entropy_per_decade_'\
+                'cluster_{}.pdf'.format(cluster)
+
+            fig.colorbar(plt.cm.ScalarMappable(cmap='GnBu',
+                                               norm=plt.Normalize(vmin=-1.0,
+                                                                  vmax=1.0)),
+                         ax=ax[1, :], shrink=0.7, label='Entropy',
                          location='bottom')
             fig.tight_layout(pad=2.0)
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
