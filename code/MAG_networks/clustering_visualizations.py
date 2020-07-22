@@ -1,6 +1,7 @@
 import json
 import geopandas as gpd
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 import numpy as np
 import pandas as pd
 import sys
@@ -71,13 +72,20 @@ elif sys.argv[1] == 'yearplot':
             years_in_c2.append(0.)
 
     fig, ax = plt.subplots(figsize=(10, 10))
-    ax.plot(np.arange(0, 40), years_in_c1, linewidth=2, color='#46B4AF',
+    ax.plot(np.arange(1980, 2020), years_in_c1, linewidth=2, color='#46B4AF',
             label='Cluster 1')
-    ax.plot(np.arange(0, 40), years_in_c2, linewidth=2, color='#b4464b',
+    ax.plot(np.arange(1980, 2020), years_in_c2, linewidth=2, color='#b4464b',
             label='Cluster 2')
-    ax.set_xticks(np.arange(0, 40))
-    ax.set_xticklabels([str(year) for year in np.arange(1980, 2020)],
-                       rotation='vertical')
+    ax.set_xlim(1979, 2020)
+    ax.set_xticks(np.arange(1980, 2020, 10))
+    ax.set_xticks(np.arange(1980, 2020), minor=True)
+    # ax.xaxis.set_major_locator(ticker.LinearLocator(5))
+    # ax.xaxis.set_minor_locator(ticker.LinearLocator(36))
+    # ax.xaxis.set_major_formatter(ticker.FixedFormatter([1980, 1990, 2000,
+    #                                                    2010, 2020]))
+    # ax.set_xticks(np.arange(0, 40))
+    # ax.set_xticklabels([str(year) for year in np.arange(1980, 2020)],
+    #                    rotation='vertical')
     ax.set_yticks([-1.0, 0.0, 1.0])
     ax.set_yticklabels(['Yes', 'No', 'Yes'])
     ax.set_title('Years represented in each Cluster', fontsize=20)
@@ -173,7 +181,7 @@ else:
                     .map(dict(entropies_by_decade))
 
                 world.plot(column='entropy', ax=ax[x][y], legend=True,
-                           cmap='RdYlGn',
+                           cmap='GnBu',
                            legend_kwds={'label': "Entropy",
                                         'orientation': "horizontal",
                                         'shrink': 0.5},
@@ -211,7 +219,7 @@ else:
             world['entropy'] = world['name'].map(dict(entropies_per_country))
 
             fig, ax = plt.subplots()
-            world.plot(column='entropy', ax=ax, legend=True, cmap='RdYlGn',
+            world.plot(column='entropy', ax=ax, legend=True, cmap='GnBu',
                        legend_kwds={'label': "Entropy",
                                     'orientation': "horizontal",
                                     'shrink': 0.5}, vmin=-1.0,
