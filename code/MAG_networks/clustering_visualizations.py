@@ -196,6 +196,8 @@ else:
                 './images/clustering/mean_entropy_per_decade_cluster_{}.pdf'\
                 .format(cluster)
 
+            plt.colorbar(ax=ax[:, :], orientation='horizontal',
+                         shrink=0.7, pad=0.1)
             fig.tight_layout(pad=1.0)
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
@@ -213,7 +215,7 @@ else:
             world.plot(column='entropy', ax=ax, legend=True, cmap='GnBu',
                        legend_kwds={'label': "Entropy",
                                     'orientation': "horizontal",
-                                    'shrink': 0.5}, vmin=-1.0,
+                                    'shrink': 0.7}, vmin=-1.0,
                        vmax=1.0, missing_kwds={'color': 'lightgrey'},
                        edgecolor='black', linewidth=0.1, figsize=(10, 10))
             ax.set_title("Mean Entropy per Country - Cluster {}"
