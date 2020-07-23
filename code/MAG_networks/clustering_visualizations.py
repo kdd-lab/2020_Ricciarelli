@@ -255,7 +255,7 @@ else:
 
             world['entropy'] = world['name'].map(dict(entropies_per_country))
 
-            fig, ax = plt.subplots()
+            fig, ax = plt.subplots(constrained_layout=True)
             world.plot(column='entropy', ax=ax, legend=True, cmap='GnBu',
                        vmin=-1.0, vmax=1.0,
                        missing_kwds={'color': 'lightgrey'}, edgecolor='black',
