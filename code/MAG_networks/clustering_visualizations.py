@@ -256,10 +256,9 @@ else:
             world['entropy'] = world['name'].map(dict(entropies_per_country))
 
             fig, ax = plt.subplots(constrained_layout=True)
-            world.plot(column='entropy', ax=ax, legend=True, cmap='GnBu',
-                       vmin=-1.0, vmax=1.0,
-                       missing_kwds={'color': 'lightgrey'}, edgecolor='black',
-                       linewidth=0.1, figsize=(10, 10))
+            world.plot(column='entropy', ax=ax, cmap='GnBu',vmin=-1.0,
+                       vmax=1.0, missing_kwds={'color': 'lightgrey'},
+                       edgecolor='black', linewidth=0.1, figsize=(10, 10))
             ax.set_title("Mean Entropy per Country - Cluster {}"
                          .format(cluster), fontsize=10)
             ax.axes.xaxis.set_visible(False)
