@@ -195,7 +195,7 @@ else:
                                                                   vmax=1.0)),
                          ax=ax[1, :], shrink=0.5, label='Entropy',
                          location='bottom')
-            fig.tight_layout(pad=2.0)
+            fig.tight_layout()
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
             plt.close(fig)
@@ -244,7 +244,7 @@ else:
                                                                   vmax=1.0)),
                          ax=ax[1, :], shrink=0.5, label='Entropy',
                          location='bottom')
-            fig.tight_layout(pad=2.0)
+            fig.tight_layout()
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
             plt.close(fig)
