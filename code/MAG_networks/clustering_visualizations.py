@@ -195,7 +195,6 @@ else:
                                                                   vmax=1.0)),
                          ax=ax[1, :], shrink=0.5, label='Entropy',
                          location='bottom')
-            # fig.tight_layout()
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
             plt.close(fig)
@@ -244,7 +243,6 @@ else:
                                                                   vmax=1.0)),
                          ax=ax[1, :], shrink=0.5, label='Entropy',
                          location='bottom')
-            # fig.tight_layout()
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
             plt.close(fig)
@@ -259,11 +257,9 @@ else:
 
             fig, ax = plt.subplots()
             world.plot(column='entropy', ax=ax, legend=True, cmap='GnBu',
-                       legend_kwds={'label': "Entropy",
-                                    'orientation': "horizontal",
-                                    'shrink': 0.7}, vmin=-1.0,
-                       vmax=1.0, missing_kwds={'color': 'lightgrey'},
-                       edgecolor='black', linewidth=0.1, figsize=(10, 10))
+                       vmin=-1.0, vmax=1.0,
+                       missing_kwds={'color': 'lightgrey'}, edgecolor='black',
+                       linewidth=0.1, figsize=(10, 10))
             ax.set_title("Mean Entropy per Country - Cluster {}"
                          .format(cluster), fontsize=10)
             ax.axes.xaxis.set_visible(False)
@@ -273,4 +269,8 @@ else:
                 './images/clustering/mean_entropy_per_country_cluster_{}.pdf'\
                 .format(cluster)
 
+            fig.colorbar(plt.cm.ScalarMappable(cmap='GnBu',
+                                               norm=plt.Normalize(vmin=-1.0,
+                                                                  vmax=1.0)),
+                         ax=ax, shrink=0.5, label='Entropy', location='bottom')
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
