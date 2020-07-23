@@ -145,6 +145,20 @@ else:
                         country = 'Russia'
                     elif country == 'Dominican Republic':
                         country = 'Dominican Rep.'
+                    elif country == 'Bosnia and Herzegovina':
+                        country = 'Bosnia and Herz.'
+                    elif country == "Lao People's Democratic Republic":
+                        country = 'Laos'
+                    elif country == 'Cyprus':
+                        country = 'N. Cyprus'
+                    elif country == 'Central African Republic':
+                        country = 'Central African Rep.'
+                    elif country == 'South Sudan':
+                        country = 'S. Sudan'
+                    elif country == 'Syrian Arab Republic':
+                        country = 'Syria'
+                    elif country == 'Viet Nam':
+                        country = 'Vietnam'
 
                     if country not in entropies_per_country:
                         entropies_per_country[country] = defaultdict(list)
