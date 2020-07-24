@@ -1,4 +1,5 @@
 import json
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import sys
@@ -57,3 +58,44 @@ for cluster in [1, 2]:
                      in entropies_per_country[country]]
         mean_entropies_per_country[np.mean(np.concatenate(entropies))] = \
             country
+
+    top_5_higher_entropies = sorted(mean_entropies_per_country,
+                                    reverse=True)[:5]
+    top_5_lower_entropies = sorted(mean_entropies_per_country)[:5]
+
+    top_5_higher_entropies = [mean_entropies_per_country[mean] for mean in
+                              top_5_higher_entropies]
+    top_5_lower_entropies = [mean_entropies_per_country[mean] for mean in
+                             top_5_lower_entropies]
+
+    fig, axes = plt.subplots(nrows=5, ncols=1, constrained_layout=True)
+
+    for l in [top_5_higher_entropies, top_5_lower_entropies]:
+        for x in np.arange(0, 5):
+            stats = dict()
+
+            for year in entropies_per_country[l[x]]:
+                stats[year] = {
+                    'mean': np.mean(entropies_per_country[l[x]][year]),
+                    'std': np.std(entropies_per_country[l[x]][year]),
+                    'samples': len(entropies_per_country[l[x]][year])}
+
+            ys = [stats[str(year)]['mean'] for year in np.arange(1980, 2020)
+                  if year in stats else np.nan]
+
+            axes[x, 0].plot(np.arange(1980, 2020), ys, linewidth=2)
+            axes[x, 0].set_xlim(1979, 2020)
+            axes[x, 0].set_xticks(np.arange(1980, 2020, 10))
+            axes[x, 0].set_xticks(np.arange(1980, 2020), minor=True)
+            axes[x, 0].set_title(l[x], fontsize=8)
+            axes[x, 0].set_xlabel('Year', fontsize=8)
+            axes[x, 0].set_ylabel('Entropy', fontsize=8)
+
+        save_title = 'top_5_higher_entropies_cluster_{}'.format(cluster) \
+            if l == top_5_higher_entropies else \
+            'top_5_lower_entropies_cluster_{}'.format(cluster)
+
+        fig.savefig('./images/' + save_title + '.pdf', format='pdf',
+                    bbox_inches='tight')
+
+        plt.close(fig)
