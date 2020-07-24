@@ -69,7 +69,8 @@ for cluster in [1, 2]:
                              top_5_lower_entropies]
 
     for l in [top_5_higher_entropies, top_5_lower_entropies]:
-        fig, axes = plt.subplots(nrows=5, ncols=1, constrained_layout=True)
+        fig, axes = plt.subplots(nrows=5, ncols=1, sharex=True,
+                                 constrained_layout=True)
 
         suptitle = 'Top 5 Countries with higher Entropy - Cluster {}' \
             .format(cluster) if l == top_5_higher_entropies else \
