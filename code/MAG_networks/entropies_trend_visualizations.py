@@ -94,13 +94,13 @@ for cluster in [1, 2]:
                 else:
                     ys.append(np.nan)
 
-            axes[x, 0].plot(np.arange(1980, 2020), ys, linewidth=2)
-            axes[x, 0].set_xlim(1979, 2020)
-            axes[x, 0].set_xticks(np.arange(1980, 2020, 10))
-            axes[x, 0].set_xticks(np.arange(1980, 2020), minor=True)
-            axes[x, 0].set_title(l[x], fontsize=8)
-            axes[x, 0].set_xlabel('Year', fontsize=8)
-            axes[x, 0].set_ylabel('Entropy', fontsize=8)
+            axes[x].plot(np.arange(1980, 2020), ys, linewidth=2)
+            axes[x].set_xlim(1979, 2020)
+            axes[x].set_xticks(np.arange(1980, 2020, 10))
+            axes[x].set_xticks(np.arange(1980, 2020), minor=True)
+            axes[x].set_title(l[x], fontsize=8)
+            axes[x].set_xlabel('Year', fontsize=8)
+            axes[x].set_ylabel('Entropy', fontsize=8)
 
         save_title = 'top_5_higher_entropies_cluster_{}'.format(cluster) \
             if l == top_5_higher_entropies else \
