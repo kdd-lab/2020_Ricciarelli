@@ -68,9 +68,15 @@ for cluster in [1, 2]:
     top_5_lower_entropies = [mean_entropies_per_country[mean] for mean in
                              top_5_lower_entropies]
 
-    fig, axes = plt.subplots(nrows=5, ncols=1, constrained_layout=True)
-
     for l in [top_5_higher_entropies, top_5_lower_entropies]:
+        fig, axes = plt.subplots(nrows=5, ncols=1, constrained_layout=True)
+
+        suptitle = 'Top 5 Countries with higher Entropy - Cluster {}' \
+            .format(cluster) if l == top_5_higher_entropies else \
+            'Top 5 Countries with lower Entropy - Cluster {}'.format(cluster)
+
+        fig.suptitle(suptitle, fontsize=10)
+
         for x in np.arange(0, 5):
             stats = dict()
 
@@ -80,8 +86,13 @@ for cluster in [1, 2]:
                     'std': np.std(entropies_per_country[l[x]][year]),
                     'samples': len(entropies_per_country[l[x]][year])}
 
-            ys = [stats[str(year)]['mean'] for year in np.arange(1980, 2020)
-                  if year in stats else np.nan]
+            ys = list()
+
+            for year in np.arange(1980, 2020):
+                if str(year) in stats:
+                    ys.append(stats[str(year)]['mean'])
+                else:
+                    ys.append(np.nan)
 
             axes[x, 0].plot(np.arange(1980, 2020), ys, linewidth=2)
             axes[x, 0].set_xlim(1979, 2020)
