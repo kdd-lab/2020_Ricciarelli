@@ -106,6 +106,7 @@ for cluster in [1, 2]:
             axes[x].fill_between(np.arange(1980, 2020), ys_fill_down,
                                  ys_fill_up, color='steelblue', alpha=0.3)
             axes[x].set_xlim(1979, 2020)
+            axes[x].set_ylim(-1.0, 1.0)
             axes[x].set_xticks(np.arange(1980, 2020, 10))
             axes[x].set_xticks(np.arange(1980, 2020), minor=True)
             axes[x].tick_params(axis='both', which='major', labelsize=6)
