@@ -99,6 +99,7 @@ for cluster in [1, 2]:
             axes[x].set_xlim(1979, 2020)
             axes[x].set_xticks(np.arange(1980, 2020, 10))
             axes[x].set_xticks(np.arange(1980, 2020), minor=True)
+            axes[x].tick_params(axis='both', which='major', labelsize=8)
             axes[x].set_title(l[x], fontsize=8)
             axes[x].set_xlabel('Year', fontsize=8)
             axes[x].set_ylabel('Entropy', fontsize=8)
@@ -107,7 +108,7 @@ for cluster in [1, 2]:
             if l == top_5_higher_entropies else \
             'top_5_lower_entropies_cluster_{}'.format(cluster)
 
-        fig.savefig('./images/' + save_title + '.pdf', format='pdf',
+        fig.savefig('./images/clustering/' + save_title + '.pdf', format='pdf',
                     bbox_inches='tight')
 
         plt.close(fig)
