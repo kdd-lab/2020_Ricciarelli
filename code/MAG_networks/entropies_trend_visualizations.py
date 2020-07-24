@@ -87,19 +87,28 @@ for cluster in [1, 2]:
                     'std': np.std(entropies_per_country[l[x]][year]),
                     'samples': len(entropies_per_country[l[x]][year])}
 
-            ys = list()
+            ys, ys_fill_up, ys_fill_down = list(), list(), list()
 
             for year in np.arange(1980, 2020):
                 if str(year) in stats:
                     ys.append(stats[str(year)]['mean'])
+                    ys_fill_up.append(stats[str(year)]['mean'] +
+                                      stats[str(year)]['std'])
+                    ys_fill_down.append(stats[str(year)]['mean'] -
+                                        stats[str(year)]['std'])
                 else:
                     ys.append(np.nan)
+                    ys_fill_up.append(np.nan)
+                    ys_fill_down.append(np.nan)
 
-            axes[x].plot(np.arange(1980, 2020), ys, linewidth=2)
+            axes[x].plot(np.arange(1980, 2020), ys, linewidth=2,
+                         color='steelblue')
+            axes[x].fill_between(np.arange(1980, 2020), ys_fill_down,
+                                 ys_fill_up, color='steelblue', alpha=0.3)
             axes[x].set_xlim(1979, 2020)
             axes[x].set_xticks(np.arange(1980, 2020, 10))
             axes[x].set_xticks(np.arange(1980, 2020), minor=True)
-            axes[x].tick_params(axis='both', which='major', labelsize=8)
+            axes[x].tick_params(axis='both', which='major', labelsize=6)
             axes[x].set_title(l[x], fontsize=8)
             axes[x].set_xlabel('Year', fontsize=8)
             axes[x].set_ylabel('Entropy', fontsize=8)
