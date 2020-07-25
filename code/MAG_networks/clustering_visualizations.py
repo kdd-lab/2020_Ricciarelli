@@ -117,14 +117,15 @@ else:
                    labels=[str(c) for c in sorted(cl_df.cluster.unique())],
                    showfliers=False, showmeans=True)
         ax.grid(linestyle='--', color='black', alpha=0.4)
-        ax.set_title("Entropies' Distribution per Clusteron a Deeper Level"
+        ax.set_title("Entropies' Distribution per Clusteron on a Deeper Level"
                      if 'deeper' in sys.argv[3] else
                      "Entropies' Distribution per Cluster", fontsize=20)
         ax.set_xlabel('Cluster', fontsize=14)
         ax.set_ylabel('Silhouette Score', fontsize=14)
 
-        fig.savefig('./images/entropies_distribution_deeper.pdf' if 'deeper'
-                    in sys.argv[3] else './images/entropies_distribution.pdf',
+        fig.savefig('./images/clustering/entropies_distribution_deeper.pdf' if
+                    'deeper' in sys.argv[3] else
+                    './images/clustering/entropies_distribution.pdf',
                     format='pdf', bbox_inches='tight')
     elif sys.argv[1] == 'geoplot':
         for cluster in [1, 2]:
