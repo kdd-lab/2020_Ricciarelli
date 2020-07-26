@@ -114,7 +114,8 @@ for cluster in [1, 2]:
         # axes[x].set_title(l[x], fontsize=8)
         axes[x].set_xlabel('Year', fontsize=8)
         axes[x].set_ylabel('Entropy', fontsize=8)
-        axes[x].legend(loc='center left', bbox_to_anchor=(1, 0.5))
+        axes[x].legend(loc='center left', fontsize=8,
+                       bbox_to_anchor=(1, 0.5))
 
     save_title = 'top_5_higher_lower_entropies_cluster_{}'.format(cluster)
 
