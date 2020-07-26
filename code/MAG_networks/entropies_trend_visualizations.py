@@ -75,9 +75,9 @@ for cluster in [1, 2]:
                  .format(cluster), fontsize=10)
 
     for x in np.arange(0, 5):
-        stats = dict()
-
         for l in [top_5_higher_entropies, top_5_lower_entropies]:
+            stats = dict()
+
             for year in entropies_per_country[l[x]]:
                 stats[year] = {
                     'mean': np.mean(entropies_per_country[l[x]][year]),
@@ -100,7 +100,7 @@ for cluster in [1, 2]:
 
             axes[x].plot(np.arange(1980, 2020), ys, linewidth=2,
                          color='steelblue' if l == top_5_higher_entropies
-                         else 'tomato', label=l[x], alpha=0.7)
+                         else 'tomato', label=l[x], alpha=0.5)
             axes[x].fill_between(np.arange(1980, 2020), ys_fill_down,
                                  ys_fill_up, color='steelblue' if
                                  l == top_5_higher_entropies else 'tomato',
@@ -114,7 +114,7 @@ for cluster in [1, 2]:
         # axes[x].set_title(l[x], fontsize=8)
         axes[x].set_xlabel('Year', fontsize=8)
         axes[x].set_ylabel('Entropy', fontsize=8)
-        axes[x].legend()
+        axes[x].legend(loc='center left', bbox_to_anchor=(1, 0.5))
 
     save_title = 'top_5_higher_lower_entropies_cluster_{}'.format(cluster)
 
