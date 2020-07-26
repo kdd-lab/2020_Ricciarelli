@@ -71,7 +71,7 @@ elif sys.argv[1] == 'yearplot':
             years_in_c1.append(0.)
             years_in_c2.append(0.)
 
-    fig, ax = plt.subplots(figsize=(10, 10))
+    fig, ax = plt.subplots()
     ax.plot(np.arange(1980, 2020), years_in_c1, linewidth=2, color='#46B4AF',
             label='Cluster 1')
     ax.plot(np.arange(1980, 2020), years_in_c2, linewidth=2, color='#b4464b',
@@ -81,9 +81,10 @@ elif sys.argv[1] == 'yearplot':
     ax.set_xticks(np.arange(1980, 2020), minor=True)
     ax.set_yticks([-1.0, 0.0, 1.0])
     ax.set_yticklabels(['Yes', 'No', 'Yes'])
-    ax.set_title('Years represented in each Cluster', fontsize=20)
-    ax.set_xlabel('Year', fontsize=14)
-    ax.set_ylabel('Is represented?', fontsize=14)
+    ax.tick_params(axis='both', which='major', labelsize=8)
+    ax.set_title('Years represented in each Cluster', fontsize=12)
+    ax.set_xlabel('Year', fontsize=10)
+    ax.set_ylabel('Is represented?', fontsize=10)
     ax.legend()
 
     fig.savefig('./images/clustering/years_per_cluster.pdf',

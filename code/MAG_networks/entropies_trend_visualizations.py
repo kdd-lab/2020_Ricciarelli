@@ -68,19 +68,16 @@ for cluster in [1, 2]:
     top_5_lower_entropies = [mean_entropies_per_country[mean] for mean in
                              top_5_lower_entropies]
 
-    for l in [top_5_higher_entropies, top_5_lower_entropies]:
-        fig, axes = plt.subplots(nrows=5, ncols=1, sharex=True,
-                                 constrained_layout=True)
+    fig, axes = plt.subplots(nrows=5, ncols=1, sharex=True,
+                             constrained_layout=True)
 
-        suptitle = 'Top 5 Countries with higher Entropy - Cluster {}' \
-            .format(cluster) if l == top_5_higher_entropies else \
-            'Top 5 Countries with lower Entropy - Cluster {}'.format(cluster)
+    fig.suptitle('Top 5 Countries with higher/lower Entropy - Cluster {}'
+                 .format(cluster), fontsize=10)
 
-        fig.suptitle(suptitle, fontsize=10)
+    for x in np.arange(0, 5):
+        stats = dict()
 
-        for x in np.arange(0, 5):
-            stats = dict()
-
+        for l in [top_5_higher_entropies, top_5_lower_entropies]:
             for year in entropies_per_country[l[x]]:
                 stats[year] = {
                     'mean': np.mean(entropies_per_country[l[x]][year]),
@@ -102,23 +99,25 @@ for cluster in [1, 2]:
                     ys_fill_down.append(np.nan)
 
             axes[x].plot(np.arange(1980, 2020), ys, linewidth=2,
-                         color='steelblue')
+                         color='steelblue' if l == top_5_higher_entropies
+                         else 'tomato', label=l[x])
             axes[x].fill_between(np.arange(1980, 2020), ys_fill_down,
-                                 ys_fill_up, color='steelblue', alpha=0.3)
-            axes[x].set_xlim(1979, 2020)
-            axes[x].set_ylim(-1.0, 1.0)
-            axes[x].set_xticks(np.arange(1980, 2020, 10))
-            axes[x].set_xticks(np.arange(1980, 2020), minor=True)
-            axes[x].tick_params(axis='both', which='major', labelsize=6)
-            axes[x].set_title(l[x], fontsize=8)
-            axes[x].set_xlabel('Year', fontsize=8)
-            axes[x].set_ylabel('Entropy', fontsize=8)
+                                 ys_fill_up, color='steelblue' if
+                                 l == top_5_higher_entropies else 'tomato',
+                                 alpha=0.3)
 
-        save_title = 'top_5_higher_entropies_cluster_{}'.format(cluster) \
-            if l == top_5_higher_entropies else \
-            'top_5_lower_entropies_cluster_{}'.format(cluster)
+        axes[x].set_xlim(1979, 2020)
+        axes[x].set_ylim(-1.0, 1.0)
+        axes[x].set_xticks(np.arange(1980, 2020, 10))
+        axes[x].set_xticks(np.arange(1980, 2020), minor=True)
+        axes[x].tick_params(axis='both', which='major', labelsize=6)
+        # axes[x].set_title(l[x], fontsize=8)
+        axes[x].set_xlabel('Year', fontsize=8)
+        axes[x].set_ylabel('Entropy', fontsize=8)
 
-        fig.savefig('./images/clustering/' + save_title + '.pdf', format='pdf',
-                    bbox_inches='tight')
+    save_title = 'top_5_higher_lower_entropies_cluster_{}'.format(cluster)
 
-        plt.close(fig)
+    fig.savefig('./images/clustering/' + save_title + '.pdf', format='pdf',
+                bbox_inches='tight')
+
+    plt.close(fig)
