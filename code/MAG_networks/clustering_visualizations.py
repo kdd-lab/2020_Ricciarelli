@@ -221,22 +221,23 @@ else:
             fig.suptitle('Changes in the Mean Entropy over the Decades '
                          '- Cluster {}'.format(cluster), fontsize=10)
 
+            entropies_by_decade = defaultdict(list)
+
             for coord, decade in zip([[0, 0], [0, 1], [1, 0], [1, 1]],
                                      [1980, 1990, 2000, 2010]):
-                entropies_by_decade = defaultdict(list)
 
                 for country in entropies_per_country:
-                    for year in np.arange(1980, decade + 10):
+                    for year in np.arange(decade, decade + 10):
                         entropies_by_decade[country] \
                             .append(np.mean(entropies_per_country[country]
                                             [str(year)]))
 
-                for country in entropies_by_decade:
-                    entropies_by_decade[country] = \
-                        np.mean(entropies_by_decade[country])
+                to_plot = dict()
 
-                world['entropy'] = world['name']\
-                    .map(dict(entropies_by_decade))
+                for country in entropies_by_decade:
+                    to_plot[country] = np.mean(entropies_by_decade[country])
+
+                world['entropy'] = world['name'].map(to_plot)
 
                 world.plot(column='entropy', ax=ax[coord[0], coord[1]],
                            cmap='GnBu', vmin=-1.0, vmax=1.0,
