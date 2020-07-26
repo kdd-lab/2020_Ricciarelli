@@ -100,7 +100,7 @@ for cluster in [1, 2]:
 
             axes[x].plot(np.arange(1980, 2020), ys, linewidth=2,
                          color='steelblue' if l == top_5_higher_entropies
-                         else 'tomato', label=l[x])
+                         else 'tomato', label=l[x], alpha=0.7)
             axes[x].fill_between(np.arange(1980, 2020), ys_fill_down,
                                  ys_fill_up, color='steelblue' if
                                  l == top_5_higher_entropies else 'tomato',
@@ -114,6 +114,7 @@ for cluster in [1, 2]:
         # axes[x].set_title(l[x], fontsize=8)
         axes[x].set_xlabel('Year', fontsize=8)
         axes[x].set_ylabel('Entropy', fontsize=8)
+        axes[x].legend()
 
     save_title = 'top_5_higher_lower_entropies_cluster_{}'.format(cluster)
 
