@@ -129,15 +129,11 @@ else:
                     '../images/clustering/entropies_distribution.pdf',
                     format='pdf', bbox_inches='tight')
     elif sys.argv[1] == 'geoplot':
-        for cluster in [1, 2]:
-            entropies_per_country = dict()
-            world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
-            world = world[world.name != "Antarctica"]
-
-            for MAG_id in cl_df[cl_df.cluster == cluster]['MAG_id']:
+        for id_list in [cl_df[cl_df.cluster == 1]['MAG_id'],
+                        cl_df[cl_df.cluster == 2]['MAG_id']]:
+            for MAG_id in id_list:
                 for year in entropies_dict[MAG_id]:
                     country = entropies_dict[MAG_id][year]['affiliation']
-                    entropy = entropies_dict[MAG_id][year]['entropy']
 
                     if country == 'United States':
                         country = 'United States of America'
@@ -162,6 +158,78 @@ else:
                     elif country == 'Viet Nam':
                         country = 'Vietnam'
 
+                    entropies_dict[MAG_id][year]['affiliation'] = country
+
+        entropies_per_country = dict()
+        world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+        world = world[world.name != "Antarctica"]
+
+        for MAG_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
+            for year in entropies_dict[MAG_id]:
+                country = entropies_dict[MAG_id][year]['affiliation']
+                entropy = entropies_dict[MAG_id][year]['entropy']
+
+                if entropy not in [0.0, -0.0]:
+                    if country not in entropies_per_country:
+                        entropies_per_country[country] = defaultdict(list)
+
+                    entropies_per_country[country][year].append(entropy)
+
+        fig, ax = plt.subplots(nrows=2, ncols=2, constrained_layout=True)
+
+        fig.suptitle('Changes in the Xenofilia/Xenophobia over'
+                     ' the Decades - Cluster {}'.format(cluster), fontsize=10)
+
+        entropies_by_decade = defaultdict(list)
+
+        for coord, decade in zip([[0, 0], [0, 1], [1, 0], [1, 1]],
+                                 [1980, 1990, 2000, 2010]):
+
+            for country in entropies_per_country:
+                for year in np.arange(decade, decade + 10):
+                    for e in entropies_per_country[country][str(year)]:
+                        entropies_by_decade[country].append(e)
+
+            to_plot = dict()
+
+            for country in entropies_by_decade:
+                to_plot[country] = np.mean(entropies_by_decade[country])
+
+            world['entropy'] = world['name'].map(to_plot)
+
+            world.plot(column='entropy', ax=ax[coord[0], coord[1]],
+                       cmap='coolwarm', vmin=-1.0, vmax=1.0,
+                       missing_kwds={'color': 'white'},
+                       edgecolor='black', linewidth=0.1)
+            ax[coord[0], coord[1]].set_title("From 1980 to {}"
+                                             .format(decade + 9),
+                                             fontsize=8)
+            ax[coord[0], coord[1]].axes.xaxis.set_visible(False)
+            ax[coord[0], coord[1]].axes.yaxis.set_visible(False)
+
+            world.drop(['entropy'], axis=1, inplace=True)
+
+        save_n = '../images/clustering/changes_over_entropy_per_decade_.pdf'
+
+        fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
+                                           norm=plt.Normalize(vmin=-1.0,
+                                                              vmax=1.0)),
+                     ax=ax[1, :], shrink=0.5, label='Xenofilia/Xenophobia',
+                     location='bottom')
+        fig.savefig(save_n, format='pdf', bbox_inches='tight')
+
+        plt.close(fig)
+
+        for cluster in [1, 2]:
+            entropies_per_country = dict()
+            world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+            world = world[world.name != "Antarctica"]
+
+            for MAG_id in cl_df[cl_df.cluster == cluster]['MAG_id']:
+                for year in entropies_dict[MAG_id]:
+                    country = entropies_dict[MAG_id][year]['affiliation']
+                    entropy = entropies_dict[MAG_id][year]['entropy']
+
                     if country not in entropies_per_country:
                         entropies_per_country[country] = defaultdict(list)
 
@@ -179,9 +247,8 @@ else:
 
                 for country in entropies_per_country:
                     for year in np.arange(decade, decade + 10):
-                        entropies_by_decade[country] \
-                            .append(np.mean(entropies_per_country[country]
-                                            [str(year)]))
+                        for e in entropies_per_country[country][str(year)]:
+                            entropies_by_decade[country].append(e)
 
                 for country in entropies_by_decade:
                     entropies_by_decade[country] = \
@@ -205,56 +272,6 @@ else:
             save_n = \
                 '../images/clustering/mean_entropy_per_decade_cluster_{}.pdf'\
                 .format(cluster)
-
-            fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
-                                               norm=plt.Normalize(vmin=-1.0,
-                                                                  vmax=1.0)),
-                         ax=ax[1, :], shrink=0.5, label='Xenofilia/Xenophobia',
-                         location='bottom')
-            fig.savefig(save_n, format='pdf', bbox_inches='tight')
-
-            plt.close(fig)
-
-            fig, ax = plt.subplots(nrows=2, ncols=2,
-                                   constrained_layout=True)
-
-            fig.suptitle('Changes in the Xenofilia/Xenophobia over'
-                         ' the Decades - Cluster {}'.format(cluster),
-                         fontsize=10)
-
-            entropies_by_decade = defaultdict(list)
-
-            for coord, decade in zip([[0, 0], [0, 1], [1, 0], [1, 1]],
-                                     [1980, 1990, 2000, 2010]):
-
-                for country in entropies_per_country:
-                    for year in np.arange(decade, decade + 10):
-                        entropies_by_decade[country] \
-                            .append(np.mean(entropies_per_country[country]
-                                            [str(year)]))
-
-                to_plot = dict()
-
-                for country in entropies_by_decade:
-                    to_plot[country] = np.mean(entropies_by_decade[country])
-
-                world['entropy'] = world['name'].map(to_plot)
-
-                world.plot(column='entropy', ax=ax[coord[0], coord[1]],
-                           cmap='coolwarm', vmin=-1.0, vmax=1.0,
-                           missing_kwds={'color': 'white'},
-                           edgecolor='black', linewidth=0.1)
-                ax[coord[0], coord[1]].set_title("From 1980 to {}"
-                                                 .format(decade + 9),
-                                                 fontsize=8)
-                ax[coord[0], coord[1]].axes.xaxis.set_visible(False)
-                ax[coord[0], coord[1]].axes.yaxis.set_visible(False)
-
-                world.drop(['entropy'], axis=1, inplace=True)
-
-            save_n = \
-                '../images/clustering/changes_over_entropy_per_decade_'\
-                'cluster_{}.pdf'.format(cluster)
 
             fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                                norm=plt.Normalize(vmin=-1.0,
