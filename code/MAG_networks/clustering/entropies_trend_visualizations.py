@@ -142,14 +142,12 @@ for cluster in [1, 2]:
         axes[x].set_xticks(np.arange(1980, 2020, 10))
         axes[x].set_xticks(np.arange(1980, 2020), minor=True)
         axes[x].tick_params(axis='both', which='major', labelsize=6)
-        # axes[x].set_xlabel('Year', fontsize=8)
-        # axes[x].set_ylabel('Xenofilia/Xenophobia', fontsize=8)
         axes[x].legend(loc='center left', fontsize=6,
                        bbox_to_anchor=(1, 0.5))
-    plt.tick_params(labelcolor='none', top=False, bottom=False, left=False,
-                    right=False)
-    plt.xlabel('Year', fontsize=8)
-    plt.ylabel('Xenofilia/Xenophobia', fontsize=8)
+
+    fig.text(0.5, 0.04, 'Year', ha='center', fontsize=8)
+    fig.text(0.04, 0.5, 'Xenofilia/Xenophobia', va='center',
+             rotation='vertical', fontsize=8)
 
     save_title = 'top_5_higher_lower_entropies_cluster_{}'.format(cluster)
 
