@@ -61,9 +61,6 @@ for cluster in [1, 2]:
             mean_entropies_per_country[np.mean(np.concatenate(entropies))] = \
                 country
 
-    import ipdb
-    ipdb.set_trace()
-
     top_5_higher_entropies = sorted(mean_entropies_per_country,
                                     reverse=True)[:5]
     top_5_lower_entropies = sorted(mean_entropies_per_country)[:5]
@@ -124,7 +121,7 @@ for cluster in [1, 2]:
 
     save_title = 'top_5_higher_lower_entropies_cluster_{}'.format(cluster)
 
-    fig.savefig('./images/clustering/' + save_title + '.pdf', format='pdf',
+    fig.savefig('../images/clustering/' + save_title + '.pdf', format='pdf',
                 bbox_inches='tight')
 
     plt.close(fig)
