@@ -170,8 +170,8 @@ else:
             fig, ax = plt.subplots(nrows=2, ncols=2,
                                    constrained_layout=True)
 
-            fig.suptitle('Mean Entropy per Country over the Decades '
-                         '- Cluster {}'.format(cluster), fontsize=10)
+            fig.suptitle('Mean Xenofilia/Xenophobia per Country over the '
+                         'Decades - Cluster {}'.format(cluster), fontsize=10)
 
             for coord, decade in zip([[0, 0], [0, 1], [1, 0], [1, 1]],
                                      [1980, 1990, 2000, 2010]):
@@ -191,7 +191,7 @@ else:
                     .map(dict(entropies_by_decade))
 
                 world.plot(column='entropy', ax=ax[coord[0], coord[1]],
-                           cmap='GnBu', vmin=-1.0, vmax=1.0,
+                           cmap='coolwarm', vmin=-1.0, vmax=1.0,
                            missing_kwds={'color': 'lightgrey'},
                            edgecolor='black', linewidth=0.1)
                 ax[coord[0], coord[1]].set_title("From {} to {}"
@@ -206,10 +206,10 @@ else:
                 './images/clustering/mean_entropy_per_decade_cluster_{}.pdf'\
                 .format(cluster)
 
-            fig.colorbar(plt.cm.ScalarMappable(cmap='GnBu',
+            fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                                norm=plt.Normalize(vmin=-1.0,
                                                                   vmax=1.0)),
-                         ax=ax[1, :], shrink=0.5, label='Entropy',
+                         ax=ax[1, :], shrink=0.5, label='Xenofilia/Xenophobia',
                          location='bottom')
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
@@ -218,8 +218,9 @@ else:
             fig, ax = plt.subplots(nrows=2, ncols=2,
                                    constrained_layout=True)
 
-            fig.suptitle('Changes in the Mean Entropy over the Decades '
-                         '- Cluster {}'.format(cluster), fontsize=10)
+            fig.suptitle('Changes in the Xenofilia/Xenophobia over'
+                         ' the Decades - Cluster {}'.format(cluster),
+                         fontsize=10)
 
             entropies_by_decade = defaultdict(list)
 
@@ -240,7 +241,7 @@ else:
                 world['entropy'] = world['name'].map(to_plot)
 
                 world.plot(column='entropy', ax=ax[coord[0], coord[1]],
-                           cmap='GnBu', vmin=-1.0, vmax=1.0,
+                           cmap='coolwarm', vmin=-1.0, vmax=1.0,
                            missing_kwds={'color': 'lightgrey'},
                            edgecolor='black', linewidth=0.1)
                 ax[coord[0], coord[1]].set_title("From 1980 to {}"
@@ -255,10 +256,10 @@ else:
                 './images/clustering/changes_over_entropy_per_decade_'\
                 'cluster_{}.pdf'.format(cluster)
 
-            fig.colorbar(plt.cm.ScalarMappable(cmap='GnBu',
+            fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                                norm=plt.Normalize(vmin=-1.0,
                                                                   vmax=1.0)),
-                         ax=ax[1, :], shrink=0.5, label='Entropy',
+                         ax=ax[1, :], shrink=0.5, label='Xenofilia/Xenophobia',
                          location='bottom')
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
@@ -273,10 +274,10 @@ else:
             world['entropy'] = world['name'].map(dict(entropies_per_country))
 
             fig, ax = plt.subplots(constrained_layout=True)
-            world.plot(column='entropy', ax=ax, cmap='GnBu',vmin=-1.0,
+            world.plot(column='entropy', ax=ax, cmap='coolwarm', vmin=-1.0,
                        vmax=1.0, missing_kwds={'color': 'lightgrey'},
                        edgecolor='black', linewidth=0.1, figsize=(10, 10))
-            ax.set_title("Mean Entropy per Country - Cluster {}"
+            ax.set_title("Mean Xenofilia/Xenophobia per Country - Cluster {}"
                          .format(cluster), fontsize=10)
             ax.axes.xaxis.set_visible(False)
             ax.axes.yaxis.set_visible(False)
@@ -285,8 +286,9 @@ else:
                 './images/clustering/mean_entropy_per_country_cluster_{}.pdf'\
                 .format(cluster)
 
-            fig.colorbar(plt.cm.ScalarMappable(cmap='GnBu',
+            fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                                norm=plt.Normalize(vmin=-1.0,
                                                                   vmax=1.0)),
-                         ax=ax, shrink=0.5, label='Entropy', location='bottom')
+                         ax=ax, shrink=0.5, label='Xenofilia/Xenophobia',
+                         location='bottom')
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
