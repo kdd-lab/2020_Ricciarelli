@@ -124,9 +124,9 @@ else:
         ax.set_xlabel('Cluster', fontsize=14)
         ax.set_ylabel('Silhouette Score', fontsize=14)
 
-        fig.savefig('./images/clustering/entropies_distribution_deeper.pdf' if
+        fig.savefig('../images/clustering/entropies_distribution_deeper.pdf' if
                     'deeper' in sys.argv[3] else
-                    './images/clustering/entropies_distribution.pdf',
+                    '../images/clustering/entropies_distribution.pdf',
                     format='pdf', bbox_inches='tight')
     elif sys.argv[1] == 'geoplot':
         for cluster in [1, 2]:
@@ -203,7 +203,7 @@ else:
                 world.drop(['entropy'], axis=1, inplace=True)
 
             save_n = \
-                './images/clustering/mean_entropy_per_decade_cluster_{}.pdf'\
+                '../images/clustering/mean_entropy_per_decade_cluster_{}.pdf'\
                 .format(cluster)
 
             fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
@@ -253,7 +253,7 @@ else:
                 world.drop(['entropy'], axis=1, inplace=True)
 
             save_n = \
-                './images/clustering/changes_over_entropy_per_decade_'\
+                '../images/clustering/changes_over_entropy_per_decade_'\
                 'cluster_{}.pdf'.format(cluster)
 
             fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
@@ -283,7 +283,7 @@ else:
             ax.axes.yaxis.set_visible(False)
 
             save_n = \
-                './images/clustering/mean_entropy_per_country_cluster_{}.pdf'\
+                '../images/clustering/mean_entropy_per_country_cluster_{}.pdf'\
                 .format(cluster)
 
             fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
