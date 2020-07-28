@@ -76,7 +76,8 @@ ax.set_xlabel('Year', fontsize=8)
 ax.set_ylabel('Xenofilia/Xenophobia', fontsize=8)
 ax.legend(loc='center left', fontsize=8, bbox_to_anchor=(1, 0.5))
 
-fig.savefig('entropies_trends_of_various_countries.pdf', format='pdf')
+fig.savefig('../images/clustering/entropies_trends_of_various_countries.pdf',
+            format='pdf')
 
 plt.close(fig)
 
