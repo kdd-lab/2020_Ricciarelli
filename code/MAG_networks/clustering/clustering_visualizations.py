@@ -192,7 +192,7 @@ else:
 
                 world.plot(column='entropy', ax=ax[coord[0], coord[1]],
                            cmap='coolwarm', vmin=-1.0, vmax=1.0,
-                           missing_kwds={'color': 'lightgrey', 'hatch': '///'},
+                           missing_kwds={'color': 'white'},
                            edgecolor='black', linewidth=0.1)
                 ax[coord[0], coord[1]].set_title("From {} to {}"
                                                  .format(decade, decade + 9),
@@ -242,7 +242,7 @@ else:
 
                 world.plot(column='entropy', ax=ax[coord[0], coord[1]],
                            cmap='coolwarm', vmin=-1.0, vmax=1.0,
-                           missing_kwds={'color': 'lightgrey', 'hatch': '///'},
+                           missing_kwds={'color': 'white'},
                            edgecolor='black', linewidth=0.1)
                 ax[coord[0], coord[1]].set_title("From 1980 to {}"
                                                  .format(decade + 9),
@@ -275,8 +275,7 @@ else:
 
             fig, ax = plt.subplots(constrained_layout=True)
             world.plot(column='entropy', ax=ax, cmap='coolwarm', vmin=-1.0,
-                       vmax=1.0, missing_kwds={'color': 'lightgrey',
-                                               'hatch': '///'},
+                       vmax=1.0, missing_kwds={'color': 'white'},
                        edgecolor='black', linewidth=0.1, figsize=(10, 10))
             ax.set_title("Mean Xenofilia/Xenophobia per Country - Cluster {}"
                          .format(cluster), fontsize=10)
