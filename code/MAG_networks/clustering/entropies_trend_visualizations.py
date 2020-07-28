@@ -74,7 +74,7 @@ ax.set_title('Xenofilia/Xenophobia over the Years for various Countries',
              fontsize=10)
 ax.set_xlabel('Year', fontsize=8)
 ax.set_ylabel('Xenofilia/Xenophobia', fontsize=8)
-ax.legend(loc='center left', fontsize=8, bbox_to_anchor=(1, 0.5))
+ax.legend(loc='center left', fontsize=6, bbox_to_anchor=(1, 0.5))
 
 fig.savefig('../images/clustering/entropies_trends_of_various_countries.pdf',
             format='pdf')
@@ -142,14 +142,16 @@ for cluster in [1, 2]:
         axes[x].set_xticks(np.arange(1980, 2020, 10))
         axes[x].set_xticks(np.arange(1980, 2020), minor=True)
         axes[x].tick_params(axis='both', which='major', labelsize=6)
-        axes[x].set_xlabel('Year', fontsize=8)
-        axes[x].set_ylabel('Xenofilia/Xenophobia', fontsize=8)
+        # axes[x].set_xlabel('Year', fontsize=8)
+        # axes[x].set_ylabel('Xenofilia/Xenophobia', fontsize=8)
         axes[x].legend(loc='center left', fontsize=8,
                        bbox_to_anchor=(1, 0.5))
 
+    plt.xlabel('Year', fontsize=8)
+    plt.ylabel('Xenofilia/Xenophobia', fontsize=8)
+
     save_title = 'top_5_higher_lower_entropies_cluster_{}'.format(cluster)
 
-    fig.savefig('../images/clustering/' + save_title + '.pdf', format='pdf',
-                bbox_inches='tight')
+    fig.savefig('../images/clustering/' + save_title + '.pdf', format='pdf')
 
     plt.close(fig)
