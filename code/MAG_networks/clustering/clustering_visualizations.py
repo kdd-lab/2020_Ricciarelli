@@ -177,8 +177,8 @@ else:
 
         fig, ax = plt.subplots(nrows=2, ncols=2, constrained_layout=True)
 
-        fig.suptitle('Changes in the Xenofilia/Xenophobia over the Decades'
-                     .format(cluster), fontsize=10)
+        fig.suptitle('Changes in the Xenofilia/Xenophobia over the Decades',
+                     fontsize=10)
 
         entropies_by_decade = defaultdict(list)
 
