@@ -56,8 +56,13 @@ for cluster in [1, 2]:
     for country in entropies_per_country:
         entropies = [entropies_per_country[country][year] for year
                      in entropies_per_country[country]]
-        mean_entropies_per_country[np.mean(np.concatenate(entropies))] = \
-            country
+
+        if len(entropies) == 40:
+            mean_entropies_per_country[np.mean(np.concatenate(entropies))] = \
+                country
+
+    import ipdb
+    ipdb.set_trace()
 
     top_5_higher_entropies = sorted(mean_entropies_per_country,
                                     reverse=True)[:5]
