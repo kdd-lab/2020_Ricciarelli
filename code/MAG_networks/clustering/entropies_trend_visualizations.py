@@ -99,7 +99,7 @@ for cluster in [1, 2]:
     top_5_lower_entropies = [mean_entropies_per_country[mean] for mean in
                              top_5_lower_entropies]
 
-    fig, axes = plt.subplots(nrows=5, ncols=1, sharex=True,
+    fig, axes = plt.subplots(nrows=5, ncols=1, sharex=True, sharey=True,
                              constrained_layout=True)
 
     fig.suptitle('Top 5 Countries with higher/lower Xenofilia/Xenophobia - '
