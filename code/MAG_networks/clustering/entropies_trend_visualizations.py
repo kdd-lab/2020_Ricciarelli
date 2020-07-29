@@ -79,6 +79,14 @@ for country, coordinates in zip(entropies, [[0, 0], [0, 1], [1, 0], [1, 1],
     ax[coordinates[0], coordinates[1]].plot(np.arange(1980, 2020),
                                             entropies[country], linewidth=2,
                                             label=country, color='steelblue')
+    ax[coordinates[0], coordinates[1]].axvilne(x=1986, ymin=-1.0, ymax=1.0,
+                                               color='tomato', ls='--')
+    ax[coordinates[0], coordinates[1]].axvilne(x=1989, ymin=-1.0, ymax=1.0,
+                                               color='tomato', ls='--')
+    ax[coordinates[0], coordinates[1]].axvilne(x=2001, ymin=-1.0, ymax=1.0,
+                                               color='tomato', ls='--')
+    ax[coordinates[0], coordinates[1]].axvilne(x=2008, ymin=-1.0, ymax=1.0,
+                                               color='tomato', ls='--')
     ax[coordinates[0], coordinates[1]].set_xlim(1979, 2020)
     ax[coordinates[0], coordinates[1]].set_ylim(-1.0, 1.0)
     ax[coordinates[0], coordinates[1]].set_xticks(np.arange(1980, 2020, 10))
