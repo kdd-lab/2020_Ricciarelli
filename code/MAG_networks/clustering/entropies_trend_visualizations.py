@@ -67,22 +67,21 @@ for country in ['Italy', 'Germany', 'France', 'Spain', 'United Kingdom',
                           for year in
                           sorted(entropies_per_country[c][country])]
 
-fig, ax = plt.subplots(1, 1, constrained_layout=True)
+fig, ax = plt.subplots(4, 2, constrained_layout=True)
 
-for country in entropies:
-    ax.plot(np.arange(1980, 2020), entropies[country], linewidth=2,
-            label=country, alpha=0.5)
-
-ax.set_xlim(1979, 2020)
-ax.set_ylim(-1.0, 1.0)
-ax.set_xticks(np.arange(1980, 2020, 10))
-ax.set_xticks(np.arange(1980, 2020), minor=True)
-ax.tick_params(axis='both', which='major', labelsize=6)
-ax.set_title('Xenofilia/Xenophobia over the Years for various Countries',
-             fontsize=10)
-ax.set_xlabel('Year', fontsize=8)
-ax.set_ylabel('Xenofilia/Xenophobia', fontsize=8)
-ax.legend(loc='center left', fontsize=6, bbox_to_anchor=(1, 0.5))
+for country, coordinates in zip(entropies, [[0, 0], [0, 1], [1, 0], [1, 1],
+                                [2, 0], [2, 1], [3, 0], [3, 1]]):
+    ax[coordinates[0], coordinates[1]].plot(np.arange(1980, 2020),
+                                            entropies[country], linewidth=2,
+                                            label=country, color='steelblue')
+    ax[coordinates[0], coordinates[1]].set_xlim(1979, 2020)
+    ax[coordinates[0], coordinates[1]].set_ylim(-1.0, 1.0)
+    ax[coordinates[0], coordinates[1]].set_xticks(np.arange(1980, 2020, 10))
+    ax[coordinates[0], coordinates[1]].set_xticks(np.arange(1980, 2020),
+                                                  minor=True)
+    ax[coordinates[0], coordinates[1]].tick_params(axis='both', which='major',
+                                                   labelsize=6)
+    ax[coordinates[0], coordinates[1]].set_title(country, fontsize=10)
 
 fig.savefig('../images/clustering/entropies_trends_of_various_countries.pdf',
             format='pdf')
@@ -109,8 +108,7 @@ for c in entropies_per_country:
     top_5_lower_entropies = [mean_entropies_per_country[mean] for mean in
                              top_5_lower_entropies]
 
-    fig, axes = plt.subplots(nrows=5, ncols=1, sharex=True, sharey=True,
-                             constrained_layout=True)
+    fig, axes = plt.subplots(nrows=5, ncols=1, constrained_layout=True)
 
     fig.suptitle('Top 5 Countries with higher/lower Xenofilia/Xenophobia - '
                  'Cluster {}'.format(c), fontsize=10)
@@ -154,10 +152,6 @@ for c in entropies_per_country:
         axes[x].tick_params(axis='both', which='major', labelsize=6)
         axes[x].legend(loc='center left', fontsize=6,
                        bbox_to_anchor=(1, 0.5))
-
-    fig.text(0.5, 0.04, 'Year', ha='center', fontsize=8)
-    fig.text(0.04, 0.5, 'Xenofilia/Xenophobia', va='center',
-             rotation='vertical', fontsize=8)
 
     save_title = 'top_5_higher_lower_entropies_cluster_{}'.format(c)
 
