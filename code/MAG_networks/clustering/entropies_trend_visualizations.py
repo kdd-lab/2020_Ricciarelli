@@ -113,7 +113,7 @@ for c in entropies_per_country:
                              constrained_layout=True)
 
     fig.suptitle('Top 5 Countries with higher/lower Xenofilia/Xenophobia - '
-                 'Cluster {}'.format(cluster), fontsize=10)
+                 'Cluster {}'.format(c), fontsize=10)
 
     for x in np.arange(0, 5):
         for l in [top_5_higher_entropies, top_5_lower_entropies]:
@@ -159,7 +159,7 @@ for c in entropies_per_country:
     fig.text(0.04, 0.5, 'Xenofilia/Xenophobia', va='center',
              rotation='vertical', fontsize=8)
 
-    save_title = 'top_5_higher_lower_entropies_cluster_{}'.format(cluster)
+    save_title = 'top_5_higher_lower_entropies_cluster_{}'.format(c)
 
     fig.savefig('../images/clustering/' + save_title + '.pdf', format='pdf')
 
