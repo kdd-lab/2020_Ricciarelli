@@ -17,7 +17,7 @@ with open(sys.argv[1], 'r') as entropies_file:
 
 cl_df = pd.read_csv(sys.argv[2], dtype={'MAG_id': str, 'cluster': int})
 
-entropies_per_country, mean_entropies_per_country = dict(), dict()
+entropies_per_country = {1: dict(), 2: dict()}
 
 for MAG_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
     for year in entropies_dict[MAG_id]:
@@ -47,15 +47,23 @@ for MAG_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
         elif country == 'Viet Nam':
             country = 'Vietnam'
 
-        if country not in entropies_per_country:
-            entropies_per_country[country] = defaultdict(list)
+        cluster = cl_df[cl_df.MAG_id == MAG_id]['cluster']
 
-        entropies_per_country[country][year].append(entropy)
+        if country not in entropies_per_country[cluster]:
+            entropies_per_country[cluster][country] = defaultdict(list)
+
+        entropies_per_country[cluster][country][year].append(entropy)
 
 entropies = dict()
 
 for country in ['Italy', 'Germany', 'France', 'Spain', 'United Kingdom',
                 'United States of America', 'Russia', 'China']:
+    entropies[country] = defaultdict(list)
+
+    for c in entropies_per_country:
+        for y in entropies_per_country[c][country]:
+            entropies[country][y] += entropies_per_country[c][country][y]
+
     entropies[country] = [np.mean(entropies_per_country[country][year])
                           for year in sorted(entropies_per_country[country])]
 
@@ -81,10 +89,12 @@ fig.savefig('../images/clustering/entropies_trends_of_various_countries.pdf',
 
 plt.close(fig)
 
-for cluster in [1, 2]:
-    for country in entropies_per_country:
-        entropies = [entropies_per_country[country][year] for year
-                     in sorted(entropies_per_country[country])]
+mean_entropies_per_country = dict()
+
+for c in entropies_per_country:
+    for country in entropies_per_country[c]:
+        entropies = [entropies_per_country[c][country][year] for year
+                     in sorted(entropies_per_country[c][country])]
 
         if len(entropies) == 40:
             mean_entropies_per_country[np.mean(np.concatenate(entropies))] = \
