@@ -63,8 +63,8 @@ for country in ['Italy', 'Germany', 'France', 'Spain', 'United Kingdom',
         for y in entropies_per_country[c][country]:
             entropies[country][y] += entropies_per_country[c][country][y]
 
-    entropies[country] = [np.mean(entropies_per_country[country][year])
-                          for year in sorted(entropies_per_country[country])]
+    entropies[country] = [np.mean(entropies_per_country[c][country][year])
+                          for year in sorted(entropies_per_country[c][country])]
 
 fig, ax = plt.subplots(1, 1, constrained_layout=True)
 
