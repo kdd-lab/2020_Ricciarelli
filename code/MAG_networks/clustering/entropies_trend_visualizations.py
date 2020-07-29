@@ -19,7 +19,12 @@ cl_df = pd.read_csv(sys.argv[2], dtype={'MAG_id': str, 'cluster': int})
 
 entropies_per_country = {1: dict(), 2: dict()}
 
+import ipdb
+ipdb.set_trace()
+
 for MAG_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
+    cluster = int(cl_df.query('MAG_id == {}'.format(MAG_id))['cluster'])
+
     for year in entropies_dict[MAG_id]:
         country = entropies_dict[MAG_id][year]['affiliation']
         entropy = entropies_dict[MAG_id][year]['entropy']
@@ -47,12 +52,13 @@ for MAG_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
         elif country == 'Viet Nam':
             country = 'Vietnam'
 
-        cluster = cl_df[cl_df.MAG_id == MAG_id]['cluster']
-
         if country not in entropies_per_country[cluster]:
             entropies_per_country[cluster][country] = defaultdict(list)
 
         entropies_per_country[cluster][country][year].append(entropy)
+
+import ipdb
+ipdb.set_trace()
 
 entropies = dict()
 
