@@ -19,46 +19,39 @@ cl_df = pd.read_csv(sys.argv[2], dtype={'MAG_id': str, 'cluster': int})
 
 entropies_per_country = {1: dict(), 2: dict()}
 
-import ipdb
-ipdb.set_trace()
+for cluster in [1, 2]:
+    for MAG_id in cl_df[cl_df.cluster == cluster]['MAG_id']:
+        for year in entropies_dict[MAG_id]:
+            country = entropies_dict[MAG_id][year]['affiliation']
+            entropy = entropies_dict[MAG_id][year]['entropy']
 
-for MAG_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
-    cluster = int(cl_df.query('MAG_id == {}'.format(MAG_id))['cluster'])
+            if country == 'United States':
+                country = 'United States of America'
+            elif country == 'Korea':
+                country = 'South Korea'
+            elif country == 'Russian Federation':
+                country = 'Russia'
+            elif country == 'Dominican Republic':
+                country = 'Dominican Rep.'
+            elif country == 'Bosnia and Herzegovina':
+                country = 'Bosnia and Herz.'
+            elif country == "Lao People's Democratic Republic":
+                country = 'Laos'
+            elif country == 'Cyprus':
+                country = 'N. Cyprus'
+            elif country == 'Central African Republic':
+                country = 'Central African Rep.'
+            elif country == 'South Sudan':
+                country = 'S. Sudan'
+            elif country == 'Syrian Arab Republic':
+                country = 'Syria'
+            elif country == 'Viet Nam':
+                country = 'Vietnam'
 
-    for year in entropies_dict[MAG_id]:
-        country = entropies_dict[MAG_id][year]['affiliation']
-        entropy = entropies_dict[MAG_id][year]['entropy']
+            if country not in entropies_per_country[cluster]:
+                entropies_per_country[cluster][country] = defaultdict(list)
 
-        if country == 'United States':
-            country = 'United States of America'
-        elif country == 'Korea':
-            country = 'South Korea'
-        elif country == 'Russian Federation':
-            country = 'Russia'
-        elif country == 'Dominican Republic':
-            country = 'Dominican Rep.'
-        elif country == 'Bosnia and Herzegovina':
-            country = 'Bosnia and Herz.'
-        elif country == "Lao People's Democratic Republic":
-            country = 'Laos'
-        elif country == 'Cyprus':
-            country = 'N. Cyprus'
-        elif country == 'Central African Republic':
-            country = 'Central African Rep.'
-        elif country == 'South Sudan':
-            country = 'S. Sudan'
-        elif country == 'Syrian Arab Republic':
-            country = 'Syria'
-        elif country == 'Viet Nam':
-            country = 'Vietnam'
-
-        if country not in entropies_per_country[cluster]:
-            entropies_per_country[cluster][country] = defaultdict(list)
-
-        entropies_per_country[cluster][country][year].append(entropy)
-
-import ipdb
-ipdb.set_trace()
+            entropies_per_country[cluster][country][year].append(entropy)
 
 entropies = dict()
 
