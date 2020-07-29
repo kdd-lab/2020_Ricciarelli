@@ -89,9 +89,9 @@ fig.savefig('../images/clustering/entropies_trends_of_various_countries.pdf',
 
 plt.close(fig)
 
-mean_entropies_per_country = dict()
-
 for c in entropies_per_country:
+    mean_entropies_per_country = dict()
+
     for country in entropies_per_country[c]:
         entropies = [entropies_per_country[c][country][year] for year
                      in sorted(entropies_per_country[c][country])]
