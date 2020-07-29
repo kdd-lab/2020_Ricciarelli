@@ -69,6 +69,9 @@ for country in ['Italy', 'Germany', 'France', 'Spain', 'United Kingdom',
 
 fig, ax = plt.subplots(4, 2, constrained_layout=True)
 
+fig.suptitle("Xenofilia/Xenophobia's trend for various Countries",
+             fontsize=10)
+
 for country, coordinates in zip(entropies, [[0, 0], [0, 1], [1, 0], [1, 1],
                                 [2, 0], [2, 1], [3, 0], [3, 1]]):
     ax[coordinates[0], coordinates[1]].plot(np.arange(1980, 2020),
@@ -81,7 +84,7 @@ for country, coordinates in zip(entropies, [[0, 0], [0, 1], [1, 0], [1, 1],
                                                   minor=True)
     ax[coordinates[0], coordinates[1]].tick_params(axis='both', which='major',
                                                    labelsize=6)
-    ax[coordinates[0], coordinates[1]].set_title(country, fontsize=10)
+    ax[coordinates[0], coordinates[1]].set_title(country, fontsize=8)
 
 fig.savefig('../images/clustering/entropies_trends_of_various_countries.pdf',
             format='pdf')
