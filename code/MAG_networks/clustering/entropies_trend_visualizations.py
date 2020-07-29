@@ -61,7 +61,9 @@ for country in ['Italy', 'Germany', 'France', 'Spain', 'United Kingdom',
 
     for c in entropies_per_country:
         for y in entropies_per_country[c][country]:
-            entropies[country][y] += entropies_per_country[c][country][y]
+            for value in entropies_per_country[c][country][y]:
+                if value not in [0.0, -0.0]:
+                   entropies[country][y].append(value)
 
     entropies[country] = [np.mean(entropies_per_country[c][country][year])
                           for year in
