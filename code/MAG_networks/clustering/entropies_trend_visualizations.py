@@ -64,7 +64,8 @@ for country in ['Italy', 'Germany', 'France', 'Spain', 'United Kingdom',
             entropies[country][y] += entropies_per_country[c][country][y]
 
     entropies[country] = [np.mean(entropies_per_country[c][country][year])
-                          for year in sorted(entropies_per_country[c][country])]
+                          for year in
+                          sorted(entropies_per_country[c][country])]
 
 fig, ax = plt.subplots(1, 1, constrained_layout=True)
 
@@ -118,11 +119,11 @@ for c in entropies_per_country:
         for l in [top_5_higher_entropies, top_5_lower_entropies]:
             stats = dict()
 
-            for year in entropies_per_country[l[x]]:
+            for year in entropies_per_country[c][l[x]]:
                 stats[year] = {
-                    'mean': np.mean(entropies_per_country[l[x]][year]),
-                    'std': np.std(entropies_per_country[l[x]][year]),
-                    'samples': len(entropies_per_country[l[x]][year])}
+                    'mean': np.mean(entropies_per_country[c][l[x]][year]),
+                    'std': np.std(entropies_per_country[c][l[x]][year]),
+                    'samples': len(entropies_per_country[c][l[x]][year])}
 
             ys, ys_fill_up, ys_fill_down = list(), list(), list()
 
