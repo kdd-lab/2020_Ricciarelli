@@ -53,4 +53,4 @@ with open(saving_to, 'w') as more_than_1_affiliation_file:
                        desc='SAVING SERIES WITH MORE THAN 1 AFFILIATION'):
         json.dump({mag_id: more_than_1_affiliation[mag_id]},
                   more_than_1_affiliation)
-        more_than_1_affiliation.write('\n')
+        more_than_1_affiliation_file.write('\n')
