@@ -21,6 +21,12 @@ for mag_id in tqdm(valid_mag_ids, desc='SELECTING VALID CREATORS'):
     creator = entropies_dict[mag_id]
 
     if len(creator) >= 20:
-       valid_creators.update({mag_id: creator})
+        valid_creators.update({mag_id: creator})
 
-print(len(valid_creators))
+saving_to = sys.argv[1].replace('global_entropies.jsonl',
+                                'valid_creators_time_series.jsonl')
+
+with open(saving_to, 'w') as valid_creators_file:
+    for mag_id in tqdm(valid_creators, desc='SAVING VALID CREATORS'):
+        json.dump({mag_id: valid_creators[mag_id]}, valid_creators_file)
+        valid_creators_file.write('\n')
