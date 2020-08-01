@@ -13,8 +13,15 @@ with open(sys.argv[1], 'r') as entropies_file:
     for row in tqdm(entropies_file, desc='READING ENTROPIES FILE'):
         creator = json.loads(row)
 
-        for mag_id in creator:
-            if mag_id in valid_mag_ids and len(creator[mag_id]) != 1:
-                entropies_dict.update(creator)
+        entropies_dict.update(creator)
 
-print(len(entropies_dict))
+valid_creators = dict()
+
+for mag_id in valid_mag_ids:
+    creator = entropies_dict[mag_id]
+
+    for m_id in creator:
+        if len(creator[m_id]) >= 20:
+            valid_creators.update(creator)
+
+print(len(valid_creators))
