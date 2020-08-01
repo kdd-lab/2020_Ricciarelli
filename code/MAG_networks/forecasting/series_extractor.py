@@ -17,11 +17,10 @@ with open(sys.argv[1], 'r') as entropies_file:
 
 valid_creators = dict()
 
-for mag_id in valid_mag_ids:
+for mag_id in tqdm(valid_mag_ids, desc='SELECTING VALID CREATORS'):
     creator = entropies_dict[mag_id]
 
-    for m_id in creator:
-        if len(creator[m_id]) >= 20:
-            valid_creators.update(creator)
+    if len(creator) >= 20:
+       valid_creators.update({mag_id: creator})
 
 print(len(valid_creators))
