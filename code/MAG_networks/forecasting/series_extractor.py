@@ -36,7 +36,8 @@ with open(saving_to, 'w') as more_than_20_ents_file:
 
 more_than_1_affiliation = dict()
 
-for mag_id in tqdm(more_than_20_ents, desc=''):
+for mag_id in tqdm(more_than_20_ents,
+                   desc='SELECTING SERIES WITH MORE THAN 1 AFFILIATION'):
     creator, countries = entropies_dict[mag_id], set()
 
     for year in creator:
@@ -52,5 +53,5 @@ with open(saving_to, 'w') as more_than_1_affiliation_file:
     for mag_id in tqdm(more_than_1_affiliation,
                        desc='SAVING SERIES WITH MORE THAN 1 AFFILIATION'):
         json.dump({mag_id: more_than_1_affiliation[mag_id]},
-                  more_than_1_affiliation)
+                  more_than_1_affiliation_file)
         more_than_1_affiliation_file.write('\n')
