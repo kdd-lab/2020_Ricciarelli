@@ -18,7 +18,9 @@ with open(sys.argv[1], 'r') as time_series_json_file:
 
             for year in time_range:
                 if str(year) in years:
-                    new_row.append(creator[mag_id][str(year)]['entropy'])
+                    entropy = creator[mag_id][str(year)]['entropy']
+
+                    new_row.append(entropy if entropy != -0.0 else 0.0)
                 else:
                     new_row.append(np.nan)
 
@@ -26,7 +28,7 @@ with open(sys.argv[1], 'r') as time_series_json_file:
                 if idx != 0:
                     if creator[mag_id][year]['affiliation'] != \
                        creator[mag_id][years[idx - 1]]['affiliation']:
-                        change_points.append(year)
+                        change_points.append(int(year))
 
             new_row.append(change_points)
             new_row.append(mag_id)
