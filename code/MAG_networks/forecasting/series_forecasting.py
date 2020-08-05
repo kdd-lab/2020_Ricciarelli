@@ -6,12 +6,15 @@ import warnings
 from pmdarima.arima import AutoARIMA
 from pmdarima.model_selection import RollingForecastCV
 from sklearn.metrics import mean_squared_error
+from tqdm import tqdm
 
 warnings.filterwarnings("ignore")
 
 time_series_df = pd.read_csv(sys.argv[1])
+mses = list()
 
-for index, row in time_series_df.iterrows():
+for index, row in tqdm(time_series_df.iterrows(), desc='FORECASTING',
+                       total=len(time_series_df)):
     change_points, chunks = list(), list()
 
     for year in row['change_points'].strip('][').split(', '):
@@ -72,5 +75,4 @@ for index, row in time_series_df.iterrows():
             row_mse.append(error)
 
     if len(row_mse) != 0:
-        print(np.mean(row_mse))
-        print('\n')
+        mses.append(np.mean(row_mse))
