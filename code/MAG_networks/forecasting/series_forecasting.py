@@ -4,48 +4,73 @@ import sys
 import warnings
 
 from pmdarima.arima import AutoARIMA
-from pmdarima.model_selection import cross_val_score, RollingForecastCV
-from tqdm import tqdm
+from pmdarima.model_selection import RollingForecastCV
+from sklearn.metrics import mean_squared_error
 
 warnings.filterwarnings("ignore")
 
 time_series_df = pd.read_csv(sys.argv[1])
 
 for index, row in time_series_df.iterrows():
+    change_points, chunks = list(), list()
+
     for year in row['change_points'].strip('][').split(', '):
-        change_point = int(year.strip("'"))
+        change_points.append(int(year.strip("'")))
 
-        series = [row[str(y)] for y in np.arange(1980, change_point) if not
-                  np.isnan(row[str(y)]) and row[str(y)] not in [0.0, -0.0]]
-
-        if len(series) >= 5:
-            series = np.array(series)
-
-            model = AutoARIMA(start_p=0, d=None, start_q=0, max_p=5, max_d=5,
-                              max_q=5, m=1, seasonal=False, stationary=False,
-                              information_criterion='aic', alpha=0.05,
-                              test='kpss', stepwise=True,
-                              suppress_warnings=True, error_action='ignore')
-            prediction = model.fit_predict(series, n_periods=1)
-
-mse = list()
-
-for mag_id in tqdm(time_series_raws, desc='PROCESSING THE SERIES'):
-    series = list()
-
-    for year in sorted(time_series_raws[mag_id]):
-        series.append(time_series_raws[mag_id][year]['entropy'])
-
-    series = np.array(series)
+    for idx, change_point in enumerate(change_points):
+        if idx == 0:
+            chunks.append([row[str(y)] for y in np.arange(1980, change_point)
+                          if not np.isnan(row[str(y)])])
+        else:
+            chunks.append([row[str(y)] for y in np.arange(
+                          change_points[idx - 1], change_point) if not
+                          np.isnan(row[str(y)])])
+    chunks.append([row[str(y)] for y in np.arange(
+                  change_points[-1], 2020) if not
+                  np.isnan(row[str(y)])])
 
     model = AutoARIMA(start_p=0, d=None, start_q=0, max_p=5, max_d=5,
                       max_q=5, m=1, seasonal=False, stationary=False,
-                      information_criterion='aic', alpha=0.05, test='kpss',
-                      stepwise=True, suppress_warnings=True,
-                      error_action='ignore')
-    cv = RollingForecastCV()
+                      information_criterion='aic', alpha=0.05,
+                      test='kpss', stepwise=True,
+                      suppress_warnings=True, error_action='ignore')
 
-    cv_score = cross_val_score(model, series, scoring='mean_squared_error',
-                               cv=cv)
+    dataset = np.array(chunks[0])
+    row_mse = list()
 
-    mse.append(np.mean(cv_score))
+    for idx, chunk in enumerate(chunks[1:]):
+        dataset = np.concatenate((dataset, chunk))
+        predictions, weights = list(), list()
+
+        if len(chunk) == 1:
+            if len(dataset[:-1]) > 1:
+                model.fit(dataset[:-1])
+                predictions.append(model.predict(n_periods=1)[0])
+                weights.append(len(dataset[:-1]))
+        else:
+            initial = sum([len(c) for c in chunks[:idx + 1]])
+
+            if initial > 1:
+                cv = RollingForecastCV(initial=initial)
+
+                for train_series, test_series in cv.split(dataset):
+                    try:
+                        model.fit(dataset[train_series])
+                        predictions.append(model.predict(n_periods=1)[0])
+                        weights.append(len(train_series))
+                    except Exception as e:
+                        pass
+
+                model.fit(dataset[:-1])
+                predictions.append(model.predict(n_periods=1)[0])
+                weights.append(len(dataset[:-1]))
+
+        if len(predictions) == len(chunk):
+            error = mean_squared_error(chunk, predictions,
+                                       sample_weight=weights
+                                       if len(weights) != 1 else None)
+            row_mse.append(error)
+
+    if len(row_mse) != 0:
+        print(np.mean(row_mse))
+        print('\n')

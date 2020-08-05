@@ -20,7 +20,8 @@ with open(sys.argv[1], 'r') as time_series_json_file:
                 if str(year) in years:
                     entropy = creator[mag_id][str(year)]['entropy']
 
-                    new_row.append(entropy if entropy != -0.0 else 0.0)
+                    new_row.append(abs(entropy) if entropy == -0.0
+                                   else entropy)
                 else:
                     new_row.append(np.nan)
 
