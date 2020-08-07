@@ -117,8 +117,8 @@ for country, coordinates in zip(entropies, [[0, 0], [0, 1], [1, 0], [1, 1],
 fig.legend((line_0, line_1, line_2, line_3, line_4),
            ('Chernobyl disaster', 'Fall of the Berlin Wall',
             'Dissolution of the Soviet Union', '09/11',
-            '2008 Economic Crysis'), loc='lower center', ncol=5,
-           fontsize=6, bbox_to_anchor=(0.5, -0.3))
+            '2008 Economic Crysis'), loc='center left',
+           fontsize=6, bbox_to_anchor=(1, 0.5))
 
 fig.savefig('../images/clustering/entropies_trends_of_various_countries.pdf',
             format='pdf')
