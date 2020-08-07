@@ -118,7 +118,7 @@ fig.legend((line_0, line_1, line_2, line_3, line_4),
            ('Chernobyl disaster', 'Fall of the Berlin Wall',
             'Dissolution of the Soviet Union', '09/11',
             '2008 Economic Crysis'), loc='upper center', ncol=5,
-           fontsize=8)
+           fontsize=6)
 
 fig.savefig('../images/clustering/entropies_trends_of_various_countries.pdf',
             format='pdf')
