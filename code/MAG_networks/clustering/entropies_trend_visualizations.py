@@ -114,7 +114,7 @@ for country, coordinates in zip(entropies, [[0, 0], [0, 1], [1, 0], [1, 1],
                                                    labelsize=6)
     ax[coordinates[0], coordinates[1]].set_title(country, fontsize=8)
 
-plt.legend((line_0, line_1, line_2, line_3, line_4),
+fig.legend((line_0, line_1, line_2, line_3, line_4),
            ('Chernobyl disaster', 'Fall of the Berlin Wall',
             'Dissolution of the Soviet Union', '09/11',
             '2008 Economic Crysis'), loc='center left',
