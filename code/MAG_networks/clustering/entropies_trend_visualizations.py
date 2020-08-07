@@ -80,20 +80,20 @@ for country, coordinates in zip(entropies, [[0, 0], [0, 1], [1, 0], [1, 1],
                                             entropies[country], linewidth=2,
                                             label=country, color='steelblue')
     ax[coordinates[0], coordinates[1]].axvline(x=1986, ymin=-1.0, ymax=1.0,
-                                               color='tomato', alpha=0.7,
-                                               ls='--')
+                                               color='#ff6347', alpha=0.7,
+                                               ls='solid')
     ax[coordinates[0], coordinates[1]].axvline(x=1989, ymin=-1.0, ymax=1.0,
-                                               color='tomato', alpha=0.7,
-                                               ls='--')
+                                               color='#47ff63', alpha=0.7,
+                                               ls='dotted')
     ax[coordinates[0], coordinates[1]].axvline(x=1991, ymin=-1.0, ymax=1.0,
-                                               color='tomato', alpha=0.7,
-                                               ls='--')
+                                               color='#6347ff', alpha=0.7,
+                                               ls='dashed')
     ax[coordinates[0], coordinates[1]].axvline(x=2001, ymin=-1.0, ymax=1.0,
-                                               color='tomato', alpha=0.7,
-                                               ls='--')
+                                               color='#ff4787', alpha=0.7,
+                                               ls='dashdot')
     ax[coordinates[0], coordinates[1]].axvline(x=2008, ymin=-1.0, ymax=1.0,
-                                               color='tomato', alpha=0.7,
-                                               ls='--')
+                                               color='#47ffbf', alpha=0.7,
+                                               ls='dashdotdotted')
     ax[coordinates[0], coordinates[1]].set_xlim(1979, 2020)
     ax[coordinates[0], coordinates[1]].set_ylim(-1.0, 1.0)
     ax[coordinates[0], coordinates[1]].set_xticks(np.arange(1980, 2020, 10))

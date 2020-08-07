@@ -1,7 +1,6 @@
 import json
 import geopandas as gpd
 import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 import numpy as np
 import pandas as pd
 import sys
@@ -118,7 +117,7 @@ else:
                    labels=[str(c) for c in sorted(cl_df.cluster.unique())],
                    showfliers=False, showmeans=True)
         ax.grid(linestyle='--', color='black', alpha=0.4)
-        ax.set_title("Entropies' Distribution per Clusteron on a Deeper Level"
+        ax.set_title("Entropies' Distribution per Cluster on a Deeper Level"
                      if 'deeper' in sys.argv[3] else
                      "Entropies' Distribution per Cluster", fontsize=20)
         ax.set_xlabel('Cluster', fontsize=14)
