@@ -93,7 +93,7 @@ for country, coordinates in zip(entropies, [[0, 0], [0, 1], [1, 0], [1, 1],
                                                ls='dashdot')
     ax[coordinates[0], coordinates[1]].axvline(x=2008, ymin=-1.0, ymax=1.0,
                                                color='#47ffbf', alpha=0.7,
-                                               ls=':')
+                                               ls=(0, (3, 5, 1, 5, 1, 5)))
     ax[coordinates[0], coordinates[1]].set_xlim(1979, 2020)
     ax[coordinates[0], coordinates[1]].set_ylim(-1.0, 1.0)
     ax[coordinates[0], coordinates[1]].set_xticks(np.arange(1980, 2020, 10))
