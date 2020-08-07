@@ -74,26 +74,37 @@ fig, ax = plt.subplots(4, 2, constrained_layout=True)
 fig.suptitle("Xenofilia/Xenophobia's trend for various Countries",
              fontsize=10)
 
+line_0, line_1, line_2, line_3, line_4 = None, None, None, None, None
+
 for country, coordinates in zip(entropies, [[0, 0], [0, 1], [1, 0], [1, 1],
                                 [2, 0], [2, 1], [3, 0], [3, 1]]):
     ax[coordinates[0], coordinates[1]].plot(np.arange(1980, 2020),
                                             entropies[country], linewidth=2,
                                             label=country, color='steelblue')
-    ax[coordinates[0], coordinates[1]].axvline(x=1986, ymin=-1.0, ymax=1.0,
-                                               color='#ff6347', alpha=0.7,
-                                               ls='solid')
-    ax[coordinates[0], coordinates[1]].axvline(x=1989, ymin=-1.0, ymax=1.0,
-                                               color='#47ff63', alpha=0.7,
-                                               ls='dotted')
-    ax[coordinates[0], coordinates[1]].axvline(x=1991, ymin=-1.0, ymax=1.0,
-                                               color='#6347ff', alpha=0.7,
-                                               ls='dashed')
-    ax[coordinates[0], coordinates[1]].axvline(x=2001, ymin=-1.0, ymax=1.0,
-                                               color='#ff4787', alpha=0.7,
-                                               ls='dashdot')
-    ax[coordinates[0], coordinates[1]].axvline(x=2008, ymin=-1.0, ymax=1.0,
-                                               color='#47ffbf', alpha=0.7,
-                                               ls=(0, (3, 5, 1, 5, 1, 5)))
+    line_0 = ax[coordinates[0], coordinates[1]].axvline(x=1986, ymin=-1.0,
+                                                        ymax=1.0,
+                                                        color='#ff6347',
+                                                        alpha=0.7, ls='solid')
+    line_1 = ax[coordinates[0], coordinates[1]].axvline(x=1989, ymin=-1.0,
+                                                        ymax=1.0,
+                                                        color='#47ff63',
+                                                        alpha=0.7,
+                                                        ls='dotted')
+    line_2 = ax[coordinates[0], coordinates[1]].axvline(x=1991, ymin=-1.0,
+                                                        ymax=1.0,
+                                                        color='#6347ff',
+                                                        alpha=0.7,
+                                                        ls='dashed')
+    line_3 = ax[coordinates[0], coordinates[1]].axvline(x=2001, ymin=-1.0,
+                                                        ymax=1.0,
+                                                        color='#ff4787',
+                                                        alpha=0.7,
+                                                        ls='dashdot')
+    line_4 = ax[coordinates[0], coordinates[1]].axvline(x=2008, ymin=-1.0,
+                                                        ymax=1.0,
+                                                        color='#47ffbf',
+                                                        alpha=0.7,
+                                                        ls=(0, (3, 5, 1, 5, 1, 5)))
     ax[coordinates[0], coordinates[1]].set_xlim(1979, 2020)
     ax[coordinates[0], coordinates[1]].set_ylim(-1.0, 1.0)
     ax[coordinates[0], coordinates[1]].set_xticks(np.arange(1980, 2020, 10))
@@ -102,6 +113,12 @@ for country, coordinates in zip(entropies, [[0, 0], [0, 1], [1, 0], [1, 1],
     ax[coordinates[0], coordinates[1]].tick_params(axis='both', which='major',
                                                    labelsize=6)
     ax[coordinates[0], coordinates[1]].set_title(country, fontsize=8)
+
+fig.legend((line_0, line_1, line_2, line_3, line_4),
+           ('Chernobyl disaster', 'Fall of the Berlin Wall',
+            'Dissolution of the Soviet Union', '09/11',
+            '2008 Economic Crysis'), loc='upper center',
+           bbox_to_anchor=(0.5, -0.05), fancybox=True)
 
 fig.savefig('../images/clustering/entropies_trends_of_various_countries.pdf',
             format='pdf')
