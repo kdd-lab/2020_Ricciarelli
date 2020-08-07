@@ -69,7 +69,7 @@ for country in ['Italy', 'Germany', 'France', 'Spain', 'United Kingdom',
                           for year in
                           sorted(entropies_per_country[c][country])]
 
-fig, ax = plt.subplots(4, 2, constrained_layout=True)
+fig, ax = plt.subplots(4, 2)
 
 fig.suptitle("Xenofilia/Xenophobia's trend for various Countries",
              fontsize=10)
@@ -119,6 +119,8 @@ fig.legend((line_0, line_1, line_2, line_3, line_4),
             'Dissolution of the Soviet Union', '09/11',
             '2008 Economic Crysis'), loc='center left',
            fontsize=6, bbox_to_anchor=(1, 0.5))
+
+plt.tight_layout()
 
 fig.savefig('../images/clustering/entropies_trends_of_various_countries.pdf',
             format='pdf')
