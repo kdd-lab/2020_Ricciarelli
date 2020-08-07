@@ -179,10 +179,9 @@ else:
         fig.suptitle('Changes in the Xenofilia/Xenophobia over the Decades',
                      fontsize=10)
 
-        entropies_by_decade = defaultdict(list)
-
         for coord, decade in zip([[0, 0], [0, 1], [1, 0], [1, 1]],
                                  [1980, 1990, 2000, 2010]):
+            entropies_by_decade = defaultdict(list)
 
             for country in entropies_per_country:
                 for year in np.arange(decade, decade + 10):
@@ -200,15 +199,15 @@ else:
                        cmap='coolwarm', vmin=-1.0, vmax=1.0,
                        missing_kwds={'color': 'white'},
                        edgecolor='black', linewidth=0.1)
-            ax[coord[0], coord[1]].set_title("From 1980 to {}"
-                                             .format(decade + 9),
+            ax[coord[0], coord[1]].set_title("From {} to {}"
+                                             .format(decade, decade + 9),
                                              fontsize=8)
             ax[coord[0], coord[1]].axes.xaxis.set_visible(False)
             ax[coord[0], coord[1]].axes.yaxis.set_visible(False)
 
             world.drop(['entropy'], axis=1, inplace=True)
 
-        save_n = '../images/clustering/changes_over_entropy_per_decade_.pdf'
+        save_n = '../images/clustering/changes_over_entropy_per_decade_new.pdf'
 
         fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                            norm=plt.Normalize(vmin=-1.0,
