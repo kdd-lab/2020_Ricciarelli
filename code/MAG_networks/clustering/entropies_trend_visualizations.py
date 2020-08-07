@@ -69,7 +69,7 @@ for country in ['Italy', 'Germany', 'France', 'Spain', 'United Kingdom',
                           for year in
                           sorted(entropies_per_country[c][country])]
 
-fig, ax = plt.subplots(4, 2, constrained_layout=True)
+fig, ax = plt.subplots(4, 2)
 
 fig.suptitle("Xenofilia/Xenophobia's trend for various Countries",
              fontsize=10)
