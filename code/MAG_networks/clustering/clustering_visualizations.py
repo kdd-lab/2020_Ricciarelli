@@ -121,7 +121,7 @@ else:
                      if 'deeper' in sys.argv[3] else
                      "Entropies' Distribution per Cluster", fontsize=20)
         ax.set_xlabel('Cluster', fontsize=14)
-        ax.set_ylabel('Silhouette Score', fontsize=14)
+        ax.set_ylabel('Xenofilia/Xenophobia', fontsize=14)
 
         fig.savefig('../images/clustering/entropies_distribution_deeper.pdf' if
                     'deeper' in sys.argv[3] else

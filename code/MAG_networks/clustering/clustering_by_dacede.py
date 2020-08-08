@@ -1,5 +1,6 @@
 import json
 import logging
+import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
@@ -44,17 +45,35 @@ for i, row in tqdm(enumerate(entropies_matrix), desc='PREPROCESSING',
         if val == 1:
             entropies_matrix[i, j] = means[j]
 
+fig, axs = plt.subplots(2, 2, constrained_layout=True)
+axs = axs.reshape((1, -1))[0]
+
+fig.suptitle("Xenofilia/Xenophobia's Distribution by Decade", fontsize=10)
+
 for idx, decade in enumerate([1980, 1990, 2000, 2010]):
-    if decade == int(sys.argv[2]):
-        dataset = entropies_matrix[:, (idx * 10):((idx + 1) * 10)]
+    dataset = entropies_matrix[:, (idx * 10):((idx + 1) * 10)]
 
-        for n_clusters in tqdm(np.arange(2, 10),
-                               desc='GRID SEARCH DECADE {}'.format(decade)):
-            classifier = KMeans(n_clusters=n_clusters)
-            labels = classifier.fit_predict(dataset).tolist()
+    classifier = KMeans(n_clusters=3, random_state=42)
+    labels = classifier.fit_predict(dataset).tolist()
 
-            silhouette_avg = silhouette_score(entropies_matrix, labels,
-                                              sample_size=100000)
+    entropies_per_cluster = {0: list(), 1: list(), 2: list()}
 
-            logging.info('N_CLUSTERS: {}, AVERAGE SILHOUETTE SCORE: {}'
-                         .format(n_clusters, silhouette_avg))
+    for label_idx, mag_id in tqdm(enumerate(sorted(entropies_dict)),
+                                  desc='DECADE {} -- ASSIGNING CLUSTER'
+                                  .format(decade)):
+        entropies = list()
+
+        for year in np.arange(decade, decade + 10):
+            entropies.append(entropies_dict[mag_id][str(year)]['entropy'])
+
+        entropies_per_cluster[labels[label_idx]].append(np.mean(entropies))
+
+    axs[idx].boxplot(entropies_per_cluster, labels=['0', '1', '2'],
+                     showfliers=False, showmeans=True)
+    axs[idx].grid(linestyle='--', color='black', alpha=0.4)
+    axs[idx].set_title('From {} to {}'.format(decade, decade + 9), fontsize=8)
+    axs[idx].set_xlabel('Cluster', fontsize=6)
+    axs[idx].set_ylabel('Xenofilia/Xenophobia', fontsize=6)
+
+fig.savefig('../images/clustering/entropies_distribution_by_decade.pdf',
+            format='pdf')
