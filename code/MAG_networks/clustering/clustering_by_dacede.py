@@ -1,14 +1,15 @@
 import json
-import logging
+# import logging
 import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
 from sklearn.cluster import KMeans
-from sklearn.metrics import silhouette_score
+# from sklearn.metrics import silhouette_score
 from tqdm import tqdm
 
-# log_name = '../logs/entropies_clustering_gs_decade_{}.log'.format(sys.argv[2])
+# log_name =
+# '../logs/entropies_clustering_gs_decade_{}.log'.format(sys.argv[2])
 
 # logging.basicConfig(filename=log_name, filemode='a', level=logging.INFO,
 #                     format='%(message)s')
@@ -64,7 +65,8 @@ for idx, decade in enumerate([1980, 1990, 2000, 2010]):
         entropies = list()
 
         for year in np.arange(decade, decade + 10):
-            entropies.append(entropies_dict[mag_id][str(year)]['entropy'])
+            if str(year) in entropies_dict[mag_id]:
+                entropies.append(entropies_dict[mag_id][str(year)]['entropy'])
 
         entropies_per_cluster[labels[label_idx]].append(np.mean(entropies))
 
