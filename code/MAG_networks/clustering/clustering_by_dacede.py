@@ -1,10 +1,16 @@
 import json
+import logging
 import numpy as np
 import sys
 
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 from tqdm import tqdm
+
+log_name = '../logs/entropies_clustering_gs_decade_{}.log'.format(sys.argv[2])
+
+logging.basicConfig(filename=log_name, filemode='a', level=logging.INFO,
+                    format='%(message)s')
 
 entropies_dict = dict()
 
@@ -39,12 +45,15 @@ for i, row in tqdm(enumerate(entropies_matrix), desc='PREPROCESSING',
             entropies_matrix[i, j] = means[j]
 
 for idx, decade in enumerate([1980, 1990, 2000, 2010]):
-    dataset = entropies_matrix[:, (idx * 10):((idx + 1) * 10)]
+    if decade == int(sys.argv[2]):
+        dataset = entropies_matrix[:, (idx * 10):((idx + 1) * 10)]
 
-    classifier = KMeans(n_clusters=3, random_state=42)
-    labels = classifier.fit_predict(dataset).tolist()
+        for n_clusters in np.arange(2, 10):
+            classifier = KMeans(n_clusters=n_clusters)
+            labels = classifier.fit_predict(dataset).tolist()
 
-    silhouette_avg = silhouette_score(entropies_matrix, labels,
-                                      sample_size=100000)
+            silhouette_avg = silhouette_score(entropies_matrix, labels,
+                                              sample_size=100000)
 
-    print('Decade {}-{}: {}'.format(decade, decade + 9, silhouette_avg))
+            logging.info('N_CLUSTERS: {}, AVERAGE SILHOUETTE SCORE: {}'
+                         .format(n_clusters, silhouette_avg))
