@@ -57,7 +57,7 @@ for idx, decade in enumerate([1980, 1990, 2000, 2010]):
     classifier = KMeans(n_clusters=3, random_state=42)
     labels = classifier.fit_predict(dataset).tolist()
 
-    entropies_per_cluster = {0: list(), 1: list(), 2: list()}
+    entropies_per_cluster = [[], [], []]
 
     for label_idx, mag_id in tqdm(enumerate(sorted(entropies_dict)),
                                   desc='DECADE {} -- ASSIGNING CLUSTER'
@@ -68,7 +68,8 @@ for idx, decade in enumerate([1980, 1990, 2000, 2010]):
             if str(year) in entropies_dict[mag_id]:
                 entropies.append(entropies_dict[mag_id][str(year)]['entropy'])
 
-        entropies_per_cluster[labels[label_idx]].append(np.mean(entropies))
+        if len(entropies) != 0:
+            entropies_per_cluster[labels[label_idx]].append(np.mean(entropies))
 
     axs[idx].boxplot(entropies_per_cluster, labels=['0', '1', '2'],
                      showfliers=False, showmeans=True)
