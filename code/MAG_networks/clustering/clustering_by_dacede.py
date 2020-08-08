@@ -48,7 +48,9 @@ for idx, decade in enumerate([1980, 1990, 2000, 2010]):
     if decade == int(sys.argv[2]):
         dataset = entropies_matrix[:, (idx * 10):((idx + 1) * 10)]
 
-        for n_clusters in np.arange(2, 10):
+        for n_clusters in tqdm(np.arange(2, 10),
+                               desc='GRID SEARCH N CLUSTERS {}'
+                               .format(n_clusters)):
             classifier = KMeans(n_clusters=n_clusters)
             labels = classifier.fit_predict(dataset).tolist()
 
