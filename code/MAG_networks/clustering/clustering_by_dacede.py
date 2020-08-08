@@ -8,10 +8,10 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 from tqdm import tqdm
 
-log_name = '../logs/entropies_clustering_gs_decade_{}.log'.format(sys.argv[2])
+# log_name = '../logs/entropies_clustering_gs_decade_{}.log'.format(sys.argv[2])
 
-logging.basicConfig(filename=log_name, filemode='a', level=logging.INFO,
-                    format='%(message)s')
+# logging.basicConfig(filename=log_name, filemode='a', level=logging.INFO,
+#                     format='%(message)s')
 
 entropies_dict = dict()
 
