@@ -75,8 +75,6 @@ ax = ax.reshape((1, -1))[0]
 fig.suptitle("Xenofilia/Xenophobia's trend for various Countries",
              fontsize=10)
 
-line_0, line_1, line_2, line_3, line_4 = None, None, None, None, None
-
 for idx, country in enumerate(entropies):
     ax[idx].plot(np.arange(1980, 2020), entropies[country], linewidth=2,
                  label=country, color='steelblue')
@@ -95,7 +93,7 @@ for idx, country in enumerate(entropies):
     ax[idx].tick_params(axis='both', which='major', labelsize=6)
     ax[idx].set_title(country, fontsize=8)
 
-fig.legend((line_0, line_1, line_2, line_3, line_4),
+fig.legend(ax[0].get_children()[1:6],
            ('Chernobyl disaster', 'Fall of the Berlin Wall',
             'Dissolution of the Soviet Union', '09/11',
             '2008 Economic Crysis'), loc='center left', fontsize=8,
