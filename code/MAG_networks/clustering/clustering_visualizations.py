@@ -117,7 +117,7 @@ else:
                    labels=[str(c) for c in sorted(cl_df.cluster.unique())],
                    showfliers=False, showmeans=True)
         ax.grid(linestyle='--', color='black', alpha=0.4)
-        ax.set_title("Xenofilia/Xenophobia' Distribution per Cluster "
+        ax.set_title("Xenofilia/Xenophobia's Distribution per Cluster "
                      "on a Deeper Level" if 'deeper' in sys.argv[3] else
                      "Entropies' Distribution per Cluster", fontsize=10)
         ax.set_xlabel('Cluster', fontsize=8)
