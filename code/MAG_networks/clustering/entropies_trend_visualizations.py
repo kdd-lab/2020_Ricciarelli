@@ -5,6 +5,7 @@ import pandas as pd
 import sys
 
 from collections import defaultdict
+from sklearn.linear_model import LinearRegression
 from tqdm import tqdm
 
 entropies_dict = dict()
@@ -76,8 +77,14 @@ fig.suptitle("Xenofilia/Xenophobia's trend for various Countries",
              fontsize=10)
 
 for idx, country in enumerate(entropies):
+    model = LinearRegression()
+    model.fit(np.arange(0, 40).reshape((40, 1)), entropies[country])
+
     ax[idx].plot(np.arange(1980, 2020), entropies[country], linewidth=2,
                  label=country, color='steelblue')
+    ax[idx].plot(np.arange(1980, 2020),
+                 model.predict(np.arange(0, 40).reshape((40, 1))), linewidth=1,
+                 label='Trend', color='black', alpha=0.7)
 
     for year, color, style in zip([1986, 1989, 1991, 2001, 2008],
                                   ['#ff6347', '#47ff63', '#6347ff', '#ff4787',
