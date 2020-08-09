@@ -100,6 +100,10 @@ for idx, country in enumerate(entropies):
     ax[idx].tick_params(axis='both', which='major', labelsize=6)
     ax[idx].set_title(country, fontsize=8)
 
+fig.legend(ax[0].get_children()[:2], ("Xenofilia/Xenophobia's score",
+           'Trend'), loc='center left', fontsize=8, title="Lines' types",
+           bbox_to_anchor=(1.1, 0.5), bbox_transform=ax[3].transAxes)
+
 fig.legend(ax[0].get_children()[1:6],
            ('Chernobyl disaster', 'Fall of the Berlin Wall',
             'Dissolution of the Soviet Union', '09/11',
