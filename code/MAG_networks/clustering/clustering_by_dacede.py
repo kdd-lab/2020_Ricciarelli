@@ -75,8 +75,9 @@ for idx, decade in enumerate([1980, 1990, 2000, 2010]):
                      showfliers=False, showmeans=True)
     axs[idx].grid(linestyle='--', color='black', alpha=0.4)
     axs[idx].set_title('From {} to {}'.format(decade, decade + 9), fontsize=8)
-    axs[idx].set_xlabel('Cluster', fontsize=6)
-    axs[idx].set_ylabel('Xenofilia/Xenophobia', fontsize=6)
+    axs[idx].set_xlabel('Cluster', fontsize=8)
+    axs[idx].set_ylabel('Xenofilia/Xenophobia', fontsize=8)
+    axs[idx].tick_params(axis='both', which='major', labelsize=8)
 
 fig.savefig('../images/clustering/entropies_distribution_by_decade.pdf',
             format='pdf')
