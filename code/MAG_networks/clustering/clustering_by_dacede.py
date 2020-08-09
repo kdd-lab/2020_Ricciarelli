@@ -3,10 +3,13 @@ import json
 import matplotlib.pyplot as plt
 import numpy as np
 import sys
+import warnings
 
 from sklearn.cluster import KMeans
 # from sklearn.metrics import silhouette_score
 from tqdm import tqdm
+
+warnings.filterwarnings("ignore")
 
 # log_name =
 # '../logs/entropies_clustering_gs_decade_{}.log'.format(sys.argv[2])
@@ -70,8 +73,6 @@ for idx, decade in enumerate([1980, 1990, 2000, 2010]):
 
         if len(entropies) != 0:
             entropies_per_cluster[labels[label_idx]].append(np.mean(entropies))
-        else:
-            entropies_per_cluster[labels[label_idx]].append(np.nan)
 
     axs[idx].boxplot(entropies_per_cluster, labels=['0', '1', '2'],
                      showfliers=False, showmeans=True)
