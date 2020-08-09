@@ -112,21 +112,21 @@ else:
 
                 entropies_per_cluster[cluster].append(np.mean(entropies))
 
-        fig, ax = plt.subplots(figsize=(10, 10))
+        fig, ax = plt.subplots(constrained_layout=True)
         ax.boxplot(entropies_per_cluster,
                    labels=[str(c) for c in sorted(cl_df.cluster.unique())],
                    showfliers=False, showmeans=True)
         ax.grid(linestyle='--', color='black', alpha=0.4)
         ax.set_title("Entropies' Distribution per Cluster on a Deeper Level"
                      if 'deeper' in sys.argv[3] else
-                     "Entropies' Distribution per Cluster", fontsize=20)
-        ax.set_xlabel('Cluster', fontsize=14)
-        ax.set_ylabel('Xenofilia/Xenophobia', fontsize=14)
+                     "Entropies' Distribution per Cluster", fontsize=10)
+        ax.set_xlabel('Cluster', fontsize=8)
+        ax.set_ylabel('Xenofilia/Xenophobia', fontsize=8)
 
         fig.savefig('../images/clustering/entropies_distribution_deeper.pdf' if
                     'deeper' in sys.argv[3] else
                     '../images/clustering/entropies_distribution.pdf',
-                    format='pdf', bbox_inches='tight')
+                    format='pdf')
     elif sys.argv[1] == 'geoplot':
         for id_list in [cl_df[cl_df.cluster == 1]['MAG_id'],
                         cl_df[cl_df.cluster == 2]['MAG_id']]:
