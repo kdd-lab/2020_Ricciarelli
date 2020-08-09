@@ -84,7 +84,7 @@ for idx, country in enumerate(entropies):
                  label=country, color='steelblue')
     ax[idx].plot(np.arange(1980, 2020),
                  model.predict(np.arange(0, 40).reshape((40, 1))), linewidth=1,
-                 label='Trend', color='black', alpha=0.7)
+                 label='Trend', color='black', ls='dashed')
 
     for year, color, style in zip([1986, 1989, 1991, 2001, 2008],
                                   ['#ff6347', '#47ff63', '#6347ff', '#ff4787',
