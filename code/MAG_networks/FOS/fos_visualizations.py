@@ -82,13 +82,13 @@ for idx, cluster in enumerate([1, 2]):
                      fontdict={'fontsize': 6, 'rotation': 0, 'ha': 'center',
                                'va': 'center'})
 
-    ax.set_title('Cluster {}'.format(cluster), fontsize=8)
-    ax.set_xlim(1979, 2020)
-    ax.set_xticks(np.arange(1980, 2020, 10))
-    ax.set_xticks(np.arange(1980, 2020), minor=True)
-    ax.tick_params(axis='both', which='major', labelsize=6)
-    ax.set_xlabel('Year', fontsize=8)
-    ax.set_ylabel('Registered Entries', fontsize=8)
+    ax[idx].set_title('Cluster {}'.format(cluster), fontsize=8)
+    ax[idx].set_xlim(1979, 2020)
+    ax[idx].set_xticks(np.arange(1980, 2020, 10))
+    ax[idx].set_xticks(np.arange(1980, 2020), minor=True)
+    ax[idx].tick_params(axis='both', which='major', labelsize=6)
+    ax[idx].set_xlabel('Year', fontsize=8)
+    ax[idx].set_ylabel('Registered Entries', fontsize=8)
 
 fig.savefig('../images/fos/most_represented_fos_per_cluster.pdf',
             format='pdf')
