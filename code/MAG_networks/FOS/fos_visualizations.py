@@ -70,8 +70,8 @@ for idx, cluster in enumerate([1, 2]):
                 for field_of_study in fos_dict[mag_id][year]:
                     fos_counter_per_cluster[year][field_of_study] += 1
 
-    fields_of_study = set([fos_counter_per_cluster[str(x)].most_common()[0][0]]
-                          for x in np.arange(1980, 2020))
+    fields_of_study = set([fos_counter_per_cluster[str(x)].most_common()[0][0]
+                          for x in np.arange(1980, 2020)])
     field_of_study_markers = dict()
 
     for i, fos in enumerate(fields_of_study):
