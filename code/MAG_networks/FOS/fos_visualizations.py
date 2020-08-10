@@ -32,11 +32,11 @@ for idx, x in enumerate(np.arange(1980, 2020)):
     y = ax.get_children()[0].properties()['data'][1][idx]
 
     if y % 2 == 0:
-        y += 25000
+        y += 40000
     else:
-        y -= 25000
+        y -= 40000
 
-    ax.text(x, y, field_of_study, fontdict={'fontsize': 4, 'rotation': 45,
+    ax.text(x, y, field_of_study, fontdict={'fontsize': 4, 'rotation': 0,
             'ha': 'center', 'va': 'center'})
 
 ax.set_xlim(1979, 2020)
