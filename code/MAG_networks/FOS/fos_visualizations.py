@@ -60,9 +60,10 @@ for idx, cluster in enumerate([1, 2]):
     fos_counter_per_cluster = defaultdict(Counter)
 
     for mag_id in cl_df[cl_df.cluster == cluster]['MAG_id']:
-        for year in fos_dict[mag_id]:
-            for field_of_study in fos_dict[mag_id][year]:
-                fos_counter_per_cluster[year][field_of_study] += 1
+        if mag_id in fos_dict:
+            for year in fos_dict[mag_id]:
+                for field_of_study in fos_dict[mag_id][year]:
+                    fos_counter_per_cluster[year][field_of_study] += 1
 
     ax[idx].plot(np.arange(1980, 2020),
                  [fos_counter_per_cluster[year].most_common()[0][1]
