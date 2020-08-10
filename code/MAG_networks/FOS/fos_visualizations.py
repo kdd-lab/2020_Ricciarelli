@@ -29,7 +29,7 @@ markers = list(mpl.markers.MarkerStyle.markers.keys())
 
 fields_of_study = set([fos_counter_per_year[str(x)].most_common()[0][0]
                       for x in np.arange(1980, 2020)])
-field_of_study_markers = dict()
+field_of_study_markers, legend_entries = dict(), dict()
 
 for idx, fos in enumerate(fields_of_study):
     field_of_study_markers[fos] = markers[idx]
@@ -44,8 +44,9 @@ for idx, x in enumerate(np.arange(1980, 2020)):
     y = ax.get_children()[idx].properties()['data'][1][idx]
     field_of_study = fos_counter_per_year[str(x)].most_common()[0][0]
 
-    ax.scatter(x, y, c='steelblue',
-               marker=field_of_study_markers[field_of_study])
+    legend_entries[field_of_study] = \
+        ax.scatter(x, y, c='steelblue',
+                   marker=field_of_study_markers[field_of_study])
 
 ax.set_xlim(1979, 2020)
 ax.set_xticks(np.arange(1980, 2020, 10))
@@ -53,6 +54,9 @@ ax.set_xticks(np.arange(1980, 2020), minor=True)
 ax.tick_params(axis='both', which='major', labelsize=6)
 ax.set_xlabel('Year', fontsize=8)
 ax.set_ylabel('Registered Entries', fontsize=8)
+ax.legend([legend_entries[fos] for fos in sorted(legend_entries)],
+          sorted(list(legend_entries.keys())), loc='center left', fontsize=6,
+          title='Fields of Study', bbox_to_anchor=(1, 0.5))
 fig.savefig('../images/fos/most_represented_fos_per_year.pdf',
             format='pdf')
 plt.close(fig)
@@ -72,7 +76,7 @@ for idx, cluster in enumerate([1, 2]):
 
     fields_of_study = set([fos_counter_per_cluster[str(x)].most_common()[0][0]
                           for x in np.arange(1980, 2020)])
-    field_of_study_markers = dict()
+    field_of_study_markers, legend_entries = dict(), dict()
 
     for i, fos in enumerate(fields_of_study):
         field_of_study_markers[fos] = markers[i]
@@ -86,8 +90,9 @@ for idx, cluster in enumerate([1, 2]):
         y = ax[idx].get_children()[i].properties()['data'][1][i]
         field_of_study = fos_counter_per_cluster[str(x)].most_common()[0][0]
 
-        ax[idx].scatter(x, y, c='steelblue',
-                        marker=field_of_study_markers[field_of_study])
+        legend_entries[field_of_study] = \
+            ax[idx].scatter(x, y, c='steelblue',
+                            marker=field_of_study_markers[field_of_study])
 
     ax[idx].set_title('Cluster {}'.format(cluster), fontsize=8)
     ax[idx].set_xlim(1979, 2020)
@@ -97,6 +102,10 @@ for idx, cluster in enumerate([1, 2]):
     ax[idx].set_xlabel('Year', fontsize=8)
     ax[idx].set_ylabel('Registered Entries', fontsize=8)
 
+fig.legend([legend_entries[fos] for fos in sorted(legend_entries)],
+           sorted(list(legend_entries.keys())), loc='center left', fontsize=6,
+           title='Fields of Study', bbox_to_anchor=(1.1, 0.5),
+           bbox_transform=ax[-1].transAxes)
 fig.savefig('../images/fos/most_represented_fos_per_cluster.pdf',
             format='pdf')
 plt.close(fig)
