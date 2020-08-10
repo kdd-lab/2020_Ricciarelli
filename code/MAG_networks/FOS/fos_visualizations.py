@@ -107,7 +107,7 @@ for idx, cluster in enumerate([1, 2]):
 
 fig.legend([legend_entries[fos] for fos in sorted(legend_entries)],
            sorted(list(legend_entries.keys())), loc='center left', fontsize=6,
-           title='Fields of Study', bbox_to_anchor=(1.1, 0.5),
+           title='Fields of Study', bbox_to_anchor=(1.0, 0.5),
            bbox_transform=ax[-1].transAxes)
 fig.savefig('../images/fos/most_represented_fos_per_cluster.pdf',
             bbox_inches='tight', format='pdf')
