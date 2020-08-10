@@ -32,3 +32,6 @@ ax.set_xticks(np.arange(1980, 2020), minor=True)
 ax.tick_params(axis='both', which='major', labelsize=6)
 ax.set_xlabel('Year', fontsize=8)
 ax.set_ylabel('Registered Entries', fontsize=8)
+fig.savefig('../images/most_represented_fos_per_year.pdf',
+            format='pdf')
+plt.close(fig)
