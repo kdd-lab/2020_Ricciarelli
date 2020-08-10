@@ -37,7 +37,7 @@ for idx, x in enumerate(np.arange(1980, 2020)):
     if y % 2 == 0:
         y += 40000
     else:
-        y += 50000
+        y -= 40000
 
     ax.text(x, y, field_of_study, fontdict={'fontsize': 6, 'rotation': 0,
             'ha': 'center', 'va': 'center'})
@@ -77,7 +77,7 @@ for idx, cluster in enumerate([1, 2]):
         if y % 2 == 0:
             y += 40000
         else:
-            y += 50000
+            y -= 50000
 
         ax[idx].text(x, y, field_of_study,
                      fontdict={'fontsize': 6, 'rotation': 0, 'ha': 'center',
