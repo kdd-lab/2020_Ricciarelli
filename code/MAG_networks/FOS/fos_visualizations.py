@@ -27,8 +27,8 @@ for mag_id in tqdm(fos_dict, desc='COUNTING FOS PER YEAR'):
 
 markers = list(mpl.markers.MarkerStyle.markers.keys())
 
-fields_of_study = set([fos_counter_per_year[str(x)].most_common()[0][0]]
-                      for x in np.arange(1980, 2020))
+fields_of_study = set([fos_counter_per_year[str(x)].most_common()[0][0]
+                      for x in np.arange(1980, 2020)])
 field_of_study_markers = dict()
 
 for idx, fos in enumerate(fields_of_study):
@@ -41,7 +41,7 @@ ax.plot(np.arange(1980, 2020),
         for year in fos_counter_per_year], lw=2, color='steelblue', alpha=0.7)
 
 for idx, x in enumerate(np.arange(1980, 2020)):
-    y = ax.get_children()[0].properties()['data'][1][idx]
+    y = ax.get_children()[idx].properties()['data'][1][idx]
     field_of_study = fos_counter_per_year[str(x)].most_common()[0][0]
 
     ax.scatter(x, y, c='steelblue',
@@ -83,7 +83,7 @@ for idx, cluster in enumerate([1, 2]):
                  alpha=0.7)
 
     for i, x in enumerate(np.arange(1980, 2020)):
-        y = ax[idx].get_children()[0].properties()['data'][1][i]
+        y = ax[idx].get_children()[i].properties()['data'][1][i]
         field_of_study = fos_counter_per_cluster[str(x)].most_common()[0][0]
 
         ax[idx].scatter(x, y, c='steelblue',
