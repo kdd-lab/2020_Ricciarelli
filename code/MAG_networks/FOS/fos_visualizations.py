@@ -110,5 +110,5 @@ fig.legend([legend_entries[fos] for fos in sorted(legend_entries)],
            title='Fields of Study', bbox_to_anchor=(1.1, 0.5),
            bbox_transform=ax[-1].transAxes)
 fig.savefig('../images/fos/most_represented_fos_per_cluster.pdf',
-            format='pdf')
+            bbox_inches='tight', format='pdf')
 plt.close(fig)
