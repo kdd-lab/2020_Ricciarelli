@@ -26,12 +26,18 @@ ax.set_title('Most represented Field of Study per Year', fontsize=10)
 ax.plot(np.arange(1980, 2020),
         [fos_counter_per_year[year].most_common()[0][1]
         for year in fos_counter_per_year], lw=2, color='steelblue')
+
+for x in np.arange(1980, 2020):
+    field_of_study = fos_counter_per_year[str(x)].most_common()[0][0]
+    y = fos_counter_per_year[str(x)].most_common()[0][0] + 1000
+    ax.text(x, y, field_of_study, fontdict={'fontsize': 4, 'rotation': 90})
+
 ax.set_xlim(1979, 2020)
 ax.set_xticks(np.arange(1980, 2020, 10))
 ax.set_xticks(np.arange(1980, 2020), minor=True)
 ax.tick_params(axis='both', which='major', labelsize=6)
 ax.set_xlabel('Year', fontsize=8)
 ax.set_ylabel('Registered Entries', fontsize=8)
-fig.savefig('../images/most_represented_fos_per_year.pdf',
+fig.savefig('../images/fos/most_represented_fos_per_year.pdf',
             format='pdf')
 plt.close(fig)
