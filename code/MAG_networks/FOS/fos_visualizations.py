@@ -29,7 +29,13 @@ ax.plot(np.arange(1980, 2020),
 
 for idx, x in enumerate(np.arange(1980, 2020)):
     field_of_study = fos_counter_per_year[str(x)].most_common()[0][0]
-    y = ax.get_children()[0].properties()['data'][1][idx] + 50000
+    y = ax.get_children()[0].properties()['data'][1][idx]
+
+    if y % 2 == 0:
+        y += 25000
+    else:
+        y -= 25000
+
     ax.text(x, y, field_of_study, fontdict={'fontsize': 4, 'rotation': 45,
             'ha': 'center', 'va': 'center'})
 
