@@ -61,6 +61,8 @@ fig.savefig('../images/fos/most_represented_fos_per_year.pdf',
             format='pdf')
 plt.close(fig)
 
+field_of_study_markers, legend_entries, fos_counter = dict(), dict(), 0
+
 fig, ax = plt.subplots(1, 2, constrained_layout=True)
 ax = ax.reshape((1, -1))[0]
 fig.suptitle('Most represented Fields of Study per Cluster', fontsize=10)
@@ -76,10 +78,11 @@ for idx, cluster in enumerate([1, 2]):
 
     fields_of_study = set([fos_counter_per_cluster[str(x)].most_common()[0][0]
                           for x in np.arange(1980, 2020)])
-    field_of_study_markers, legend_entries = dict(), dict()
 
-    for i, fos in enumerate(fields_of_study):
-        field_of_study_markers[fos] = markers[i]
+    for fos in fields_of_study:
+        if fos not in field_of_study_markers:
+            field_of_study_markers[fos] = markers[fos_counter]
+            fos_counter += 1
 
     ax[idx].plot(np.arange(1980, 2020),
                  [fos_counter_per_cluster[year].most_common()[0][1]
