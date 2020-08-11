@@ -199,7 +199,8 @@ for cluster in [1, 2]:
     world.plot(column='fos', ax=ax, categorical=True, cmap='Spectral',
                missing_kwds={'color': 'white'}, edgecolor='black',
                linewidth=0.1, legend=True,
-               legend_kwds={'bbox_to_anchor': (1.5, 0.75), 'fontsize': 6})
+               legend_kwds={'bbox_to_anchor': (1.5, 0.75), 'fontsize': 6,
+               'labelspacing':1.5})
     ax.axes.xaxis.set_visible(False)
     ax.axes.yaxis.set_visible(False)
 
