@@ -169,13 +169,15 @@ for cluster in [1, 2]:
     for mag_id in cl_df[cl_df.cluster == cluster]['MAG_id']:
         if mag_id in fos_dict:
             for year in fos_dict[mag_id]:
-                country = entropies_dict[mag_id][year]['affiliation']
+                if year in entropies_dict[mag_id]:
+                    country = entropies_dict[mag_id][year]['affiliation']
 
-                if country not in fos_counter_per_country:
-                    fos_counter_per_country[country] = defaultdict(Counter())
+                    if country not in fos_counter_per_country:
+                        fos_counter_per_country[country] = \
+                            defaultdict(Counter())
 
-                for field_of_study in fos_dict[mag_id][year]:
-                    fos_counter_per_country[country][year][field_of_study] += 1
+                    for fos in fos_dict[mag_id][year]:
+                        fos_counter_per_country[country][year][fos] += 1
 
     for idx, decade in enumerate([1980, 1990, 2000, 2010]):
         world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
