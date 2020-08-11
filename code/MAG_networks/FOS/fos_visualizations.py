@@ -235,7 +235,7 @@ for cluster in [1, 2]:
                     for fos in fos_dict[mag_id][year]:
                         fos_counter_per_country[country][year][fos] += 1
 
-    distinct_fos = set()
+    distinct_fos = list()
 
     for idx, decade in enumerate([1980, 1990, 2000, 2010]):
         world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
@@ -256,7 +256,8 @@ for cluster in [1, 2]:
                 to_plot[country] = Counter(fos_per_decade).most_common()[0][0]
 
         for country in to_plot:
-            distinct_fos.add(to_plot[country])
+            if to_plot[country] not in distinct_fos:
+                distinct_fos.append(to_plot[country])
 
         world['fos'] = world['name'].map(to_plot)
         world.plot(column='fos', ax=ax[idx], categorical=True,
