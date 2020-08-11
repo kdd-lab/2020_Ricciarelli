@@ -273,9 +273,11 @@ for cluster in [1, 2]:
     patches = list()
     cmap = cm.get_cmap('Spectral', len(distinct_fos))
 
+    import ipdb
+    ipdb.set_trace()
+
     for i, fos in enumerate(distinct_fos):
-        patches.append(Patch(color=cmap.colors[i],
-                       label=distinct_fos[i]))
+        patches.append(Patch(color=cmap.colors[i], label=distinct_fos[i]))
 
     fig.legend(handles=patches, loc='center left', fontsize=8,
                bbox_to_anchor=(1.1, 0.5), bbox_transform=ax[1].transAxes)
