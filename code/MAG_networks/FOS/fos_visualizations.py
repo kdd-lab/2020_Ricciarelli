@@ -198,7 +198,8 @@ for cluster in [1, 2]:
         world['fos'] = world['name'].map(to_plot)
         world.plot(column='fos', ax=ax[idx], categorical=True, cmap='Spectral',
                    missing_kwds={'color': 'white'}, edgecolor='black',
-                   linewidth=0.1, legend=True)
+                   linewidth=0.1, legend=True,
+                   legend_kwds={'bbox_to_anchor': (1.1, 0.5), 'fontsize':6})
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
                           fontsize=8)
         ax[idx].axes.xaxis.set_visible(False)
