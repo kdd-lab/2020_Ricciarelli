@@ -186,17 +186,17 @@ for cluster in [1, 2]:
         to_plot = dict()
 
         for country in fos_counter_per_country:
-            fos_per_decade = \
-                [fos_counter_per_country[country][str(year)]
-                 .most_common()[0][0] for year in
-                 np.arange(decade, decade + 10)
-                 if len(fos_counter_per_country[country][str(year)]
-                 .most_common()) != 0]
+            fos_per_decade = list()
 
-            to_plot[country] = Counter(fos_per_decade).most_common()[0][0]
+            for year in np.arange(decade, decade + 10):
+                if str(year) in fos_counter_per_country[country]:
+                    fos_per_decade.append(fos_counter_per_country[country][str(year)].most_common()[0][0])
+
+            if len(fos_per_decade) != 0:
+                to_plot[country] = Counter(fos_per_decade).most_common()[0][0]
 
         world['fos'] = world['name'].map(to_plot)
-        world.plot(column='fos', ax=ax[idx], categorical=True, cmap='spectral',
+        world.plot(column='fos', ax=ax[idx], categorical=True, cmap='Spectral',
                    missing_kwds={'color': 'white'}, edgecolor='black',
                    linewidth=0.1)
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
