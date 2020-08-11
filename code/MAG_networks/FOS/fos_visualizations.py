@@ -27,6 +27,8 @@ for mag_id in tqdm(fos_dict, desc='COUNTING FOS PER YEAR'):
 
 markers = list(mpl.markers.MarkerStyle.markers.keys())
 
+# MOST REPRESENTED FIELD OF STUDY PER YEAR ####################################
+
 fields_of_study = set([fos_counter_per_year[str(x)].most_common()[0][0]
                       for x in np.arange(1980, 2020)])
 field_of_study_markers, legend_entries = dict(), dict()
@@ -60,6 +62,8 @@ ax.legend([legend_entries[fos] for fos in sorted(legend_entries)],
 fig.savefig('../images/fos/most_represented_fos_per_year.pdf',
             format='pdf')
 plt.close(fig)
+
+# MOST REPRESENTED FIELD OF STUDY PER CLUSTER PER YEAR ########################
 
 field_of_study_markers, legend_entries, fos_counter = dict(), dict(), 0
 
@@ -95,7 +99,8 @@ for idx, cluster in enumerate([1, 2]):
 
         legend_entries[field_of_study] = \
             ax[idx].scatter(x, y, c='steelblue',
-                            marker=field_of_study_markers[field_of_study])
+                            marker=field_of_study_markers[field_of_study],
+                            ms=2)
 
     ax[idx].set_title('Cluster {}'.format(cluster), fontsize=8)
     ax[idx].set_xlim(1979, 2020)
