@@ -260,7 +260,7 @@ for cluster in [1, 2]:
 
         world['fos'] = world['name'].map(to_plot)
         world.plot(column='fos', ax=ax[idx], categorical=True,
-                   cm.get_cmap('Spectral', len(distinct_fos)),
+                   cmap=cm.get_cmap('Spectral', len(distinct_fos)),
                    missing_kwds={'color': 'white'}, edgecolor='black',
                    linewidth=0.1)
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
@@ -274,7 +274,8 @@ for cluster in [1, 2]:
     cmap = cm.get_cmap('Spectral', len(distinct_fos))
 
     for i, fos in enumerate(distinct_fos):
-        patches.append(Patch(color=cmap[i]), label=distinct_fos[i])
+        patches.append(Patch(color=cmap.colors[i],
+                       label=distinct_fos[i]))
 
     fig.legend(handles=patches, loc='center left', fontsize=8,
                bbox_to_anchor=(1.1, 0.5), bbox_transform=ax[1].transAxes)
