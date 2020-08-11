@@ -189,7 +189,9 @@ for cluster in [1, 2]:
             fos_per_decade = \
                 [fos_counter_per_country[country][str(year)]
                  .most_common()[0][0] for year in
-                 np.arange(decade, decade + 10)]
+                 np.arange(decade, decade + 10)
+                 if len(fos_counter_per_country[country][str(year)]
+                 .most_common()) != 0]
 
             to_plot[country] = Counter(fos_per_decade).most_common()[0][0]
 
