@@ -1,4 +1,5 @@
 import json
+import geopandas as gpd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
@@ -10,13 +11,50 @@ from tqdm import tqdm
 
 fos_dict = dict()
 
-with open(sys.argv[1], 'r') as entropies_file:
-    for row in tqdm(entropies_file, desc='READING FOS FILE'):
+with open(sys.argv[1], 'r') as fos_file:
+    for row in tqdm(fos_file, desc='READING FOS FILE'):
         creator = json.loads(row)
 
         fos_dict.update(creator)
 
-cl_df = pd.read_csv(sys.argv[2], dtype={'MAG_id': str, 'cluster': int})
+entropies_dict = dict()
+
+with open(sys.argv[2], 'r') as entropies_file:
+    for row in tqdm(entropies_file, desc='READING ENTROPIES FILE'):
+        creator = json.loads(row)
+
+        entropies_dict.update(creator)
+
+cl_df = pd.read_csv(sys.argv[3], dtype={'MAG_id': str, 'cluster': int})
+
+for mag_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
+    for year in entropies_dict[mag_id]:
+        country = entropies_dict[mag_id][year]['affiliation']
+
+        if country == 'United States':
+            country = 'United States of America'
+        elif country == 'Korea':
+            country = 'South Korea'
+        elif country == 'Russian Federation':
+            country = 'Russia'
+        elif country == 'Dominican Republic':
+            country = 'Dominican Rep.'
+        elif country == 'Bosnia and Herzegovina':
+            country = 'Bosnia and Herz.'
+        elif country == "Lao People's Democratic Republic":
+            country = 'Laos'
+        elif country == 'Cyprus':
+            country = 'N. Cyprus'
+        elif country == 'Central African Republic':
+            country = 'Central African Rep.'
+        elif country == 'South Sudan':
+            country = 'S. Sudan'
+        elif country == 'Syrian Arab Republic':
+            country = 'Syria'
+        elif country == 'Viet Nam':
+            country = 'Vietnam'
+
+        entropies_dict[mag_id][year]['affiliation'] = country
 
 fos_counter_per_year = defaultdict(Counter)
 
@@ -117,3 +155,53 @@ fig.legend([legend_entries[fos] for fos in sorted(legend_entries)],
 fig.savefig('../images/fos/most_represented_fos_per_cluster.pdf',
             bbox_inches='tight', format='pdf')
 plt.close(fig)
+
+# MOST REPRESENTED FIELD OF STUDY PER CLUSTER PER YEAR GEOPLOT ################
+
+for cluster in [1, 2]:
+    fig, ax = plt.subplots(2, 2, constrained_layout=True)
+    ax = ax.reshape((1, -1))[0]
+    fig.suptitle('Most represented Fields of Study per Country - Cluster {}'
+                 .format(cluster), fontsize=10)
+
+    fos_counter_per_country = dict()
+
+    for mag_id in cl_df[cl_df.cluster == cluster]['MAG_id']:
+        if mag_id in fos_dict:
+            for year in fos_dict[mag_id]:
+                country = entropies_dict[mag_id][year]['affiliation']
+
+                if country not in fos_counter_per_country:
+                    fos_counter_per_country[country] = defaultdict(Counter())
+
+                for field_of_study in fos_dict[mag_id][year]:
+                    fos_counter_per_country[country][year][field_of_study] += 1
+
+    for idx, decade in enumerate([1980, 1990, 2000, 2010]):
+        world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+        world = world[world.name != "Antarctica"]
+
+        to_plot = dict()
+
+        for country in fos_counter_per_country:
+            fos_per_decade = \
+                [fos_counter_per_country[country][str(year)]
+                 .most_common()[0][0] for year in
+                 np.arange(decade, decade + 10)]
+
+            to_plot[country] = Counter(fos_per_decade).most_common()[0][0]
+
+        world['fos'] = world['name'].map(to_plot)
+        world.plot(column='fos', ax=ax[idx], categorical=True, cmap='spectral',
+                   missing_kwds={'color': 'white'}, edgecolor='black',
+                   linewidth=0.1)
+        ax[idx].set_title("From {} to {}".format(decade, decade + 9),
+                          fontsize=8)
+        ax[idx].axes.xaxis.set_visible(False)
+        ax[idx].axes.yaxis.set_visible(False)
+
+        world.drop(['fos'], axis=1, inplace=True)
+
+    fig.savefig('../images/fos/fos_per_country_cluster_{}.pdf'.format(cluster),
+                format='pdf', bbox_inches='tight')
+    plt.close(fig)
