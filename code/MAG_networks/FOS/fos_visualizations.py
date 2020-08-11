@@ -156,7 +156,60 @@ fig.savefig('../images/fos/most_represented_fos_per_cluster.pdf',
             bbox_inches='tight', format='pdf')
 plt.close(fig)
 
-# MOST REPRESENTED FIELD OF STUDY PER CLUSTER PER YEAR GEOPLOT ################
+# MOST REPRESENTED FIELD OF STUDY PER CLUSTER GEOPLOT #########################
+
+for cluster in [1, 2]:
+    fig, ax = plt.subplots(1, 1, constrained_layout=True)
+    ax.set_title('Most represented Fields of Study per Country - Cluster {}'
+                 .format(cluster))
+
+    fos_counter_per_country = dict()
+
+    for mag_id in cl_df[cl_df.cluster == cluster]['MAG_id']:
+        if mag_id in fos_dict:
+            for year in fos_dict[mag_id]:
+                if year in entropies_dict[mag_id]:
+                    country = entropies_dict[mag_id][year]['affiliation']
+
+                    if country not in fos_counter_per_country:
+                        fos_counter_per_country[country] = \
+                            defaultdict(Counter)
+
+                    for fos in fos_dict[mag_id][year]:
+                        fos_counter_per_country[country][year][fos] += 1
+
+    world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+    world = world[world.name != "Antarctica"]
+
+    to_plot = dict()
+
+    for country in fos_counter_per_country:
+        fos_per_decade = list()
+
+        for year in np.arange(1980, 2020):
+            if str(year) in fos_counter_per_country[country]:
+                fos_per_decade.append(
+                    fos_counter_per_country[country][str(year)]
+                    .most_common()[0][0])
+
+        if len(fos_per_decade) != 0:
+            to_plot[country] = Counter(fos_per_decade).most_common()[0][0]
+
+    world['fos'] = world['name'].map(to_plot)
+    world.plot(column='fos', ax=ax, categorical=True, cmap='Spectral',
+               missing_kwds={'color': 'white'}, edgecolor='black',
+               linewidth=0.1, legend=True,
+               legend_kwds={'bbox_to_anchor': (1.1, 0.5), 'fontsize': 6})
+    ax.axes.xaxis.set_visible(False)
+    ax.axes.yaxis.set_visible(False)
+
+    world.drop(['fos'], axis=1, inplace=True)
+
+    fig.savefig('../images/fos/fos_per_country_cluster_{}.pdf'.format(cluster),
+                format='pdf', bbox_inches='tight')
+    plt.close(fig)
+
+# MOST REPRESENTED FIELD OF STUDY PER CLUSTER PER DECADE GEOPLOT ##############
 
 for cluster in [1, 2]:
     fig, ax = plt.subplots(2, 2, constrained_layout=True)
@@ -190,7 +243,9 @@ for cluster in [1, 2]:
 
             for year in np.arange(decade, decade + 10):
                 if str(year) in fos_counter_per_country[country]:
-                    fos_per_decade.append(fos_counter_per_country[country][str(year)].most_common()[0][0])
+                    fos_per_decade.append(
+                        fos_counter_per_country[country][str(year)]
+                        .most_common()[0][0])
 
             if len(fos_per_decade) != 0:
                 to_plot[country] = Counter(fos_per_decade).most_common()[0][0]
@@ -208,6 +263,6 @@ for cluster in [1, 2]:
 
         world.drop(['fos'], axis=1, inplace=True)
 
-    fig.savefig('../images/fos/fos_per_country_cluster_{}.pdf'.format(cluster),
-                format='pdf', bbox_inches='tight')
+    fig.savefig('../images/fos/fos_per_country_cluster_per_decade_{}.pdf'
+                .format(cluster), format='pdf', bbox_inches='tight')
     plt.close(fig)
