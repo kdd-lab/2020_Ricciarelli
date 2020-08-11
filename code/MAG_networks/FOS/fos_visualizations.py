@@ -174,7 +174,7 @@ for cluster in [1, 2]:
 
                     if country not in fos_counter_per_country:
                         fos_counter_per_country[country] = \
-                            defaultdict(Counter())
+                            defaultdict(Counter)
 
                     for fos in fos_dict[mag_id][year]:
                         fos_counter_per_country[country][year][fos] += 1
