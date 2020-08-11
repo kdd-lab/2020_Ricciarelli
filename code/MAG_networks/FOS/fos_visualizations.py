@@ -7,6 +7,8 @@ import pandas as pd
 import sys
 
 from collections import Counter, defaultdict
+from matplotlib import cm
+from matplotlib.patches import Patch
 from tqdm import tqdm
 
 fos_dict = dict()
@@ -199,8 +201,8 @@ for cluster in [1, 2]:
     world.plot(column='fos', ax=ax, categorical=True, cmap='Spectral',
                missing_kwds={'color': 'white'}, edgecolor='black',
                linewidth=0.1, legend=True,
-               legend_kwds={'bbox_to_anchor': (1.3, 1.0), 'fontsize': 6,
-               'labelspacing':1.5})
+               legend_kwds={'bbox_to_anchor': (1.2, 1.0), 'fontsize': 6,
+                            'labelspacing': 1.5})
     ax.axes.xaxis.set_visible(False)
     ax.axes.yaxis.set_visible(False)
 
@@ -233,6 +235,8 @@ for cluster in [1, 2]:
                     for fos in fos_dict[mag_id][year]:
                         fos_counter_per_country[country][year][fos] += 1
 
+    distinct_fos = set()
+
     for idx, decade in enumerate([1980, 1990, 2000, 2010]):
         world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
         world = world[world.name != "Antarctica"]
@@ -251,8 +255,12 @@ for cluster in [1, 2]:
             if len(fos_per_decade) != 0:
                 to_plot[country] = Counter(fos_per_decade).most_common()[0][0]
 
+        for country in to_plot:
+            distinct_fos.add(to_plot[country])
+
         world['fos'] = world['name'].map(to_plot)
-        world.plot(column='fos', ax=ax[idx], categorical=True, cmap='Spectral',
+        world.plot(column='fos', ax=ax[idx], categorical=True,
+                   cm.get_cmap('Spectral', len(distinct_fos)),
                    missing_kwds={'color': 'white'}, edgecolor='black',
                    linewidth=0.1)
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
@@ -261,6 +269,15 @@ for cluster in [1, 2]:
         ax[idx].axes.yaxis.set_visible(False)
 
         world.drop(['fos'], axis=1, inplace=True)
+
+    patches = list()
+    cmap = cm.get_cmap('Spectral', len(distinct_fos))
+
+    for i, fos in enumerate(distinct_fos):
+        patches.append(Patch(color=cmap[i]), label=distinct_fos[i])
+
+    fig.legend(handles=patches, loc='center left', fontsize=8,
+               bbox_to_anchor=(1.1, 0.5), bbox_transform=ax[1].transAxes)
 
     fig.savefig('../images/fos/fos_per_country_cluster_per_decade_{}.pdf'
                 .format(cluster), format='pdf', bbox_inches='tight')
