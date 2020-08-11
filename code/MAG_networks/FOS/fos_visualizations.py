@@ -100,7 +100,7 @@ for idx, cluster in enumerate([1, 2]):
         legend_entries[field_of_study] = \
             ax[idx].scatter(x, y, c='steelblue',
                             marker=field_of_study_markers[field_of_study],
-                            ms=2)
+                            s=2)
 
     ax[idx].set_title('Cluster {}'.format(cluster), fontsize=8)
     ax[idx].set_xlim(1979, 2020)
