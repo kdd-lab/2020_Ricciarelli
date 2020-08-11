@@ -199,7 +199,7 @@ for cluster in [1, 2]:
     world.plot(column='fos', ax=ax, categorical=True, cmap='Spectral',
                missing_kwds={'color': 'white'}, edgecolor='black',
                linewidth=0.1, legend=True,
-               legend_kwds={'bbox_to_anchor': (1.5, 0.75), 'fontsize': 6,
+               legend_kwds={'bbox_to_anchor': (1.3, 1.0), 'fontsize': 6,
                'labelspacing':1.5})
     ax.axes.xaxis.set_visible(False)
     ax.axes.yaxis.set_visible(False)
@@ -254,9 +254,7 @@ for cluster in [1, 2]:
         world['fos'] = world['name'].map(to_plot)
         world.plot(column='fos', ax=ax[idx], categorical=True, cmap='Spectral',
                    missing_kwds={'color': 'white'}, edgecolor='black',
-                   linewidth=0.1, legend=True,
-                   legend_kwds={'bbox_to_anchor': (0.5, 1.4), 'fontsize': 6,
-                   'ncol': 4})
+                   linewidth=0.1)
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
                           fontsize=8)
         ax[idx].axes.xaxis.set_visible(False)
