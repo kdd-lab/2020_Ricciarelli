@@ -104,9 +104,11 @@ ax.set_xticks(np.arange(1980, 2020), minor=True)
 ax.tick_params(axis='both', which='major', labelsize=6)
 ax.set_xlabel('Year', fontsize=8)
 ax.set_ylabel('Registered Entries', fontsize=8)
-plt.gca().add_artist(plt.legend(handles=[legend_entries[fos] for fos in sorted(legend_entries)],
-                     sorted(list(legend_entries.keys())), loc='center left', fontsize=6,
-                     title='Fields of Study', bbox_to_anchor=(1, 0.5))
+plt.gca().add_artist(plt.legend(handles=[legend_entries[fos] for fos in
+                                sorted(legend_entries)],
+                                sorted(list(legend_entries.keys())),
+                                loc='center left', fontsize=6,
+                     title='Fields of Study', bbox_to_anchor=(1, 0.5)))
 plt.legend(handles=vertical_lines,
            ('Chernobyl disaster', 'Fall of the Berlin Wall',
             'Dissolution of the Soviet Union', '09/11',
