@@ -113,12 +113,13 @@ plt.legend(vertical_lines,
            ('Chernobyl disaster', 'Fall of the Berlin Wall',
             'Dissolution of the Soviet Union', '09/11',
             '2008 Economic Crysis'), loc='center left', fontsize=6,
-           title='Events', bbox_to_anchor=(1, 0.25),)
+           title='Events', bbox_to_anchor=(1, 0.25))
 fig.savefig('../images/fos/most_represented_fos_per_year.pdf',
             format='pdf')
 plt.close(fig)
 
 # MOST REPRESENTED FIELD OF STUDY PER CLUSTER PER YEAR ########################
+vertical_lines = list()
 
 field_of_study_markers, legend_entries, fos_counter = dict(), dict(), 0
 
@@ -157,6 +158,14 @@ for idx, cluster in enumerate([1, 2]):
                             marker=field_of_study_markers[field_of_study],
                             s=8)
 
+    for year, color, style in zip([1986, 1989, 1991, 2001, 2008],
+                                  ['#ff6347', '#47ff63', '#6347ff', '#ff4787',
+                                   '#47ffbf'], ['solid', 'dotted', 'dashed',
+                                  'dashdot', (0, (3, 5, 1, 5, 1, 5))]):
+        vertical_lines.append(ax[idx].axvline(x=year, ymin=-1.0, ymax=1.0,
+                                              color=color, alpha=0.7,
+                                              ls=style))
+
     ax[idx].set_title('Cluster {}'.format(cluster), fontsize=8)
     ax[idx].set_xlim(1979, 2020)
     ax[idx].set_xticks(np.arange(1980, 2020, 10))
@@ -169,6 +178,13 @@ fig.legend([legend_entries[fos] for fos in sorted(legend_entries)],
            sorted(list(legend_entries.keys())), loc='center left', fontsize=6,
            title='Fields of Study', bbox_to_anchor=(1.0, 0.5),
            bbox_transform=ax[-1].transAxes)
+fig.legend(vertical_lines[:5],
+           ('Chernobyl disaster', 'Fall of the Berlin Wall',
+            'Dissolution of the Soviet Union', '09/11',
+            '2008 Economic Crysis'), loc='center left', fontsize=6,
+           title='Events', bbox_to_anchor=(1, 0.25),
+           bbox_transform=ax[-1].transAxes)
+
 fig.savefig('../images/fos/most_represented_fos_per_cluster.pdf',
             bbox_inches='tight', format='pdf')
 plt.close(fig)
