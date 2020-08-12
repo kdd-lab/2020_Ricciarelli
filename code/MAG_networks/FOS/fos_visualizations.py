@@ -199,7 +199,7 @@ for cluster in [1, 2]:
     world.plot(column='fos', ax=ax, categorical=True, cmap='Spectral',
                missing_kwds={'color': 'white', 'label': '_nolegend_'},
                edgecolor='black', linewidth=0.1, legend=True,
-               legend_kwds={'bbox_to_anchor': (1.3, 1.0), 'fontsize': 6,
+               legend_kwds={'bbox_to_anchor': (1.3, 1.0), 'fontsize': 8,
                             'labelspacing': 1.5, 'title': 'Fields of Study'})
     ax.axes.xaxis.set_visible(False)
     ax.axes.yaxis.set_visible(False)
@@ -263,6 +263,8 @@ for cluster in [1, 2]:
         ax[idx].axes.yaxis.set_visible(False)
 
         world.drop(['fos'], axis=1, inplace=True)
+
+    plt.tight_layout()
 
     fig.savefig('../images/fos/fos_per_country_cluster_per_decade_{}.pdf'
                 .format(cluster), format='pdf')
