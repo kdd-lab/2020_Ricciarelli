@@ -255,8 +255,8 @@ for cluster in [1, 2]:
         world.plot(column='fos', ax=ax[idx], categorical=True, cmap='Spectral',
                    missing_kwds={'color': 'white', 'label': '_nolegend_'},
                    edgecolor='black', linewidth=0.1, legend=True,
-                   legend_kwds={'bbox_to_anchor': (1.2, 1.0), 'fontsize': 6,
-                   'labelspacing': 1.5, 'title': 'Fields of Study'})
+                   legend_kwds={'bbox_to_anchor': (1.4, 1.0), 'fontsize': 6,
+                   'labelspacing': 1.5, 'title': 'Fields of Study', 'ncol': 4})
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
                           fontsize=8)
         ax[idx].axes.xaxis.set_visible(False)
