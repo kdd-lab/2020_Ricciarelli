@@ -107,11 +107,11 @@ ax.set_ylabel('Registered Entries', fontsize=8)
 ax.legend([legend_entries[fos] for fos in sorted(legend_entries)],
           sorted(list(legend_entries.keys())), loc='center left', fontsize=6,
           title='Fields of Study', bbox_to_anchor=(1, 0.5))
-fig.legend(vertical_lines,
-           ('Chernobyl disaster', 'Fall of the Berlin Wall',
-            'Dissolution of the Soviet Union', '09/11',
-            '2008 Economic Crysis'), loc='center left', fontsize=8,
-           title='Events', bbox_to_anchor=(1., 0.25),)
+ax.legend(vertical_lines,
+          ('Chernobyl disaster', 'Fall of the Berlin Wall',
+           'Dissolution of the Soviet Union', '09/11',
+           '2008 Economic Crysis'), loc='center left', fontsize=6,
+          title='Events', bbox_to_anchor=(1, 0.25),)
 fig.savefig('../images/fos/most_represented_fos_per_year.pdf',
             format='pdf')
 plt.close(fig)
