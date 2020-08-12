@@ -251,7 +251,7 @@ for cluster in [1, 2]:
             if len(fos_per_decade) != 0:
                 to_plot[country] = Counter(fos_per_decade).most_common()[0][0]
 
-        bbox = (2.2, 1.0) if cluster == 1 else (2.4, 1.0)
+        bbox = (2.1, 1.1) if cluster == 1 else (2.6, 1.1)
 
         world['fos'] = world['name'].map(to_plot)
         world.plot(column='fos', ax=ax[idx], categorical=True, cmap='Spectral',
