@@ -200,7 +200,7 @@ for cluster in [1, 2]:
                missing_kwds={'color': 'white', 'label': '_nolegend_'},
                edgecolor='black', linewidth=0.1, legend=True,
                legend_kwds={'bbox_to_anchor': (1.2, 1.0), 'fontsize': 6,
-                            'labelspacing': 1.5}, 'label': 'Fields of Study')
+                            'labelspacing': 1.5, 'title': 'Fields of Study'})
     ax.axes.xaxis.set_visible(False)
     ax.axes.yaxis.set_visible(False)
 
@@ -213,7 +213,7 @@ for cluster in [1, 2]:
 # MOST REPRESENTED FIELD OF STUDY PER CLUSTER PER DECADE GEOPLOT ##############
 
 for cluster in [1, 2]:
-    fig, ax = plt.subplots(2, 2, constrained_layout=True)
+    fig, ax = plt.subplots(4, 1, constrained_layout=True)
     ax = ax.reshape((1, -1))[0]
     fig.suptitle('Most represented Fields of Study per Country - Cluster {}'
                  .format(cluster), fontsize=10)
@@ -256,7 +256,7 @@ for cluster in [1, 2]:
                    missing_kwds={'color': 'white', 'label': '_nolegend_'},
                    edgecolor='black', linewidth=0.1,
                    legend_kwds={'bbox_to_anchor': (1.2, 1.0), 'fontsize': 6,
-                   'labelspacing': 1.5, 'label': 'Fields of Study'})
+                   'labelspacing': 1.5, 'title': 'Fields of Study'})
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
                           fontsize=8)
         ax[idx].axes.xaxis.set_visible(False)
