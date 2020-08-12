@@ -127,7 +127,7 @@ for cluster in [1, 2]:
 for cluster in [1, 2]:
     fig, ax = plt.subplots(4, 1)
     ax = ax.reshape((1, -1))[0]
-    fig.suptitle('Most represented Fields of Study over the Decade - '
+    fig.suptitle('Most represented Fields of Study over the Decades - '
                  'Cluster {}'.format(cluster), fontsize=10)
 
     fos_counter_per_country = dict()
