@@ -5,9 +5,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import sys
+import warnings
 
 from collections import Counter, defaultdict
 from tqdm import tqdm
+
+warnings.filterwarnings("ignore")
+
+plt.rcParams['legend.title_fontsize'] = 'xx-small'
 
 fos_dict = dict()
 
@@ -259,8 +264,9 @@ for cluster in [1, 2]:
                    missing_kwds={'color': 'white', 'label': '_nolegend_'},
                    edgecolor='black', linewidth=0.1, legend=True,
                    legend_kwds={'bbox_to_anchor': bbox, 'fontsize': 6,
-                   'labelspacing': 1.5, 'title': 'Fields of Study', 'ncol': cols,
-                   'prop': {'size': '6'}})
+                                'labelspacing': 1.5,
+                                'title': 'Fields of Study', 'ncol': cols,
+                                'prop': {'size': '6'}})
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
                           fontsize=8)
         ax[idx].axes.xaxis.set_visible(False)
