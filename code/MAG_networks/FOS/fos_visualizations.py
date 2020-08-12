@@ -12,7 +12,7 @@ from tqdm import tqdm
 
 warnings.filterwarnings("ignore")
 
-plt.rcParams['legend.title_fontsize'] = 'xx-small'
+plt.rcParams['legend.title_fontsize'] = 'x-small'
 
 fos_dict = dict()
 
@@ -277,5 +277,5 @@ for cluster in [1, 2]:
     plt.tight_layout(pad=2.5, w_pad=0.5, h_pad=1.0)
 
     fig.savefig('../images/fos/fos_per_country_cluster_per_decade_{}.pdf'
-                .format(cluster), format='pdf')
+                .format(cluster), bbox_inches='tight', format='pdf')
     plt.close(fig)
