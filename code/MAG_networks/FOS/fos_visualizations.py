@@ -213,7 +213,7 @@ for cluster in [1, 2]:
 # MOST REPRESENTED FIELD OF STUDY PER CLUSTER PER DECADE GEOPLOT ##############
 
 for cluster in [1, 2]:
-    fig, ax = plt.subplots(4, 1, constrained_layout=True)
+    fig, ax = plt.subplots(4, 1)
     ax = ax.reshape((1, -1))[0]
     fig.suptitle('Most represented Fields of Study per Country - Cluster {}'
                  .format(cluster), fontsize=10)
