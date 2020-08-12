@@ -251,11 +251,13 @@ for cluster in [1, 2]:
             if len(fos_per_decade) != 0:
                 to_plot[country] = Counter(fos_per_decade).most_common()[0][0]
 
+        bbox = (2.2, 1.0) if cluster == 1 else (2.4, 1.0)
+
         world['fos'] = world['name'].map(to_plot)
         world.plot(column='fos', ax=ax[idx], categorical=True, cmap='Spectral',
                    missing_kwds={'color': 'white', 'label': '_nolegend_'},
                    edgecolor='black', linewidth=0.1, legend=True,
-                   legend_kwds={'bbox_to_anchor': (2.3, 1.0), 'fontsize': 6,
+                   legend_kwds={'bbox_to_anchor': bbox, 'fontsize': 6,
                    'labelspacing': 1.5, 'title': 'Fields of Study', 'ncol': 2,
                    'prop': {'size': '6'}})
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
