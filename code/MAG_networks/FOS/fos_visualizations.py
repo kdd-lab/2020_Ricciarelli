@@ -257,7 +257,7 @@ for cluster in [1, 2]:
                    edgecolor='black', linewidth=0.1, legend=True,
                    legend_kwds={'bbox_to_anchor': (2.3, 1.0), 'fontsize': 6,
                    'labelspacing': 1.5, 'title': 'Fields of Study', 'ncol': 2,
-                   'prop': {'size': 'small'}})
+                   'prop': {'size': 'xx-small'}})
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
                           fontsize=8)
         ax[idx].axes.xaxis.set_visible(False)
