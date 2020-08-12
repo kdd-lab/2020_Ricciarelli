@@ -257,7 +257,7 @@ for cluster in [1, 2]:
                    edgecolor='black', linewidth=0.1, legend=True,
                    legend_kwds={'bbox_to_anchor': (2.3, 1.0), 'fontsize': 6,
                    'labelspacing': 1.5, 'title': 'Fields of Study', 'ncol': 2,
-                   'prop': {'size': 'xx-small'}})
+                   'prop': {'size': '4'}})
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
                           fontsize=8)
         ax[idx].axes.xaxis.set_visible(False)
@@ -265,7 +265,7 @@ for cluster in [1, 2]:
 
         world.drop(['fos'], axis=1, inplace=True)
 
-    plt.tight_layout(pad=2.0, w_pad=0.5, h_pad=1.0)
+    plt.tight_layout(pad=2.5, w_pad=0.5, h_pad=1.0)
 
     fig.savefig('../images/fos/fos_per_country_cluster_per_decade_{}.pdf'
                 .format(cluster), format='pdf')
