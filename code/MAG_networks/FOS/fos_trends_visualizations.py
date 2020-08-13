@@ -79,7 +79,8 @@ fig, ax = plt.subplots(1, 1, constrained_layout=True)
 ax.set_title('Most represented Field of Study per Year', fontsize=10)
 ax.plot(np.arange(1980, 2020),
         [fos_counter_per_year[year].most_common()[0][1]
-        for year in fos_counter_per_year], lw=2, color='steelblue', alpha=0.7)
+        for year in sorted(fos_counter_per_year)], lw=2, color='steelblue',
+        alpha=0.7)
 
 for idx, x in enumerate(np.arange(1980, 2020)):
     y = ax.get_children()[idx].properties()['data'][1][idx]
@@ -119,6 +120,7 @@ fig.savefig('../images/fos/most_represented_fos_per_year.pdf',
 plt.close(fig)
 
 # MOST REPRESENTED FIELD OF STUDY PER CLUSTER PER YEAR ########################
+
 vertical_lines = list()
 
 field_of_study_markers, legend_entries, fos_counter = dict(), dict(), 0
@@ -146,8 +148,8 @@ for idx, cluster in enumerate([1, 2]):
 
     ax[idx].plot(np.arange(1980, 2020),
                  [fos_counter_per_cluster[year].most_common()[0][1]
-                 for year in fos_counter_per_year], lw=2, color='steelblue',
-                 alpha=0.7)
+                 for year in sorted(fos_counter_per_year)], lw=2,
+                 color='steelblue', alpha=0.7)
 
     for i, x in enumerate(np.arange(1980, 2020)):
         y = ax[idx].get_children()[i].properties()['data'][1][i]
@@ -155,8 +157,7 @@ for idx, cluster in enumerate([1, 2]):
 
         legend_entries[field_of_study] = \
             ax[idx].scatter(x, y, c='steelblue',
-                            marker=field_of_study_markers[field_of_study],
-                            s=8)
+                            marker=field_of_study_markers[field_of_study], s=8)
 
     for year, color, style in zip([1986, 1989, 1991, 2001, 2008],
                                   ['#ff6347', '#47ff63', '#6347ff', '#ff4787',
@@ -187,4 +188,70 @@ fig.legend(vertical_lines[:5],
 
 fig.savefig('../images/fos/most_represented_fos_per_cluster.pdf',
             bbox_inches='tight', format='pdf')
+plt.close(fig)
+
+# MOST REPRESENTED FIELD OF STUDY PER SPECIFIC COUNTRIES ######################
+
+fos_per_country = dict()
+
+for mag_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
+    if mag_id in fos_dict:
+        for year in fos_dict[mag_id]:
+            if year in entropies_dict[mag_id]:
+                country = entropies_dict[mag_id][year]['affiliation']
+
+                if country not in fos_per_country:
+                    fos_per_country[country] = defaultdict(Counter)
+
+                for fos in fos_dict[mag_id][year]:
+                    fos_per_country[country][year][fos] += 1
+
+field_of_study_markers, legend_entries = dict(), dict()
+fields_of_study = set()
+
+for country in ['Italy', 'Germany', 'France', 'Spain', 'United Kingdom',
+                'United States of America', 'Russia', 'China']:
+    for year in fos_per_country[country]:
+        for fos in fos_per_country[country][year]:
+            fields_of_study.add(fos)
+
+for idx, fos in enumerate(fields_of_study):
+    field_of_study_markers[fos] = markers[idx]
+
+fig, ax = plt.subplots(4, 2, constrained_layout=True)
+ax = ax.reshape((1, -1))[0]
+
+fig.suptitle('Most represented Fields of Study for various Countries',
+             fontsize=10)
+
+for idx, country in enumerate(['Italy', 'Germany', 'France', 'Spain',
+                               'United Kingdom', 'United States of America',
+                               'Russia', 'China']):
+    ax[idx].plot(np.arange(1980, 2020),
+                 [fos_per_country[country][str(year)].most_common()[0][1]
+                 for year in np.arange(1980, 2020)], lw=2, color='steelblue',
+                 alpha=0.7)
+
+    for i, x in enumerate(np.arange(1980, 2020)):
+        y = ax[idx].get_children()[i].properties()['data'][1][i]
+        field_of_study = fos_per_country[country][str(x)].most_common()[0][0]
+
+        legend_entries[field_of_study] = \
+            ax[idx].scatter(x, y, c='steelblue',
+                            marker=field_of_study_markers[field_of_study], s=8)
+
+    ax[idx].set_title(country, fontsize=8)
+    ax[idx].set_xlim(1979, 2020)
+    ax[idx].set_xticks(np.arange(1980, 2020, 10))
+    ax[idx].set_xticks(np.arange(1980, 2020), minor=True)
+    ax[idx].tick_params(axis='both', which='major', labelsize=6)
+    ax[idx].set_xlabel('Year', fontsize=8)
+    ax[idx].set_ylabel('Registered Entries', fontsize=8)
+
+fig.legend([legend_entries[fos] for fos in sorted(legend_entries)],
+           sorted(list(legend_entries.keys())), loc='center left', fontsize=6,
+           title='Fields of Study', bbox_to_anchor=(1, 0.5),
+           bbox_transform=ax[1].transAxes)
+fig.savefig('../images/fos/fos_of_various_countries.pdf', bbox_inches='tight',
+            format='pdf')
 plt.close(fig)
