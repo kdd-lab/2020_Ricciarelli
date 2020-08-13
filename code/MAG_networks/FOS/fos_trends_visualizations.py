@@ -80,7 +80,7 @@ ax.set_title('Most represented Field of Study per Year', fontsize=10)
 ax.plot(np.arange(1980, 2020),
         [fos_counter_per_year[year].most_common()[0][1]
         for year in sorted(fos_counter_per_year)], lw=2, color='steelblue',
-        alpha=0.7)
+        alpha=0.5)
 
 for idx, x in enumerate(np.arange(1980, 2020)):
     y = ax.get_children()[idx].properties()['data'][1][idx]
@@ -149,7 +149,7 @@ for idx, cluster in enumerate([1, 2]):
     ax[idx].plot(np.arange(1980, 2020),
                  [fos_counter_per_cluster[year].most_common()[0][1]
                  for year in sorted(fos_counter_per_year)], lw=2,
-                 color='steelblue', alpha=0.7)
+                 color='steelblue', alpha=0.5)
 
     for i, x in enumerate(np.arange(1980, 2020)):
         y = ax[idx].get_children()[i].properties()['data'][1][i]
@@ -230,7 +230,7 @@ for idx, country in enumerate(['Italy', 'Germany', 'France', 'Spain',
     ax[idx].plot(np.arange(1980, 2020),
                  [fos_per_country[country][str(year)].most_common()[0][1]
                  for year in np.arange(1980, 2020)], lw=2, color='steelblue',
-                 alpha=0.7)
+                 alpha=0.5)
 
     for i, x in enumerate(np.arange(1980, 2020)):
         y = ax[idx].get_children()[i].properties()['data'][1][i]
@@ -250,7 +250,7 @@ for idx, country in enumerate(['Italy', 'Germany', 'France', 'Spain',
 
 fig.legend([legend_entries[fos] for fos in sorted(legend_entries)],
            sorted(list(legend_entries.keys())), loc='center left', fontsize=6,
-           title='Fields of Study', bbox_to_anchor=(1, 0.5),
+           title='Fields of Study', bbox_to_anchor=(1.1, 0.5),
            bbox_transform=ax[1].transAxes)
 fig.savefig('../images/fos/fos_of_various_countries.pdf', bbox_inches='tight',
             format='pdf')
