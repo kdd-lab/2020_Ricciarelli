@@ -61,10 +61,13 @@ for country in ['Italy', 'Germany', 'Norway', 'Slovakia', 'United Kingdom',
     entropies[country] = defaultdict(list)
 
     for c in entropies_per_country:
-        for y in entropies_per_country[c][country]:
-            for value in entropies_per_country[c][country][y]:
-                if value not in [0.0, -0.0]:
-                    entropies[country][y].append(value)
+        for y in np.arange(1980, 2020):
+            if str(y) in entropies_per_country[c][country]:
+                for value in entropies_per_country[c][country][y]:
+                    if value not in [0.0, -0.0]:
+                        entropies[country][y].append(value)
+            else:
+                entropies[country][y].append(np.nan)
 
     entropies[country] = [np.mean(entropies_per_country[c][country][year])
                           for year in
