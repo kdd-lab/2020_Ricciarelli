@@ -69,7 +69,7 @@ markers = list(mpl.markers.MarkerStyle.markers.keys())
 # MOST REPRESENTED FIELD OF STUDY PER YEAR ####################################
 
 fields_of_study = set([fos_counter_per_year[str(x)].most_common()[0][0]
-                      for x in np.arange(1980, 2020)])
+                      for x in np.arange(1980, 2018)])
 field_of_study_markers, legend_entries = dict(), dict()
 
 for idx, fos in enumerate(fields_of_study):
@@ -77,12 +77,11 @@ for idx, fos in enumerate(fields_of_study):
 
 fig, ax = plt.subplots(1, 1, constrained_layout=True)
 ax.set_title('Most represented Field of Study per Year', fontsize=10)
-ax.plot(np.arange(1980, 2020),
-        [fos_counter_per_year[year].most_common()[0][1]
-        for year in sorted(fos_counter_per_year)], lw=2, color='steelblue',
-        alpha=0.5)
+ax.plot(np.arange(1980, 2018),
+        [fos_counter_per_year[str(year)].most_common()[0][1]
+        for year in np.arange(1980, 2018)], lw=2, color='steelblue', alpha=0.5)
 
-for idx, x in enumerate(np.arange(1980, 2020)):
+for idx, x in enumerate(np.arange(1980, 2018)):
     y = ax.get_children()[idx].properties()['data'][1][idx]
     field_of_study = fos_counter_per_year[str(x)].most_common()[0][0]
 
@@ -99,9 +98,9 @@ for year, color, style in zip([1986, 1989, 1991, 2001, 2008],
     vertical_lines.append(ax.axvline(x=year, ymin=-1.0, ymax=1.0, color=color,
                                      alpha=0.7, ls=style))
 
-ax.set_xlim(1979, 2020)
-ax.set_xticks(np.arange(1980, 2020, 10))
-ax.set_xticks(np.arange(1980, 2020), minor=True)
+ax.set_xlim(1979, 2018)
+ax.set_xticks(np.arange(1980, 2018, 10))
+ax.set_xticks(np.arange(1980, 2018), minor=True)
 ax.tick_params(axis='both', which='major', labelsize=6)
 ax.set_xlabel('Year', fontsize=8)
 ax.set_ylabel('Registered Entries', fontsize=8)
@@ -139,19 +138,19 @@ for idx, cluster in enumerate([1, 2]):
                     fos_counter_per_cluster[year][field_of_study] += 1
 
     fields_of_study = set([fos_counter_per_cluster[str(x)].most_common()[0][0]
-                          for x in np.arange(1980, 2020)])
+                          for x in np.arange(1980, 2018)])
 
     for fos in fields_of_study:
         if fos not in field_of_study_markers:
             field_of_study_markers[fos] = markers[fos_counter]
             fos_counter += 1
 
-    ax[idx].plot(np.arange(1980, 2020),
-                 [fos_counter_per_cluster[year].most_common()[0][1]
-                 for year in sorted(fos_counter_per_year)], lw=2,
-                 color='steelblue', alpha=0.5)
+    ax[idx].plot(np.arange(1980, 2018),
+                 [fos_counter_per_cluster[str(year)].most_common()[0][1]
+                 for year in np.arange(1980, 2018)], lw=2, color='steelblue',
+                 alpha=0.5)
 
-    for i, x in enumerate(np.arange(1980, 2020)):
+    for i, x in enumerate(np.arange(1980, 2018)):
         y = ax[idx].get_children()[i].properties()['data'][1][i]
         field_of_study = fos_counter_per_cluster[str(x)].most_common()[0][0]
 
@@ -168,9 +167,9 @@ for idx, cluster in enumerate([1, 2]):
                                               ls=style))
 
     ax[idx].set_title('Cluster {}'.format(cluster), fontsize=8)
-    ax[idx].set_xlim(1979, 2020)
-    ax[idx].set_xticks(np.arange(1980, 2020, 10))
-    ax[idx].set_xticks(np.arange(1980, 2020), minor=True)
+    ax[idx].set_xlim(1979, 2018)
+    ax[idx].set_xticks(np.arange(1980, 2018, 10))
+    ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
     ax[idx].tick_params(axis='both', which='major', labelsize=6)
     ax[idx].set_xlabel('Year', fontsize=8)
     ax[idx].set_ylabel('Registered Entries', fontsize=8)
@@ -227,12 +226,12 @@ fig.suptitle('Most represented Fields of Study for various Countries',
 for idx, country in enumerate(['Italy', 'Germany', 'France', 'Spain',
                                'United Kingdom', 'United States of America',
                                'Russia', 'China']):
-    ax[idx].plot(np.arange(1980, 2020),
+    ax[idx].plot(np.arange(1980, 2018),
                  [fos_per_country[country][str(year)].most_common()[0][1]
-                 for year in np.arange(1980, 2020)], lw=2, color='steelblue',
+                 for year in np.arange(1980, 2018)], lw=2, color='steelblue',
                  alpha=0.5)
 
-    for i, x in enumerate(np.arange(1980, 2020)):
+    for i, x in enumerate(np.arange(1980, 2018)):
         y = ax[idx].get_children()[i].properties()['data'][1][i]
         field_of_study = fos_per_country[country][str(x)].most_common()[0][0]
 
@@ -241,9 +240,9 @@ for idx, country in enumerate(['Italy', 'Germany', 'France', 'Spain',
                             marker=field_of_study_markers[field_of_study], s=8)
 
     ax[idx].set_title(country, fontsize=8)
-    ax[idx].set_xlim(1979, 2020)
-    ax[idx].set_xticks(np.arange(1980, 2020, 10))
-    ax[idx].set_xticks(np.arange(1980, 2020), minor=True)
+    ax[idx].set_xlim(1979, 2018)
+    ax[idx].set_xticks(np.arange(1980, 2018, 10))
+    ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
     ax[idx].tick_params(axis='both', which='major', labelsize=6)
     ax[idx].set_xlabel('Year', fontsize=8)
     ax[idx].set_ylabel('Registered Entries', fontsize=8)
