@@ -70,17 +70,17 @@ for country in ['Italy', 'Germany', 'Norway', 'Poland', 'United Kingdom',
             else:
                 entropies[country][str(y)].append(np.nan)
 
-    entropies[country] = [np.nanmean(entropies_per_country[c][country][year])
-                          for year in
-                          sorted(entropies_per_country[c][country])]
+    entropies[country] = [np.nanmean(entropies_per_country[c][country][str(y)])
+                          for y in np.arange(1980, 2018)]
 
 fig, ax = plt.subplots(4, 2, constrained_layout=True)
 ax = ax.reshape((1, -1))[0]
 
 fig.suptitle("Xenofilia/Xenophobia's trend for various Countries",
              fontsize=10)
-
+import ipdb
 for idx, country in enumerate(entropies):
+    ipdb.set_trace()
     model = LinearRegression()
     model.fit(np.arange(0, 38).reshape((38, 1)), entropies[country])
 
