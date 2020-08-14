@@ -98,7 +98,7 @@ for idx, country in enumerate(entropies):
                         ls=style)
 
     ax[idx].set_xlim(1979, 2020)
-    ax[idx].set_ylim(-1.0, 1.0)
+    ax[idx].set_ylim(-0.5, 0.5)
     ax[idx].set_xticks(np.arange(1980, 2020, 10))
     ax[idx].set_xticks(np.arange(1980, 2020), minor=True)
     ax[idx].tick_params(axis='both', which='major', labelsize=6)
