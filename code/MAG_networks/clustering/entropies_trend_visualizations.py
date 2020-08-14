@@ -172,7 +172,7 @@ for c in entropies_per_country:
             axes[x].fill_between(np.arange(1980, 2020), ys_fill_down,
                                  ys_fill_up, color='steelblue' if
                                  l == top_5_higher_entropies else 'tomato',
-                                 alpha=0.1)
+                                 alpha=0.01)
 
         axes[x].set_xlim(1979, 2020)
         axes[x].set_ylim(-1.0, 1.0)
