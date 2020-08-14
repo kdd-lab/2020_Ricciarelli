@@ -62,7 +62,7 @@ for country in ['Italy', 'Germany', 'Norway', 'Poland', 'United Kingdom',
     entropies[country] = defaultdict(list)
 
     for c in entropies_per_country:
-        for y in np.arange(1980, 2020):
+        for y in np.arange(1980, 2018):
             if str(y) in entropies_per_country[c][country]:
                 for value in entropies_per_country[c][country][str(y)]:
                     if value not in [0.0, -0.0]:
@@ -84,9 +84,9 @@ for idx, country in enumerate(entropies):
     model = LinearRegression()
     model.fit(np.arange(0, 40).reshape((40, 1)), entropies[country])
 
-    ax[idx].plot(np.arange(1980, 2020), entropies[country], linewidth=2,
+    ax[idx].plot(np.arange(1980, 2018), entropies[country], linewidth=2,
                  label=country, color='steelblue')
-    ax[idx].plot(np.arange(1980, 2020),
+    ax[idx].plot(np.arange(1980, 2018),
                  model.predict(np.arange(0, 40).reshape((40, 1))), linewidth=1,
                  label='Trend', color='black', ls='dashed')
 
@@ -97,10 +97,10 @@ for idx, country in enumerate(entropies):
         ax[idx].axvline(x=year, ymin=-1.0, ymax=1.0, color=color, alpha=0.7,
                         ls=style)
 
-    ax[idx].set_xlim(1979, 2020)
+    ax[idx].set_xlim(1979, 2018)
     ax[idx].set_ylim(-0.5, 0.5)
-    ax[idx].set_xticks(np.arange(1980, 2020, 10))
-    ax[idx].set_xticks(np.arange(1980, 2020), minor=True)
+    ax[idx].set_xticks(np.arange(1980, 2018, 10))
+    ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
     ax[idx].tick_params(axis='both', which='major', labelsize=6)
     ax[idx].set_title(country, fontsize=8)
 
@@ -158,7 +158,7 @@ for c in entropies_per_country:
 
             ys, ys_fill_up, ys_fill_down = list(), list(), list()
 
-            for year in np.arange(1980, 2020):
+            for year in np.arange(1980, 2018):
                 if str(year) in stats:
                     ys.append(stats[str(year)]['mean'])
                     ys_fill_up.append(stats[str(year)]['mean'] +
@@ -170,18 +170,18 @@ for c in entropies_per_country:
                     ys_fill_up.append(np.nan)
                     ys_fill_down.append(np.nan)
 
-            axes[x].plot(np.arange(1980, 2020), ys, linewidth=2,
+            axes[x].plot(np.arange(1980, 2018), ys, linewidth=2,
                          color='steelblue' if l == top_5_higher_entropies
                          else 'tomato', label=l[x], alpha=0.7)
-            axes[x].fill_between(np.arange(1980, 2020), ys_fill_down,
+            axes[x].fill_between(np.arange(1980, 2018), ys_fill_down,
                                  ys_fill_up, color='steelblue' if
                                  l == top_5_higher_entropies else 'tomato',
                                  alpha=0.07)
 
-        axes[x].set_xlim(1979, 2020)
+        axes[x].set_xlim(1979, 2018)
         axes[x].set_ylim(-1.0, 1.0)
-        axes[x].set_xticks(np.arange(1980, 2020, 10))
-        axes[x].set_xticks(np.arange(1980, 2020), minor=True)
+        axes[x].set_xticks(np.arange(1980, 2018, 10))
+        axes[x].set_xticks(np.arange(1980, 2018), minor=True)
         axes[x].tick_params(axis='both', which='major', labelsize=6)
         axes[x].legend(loc='center left', fontsize=6,
                        bbox_to_anchor=(1, 0.5))
