@@ -57,7 +57,7 @@ for cluster in [1, 2]:
 
 entropies = dict()
 
-for country in ['Italy', 'Germany', 'Norway', 'Spain', 'United Kingdom',
+for country in ['Italy', 'Germany', 'Norway', 'Poland', 'United Kingdom',
                 'United States of America', 'Russia', 'China']:
     entropies[country] = defaultdict(list)
 
