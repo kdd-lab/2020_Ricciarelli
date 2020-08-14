@@ -255,11 +255,11 @@ else:
                     edgecolor='black', linewidth=0.1)
             ax[idx].set_title("From {} to {}".format(decade, decade + 9),
                               fontsize=8)
-            # ax[idx].axes.xaxis.set_visible(False)
-            # ax[idx].axes.yaxis.set_visible(False)
+            ax[idx].axes.xaxis.set_visible(False)
+            ax[idx].axes.yaxis.set_visible(False)
             # minx, miny, maxx, maxy = eu.total_bounds
-            # ax[idx].set_xlim(minx, maxx)
-            # ax[idx].set_ylim(miny, maxy)
+            ax[idx].set_xlim(-25, 125)
+            ax[idx].set_ylim(25, 70)
 
             eu.drop(['entropy'], axis=1, inplace=True)
 
