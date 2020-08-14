@@ -164,7 +164,7 @@ else:
                         'Malta', 'Czechia', 'Netherlands', 'Denmark', 'Poland',
                         'Estonia', 'Portugal', 'Finland', 'Romania', 'France',
                         'Slovakia', 'Germany', 'Slovenia', 'Greece', 'Spain',
-                        'Hungary', 'Sweden', 'Ireland', 'Andorra', 'Armenia',
+                        'Hungary', 'Sweden', 'Ireland', 'Armenia', 'Andorra',
                         'Azerbaijan', 'Belarus', 'Georgia', 'Iceland',
                         'Liechtenstein', 'Moldova', 'Monaco', 'Norway',
                         'Russia', 'San Marino', 'Switzerland', 'Ukraine',
@@ -239,8 +239,9 @@ else:
 
             for country in eu_countries:
                 for year in np.arange(decade, decade + 10):
-                    for e in entropies_per_country[country][str(year)]:
-                        entropies_by_decade[country].append(e)
+                    if country in entropies_per_country:
+                        for e in entropies_per_country[country][str(year)]:
+                            entropies_by_decade[country].append(e)
 
             to_plot = dict()
 
