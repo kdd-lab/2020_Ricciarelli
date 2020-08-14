@@ -257,6 +257,9 @@ else:
                               fontsize=8)
             ax[idx].axes.xaxis.set_visible(False)
             ax[idx].axes.yaxis.set_visible(False)
+            minx, miny, maxx, maxy = eu.total_bounds
+            ax[idx].set_xlim(minx, maxx)
+            ax[idx].set_ylim(miny, maxy)
 
             eu.drop(['entropy'], axis=1, inplace=True)
 
