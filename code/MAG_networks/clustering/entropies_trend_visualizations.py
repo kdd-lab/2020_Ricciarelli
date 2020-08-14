@@ -1,3 +1,4 @@
+
 import json
 import matplotlib.pyplot as plt
 import numpy as np
@@ -56,20 +57,20 @@ for cluster in [1, 2]:
 
 entropies = dict()
 
-for country in ['Italy', 'Germany', 'Norway', 'Slovakia', 'United Kingdom',
+for country in ['Italy', 'Germany', 'Norway', 'Spain', 'United Kingdom',
                 'United States of America', 'Russia', 'China']:
     entropies[country] = defaultdict(list)
 
     for c in entropies_per_country:
         for y in np.arange(1980, 2020):
             if str(y) in entropies_per_country[c][country]:
-                for value in entropies_per_country[c][country][y]:
+                for value in entropies_per_country[c][country][str(y)]:
                     if value not in [0.0, -0.0]:
-                        entropies[country][y].append(value)
+                        entropies[country][str(y)].append(value)
             else:
-                entropies[country][y].append(np.nan)
+                entropies[country][str(y)].append(np.nan)
 
-    entropies[country] = [np.mean(entropies_per_country[c][country][year])
+    entropies[country] = [np.nanmean(entropies_per_country[c][country][year])
                           for year in
                           sorted(entropies_per_country[c][country])]
 
