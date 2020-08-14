@@ -82,7 +82,7 @@ fig.suptitle("Xenofilia/Xenophobia's trend for various Countries",
 
 for idx, country in enumerate(entropies):
     model = LinearRegression()
-    model.fit(np.arange(0, 40).reshape((40, 1)), entropies[country])
+    model.fit(np.arange(0, 38).reshape((38, 1)), entropies[country])
 
     ax[idx].plot(np.arange(1980, 2018), entropies[country], linewidth=2,
                  label=country, color='steelblue')
