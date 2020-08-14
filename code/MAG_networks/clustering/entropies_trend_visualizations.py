@@ -57,7 +57,7 @@ for cluster in [1, 2]:
 
 entropies = dict()
 
-for country in ['Italy', 'Germany', 'Norway', 'Poland', 'United Kingdom',
+for country in ['Italy', 'Germany', 'Norway', 'Poland', 'Portugal',
                 'United States of America', 'Russia', 'China']:
     entropies[country] = defaultdict(list)
 
@@ -78,9 +78,8 @@ ax = ax.reshape((1, -1))[0]
 
 fig.suptitle("Xenofilia/Xenophobia's trend for various Countries",
              fontsize=10)
-import ipdb
+
 for idx, country in enumerate(entropies):
-    ipdb.set_trace()
     model = LinearRegression()
     model.fit(np.arange(0, 38).reshape((38, 1)), entropies[country])
 
