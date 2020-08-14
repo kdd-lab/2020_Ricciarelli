@@ -222,7 +222,7 @@ else:
         fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                            norm=plt.Normalize(vmin=-1.0,
                                                               vmax=1.0)),
-                     ax=ax[:], shrink=0.5, label='Xenofilia/Xenophobia',
+                     ax=ax[-2:], shrink=0.5, label='Xenofilia/Xenophobia',
                      location='bottom')
         fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
@@ -258,7 +258,7 @@ else:
             ax[idx].axes.xaxis.set_visible(False)
             ax[idx].axes.yaxis.set_visible(False)
             ax[idx].set_xlim(-35, 125)
-            ax[idx].set_ylim(15, 80)
+            ax[idx].set_ylim(25, 90)
 
             eu.drop(['entropy'], axis=1, inplace=True)
 
