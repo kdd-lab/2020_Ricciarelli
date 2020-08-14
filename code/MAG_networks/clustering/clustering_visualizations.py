@@ -173,7 +173,7 @@ else:
         entropies_per_country = dict()
         world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
         world = world[world.name != "Antarctica"]
-        eu = world[world.name.isin(eu_countries)]
+        eu = world[world.continent == 'Europe']
 
         for MAG_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
             for year in entropies_dict[MAG_id]:
