@@ -258,7 +258,7 @@ else:
             ax[idx].axes.xaxis.set_visible(False)
             ax[idx].axes.yaxis.set_visible(False)
             ax[idx].set_xlim(-35, 125)
-            ax[idx].set_ylim(25, 90)
+            ax[idx].set_ylim(15, 80)
 
             eu.drop(['entropy'], axis=1, inplace=True)
 
