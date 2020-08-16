@@ -1,7 +1,9 @@
 import json
+import numpy as np
 import sys
 
 from collections import Counter
+from sklearn.preprocessing import normalize
 from tqdm import tqdm
 
 
@@ -36,7 +38,7 @@ mobility_dict = dict()
 
 with open(sys.argv[1], 'r') as mobility_file:
     for row in tqdm(mobility_file, desc='READING MOBILITY FILE'):
-        from_country, to_country, year, times = row.strip().split()
+        from_country, to_country, year, times = row.strip().split('\t')
 
         if int(year) >= 1980 and int(year) < 2020:
             from_country = check_country(from_country)
@@ -44,16 +46,46 @@ with open(sys.argv[1], 'r') as mobility_file:
 
             if from_country not in mobility_dict:
                 mobility_dict[from_country] = dict()
-            elif to_country not in mobility_dict:
+            if to_country not in mobility_dict:
                 mobility_dict[to_country] = dict()
 
             if year not in mobility_dict[from_country]:
                 mobility_dict[from_country][year] = Counter()
-            elif year not in mobility_dict[to_country]:
+            if year not in mobility_dict[to_country]:
                 mobility_dict[to_country][year] = Counter()
 
             mobility_dict[from_country][year]['out'] += int(times)
             mobility_dict[to_country][year]['in'] += int(times)
+
+for key_type in ['in', 'out']:
+    mobility_matrix = list()
+
+    for country in sorted(mobility_dict):
+        row = list()
+
+        for year in np.arange(1980, 2020):
+            if str(year) in mobility_dict[country]:
+                if key_type in mobility_dict[country][str(year)]:
+                    row.append(mobility_dict[country][str(year)][key_type])
+                else:
+                    row.append(0)
+            else:
+                row.append(0)
+
+        mobility_matrix.append(row)
+
+    mobility_matrix = np.array(mobility_matrix)
+    decade_dict = {0: 1980, 1: 1990, 2: 2000, 3: 2010}
+
+    for idx, year in enumerate(np.arange(1980, 2020)):
+        n_column = normalize(mobility_matrix[:, idx].reshape(1, -1),
+                             norm='max')[0]
+
+        for x, country in enumerate(sorted(mobility_dict)):
+            if str(year) in mobility_dict[country]:
+                mobility_dict[country][str(year)][key_type] = n_column[x]
+            else:
+                mobility_dict[country][str(year)] = {key_type: n_column[x]}
 
 with open(sys.argv[2], 'w') as mobility_jsonl:
     for country in tqdm(mobility_dict.items(), desc='WRITING MOBILITY JSONL'):
