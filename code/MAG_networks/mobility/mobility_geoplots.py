@@ -3,8 +3,11 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import numpy as np
 import sys
+import warnings
 
 from tqdm import tqdm
+
+warnings.filterwarnings("ignore")
 
 eu_countries = ['Austria', 'Italy', 'Belgium', 'Latvia', 'Bulgaria',
                 'Lithuania', 'Croatia', 'Luxembourg', 'N. Cyprus',
