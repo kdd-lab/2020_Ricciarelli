@@ -4,6 +4,7 @@ import sys
 
 from collections import Counter
 from sklearn.preprocessing import normalize
+from sklearn.preprocessing import QuantileTransformer
 from tqdm import tqdm
 
 
@@ -75,17 +76,22 @@ for key_type in ['in', 'out']:
         mobility_matrix.append(row)
 
     mobility_matrix = np.array(mobility_matrix)
-    decade_dict = {0: 1980, 1: 1990, 2: 2000, 3: 2010}
 
     for idx, year in enumerate(np.arange(1980, 2020)):
-        n_column = normalize(mobility_matrix[:, idx].reshape(1, -1),
-                             norm='max')[0]
+        qt = QuantileTransformer()
+        n_column = qt.fit_transform(mobility_matrix[:, idx].reshape(-1, 1))
 
         for x, country in enumerate(sorted(mobility_dict)):
             if str(year) in mobility_dict[country]:
-                mobility_dict[country][str(year)][key_type] = n_column[x]
+                mobility_dict[country][str(year)][key_type] = n_column[x][0]
             else:
-                mobility_dict[country][str(year)] = {key_type: n_column[x]}
+                mobility_dict[country][str(year)] = {key_type: n_column[x][0]}
+
+for country in mobility_dict:
+    for year in mobility_dict[country]:
+        mobility_dict[country][year]['balance'] = \
+            mobility_dict[country][year]['in'] - \
+            mobility_dict[country][year]['out']
 
 with open(sys.argv[2], 'w') as mobility_jsonl:
     for country in tqdm(mobility_dict.items(), desc='WRITING MOBILITY JSONL'):
