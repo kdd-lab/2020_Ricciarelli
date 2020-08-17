@@ -68,7 +68,7 @@ for key_type in ['in', 'out', 'balance']:
 
         world['mobility'] = world['name'].map(mobility_score_dict)
 
-        world.plot(column='mobility', ax=ax[idx], cmap='Oranges',
+        world.plot(column='mobility', ax=ax[idx], cmap='coolwarm',
                    vmin=0.0, vmax=1.0, missing_kwds={'color': 'white'},
                    edgecolor='black', linewidth=0.1)
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
@@ -81,7 +81,7 @@ for key_type in ['in', 'out', 'balance']:
         vmin = min(world['mobility'].values)
         vmax = max(world['mobility'].values)
 
-    fig.colorbar(plt.cm.ScalarMappable(cmap='Oranges',
+    fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                        norm=plt.Normalize(vmin=vmin,
                                                           vmax=vmax)),
                  ax=ax[-2:], shrink=0.5,
@@ -98,10 +98,10 @@ for key_type in ['in', 'out', 'balance']:
     ax = ax.reshape((1, -1))[0]
 
     if key_type != 'balance':
-        fig.suptitle('{} Mobility Score per Country by Decade'
+        fig.suptitle('{} Mobility Score per Country by Decade - Europe'
                      .format(key_type.capitalize()), fontsize=10)
     else:
-        fig.suptitle("Mobility Score's Balance per Country by Decade"
+        fig.suptitle("Mobility Score's Balance per Country by Decade - Europe"
                      .format(key_type.capitalize()), fontsize=10)
 
     for idx, decade in enumerate([1980, 1990, 2000, 2010]):
@@ -125,7 +125,7 @@ for key_type in ['in', 'out', 'balance']:
         world['mobility'] = world['name'].map(mobility_score_dict)
 
         world[world.continent == 'Europe'].plot(
-            column='mobility', ax=ax[idx], cmap='Oranges',
+            column='mobility', ax=ax[idx], cmap='coolwarm',
             vmin=0.0, vmax=1.0, missing_kwds={'color': 'white'},
             edgecolor='black', linewidth=0.1)
         ax[idx].set_title("From {} to {}".format(decade, decade + 9),
@@ -140,7 +140,7 @@ for key_type in ['in', 'out', 'balance']:
         vmin = min(world['mobility'].values)
         vmax = max(world['mobility'].values)
 
-    fig.colorbar(plt.cm.ScalarMappable(cmap='Oranges',
+    fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                        norm=plt.Normalize(vmin=vmin,
                                                           vmax=vmax)),
                  ax=ax[-2:], shrink=0.5, label='Mobility Score'
