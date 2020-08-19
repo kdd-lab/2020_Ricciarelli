@@ -1,4 +1,3 @@
-import ipdb
 import json
 import matplotlib.pyplot as plt
 import numpy as np
@@ -114,7 +113,8 @@ for mag_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
                             {country: defaultdict(list)}
                     else:
                         if country not in entropy_per_fos_per_country[fos]:
-                            entropy_per_fos_per_country[fos][country] = defaultdict(list)
+                            entropy_per_fos_per_country[fos][country] = \
+                                defaultdict(list)
 
                     entropy_per_fos_per_country[fos][country][year]\
                         .append(score)
@@ -135,4 +135,38 @@ for fos in entropy_per_fos_per_country:
             entropy_per_fos_per_country[fos][country][str(year)] = \
                 {'mean': mean, 'std': std}
 
-ipdb.set_trace()
+for fos in entropy_per_fos_per_country:
+    fig, ax = plt.subplots(4, 2, constrained_layout=True)
+    ax = ax.reshape((1, -1))[0]
+
+    title = fos.capitalize() if '_' not in fos else ' '\
+        .join([chunk.capitalize() for chunk in fos.split('_')])
+
+    fig.suptitle('Xenofilia/Xenofobia per Field of Study over the Years'
+                 ' by Country - {}'.format(title), fontsize=10)
+
+    for idx, country in enumerate(entropy_per_fos_per_country[fos]):
+        ax[idx].set_title(country, fontsize=8)
+        ax[idx].plot(np.arange(1980, 2020),
+                     [entropy_per_fos_per_year[fos][country][y]['mean']
+                     for y in sorted(entropy_per_fos_per_year[fos][country])],
+                     lw=2, color='steelblue')
+        # ax[idx].fill_between(np.arange(1980, 2020),
+        #                      [entropy_per_fos_per_year[fos][y]['mean'] -
+        #                      entropy_per_fos_per_year[fos][y]['std'] for y in
+        #                      sorted(entropy_per_fos_per_year[fos])],
+        #                      [entropy_per_fos_per_year[fos][y]['mean'] +
+        #                      entropy_per_fos_per_year[fos][y]['std'] for y in
+        #                      sorted(entropy_per_fos_per_year[fos])],
+        #                      color='steelblue', alpha=0.1)
+        ax[idx].set_xlim(1979, 2018)
+        ax[idx].set_ylim(-0.5, 0.5)
+        ax[idx].set_xticks(np.arange(1980, 2018, 10))
+        ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
+        ax[idx].tick_params(axis='both', which='major', labelsize=6)
+        ax[idx].set_xlabel('Year', fontsize=6)
+        ax[idx].set_ylabel('Xenofilia/Xenofobia', fontsize=6)
+
+    fig.savefig('../images/fos/xenofilia_xenofobia_per_fos_per_country_{}.pdf'
+                .format(fos), format='pdf')
+    plt.close(fig)
