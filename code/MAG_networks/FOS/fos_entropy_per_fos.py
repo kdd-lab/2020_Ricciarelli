@@ -64,6 +64,7 @@ for idx, fos in enumerate(sorted(entropy_per_fos_per_year)):
     if idx > 5:
         break
 
+    ax[idx].set_title(fos, fontsize=8)
     ax[idx].plot(np.arange(1980, 2020),
                  [entropy_per_fos_per_year[fos][y]['mean'] for y in
                  sorted(entropy_per_fos_per_year[fos])], lw=2,
@@ -98,6 +99,7 @@ fig.suptitle('Xenofilia/Xenofobia per Field of Study over the Years',
 remaining_fos = [fos for fos in entropy_per_fos_per_year if fos not in checked]
 
 for idx, fos in enumerate(sorted(remaining_fos)):
+    ax[idx].set_title(fos, fontsize=8)
     ax[idx].plot(np.arange(1980, 2020),
                  [entropy_per_fos_per_year[fos][y]['mean'] for y in
                  sorted(entropy_per_fos_per_year[fos])], lw=2,
