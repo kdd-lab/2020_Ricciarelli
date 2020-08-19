@@ -188,7 +188,6 @@ for fos in entropy_per_fos_per_country:
         #                      sorted(entropy_per_fos_per_year[fos])],
         #                      color='steelblue', alpha=0.1)
         ax[idx].set_xlim(1979, 2018)
-        ax[idx].set_ylim(-0.5, 0.5)
         ax[idx].set_xticks(np.arange(1980, 2018, 10))
         ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
         ax[idx].tick_params(axis='both', which='major', labelsize=6)
