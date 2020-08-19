@@ -52,75 +52,44 @@ for fos in entropy_per_fos_per_year:
 
         entropy_per_fos_per_year[fos][str(year)] = {'mean': mean, 'std': std}
 
-fig, ax = plt.subplots(3, 2, constrained_layout=True)
-ax = ax.reshape((1, -1))[0]
-
-fig.suptitle('Xenofilia/Xenofobia per Field of Study over the Years',
-             fontsize=10)
-
 checked = list()
 
-for idx, fos in enumerate(sorted(entropy_per_fos_per_year)):
-    if idx > 5:
-        break
+for i, fos_list in enumerate([sorted(entropy_per_fos_per_year)[:6],
+                             sorted(entropy_per_fos_per_year)[6:]]):
+    fig, ax = plt.subplots(3 if i == 0 else 4, 2, constrained_layout=True)
+    ax = ax.reshape((1, -1))[0]
 
-    ax[idx].set_title(fos, fontsize=8)
-    ax[idx].plot(np.arange(1980, 2020),
-                 [entropy_per_fos_per_year[fos][y]['mean'] for y in
-                 sorted(entropy_per_fos_per_year[fos])], lw=2,
-                 color='steelblue')
-    ax[idx].fill_between(np.arange(1980, 2020),
-                         [entropy_per_fos_per_year[fos][y]['mean'] -
-                         entropy_per_fos_per_year[fos][y]['std'] for y in
-                         sorted(entropy_per_fos_per_year[fos])],
-                         [entropy_per_fos_per_year[fos][y]['mean'] +
-                         entropy_per_fos_per_year[fos][y]['std'] for y in
-                         sorted(entropy_per_fos_per_year[fos])],
-                         color='steelblue', alpha=0.1)
-    ax[idx].set_xlim(1979, 2018)
-    ax[idx].set_ylim(-0.5, 0.5)
-    ax[idx].set_xticks(np.arange(1980, 2018, 10))
-    ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
-    ax[idx].tick_params(axis='both', which='major', labelsize=6)
-    ax[idx].set_xlabel('Year', fontsize=8)
-    ax[idx].set_ylabel('Xenofilia/Xenofobia', fontsize=8)
+    fig.suptitle('Xenofilia/Xenofobia per Field of Study over the Years',
+                 fontsize=10)
 
-    checked.append(fos)
+    for idx, fos in enumerate(fos_list):
+        title = fos.capitalize() if '_' not in fos else \
+            ' '.join([chunk.capitalize() for chunk in fos.split('_')])
 
-fig.savefig('../images/fos/xenofilia_xenofobia_per_fos_per_year_1.pdf',
-            format='pdf')
-plt.close(fig)
+        ax[idx].set_title(title, fontsize=8)
+        ax[idx].plot(np.arange(1980, 2020),
+                     [entropy_per_fos_per_year[fos][y]['mean'] for y in
+                     sorted(entropy_per_fos_per_year[fos])], lw=2,
+                     color='steelblue')
+        ax[idx].fill_between(np.arange(1980, 2020),
+                             [entropy_per_fos_per_year[fos][y]['mean'] -
+                             entropy_per_fos_per_year[fos][y]['std'] for y in
+                             sorted(entropy_per_fos_per_year[fos])],
+                             [entropy_per_fos_per_year[fos][y]['mean'] +
+                             entropy_per_fos_per_year[fos][y]['std'] for y in
+                             sorted(entropy_per_fos_per_year[fos])],
+                             color='steelblue', alpha=0.1)
+        ax[idx].set_xlim(1979, 2018)
+        ax[idx].set_ylim(-0.5, 0.5)
+        ax[idx].set_xticks(np.arange(1980, 2018, 10))
+        ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
+        ax[idx].tick_params(axis='both', which='major', labelsize=6)
+        ax[idx].set_xlabel('Year', fontsize=8)
+        ax[idx].set_ylabel('Xenofilia/Xenofobia', fontsize=8)
 
-fig, ax = plt.subplots(4, 2, constrained_layout=True)
-ax = ax.reshape((1, -1))[0]
+    if i == 1:
+        ax[-1].remove()
 
-fig.suptitle('Xenofilia/Xenofobia per Field of Study over the Years',
-             fontsize=10)
-
-remaining_fos = [fos for fos in entropy_per_fos_per_year if fos not in checked]
-
-for idx, fos in enumerate(sorted(remaining_fos)):
-    ax[idx].set_title(fos, fontsize=8)
-    ax[idx].plot(np.arange(1980, 2020),
-                 [entropy_per_fos_per_year[fos][y]['mean'] for y in
-                 sorted(entropy_per_fos_per_year[fos])], lw=2,
-                 color='steelblue')
-    ax[idx].fill_between(np.arange(1980, 2020),
-                         [entropy_per_fos_per_year[fos][y]['mean'] -
-                         entropy_per_fos_per_year[fos][y]['std'] for y in
-                         sorted(entropy_per_fos_per_year[fos])],
-                         [entropy_per_fos_per_year[fos][y]['mean'] +
-                         entropy_per_fos_per_year[fos][y]['std'] for y in
-                         sorted(entropy_per_fos_per_year[fos])],
-                         color='steelblue', alpha=0.1)
-    ax[idx].set_xlim(1979, 2018)
-    ax[idx].set_ylim(-0.5, 0.5)
-    ax[idx].set_xticks(np.arange(1980, 2018, 10))
-    ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
-    ax[idx].tick_params(axis='both', which='major', labelsize=6)
-    ax[idx].set_xlabel('Year', fontsize=8)
-    ax[idx].set_ylabel('Xenofilia/Xenofobia', fontsize=8)
-
-fig.savefig('../images/fos/xenofilia_xenofobia_per_fos_per_year_2.pdf',
-            format='pdf')
-plt.close(fig)
+    fig.savefig('../images/fos/xenofilia_xenofobia_per_fos_per_year_{}.pdf'
+                .format(i + 1), format='pdf')
+    plt.close(fig)
