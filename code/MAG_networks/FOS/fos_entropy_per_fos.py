@@ -52,8 +52,6 @@ for fos in entropy_per_fos_per_year:
 
         entropy_per_fos_per_year[fos][str(year)] = {'mean': mean, 'std': std}
 
-checked = list()
-
 for i, fos_list in enumerate([sorted(entropy_per_fos_per_year)[:6],
                              sorted(entropy_per_fos_per_year)[6:]]):
     fig, ax = plt.subplots(3 if i == 0 else 4, 2, constrained_layout=True)
@@ -93,3 +91,44 @@ for i, fos_list in enumerate([sorted(entropy_per_fos_per_year)[:6],
     fig.savefig('../images/fos/xenofilia_xenofobia_per_fos_per_year_{}.pdf'
                 .format(i + 1), format='pdf')
     plt.close(fig)
+
+countries = ['Italy', 'Germany', 'Norway', 'Poland', 'Portugal',
+             'United States of America', 'Russia', 'China']
+
+entropy_per_fos_per_country = dict()
+
+for mag_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
+    if mag_id in fos_dict:
+        fos_years = set([year for year in fos_dict[mag_id]])
+        entropies_years = set([year for year in entropies_dict[mag_id]])
+
+        for year in fos_years.intersection(entropies_years):
+            score = entropies_dict[mag_id][year]['entropy']
+            country = entropies_dict[mag_id][year]['affiliation']
+
+            if country in countries:
+                for fos in fos_dict[mag_id][year]:
+                    if fos not in entropy_per_fos_per_year:
+                        entropy_per_fos_per_country[fos] = \
+                            {country: defaultdict(list)}
+
+                    entropy_per_fos_per_country[fos][country][year]\
+                        .append(score)
+
+for fos in entropy_per_fos_per_country:
+    for year in np.arange(1980, 2020):
+        mean, std = np.nan, np.nan
+
+        for country in entropy_per_fos_per_country[fos]:
+            if str(year) in entropy_per_fos_per_country[fos][country]:
+                mean = \
+                    np.mean(entropy_per_fos_per_country[fos][country]
+                            [str(year)])
+                std = \
+                    np.std(entropy_per_fos_per_country[fos][country]
+                           [str(year)])
+
+            entropy_per_fos_per_country[fos][country][str(year)] = \
+                {'mean': mean, 'std': std}
+
+print(entropy_per_fos_per_country['business'])
