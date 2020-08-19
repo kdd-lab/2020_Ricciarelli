@@ -47,4 +47,19 @@ for fos in entropy_per_fos_per_year:
 
 fig, ax = plt.subplots(1, 1, constrained_layout=True)
 
-print(entropy_per_fos_per_year.keys())
+for fos in sorted(entropy_per_fos_per_year):
+    ax.plot(np.arange(1980, 2020),
+            [entropy_per_fos_per_year[fos][y]['mean'] for y in
+            sorted(entropy_per_fos_per_year[fos])], lw=2, color='steelblue')
+    ax.set_xlim(1979, 2018)
+    ax.set_xticks(np.arange(1980, 2018, 10))
+    ax.set_xticks(np.arange(1980, 2018), minor=True)
+    ax.tick_params(axis='both', which='major', labelsize=6)
+    ax.set_xlabel('Year', fontsize=8)
+    ax.set_ylabel('Xenofilia/Xenofobia', fontsize=8)
+
+    break
+
+fig.savefig('../images/fos/xenofilia_xenofobia_per_fos_per_tear.pdf',
+            format='pdf')
+plt.close(fig)
