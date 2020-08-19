@@ -50,7 +50,7 @@ for fos in entropy_per_fos_per_year:
             mean = np.mean(entropy_per_fos_per_year[fos][str(year)])
             std = np.std(entropy_per_fos_per_year[fos][str(year)])
 
-        entropy_per_fos_per_year[fos][year] = {'mean': mean, 'std': std}
+        entropy_per_fos_per_year[fos][str(year)] = {'mean': mean, 'std': std}
 
 fig, ax = plt.subplots(3, 2, constrained_layout=True)
 ax = ax.reshape((1, -1))[0]
