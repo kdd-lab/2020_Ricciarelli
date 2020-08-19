@@ -25,7 +25,7 @@ with open(sys.argv[2], 'r') as entropies_file:
 
 entropy_per_fos_per_year = dict()
 
-for mag_id in fos_dict:
+for mag_id in tqdm(fos_dict, desc='ASSIGNING ENTROPY TO FOS'):
     fos_years = set([year for year in fos_dict[mag_id]])
     entropies_years = set([year for year in entropies_dict[mag_id]])
 
@@ -47,4 +47,4 @@ for fos in entropy_per_fos_per_year:
 
 fig, ax = plt.subplots(1, 1, constrained_layout=True)
 
-print(entropy_per_fos_per_year)
+print(entropy_per_fos_per_year.keys())
