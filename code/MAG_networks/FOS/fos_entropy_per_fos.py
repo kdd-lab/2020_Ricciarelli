@@ -84,8 +84,8 @@ for i, fos_list in enumerate([sorted(entropy_per_fos_per_year)[:6],
         ax[idx].set_xticks(np.arange(1980, 2018, 10))
         ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
         ax[idx].tick_params(axis='both', which='major', labelsize=6)
-        ax[idx].set_xlabel('Year', fontsize=8)
-        ax[idx].set_ylabel('Xenofilia/Xenofobia', fontsize=8)
+        ax[idx].set_xlabel('Year', fontsize=6)
+        ax[idx].set_ylabel('Xenofilia/Xenofobia', fontsize=6)
 
     if i == 1:
         ax[-1].remove()
