@@ -148,8 +148,8 @@ for fos in entropy_per_fos_per_country:
     for idx, country in enumerate(entropy_per_fos_per_country[fos]):
         ax[idx].set_title(country, fontsize=8)
         ax[idx].plot(np.arange(1980, 2020),
-                     [entropy_per_fos_per_year[fos][country][y]['mean']
-                     for y in sorted(entropy_per_fos_per_year[fos][country])],
+                     [entropy_per_fos_per_country[fos][country][y]['mean']
+                     for y in sorted(entropy_per_fos_per_country[fos][country])],
                      lw=2, color='steelblue')
         # ax[idx].fill_between(np.arange(1980, 2020),
         #                      [entropy_per_fos_per_year[fos][y]['mean'] -
