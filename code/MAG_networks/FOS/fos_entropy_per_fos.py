@@ -76,8 +76,9 @@ for idx, fos in enumerate(sorted(entropy_per_fos_per_year)):
                          [entropy_per_fos_per_year[fos][y]['mean'] +
                          entropy_per_fos_per_year[fos][y]['std'] for y in
                          sorted(entropy_per_fos_per_year[fos])],
-                         color='steelblue', alpha=0.3)
+                         color='steelblue', alpha=0.1)
     ax[idx].set_xlim(1979, 2018)
+    ax[idx].set_ylim(-0.5, 0.5)
     ax[idx].set_xticks(np.arange(1980, 2018, 10))
     ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
     ax[idx].tick_params(axis='both', which='major', labelsize=6)
@@ -111,8 +112,9 @@ for idx, fos in enumerate(sorted(remaining_fos)):
                          [entropy_per_fos_per_year[fos][y]['mean'] +
                          entropy_per_fos_per_year[fos][y]['std'] for y in
                          sorted(entropy_per_fos_per_year[fos])],
-                         color='steelblue', alpha=0.3)
+                         color='steelblue', alpha=0.1)
     ax[idx].set_xlim(1979, 2018)
+    ax[idx].set_ylim(-0.5, 0.5)
     ax[idx].set_xticks(np.arange(1980, 2018, 10))
     ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
     ax[idx].tick_params(axis='both', which='major', labelsize=6)
