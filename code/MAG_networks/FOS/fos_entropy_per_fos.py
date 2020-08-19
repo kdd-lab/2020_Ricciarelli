@@ -8,6 +8,33 @@ from collections import defaultdict
 from tqdm import tqdm
 
 
+def check_country(country):
+    if country == 'United States':
+        country = 'United States of America'
+    elif country == 'Korea':
+        country = 'South Korea'
+    elif country == 'Russian Federation':
+        country = 'Russia'
+    elif country == 'Dominican Republic':
+        country = 'Dominican Rep.'
+    elif country == 'Bosnia and Herzegovina':
+        country = 'Bosnia and Herz.'
+    elif country == "Lao People's Democratic Republic":
+        country = 'Laos'
+    elif country == 'Cyprus':
+        country = 'N. Cyprus'
+    elif country == 'Central African Republic':
+        country = 'Central African Rep.'
+    elif country == 'South Sudan':
+        country = 'S. Sudan'
+    elif country == 'Syrian Arab Republic':
+        country = 'Syria'
+    elif country == 'Viet Nam':
+        country = 'Vietnam'
+
+    return country
+
+
 fos_dict = dict()
 
 with open(sys.argv[1], 'r') as fos_file:
@@ -106,7 +133,7 @@ for mag_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
             score = entropies_dict[mag_id][year]['entropy']
             country = entropies_dict[mag_id][year]['affiliation']
 
-            if country in countries:
+            if check_country(country) in countries:
                 for fos in fos_dict[mag_id][year]:
                     if fos not in entropy_per_fos_per_country:
                         entropy_per_fos_per_country[fos] = \
@@ -149,8 +176,9 @@ for fos in entropy_per_fos_per_country:
         ax[idx].set_title(country, fontsize=8)
         ax[idx].plot(np.arange(1980, 2020),
                      [entropy_per_fos_per_country[fos][country][y]['mean']
-                     for y in sorted(entropy_per_fos_per_country[fos][country])],
-                     lw=2, color='steelblue')
+                     for y in
+                     sorted(entropy_per_fos_per_country[fos][country])], lw=2,
+                     color='steelblue')
         # ax[idx].fill_between(np.arange(1980, 2020),
         #                      [entropy_per_fos_per_year[fos][y]['mean'] -
         #                      entropy_per_fos_per_year[fos][y]['std'] for y in

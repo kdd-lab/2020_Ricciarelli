@@ -3,7 +3,6 @@ import numpy as np
 import sys
 
 from collections import Counter
-from sklearn.preprocessing import normalize
 from sklearn.preprocessing import QuantileTransformer
 from tqdm import tqdm
 
