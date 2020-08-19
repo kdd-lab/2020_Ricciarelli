@@ -131,9 +131,9 @@ for mag_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
 
         for year in fos_years.intersection(entropies_years):
             score = entropies_dict[mag_id][year]['entropy']
-            country = entropies_dict[mag_id][year]['affiliation']
+            country = check_country(entropies_dict[mag_id][year]['affiliation'])
 
-            if check_country(country) in countries:
+            if country in countries:
                 for fos in fos_dict[mag_id][year]:
                     if fos not in entropy_per_fos_per_country:
                         entropy_per_fos_per_country[fos] = \
