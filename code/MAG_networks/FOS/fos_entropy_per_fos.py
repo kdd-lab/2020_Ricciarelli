@@ -1,3 +1,4 @@
+import ipdb
 import json
 import matplotlib.pyplot as plt
 import numpy as np
@@ -108,9 +109,12 @@ for mag_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
 
             if country in countries:
                 for fos in fos_dict[mag_id][year]:
-                    if fos not in entropy_per_fos_per_year:
+                    if fos not in entropy_per_fos_per_country:
                         entropy_per_fos_per_country[fos] = \
                             {country: defaultdict(list)}
+                    else:
+                        if country not in entropy_per_fos_per_country[fos]:
+                            entropy_per_fos_per_country[fos][country] = defaultdict(list)
 
                     entropy_per_fos_per_country[fos][country][year]\
                         .append(score)
@@ -131,4 +135,4 @@ for fos in entropy_per_fos_per_country:
             entropy_per_fos_per_country[fos][country][str(year)] = \
                 {'mean': mean, 'std': std}
 
-print(entropy_per_fos_per_country['business'])
+ipdb.set_trace()
