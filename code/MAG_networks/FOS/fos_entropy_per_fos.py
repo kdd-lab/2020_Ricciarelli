@@ -43,9 +43,12 @@ for mag_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
                 entropy_per_fos_per_year[fos][year].append(score)
 
 for fos in entropy_per_fos_per_year:
-    for year in entropy_per_fos_per_year[fos]:
-        mean = np.mean(entropy_per_fos_per_year[fos][year])
-        std = np.std(entropy_per_fos_per_year[fos][year])
+    for year in np.arange(1980, 2020):
+        mean, std = np.nan, np.nan
+
+        if str(year) in entropy_per_fos_per_year[fos]:
+            mean = np.mean(entropy_per_fos_per_year[fos][str(year)])
+            std = np.std(entropy_per_fos_per_year[fos][str(year)])
 
         entropy_per_fos_per_year[fos][year] = {'mean': mean, 'std': std}
 
