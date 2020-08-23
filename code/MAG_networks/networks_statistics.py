@@ -8,6 +8,9 @@ decade = np.arange(int(sys.argv[1]), int(sys.argv[1]) + 10)
 
 authors_affiliations = dict()
 
+import ipdb
+ipdb.set_trace()
+
 with open(sys.argv[2], 'r') as affiliations:
     for affiliation in tqdm(affiliations, desc='READING AFFILIATIONS FILE'):
         if len(json.loads(affiliation.strip())) != 0:
@@ -15,8 +18,8 @@ with open(sys.argv[2], 'r') as affiliations:
 
             for mag_id in a:
                 for aff_id in a[mag_id]:
-                    if int(a[mag_id][affiliation]['from']) not in decade:
-                        del a[mag_id][affiliation]
+                    if a[mag_id][aff_id]['from'] not in decade:
+                        del a[mag_id][aff_id]
 
             if len(a[mag_id]) != 0:
                 authors_affiliations.update(a)
