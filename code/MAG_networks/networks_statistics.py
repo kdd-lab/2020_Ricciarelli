@@ -19,17 +19,18 @@ with open(file_name, 'r') as affiliations:
         if len(json.loads(affiliation.strip())) != 0:
             a, to_delete = json.loads(affiliation.strip()), list()
 
-            for mag_id in a:
-                for aff_id in a[mag_id]:
-                    if a[mag_id][aff_id]['from'] not in decade:
-                        to_delete.append(aff_id)
+            authors_affiliations.update(a)
+            #for mag_id in a:
+            #    for aff_id in a[mag_id]:
+            #        if a[mag_id][aff_id]['from'] not in decade:
+            #            to_delete.append(aff_id)
 
-            for mag_id in a:
-                for aff_id in to_delete:
-                    del a[mag_id][aff_id]
+            #for mag_id in a:
+            #    for aff_id in to_delete:
+            #        del a[mag_id][aff_id]
 
-            if len(a[mag_id]) != 0:
-                authors_affiliations.update(a)
+            #if len(a[mag_id]) != 0:
+            #    authors_affiliations.update(a)
 
 affiliations_countries = dict()
 
@@ -123,6 +124,6 @@ for year in decade:
     statistics['Diameter'].append(np.round(np.mean(diameter), 2))
     statistics['Radius'].append(np.round(np.mean(radius), 2))
 
-pd.Dataframe(data=statistics, index=decade)\
+pd.DataFrame(data=statistics, index=decade)\
     .to_csv('/home/ricciarelli/mydata/MAG_networks/networks_statistics/'
             '{}_{}_statistics.csv'.format(decade[0], decade[-1]))
