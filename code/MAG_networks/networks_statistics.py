@@ -62,7 +62,11 @@ for year in decade:
             edges_list.append((e[0], e[1]))
             weights_list.append(int(e[2]))
 
+    valid_nodes = dict()
+
     for node in tqdm(nodes_list, desc='YEAR {}: ADDING NODES'.format(year)):
+        valid_nodes[node] = False
+
         affiliation = list()
 
         if node in authors_affiliations:
@@ -80,13 +84,14 @@ for year in decade:
 
                 g.add_vertex(node,
                              affiliation=affiliation.most_common(1)[0][0])
+                valid_nodes[node] = True
 
     valid_edges, valid_weights = list(), list()
 
     for idx, edge in tqdm(enumerate(edges_list),
                           desc='YEAR {}: VALIDATING EDGES'.format(year)):
         if edge[0] in authors_affiliations and edge[1] in authors_affiliations:
-            if edge[0] in g.vs['name'] and edge[1] in g.vs['name']:
+            if valid_nodes[edge[0]] and valid_nodes[edge[1]]:
                 valid_edges.append(edges_list[idx])
                 valid_weights.append(weights_list[idx])
 
