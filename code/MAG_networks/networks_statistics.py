@@ -40,7 +40,7 @@ with open(file_name, 'r') as affiliations_countries_file:
                             desc='READING AFFILIATION COUNTRIES FILE'):
         a = affiliation.strip().split('\t')
 
-        affiliations_countries.update(a)
+        affiliations_countries.update({a[0]: a[1]})
 
 statistics = defaultdict(list)
 
