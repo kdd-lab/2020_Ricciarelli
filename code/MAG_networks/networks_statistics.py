@@ -20,17 +20,6 @@ with open(file_name, 'r') as affiliations:
             a, to_delete = json.loads(affiliation.strip()), list()
 
             authors_affiliations.update(a)
-            #for mag_id in a:
-            #    for aff_id in a[mag_id]:
-            #        if a[mag_id][aff_id]['from'] not in decade:
-            #            to_delete.append(aff_id)
-
-            #for mag_id in a:
-            #    for aff_id in to_delete:
-            #        del a[mag_id][aff_id]
-
-            #if len(a[mag_id]) != 0:
-            #    authors_affiliations.update(a)
 
 affiliations_countries = dict()
 
@@ -103,26 +92,26 @@ for year in decade:
     statistics['Edges'].append(len(g.es))
     statistics['Density'].append(g.density())
 
-    avg_clustering_coefficient = list()
-    transitivity = list()
-    diameter, radius = list(), list()
+    # avg_clustering_coefficient = list()
+    # transitivity = list()
+    # diameter, radius = list(), list()
 
-    for conn_component in \
-        tqdm(g.components(),
-             desc='YEAR {}: ANALYZING CONNECTED COMPONENTS'.format(year)):
-        subgraph = g.induced_subgraph(conn_component)
+    # for conn_component in \
+    #     tqdm(g.components(),
+    #          desc='YEAR {}: ANALYZING CONNECTED COMPONENTS'.format(year)):
+    #     subgraph = g.induced_subgraph(conn_component)
 
-        avg_clustering_coefficient\
-            .append(subgraph.transitivity_avglocal_undirected(mode='zero'))
-        transitivity.append(subgraph.transitivity_undirected(mode='zero'))
-        diameter.append(subgraph.diameter(directed='False'))
-        radius.append(subgraph.radius())
+    #     avg_clustering_coefficient\
+    #         .append(subgraph.transitivity_avglocal_undirected(mode='zero'))
+    #     transitivity.append(subgraph.transitivity_undirected(mode='zero'))
+    #     diameter.append(subgraph.diameter(directed='False'))
+    #     radius.append(subgraph.radius())
 
-    statistics['Average CC'].append(
-        np.round(np.mean(avg_clustering_coefficient), 2))
-    statistics['Transitivity'].append(np.round(np.mean(transitivity), 2))
-    statistics['Diameter'].append(np.round(np.mean(diameter), 2))
-    statistics['Radius'].append(np.round(np.mean(radius), 2))
+    # statistics['Average CC'].append(
+    #     np.round(np.mean(avg_clustering_coefficient), 2))
+    # statistics['Transitivity'].append(np.round(np.mean(transitivity), 2))
+    # statistics['Diameter'].append(np.round(np.mean(diameter), 2))
+    # statistics['Radius'].append(np.round(np.mean(radius), 2))
 
 pd.DataFrame(data=statistics, index=decade)\
     .to_csv('/home/ricciarelli/mydata/MAG_networks/networks_statistics/'
