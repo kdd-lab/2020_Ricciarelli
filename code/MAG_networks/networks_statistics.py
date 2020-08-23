@@ -15,20 +15,23 @@ with open(sys.argv[2], 'r') as affiliations:
 
             for mag_id in a:
                 for aff_id in a[mag_id]:
-                    if len(a[mag_id][aff_id]) > 2:
-                        print(a)
-                    break
-#                     if a[mag_id][aff_id]['from'] not in decade:
-#                         del a[mag_id][aff_id]
+                    if a[mag_id][aff_id]['from'] not in decade:
+                        to_delete.append(aff_id)
 
-#             if len(a[mag_id]) != 0:
-#                 authors_affiliations.update(a)
+            for mag_id in a:
+                for aff_id in to_delete:
+                    del a[mag_id][aff_id]
 
-# affiliations_countries = dict()
+            if len(a[mag_id]) != 0:
+                authors_affiliations.update(a)
 
-# with open(sys.argv[3], 'r') as affiliations_countries_file:
-#     for affiliation in tqdm(affiliations_countries_file,
-#                             desc='READING AFFILIATION COUNTRIES FILE'):
-#         a = affiliation.strip().split('\t')
+affiliations_countries = dict()
 
-#         affiliations_countries.update(a)
+with open(sys.argv[3], 'r') as affiliations_countries_file:
+    for affiliation in tqdm(affiliations_countries_file,
+                            desc='READING AFFILIATION COUNTRIES FILE'):
+        a = affiliation.strip().split('\t')
+
+        affiliations_countries.update(a)
+
+print(len(authors_affiliations), len(affiliations_countries))
