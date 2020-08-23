@@ -10,7 +10,7 @@ decade = np.arange(int(sys.argv[1]), int(sys.argv[1]) + 10)
 
 authors_affiliations = dict()
 
-file_name = '~/mydata/MAG_networks/authors_affiliation.json'
+file_name = '/home/ricciarelli/mydata/MAG_networks/authors_affiliation.json'
 
 with open(file_name, 'r') as affiliations:
     for affiliation in tqdm(affiliations, desc='READING AFFILIATIONS FILE'):
@@ -31,7 +31,7 @@ with open(file_name, 'r') as affiliations:
 
 affiliations_countries = dict()
 
-file_name = '~/mydata/MAG_networks/affiliations_geo.txt'
+file_name = '/home/ricciarelli/mydata/MAG_networks/affiliations_geo.txt'
 
 with open(file_name, 'r') as affiliations_countries_file:
     for affiliation in tqdm(affiliations_countries_file,
@@ -43,7 +43,8 @@ with open(file_name, 'r') as affiliations_countries_file:
 for year in decade:
     g = ig.Graph()
 
-    file_name = '~/mydata/MAG_networks/{}/{}.gz'.format(year, year)
+    file_name = '/home/ricciarelli/mydata/MAG_networks/{}/{}.gz'\
+        .format(year, year)
 
     nodes_list, edges_list, weights_list = set(), list(), list()
 
