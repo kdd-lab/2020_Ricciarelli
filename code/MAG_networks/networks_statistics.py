@@ -43,8 +43,7 @@ for year in decade:
 
     nodes_list, edges_list, weights_list = set(), list(), list()
 
-    if len(sys.argv == 2) or
-    (len(sys.argv) > 2 and sys.argv[-1] == str(year)):
+    if len(sys.argv == 2) or (len(sys.argv) > 2 and sys.argv[-1] == str(year)):
         with gzip.open(file_name, 'r') as es_list:
             for edge in tqdm(es_list,
                              desc='YEAR {}: READING EDGES LIST'.format(year)):
@@ -70,8 +69,8 @@ for year in decade:
 
                     years_range = np.arange(_from, _to + 1)
 
-                    if year in years_range and
-                    aff_id in affiliations_countries:
+                    if year in years_range and \
+                            aff_id in affiliations_countries:
                         affiliation.append(affiliations_countries[aff_id])
 
                 if len(affiliation) != 0:
@@ -85,8 +84,8 @@ for year in decade:
 
         for idx, edge in tqdm(enumerate(edges_list),
                               desc='YEAR {}: VALIDATING EDGES'.format(year)):
-            if edge[0] in authors_affiliations and
-            edge[1] in authors_affiliations:
+            if edge[0] in authors_affiliations and \
+                    edge[1] in authors_affiliations:
                 if valid_nodes[edge[0]] and valid_nodes[edge[1]]:
                     valid_edges.append(edges_list[idx])
                     valid_weights.append(weights_list[idx])
