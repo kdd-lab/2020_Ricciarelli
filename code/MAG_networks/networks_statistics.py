@@ -143,7 +143,7 @@ for year in decade:
                        color='steelblue', edgecolor='steelblue')
             ax.set_title(r'Probability Density Distribution'
                          r' - Year {} - $\gamma = {} \pm {}$'
-                         .format(year, pars[0] stdevs),
+                         .format(year, pars[0], stdevs),
                          fontsize=10)
             ax.set_xscale('log')
             ax.set_xlim(0.5, right_x_lim)
