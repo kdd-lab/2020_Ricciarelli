@@ -130,6 +130,10 @@ for year in decade:
                     right_x_lim = es_2[i]
                     break
 
+            f = open('./data.txt', 'w')
+            for x in sorted(countdict_pdf):
+                f.write('{}\t{}\n'.format(x, countdict_pdf[x]))
+
             pars, cov = curve_fit(f=power_law,
                                   xdata=list(countdict_pdf.keys()),
                                   ydata=list(countdict_pdf.values()),
