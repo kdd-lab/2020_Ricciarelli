@@ -90,18 +90,15 @@ for year in decade:
                     valid_edges.append(edges_list[idx])
                     valid_weights.append(weights_list[idx])
 
-    if len(sys.argv) == 2:
         g.add_edges(valid_edges)
         g.es['weight'] = valid_weights
 
+    if len(sys.argv) == 2:
         statistics['Nodes'].append(len(g.vs))
         statistics['Edges'].append(len(g.es))
         statistics['Density'].append(g.density())
     else:
         if sys.argv[-1] == str(year):
-            import ipdb
-            ipdb.set_trace()
-
             degrees = sorted(g.degree())
 
             c, countdict_pdf = Counter(degrees), dict()
