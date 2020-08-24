@@ -129,8 +129,7 @@ for year in decade:
                 if max_degree < v:
                     right_x_lim = es_2[i]
                     break
-            import ipdb
-            ipdb.set_trace()
+
             pars, cov = curve_fit(f=power_law,
                                   xdata=list(countdict_pdf.keys()),
                                   ydata=list(countdict_pdf.values()),
@@ -143,7 +142,8 @@ for year in decade:
                        list(countdict_pdf.values()), alpha=0.7,
                        color='steelblue', edgecolor='steelblue')
             ax.set_title(r'Probability Density Distribution'
-                         r' - Year {} - $\gamma = {}$'.format(year, pars[0]),
+                         r' - Year {} - $\gamma = {} \pm {}$'
+                         .format(year, pars[0] stdevs),
                          fontsize=10)
             ax.set_xscale('log')
             ax.set_xlim(0.5, right_x_lim)
