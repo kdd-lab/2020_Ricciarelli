@@ -43,7 +43,7 @@ for year in decade:
 
     nodes_list, edges_list, weights_list = set(), list(), list()
 
-    if len(sys.argv == 2) or (len(sys.argv) > 2 and sys.argv[-1] == str(year)):
+    if len(sys.argv) == 2 or (len(sys.argv) > 2 and sys.argv[-1] == str(year)):
         with gzip.open(file_name, 'r') as es_list:
             for edge in tqdm(es_list,
                              desc='YEAR {}: READING EDGES LIST'.format(year)):
@@ -90,7 +90,7 @@ for year in decade:
                     valid_edges.append(edges_list[idx])
                     valid_weights.append(weights_list[idx])
 
-    if len(sys.argv == 2):
+    if len(sys.argv) == 2:
         g.add_edges(valid_edges)
         g.es['weight'] = valid_weights
 
