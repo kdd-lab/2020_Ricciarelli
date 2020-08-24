@@ -1,6 +1,7 @@
 import gzip
 import igraph as ig
 import json
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import sys
@@ -42,55 +43,105 @@ for year in decade:
 
     nodes_list, edges_list, weights_list = set(), list(), list()
 
-    with gzip.open(file_name, 'r') as es_list:
-        for edge in tqdm(es_list,
-                         desc='YEAR {}: READING EDGES LIST'.format(year)):
-            e = edge.decode().strip().split(',')
+    if sys.argv[1] != 'plot' or
+    (sys.argv[1] == 'plot' and sys.argv[2] == str(year)):
+        with gzip.open(file_name, 'r') as es_list:
+            for edge in tqdm(es_list,
+                             desc='YEAR {}: READING EDGES LIST'.format(year)):
+                e = edge.decode().strip().split(',')
 
-            nodes_list.add(e[0])
-            nodes_list.add(e[1])
-            edges_list.append((e[0], e[1]))
-            weights_list.append(int(e[2]))
+                nodes_list.add(e[0])
+                nodes_list.add(e[1])
+                edges_list.append((e[0], e[1]))
+                weights_list.append(int(e[2]))
 
-    valid_nodes = dict()
+        valid_nodes = dict()
 
-    for node in tqdm(nodes_list, desc='YEAR {}: ADDING NODES'.format(year)):
-        valid_nodes[node] = False
+        for node in tqdm(nodes_list, desc='YEAR {}: ADDING NODES'
+                         .format(year)):
+            valid_nodes[node] = False
 
-        affiliation = list()
+            affiliation = list()
 
-        if node in authors_affiliations:
-            for aff_id in authors_affiliations[node]:
-                _from = authors_affiliations[node][aff_id]['from']
-                _to = authors_affiliations[node][aff_id]['to']
+            if node in authors_affiliations:
+                for aff_id in authors_affiliations[node]:
+                    _from = authors_affiliations[node][aff_id]['from']
+                    _to = authors_affiliations[node][aff_id]['to']
 
-                years_range = np.arange(_from, _to + 1)
+                    years_range = np.arange(_from, _to + 1)
 
-                if year in years_range and aff_id in affiliations_countries:
-                    affiliation.append(affiliations_countries[aff_id])
+                    if year in years_range and
+                    aff_id in affiliations_countries:
+                        affiliation.append(affiliations_countries[aff_id])
 
-            if len(affiliation) != 0:
-                affiliation = Counter(affiliation)
+                if len(affiliation) != 0:
+                    affiliation = Counter(affiliation)
 
-                g.add_vertex(node,
-                             affiliation=affiliation.most_common(1)[0][0])
-                valid_nodes[node] = True
+                    g.add_vertex(node,
+                                 affiliation=affiliation.most_common(1)[0][0])
+                    valid_nodes[node] = True
 
-    valid_edges, valid_weights = list(), list()
+        valid_edges, valid_weights = list(), list()
 
-    for idx, edge in tqdm(enumerate(edges_list),
-                          desc='YEAR {}: VALIDATING EDGES'.format(year)):
-        if edge[0] in authors_affiliations and edge[1] in authors_affiliations:
-            if valid_nodes[edge[0]] and valid_nodes[edge[1]]:
-                valid_edges.append(edges_list[idx])
-                valid_weights.append(weights_list[idx])
+        for idx, edge in tqdm(enumerate(edges_list),
+                              desc='YEAR {}: VALIDATING EDGES'.format(year)):
+            if edge[0] in authors_affiliations and
+            edge[1] in authors_affiliations:
+                if valid_nodes[edge[0]] and valid_nodes[edge[1]]:
+                    valid_edges.append(edges_list[idx])
+                    valid_weights.append(weights_list[idx])
 
-    g.add_edges(valid_edges)
-    g.es['weight'] = valid_weights
+    if sys.argv[1] != 'plot':
+        g.add_edges(valid_edges)
+        g.es['weight'] = valid_weights
 
-    statistics['Nodes'].append(len(g.vs))
-    statistics['Edges'].append(len(g.es))
-    statistics['Density'].append(g.density())
+        statistics['Nodes'].append(len(g.vs))
+        statistics['Edges'].append(len(g.es))
+        statistics['Density'].append(g.density())
+    else:
+        if sys.argv[2] == str(year):
+            degrees = sorted(g.degree())
+
+            c, countdict_pdf = Counter(degrees), dict()
+            left_y_lim, right_x_lim = None, None
+
+            for deg in np.arange(0, max(degrees) + 1):
+                countdict_pdf[deg] = (c[deg] / len(degrees)) \
+                    if deg in c.keys() else 0.
+
+            min_prob = \
+                [i for i in sorted(countdict_pdf.values()) if i != 0.0][0]
+            max_degree = max(countdict_pdf.keys())
+            es_1 = [1e-7, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1e0]
+            es_2 = [1e0, 1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7]
+
+            for i, v in enumerate(es_1):
+                if min_prob < v:
+                    left_y_lim = es_1[i - 1]
+                    break
+
+            for i, v in enumerate(es_2):
+                if max_degree < v:
+                    right_x_lim = es_2[i]
+                    break
+
+            fig, ax = plt.subplots(1, 1, constrained_layout=True)
+
+            ax.scatter(list(countdict_pdf.keys()),
+                       list(countdict_pdf.values()), zorder=2, alpha=0.7,
+                       color='steelblue', edgecolor='steelblue')
+            ax.set_title('Probability Density Distribution', fontsize=14)
+            ax.set_xscale('log')
+            ax.set_xlim(0.5, right_x_lim)
+            ax.set_yscale('log')
+            ax.set_ylim(left_y_lim, 1.)
+            ax.set_xlabel(r'$k$', fontsize=14)
+            ax.set_ylabel(r'$p_k$', fontsize=14)
+            ax.grid(axis='y', linestyle='--', color='black', zorder=1)
+
+            fig.savefig('./images/degree_distribution_{}.pdf'.format(year),
+                        format='pdf')
+            plt.close(fig=fig)
 
     # avg_clustering_coefficient = list()
     # transitivity = list()
