@@ -43,8 +43,8 @@ for year in decade:
 
     nodes_list, edges_list, weights_list = set(), list(), list()
 
-    if sys.argv[1] != 'plot' or
-    (sys.argv[1] == 'plot' and sys.argv[2] == str(year)):
+    if len(sys.argv == 2) or
+    (len(sys.argv) > 2 and sys.argv[-1] == str(year)):
         with gzip.open(file_name, 'r') as es_list:
             for edge in tqdm(es_list,
                              desc='YEAR {}: READING EDGES LIST'.format(year)):
@@ -91,7 +91,7 @@ for year in decade:
                     valid_edges.append(edges_list[idx])
                     valid_weights.append(weights_list[idx])
 
-    if sys.argv[1] != 'plot':
+    if len(sys.argv == 2):
         g.add_edges(valid_edges)
         g.es['weight'] = valid_weights
 
@@ -99,7 +99,7 @@ for year in decade:
         statistics['Edges'].append(len(g.es))
         statistics['Density'].append(g.density())
     else:
-        if sys.argv[2] == str(year):
+        if sys.argv[-1] == str(year):
             degrees = sorted(g.degree())
 
             c, countdict_pdf = Counter(degrees), dict()
@@ -164,6 +164,7 @@ for year in decade:
     # statistics['Diameter'].append(np.round(np.mean(diameter), 2))
     # statistics['Radius'].append(np.round(np.mean(radius), 2))
 
-pd.DataFrame(data=statistics, index=decade)\
-    .to_csv('/home/ricciarelli/mydata/MAG_networks/networks_statistics/'
-            '{}_{}_statistics.csv'.format(decade[0], decade[-1]))
+if len(sys.argv) == 2:
+    pd.DataFrame(data=statistics, index=decade)\
+        .to_csv('/home/ricciarelli/mydata/MAG_networks/networks_statistics/'
+                '{}_{}_statistics.csv'.format(decade[0], decade[-1]))
