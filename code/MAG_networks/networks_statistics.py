@@ -11,8 +11,8 @@ from scipy.optimize import curve_fit
 from tqdm import tqdm
 
 
-def power_law(x, a, b):
-    return a * np.power(x, b)
+def power_law(x, b):
+    return (1 / np.power(x, b))
 
 
 decade = np.arange(int(sys.argv[1]), int(sys.argv[1]) + 10)
@@ -129,12 +129,11 @@ for year in decade:
                 if max_degree < v:
                     right_x_lim = es_2[i]
                     break
-            import ipdb
-            ipdb.set_trace()
+
             pars, cov = curve_fit(f=power_law,
                                   xdata=list(countdict_pdf.keys()),
                                   ydata=list(countdict_pdf.values()),
-                                  p0=[0, 0], bounds=(-np.inf, np.inf))
+                                  p0=[0], bounds=(-np.inf, np.inf))
             stdevs = np.sqrt(np.diag(cov))
 
             fig, ax = plt.subplots(1, 1, constrained_layout=True)
@@ -143,7 +142,7 @@ for year in decade:
                        list(countdict_pdf.values()), alpha=0.7,
                        color='steelblue', edgecolor='steelblue')
             ax.set_title(r'Probability Density Distribution'
-                         r' - Year {} - $\gamma = {}$'.format(year, pars[1]),
+                         r' - Year {} - $\gamma = {}$'.format(year, pars[0]),
                          fontsize=10)
             ax.set_xscale('log')
             ax.set_xlim(0.5, right_x_lim)
