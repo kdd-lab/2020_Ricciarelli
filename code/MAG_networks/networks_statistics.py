@@ -99,6 +99,9 @@ for year in decade:
         statistics['Density'].append(g.density())
     else:
         if sys.argv[-1] == str(year):
+            import ipdb
+            ipdb.set_trace()
+
             degrees = sorted(g.degree())
 
             c, countdict_pdf = Counter(degrees), dict()
@@ -127,16 +130,16 @@ for year in decade:
             fig, ax = plt.subplots(1, 1, constrained_layout=True)
 
             ax.scatter(list(countdict_pdf.keys()),
-                       list(countdict_pdf.values()), zorder=2, alpha=0.7,
+                       list(countdict_pdf.values()), alpha=0.7,
                        color='steelblue', edgecolor='steelblue')
-            ax.set_title('Probability Density Distribution', fontsize=14)
+            ax.set_title('Probability Density Distribution', fontsize=10)
             ax.set_xscale('log')
             ax.set_xlim(0.5, right_x_lim)
             ax.set_yscale('log')
-            ax.set_ylim(left_y_lim, 1.)
-            ax.set_xlabel(r'$k$', fontsize=14)
-            ax.set_ylabel(r'$p_k$', fontsize=14)
-            ax.grid(axis='y', linestyle='--', color='black', zorder=1)
+            ax.set_ylim(left_y_lim, 1.2)
+            ax.set_xlabel(r'$k$', fontsize=8)
+            ax.set_ylabel(r'$P(k)$', fontsize=8)
+            ax.tick_params(axis='both', which='major', labelsize=6)
 
             fig.savefig('./images/degree_distribution_{}.pdf'.format(year),
                         format='pdf')
