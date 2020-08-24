@@ -12,7 +12,7 @@ from tqdm import tqdm
 
 
 def power_law(x, b):
-    return (1 / np.power(x, b))
+    return x**(-b)
 
 
 decade = np.arange(int(sys.argv[1]), int(sys.argv[1]) + 10)
@@ -129,7 +129,8 @@ for year in decade:
                 if max_degree < v:
                     right_x_lim = es_2[i]
                     break
-
+            import ipdb
+            ipdb.set_trace()
             pars, cov = curve_fit(f=power_law,
                                   xdata=list(countdict_pdf.keys()),
                                   ydata=list(countdict_pdf.values()),
