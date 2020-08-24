@@ -130,14 +130,9 @@ for year in decade:
                     right_x_lim = es_2[i]
                     break
 
-            f = open('./data.txt', 'w')
-            for x in sorted(countdict_pdf):
-                f.write('{}\t{}\n'.format(x, countdict_pdf[x]))
-
             pars, cov = curve_fit(f=power_law,
                                   xdata=list(countdict_pdf.keys()),
-                                  ydata=list(countdict_pdf.values()),
-                                  p0=[0], bounds=(-np.inf, np.inf))
+                                  ydata=list(countdict_pdf.values()))
             stdevs = np.sqrt(np.diag(cov))
 
             fig, ax = plt.subplots(1, 1, constrained_layout=True)
@@ -147,7 +142,7 @@ for year in decade:
                        color='steelblue', edgecolor='steelblue')
             ax.set_title(r'Probability Density Distribution'
                          r' - Year {} - $\gamma = {} \pm {}$'
-                         .format(year, pars[0], stdevs),
+                         .format(year, pars[0], stdevs[0]),
                          fontsize=10)
             ax.set_xscale('log')
             ax.set_xlim(0.5, right_x_lim)
