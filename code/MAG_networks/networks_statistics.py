@@ -131,7 +131,7 @@ for year in decade:
                     break
 
             pars, cov = curve_fit(f=power_law,
-                                  xdata=[x for x in sorted(countdict_pdf)],
+                                  xdata=np.arange(1, len(countdict_pdf) + 1),
                                   ydata=[countdict_pdf[x] for x in sorted(countdict_pdf)])
             stdevs = np.sqrt(np.diag(cov))
 
