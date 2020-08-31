@@ -199,7 +199,7 @@ for fos in entropy_per_fos_per_country:
                ('Chernobyl disaster', 'Fall of the Berlin Wall',
                 'Dissolution of the Soviet Union', '09/11',
                 '2008 Economic Crysis'), loc='center left', fontsize=8,
-               title='Events', bbox_to_anchor=(1.1, 0.5),
+               title='Events', bbox_to_anchor=(1.0, 0.5),
                bbox_transform=ax[1].transAxes)
     fig.savefig('../images/fos/xenofilia_xenofobia_per_fos_per_country_{}.pdf'
                 .format(fos), format='pdf')
