@@ -172,7 +172,7 @@ for fos in entropy_per_fos_per_country:
     fig.suptitle('Xenofilia/Xenofobia per Field of Study over the Years'
                  ' by Country - {}'.format(title), fontsize=10)
 
-    for idx, country in enumerate(entropy_per_fos_per_country[fos]):
+    for idx, country in enumerate(sorted(entropy_per_fos_per_country[fos])):
         ax[idx].set_title(country, fontsize=8)
         ax[idx].plot(np.arange(1980, 2020),
                      [entropy_per_fos_per_country[fos][country][y]['mean']
