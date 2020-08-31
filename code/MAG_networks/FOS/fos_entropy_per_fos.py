@@ -187,6 +187,15 @@ for fos in entropy_per_fos_per_country:
         #                      entropy_per_fos_per_year[fos][y]['std'] for y in
         #                      sorted(entropy_per_fos_per_year[fos])],
         #                      color='steelblue', alpha=0.1)
+
+        for year, color, style in zip([1986, 1989, 1991, 2001, 2008],
+                                      ['#ff6347', '#47ff63', '#6347ff',
+                                       '#ff4787', '#47ffbf'],
+                                      ['solid', 'dotted', 'dashed', 'dashdot',
+                                      (0, (3, 5, 1, 5, 1, 5))]):
+            ax[idx].axvline(x=year, ymin=-1.0, ymax=1.0, color=color,
+                            alpha=0.7, ls=style)
+
         ax[idx].set_xlim(1979, 2018)
         ax[idx].set_xticks(np.arange(1980, 2018, 10))
         ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
