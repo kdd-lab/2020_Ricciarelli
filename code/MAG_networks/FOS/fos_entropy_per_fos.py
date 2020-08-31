@@ -195,7 +195,7 @@ for fos in entropy_per_fos_per_country:
         ax[idx].set_xlabel('Year', fontsize=6)
         ax[idx].set_ylabel('Xenofilia/Xenofobia', fontsize=6)
 
-    fig.legend(ax[0].get_children()[2:7],
+    fig.legend(ax[0].get_children()[1:6],
                ('Chernobyl disaster', 'Fall of the Berlin Wall',
                 'Dissolution of the Soviet Union', '09/11',
                 '2008 Economic Crysis'), loc='center left', fontsize=8,
