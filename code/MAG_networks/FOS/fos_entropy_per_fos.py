@@ -177,8 +177,7 @@ for fos in entropy_per_fos_per_country:
 
         for y in np.arange(1980, 2020):
             if str(y) in entropy_per_fos_per_country[fos][country]:
-                y_values.append(entropy_per_fos_per_country[fos][country][y]
-                                ['mean'])
+                y_values.append(entropy_per_fos_per_country[fos][country][str(y)]['mean'])
             else:
                 y_values.append(0.0)
 
