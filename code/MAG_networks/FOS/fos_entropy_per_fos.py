@@ -148,7 +148,7 @@ for mag_id in cl_df[cl_df.cluster.isin([1, 2])]['MAG_id']:
 
 for fos in entropy_per_fos_per_country:
     for year in np.arange(1980, 2020):
-        mean, std = np.nan, np.nan
+        mean, std = 0.0, 0.0
 
         for country in entropy_per_fos_per_country[fos]:
             if str(year) in entropy_per_fos_per_country[fos][country]:
@@ -173,18 +173,12 @@ for fos in entropy_per_fos_per_country:
                  ' by Country - {}'.format(title), fontsize=10)
 
     for idx, country in enumerate(sorted(entropy_per_fos_per_country[fos])):
-        y_values = list()
-
-        for y in np.arange(1980, 2020):
-            if entropy_per_fos_per_country[fos][country][str(y)]['mean'] != \
-                 np.nan:
-                y_values.append(entropy_per_fos_per_country[fos][country]
-                                [str(y)]['mean'])
-            else:
-                y_values.append(0.0)
-
         ax[idx].set_title(country, fontsize=8)
-        ax[idx].plot(np.arange(1980, 2020), y_values, lw=2, color='steelblue')
+        ax[idx].plot(np.arange(1980, 2020),
+                     [entropy_per_fos_per_country[fos][country][y]['mean']
+                     for y in
+                     sorted(entropy_per_fos_per_country[fos][country])], lw=2,
+                     color='steelblue')
 
         for year, color, style in zip([1986, 1989, 1991, 2001, 2008],
                                       ['#ff6347', '#47ff63', '#6347ff',
