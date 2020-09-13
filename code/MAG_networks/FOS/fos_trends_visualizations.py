@@ -112,7 +112,7 @@ plt.gca().add_artist(plt.legend([legend_entries[fos] for fos in
 plt.legend(vertical_lines,
            ('Chernobyl disaster', 'Fall of the Berlin Wall',
             'Dissolution of the Soviet Union', '09/11',
-            '2008 Economic Crysis'), loc='center left', fontsize=6,
+            '2008 Economic Crisis'), loc='center left', fontsize=6,
            title='Events', bbox_to_anchor=(1, 0.25))
 fig.savefig('../images/fos/most_represented_fos_per_year.pdf',
             format='pdf')
@@ -181,7 +181,7 @@ fig.legend([legend_entries[fos] for fos in sorted(legend_entries)],
 fig.legend(vertical_lines[:5],
            ('Chernobyl disaster', 'Fall of the Berlin Wall',
             'Dissolution of the Soviet Union', '09/11',
-            '2008 Economic Crysis'), loc='center left', fontsize=6,
+            '2008 Economic Crisis'), loc='center left', fontsize=6,
            title='Events', bbox_to_anchor=(1, 0.25),
            bbox_transform=ax[-1].transAxes)
 
@@ -264,7 +264,7 @@ fig.legend([legend_entries[fos] for fos in sorted(legend_entries)],
 fig.legend(vertical_lines[:5],
            ('Chernobyl disaster', 'Fall of the Berlin Wall',
             'Dissolution of the Soviet Union', '09/11',
-            '2008 Economic Crysis'), loc='center left', fontsize=6,
+            '2008 Economic Crisis'), loc='center left', fontsize=6,
            title='Events', bbox_to_anchor=(1.1, 0.25),
            bbox_transform=ax[3].transAxes)
 fig.savefig('../images/fos/fos_of_various_countries.pdf', bbox_inches='tight',

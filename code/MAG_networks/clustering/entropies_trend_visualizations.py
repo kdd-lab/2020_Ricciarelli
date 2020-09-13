@@ -111,7 +111,7 @@ fig.legend(ax[0].get_children()[:2], ("Xenofilia/Xenophobia's Score",
 fig.legend(ax[0].get_children()[2:7],
            ('Chernobyl disaster', 'Fall of the Berlin Wall',
             'Dissolution of the Soviet Union', '09/11',
-            '2008 Economic Crysis'), loc='center left', fontsize=8,
+            '2008 Economic Crisis'), loc='center left', fontsize=8,
            title='Events', bbox_to_anchor=(1.1, 0.5),
            bbox_transform=ax[3].transAxes)
 
