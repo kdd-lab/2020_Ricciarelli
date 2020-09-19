@@ -2,6 +2,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+plt.rcParams['font.sans-serif'] = "Times New Roman"
+plt.rcParams['font.family'] = "sans-serif"
+plt.rcParams['mathtext.default'] = 'regular'
+plt.rcParams['axes.titlesize'] = 12
+plt.rcParams['axes.labelsize'] = 10
+plt.rcParams['xtick.labelsize'] = 8
+plt.rcParams['ytick.labelsize'] = 8
 plt.rcParams['legend.title_fontsize'] = 'x-small'
 
 df = pd.read_csv('../../../1980_1989_statistics.csv', index_col=0)
@@ -18,16 +25,15 @@ axs = axs.reshape((1, -1))[0]
 
 for idx, ax in enumerate(axs):
     ax.set_title('Number of Nodes per Year' if idx == 0
-                 else 'Number of Edges per Year', fontsize=10)
+                 else 'Number of Edges per Year')
     ax.plot(np.arange(1980, 2020), df['Nodes'].values if idx == 0 else
             df['Edges'], lw=2, color='steelblue')
     ax.set_xlim(1979, 2020)
     ax.set_xticks(np.arange(1980, 2020, 10))
     ax.set_xticks(np.arange(1980, 2020), minor=True)
-    ax.tick_params(axis='both', which='major', labelsize=6)
-    ax.set_xlabel('Year', fontsize=8)
-    ax.set_ylabel('Number of Nodes' if idx == 0 else 'Number of Edges',
-                  fontsize=8)
+    ax.tick_params(axis='both', which='major')
+    ax.set_xlabel('Year')
+    ax.set_ylabel('Number of Nodes' if idx == 0 else 'Number of Edges')
 
 fig.savefig('./images/number_of_nodes_and_edges_per_year.pdf',
             format='pdf')
@@ -35,14 +41,14 @@ plt.close(fig)
 
 fig, ax = plt.subplots(1, 1, constrained_layout=True)
 
-ax.set_title("Networks' Density per Year", fontsize=10)
+ax.set_title("Networks' Density per Year")
 ax.plot(np.arange(1980, 2020), df['Density'].values, lw=2, color='steelblue')
 ax.set_xlim(1979, 2020)
 ax.set_xticks(np.arange(1980, 2020, 10))
 ax.set_xticks(np.arange(1980, 2020), minor=True)
-ax.tick_params(axis='both', which='major', labelsize=6)
-ax.set_xlabel('Year', fontsize=8)
-ax.set_ylabel('Density', fontsize=8)
+ax.tick_params(axis='both', which='major')
+ax.set_xlabel('Year')
+ax.set_ylabel('Density')
 
 fig.savefig('./images/density_per_year.pdf',
             format='pdf')
