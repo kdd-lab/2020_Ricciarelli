@@ -1,6 +1,7 @@
 import gzip
 import igraph as ig
 import json
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -14,6 +15,14 @@ from tqdm import tqdm
 def power_law(x, b):
     return x**(-b)
 
+
+matplotlib.rcParams['font.sans-serif'] = "Times New Roman"
+matplotlib.rcParams['font.family'] = "sans-serif"
+matplotlib.rcParams['mathtext.default'] = 'regular'
+matplotlib.rcParams['axes.titlesize'] = 12
+matplotlib.rcParams['axes.labelsize'] = 10
+matplotlib.rcParams['xtick.labelsize'] = 8
+matplotlib.rcParams['ytick.labelsize'] = 8
 
 decade = np.arange(int(sys.argv[1]), int(sys.argv[1]) + 10)
 
@@ -105,53 +114,32 @@ for year in decade:
         statistics['Density'].append(g.density())
     else:
         if sys.argv[-1] == str(year):
-            degrees = sorted(g.degree())
+            degrees = Counter(g.degree())
 
-            c, countdict_pdf = Counter(degrees), dict()
-            left_y_lim, right_x_lim = None, None
+            probabilities = list()
 
-            for deg in np.arange(0, max(degrees) + 1):
-                countdict_pdf[deg] = (c[deg] / len(degrees)) \
-                    if deg in c.keys() else 0.
+            for degree in sorted(degrees):
+                probabilities.append(degrees[degree] / len(g.vs))
 
-            min_prob = \
-                [i for i in sorted(countdict_pdf.values()) if i != 0.0][0]
-            max_degree = max(countdict_pdf.keys())
-            es_1 = [1e-7, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1e0]
-            es_2 = [1e0, 1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7]
-
-            for i, v in enumerate(es_1):
-                if min_prob < v:
-                    left_y_lim = es_1[i - 1]
-                    break
-
-            for i, v in enumerate(es_2):
-                if max_degree < v:
-                    right_x_lim = es_2[i]
-                    break
-
-            pars, cov = curve_fit(f=power_law,
-                                  xdata=np.arange(1, len(countdict_pdf) + 1),
-                                  ydata=[countdict_pdf[x] for x in sorted(countdict_pdf)])
+            pars, cov = curve_fit(f=power_law, xdata=sorted(degrees),
+                                  ydata=probabilities)
             stdevs = np.sqrt(np.diag(cov))
 
-            fig, ax = plt.subplots(1, 1, constrained_layout=True)
-
-            ax.scatter(list(countdict_pdf.keys()),
-                       list(countdict_pdf.values()), alpha=0.7,
-                       color='steelblue', edgecolor='steelblue')
+            fig, ax = plt.subplots()
+            ax.scatter(sorted(degrees), probabilities, color='steelblue',
+                       edgecolor='steelblue', alpha=0.7)
+            ax.plot(sorted(degrees), power_law(sorted(degrees), pars[0]),
+                    linestyle='--', color='black', alpha=0.8)
+            ax.set_xscale('log')
+            ax.set_yscale('log')
             ax.set_title(r'Probability Density Distribution'
                          r' - Year {} - $\gamma = {} \pm {}$'
-                         .format(year, np.round(pars[0], 2), np.round(stdevs[0], 2)),
-                         fontsize=10)
-            ax.set_xscale('log')
-            ax.set_xlim(0.5, right_x_lim)
-            ax.set_yscale('log')
-            ax.set_ylim(left_y_lim, 1.2)
-            ax.set_xlabel(r'$k$', fontsize=8)
-            ax.set_ylabel(r'$P(k)$', fontsize=8)
-            ax.tick_params(axis='both', which='major', labelsize=6)
-
+                         .format(year, np.round(pars[0], 2),
+                                 np.round(stdevs[0], 2)))
+            ax.set_xlabel(r'$k$')
+            ax.set_ylabel(r'$P_k$')
+            ax.tick_params(axis='both', which='major')
+            ax.set_ylim(1e-5, 2)
             fig.savefig('./images/degree_distribution_{}.pdf'.format(year),
                         format='pdf')
             plt.close(fig=fig)
