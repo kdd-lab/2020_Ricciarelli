@@ -142,8 +142,6 @@ for year in decade:
             ax.set_ylim(bottom=1e-8)
             ax.set_xlabel(r'$k$')
             ax.set_ylabel(r'$P_k$')
-            ax.tick_params(axis='both', which='major')
-            ax.set_ylim(1e-5, 2)
             fig.savefig('./images/degree_distribution_{}.pdf'.format(year),
                         format='pdf')
             plt.close(fig=fig)
