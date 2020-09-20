@@ -116,6 +116,9 @@ for year in decade:
         if sys.argv[-1] == str(year):
             degrees = Counter(g.degree())
 
+            if 0 in degrees:
+                del degrees[0]
+
             probabilities = list()
 
             for degree in sorted(degrees):
