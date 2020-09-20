@@ -139,6 +139,7 @@ for year in decade:
                          r' - Year {} - $\gamma = {} \pm {}$'
                          .format(year, np.round(pars[0], 2),
                                  np.round(stdevs[0], 2)))
+            ax.set_ylim(bottom=1e-8)
             ax.set_xlabel(r'$k$')
             ax.set_ylabel(r'$P_k$')
             ax.tick_params(axis='both', which='major')
