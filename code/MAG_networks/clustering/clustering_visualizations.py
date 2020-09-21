@@ -338,7 +338,7 @@ else:
                          location='bottom')
             #fig.subplots_adjust(left=0.1, right=0.9, bottom=0.25, top=0.85,
             #                    wspace=0.1, hspace=0.5)
-            fig.tight_layout()
+            fig.tight_layout(pad=1.5, h_pad=0.5, w_pad=0.5)
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
             plt.close(fig)
