@@ -1,5 +1,5 @@
-
 import json
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -8,6 +8,14 @@ import sys
 from collections import defaultdict
 from sklearn.linear_model import LinearRegression
 from tqdm import tqdm
+
+matplotlib.rcParams['font.sans-serif'] = "Times New Roman"
+matplotlib.rcParams['font.family'] = "sans-serif"
+matplotlib.rcParams['mathtext.default'] = 'regular'
+matplotlib.rcParams['axes.titlesize'] = 12
+matplotlib.rcParams['axes.labelsize'] = 10
+matplotlib.rcParams['xtick.labelsize'] = 8
+matplotlib.rcParams['ytick.labelsize'] = 8
 
 entropies_dict = dict()
 
@@ -76,7 +84,7 @@ for country in ['Italy', 'Germany', 'Norway', 'Poland', 'Portugal',
 fig, ax = plt.subplots(4, 2, constrained_layout=True)
 ax = ax.reshape((1, -1))[0]
 
-fig.suptitle("Xenofilia/Xenophobia's trend for various Countries",
+fig.suptitle("YDCI's trend for various Countries",
              fontsize=10)
 
 for idx, country in enumerate(entropies):
@@ -103,7 +111,7 @@ for idx, country in enumerate(entropies):
     ax[idx].tick_params(axis='both', which='major', labelsize=6)
     ax[idx].set_title(country, fontsize=8)
 
-fig.legend(ax[0].get_children()[:2], ("Xenofilia/Xenophobia's Score",
+fig.legend(ax[0].get_children()[:2], ("YDCI",
            "Series' Trend"), loc='center left', fontsize=8,
            title="Lines' types", bbox_to_anchor=(1.1, 0.5),
            bbox_transform=ax[1].transAxes)
@@ -142,7 +150,7 @@ for c in entropies_per_country:
 
     fig, axes = plt.subplots(nrows=5, ncols=1, constrained_layout=True)
 
-    fig.suptitle('Top 5 Countries with higher/lower Xenofilia/Xenophobia - '
+    fig.suptitle('Top 5 Countries with higher/lower YDCI - '
                  'Cluster {}'.format(c), fontsize=10)
 
     for x in np.arange(0, 5):
@@ -181,7 +189,7 @@ for c in entropies_per_country:
         axes[x].set_ylim(-1.0, 1.0)
         axes[x].set_xticks(np.arange(1980, 2018, 10))
         axes[x].set_xticks(np.arange(1980, 2018), minor=True)
-        axes[x].tick_params(axis='both', which='major', labelsize=6)
+        axes[x].tick_params(axis='both', which='major')
         axes[x].legend(loc='center left', fontsize=6,
                        bbox_to_anchor=(1, 0.5))
 
