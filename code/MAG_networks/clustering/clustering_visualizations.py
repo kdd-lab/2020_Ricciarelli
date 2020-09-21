@@ -1,5 +1,6 @@
 import json
 import geopandas as gpd
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -10,6 +11,14 @@ from collections import defaultdict
 from tqdm import tqdm
 
 warnings.filterwarnings("ignore")
+
+matplotlib.rcParams['font.sans-serif'] = "Times New Roman"
+matplotlib.rcParams['font.family'] = "sans-serif"
+matplotlib.rcParams['mathtext.default'] = 'regular'
+matplotlib.rcParams['axes.titlesize'] = 12
+matplotlib.rcParams['axes.labelsize'] = 10
+matplotlib.rcParams['xtick.labelsize'] = 8
+matplotlib.rcParams['ytick.labelsize'] = 8
 
 if sys.argv[1] == 'lineplot':
     f = open(sys.argv[2], 'r').readlines()
@@ -117,11 +126,10 @@ else:
                    labels=[str(c) for c in sorted(cl_df.cluster.unique())],
                    showfliers=False, showmeans=True)
         ax.grid(linestyle='--', color='black', alpha=0.4)
-        ax.set_title("Xenofilia/Xenophobia's Distribution per Cluster "
-                     "on a Deeper Level" if 'deeper' in sys.argv[3] else
-                     "Entropies' Distribution per Cluster", fontsize=10)
-        ax.set_xlabel('Cluster', fontsize=8)
-        ax.set_ylabel('Xenofilia/Xenophobia', fontsize=8)
+        ax.set_title("YDCI's Distribution per Cluster" if 'deeper'
+                     in sys.argv[3] else "Entropies' Distribution per Cluster")
+        ax.set_xlabel('Cluster')
+        ax.set_ylabel('YDCI')
 
         fig.savefig('../images/clustering/entropies_distribution_deeper.pdf' if
                     'deeper' in sys.argv[3] else
