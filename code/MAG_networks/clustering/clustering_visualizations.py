@@ -197,7 +197,7 @@ else:
         fig, ax = plt.subplots(nrows=2, ncols=2, constrained_layout=True)
         ax = ax.reshape((1, -1))[0]
 
-        fig.suptitle('Changes in the Xenofilia/Xenophobia over the Decades',
+        fig.suptitle('Changes in the YDCI over the Decades',
                      fontsize=10)
 
         for idx, decade in enumerate([1980, 1990, 2000, 2010]):
@@ -230,7 +230,7 @@ else:
         fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                            norm=plt.Normalize(vmin=-1.0,
                                                               vmax=1.0)),
-                     ax=ax[-2:], shrink=0.5, label='Xenofilia/Xenophobia',
+                     ax=ax[-2:], shrink=0.5, label='YDCI',
                      location='bottom')
         fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
@@ -239,7 +239,7 @@ else:
         fig, ax = plt.subplots(nrows=2, ncols=2, constrained_layout=True)
         ax = ax.reshape((1, -1))[0]
 
-        fig.suptitle('Changes in the Xenofilia/Xenophobia over the Decades'
+        fig.suptitle('Changes in the YDCI over the Decades'
                      ' - Europe', fontsize=10)
 
         for idx, decade in enumerate([1980, 1990, 2000, 2010]):
@@ -275,7 +275,7 @@ else:
         fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                            norm=plt.Normalize(vmin=-1.0,
                                                               vmax=1.0)),
-                     ax=ax[:], shrink=0.5, label='Xenofilia/Xenophobia',
+                     ax=ax[:], shrink=0.5, label='YDCI',
                      location='bottom')
         fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
@@ -297,7 +297,7 @@ else:
             fig, ax = plt.subplots(nrows=2, ncols=2,
                                    constrained_layout=True)
 
-            fig.suptitle('Mean Xenofilia/Xenophobia per Country over the '
+            fig.suptitle('Mean YDCI per Country over the '
                          'Decades - Cluster {}'.format(cluster), fontsize=10)
 
             for coord, decade in zip([[0, 0], [0, 1], [1, 0], [1, 1]],
@@ -335,7 +335,7 @@ else:
             fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                                norm=plt.Normalize(vmin=-1.0,
                                                                   vmax=1.0)),
-                         ax=ax[1, :], shrink=0.5, label='Xenofilia/Xenophobia',
+                         ax=ax[1, :], shrink=0.5, label='YDCI',
                          location='bottom')
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
@@ -353,7 +353,7 @@ else:
             world.plot(column='entropy', ax=ax, cmap='coolwarm', vmin=-1.0,
                        vmax=1.0, missing_kwds={'color': 'white'},
                        edgecolor='black', linewidth=0.1, figsize=(10, 10))
-            ax.set_title("Mean Xenofilia/Xenophobia per Country - Cluster {}"
+            ax.set_title("Mean YDCI per Country - Cluster {}"
                          .format(cluster), fontsize=10)
             ax.axes.xaxis.set_visible(False)
             ax.axes.yaxis.set_visible(False)
@@ -365,6 +365,6 @@ else:
             fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                                norm=plt.Normalize(vmin=-1.0,
                                                                   vmax=1.0)),
-                         ax=ax, shrink=0.5, label='Xenofilia/Xenophobia',
+                         ax=ax, shrink=0.5, label='YDCI',
                          location='bottom')
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
