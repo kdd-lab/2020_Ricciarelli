@@ -336,7 +336,7 @@ else:
                                                                   vmax=1.0)),
                          ax=ax[1, :], shrink=0.5, label='YDCI',
                          location='bottom')
-            fig.subplots_adjust(top=0.80)
+            fig.subplots_adjust(top=1.0)
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
             plt.close(fig)
