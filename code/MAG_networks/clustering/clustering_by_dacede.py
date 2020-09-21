@@ -1,5 +1,6 @@
 import json
 # import logging
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import sys
@@ -10,6 +11,14 @@ from sklearn.cluster import KMeans
 from tqdm import tqdm
 
 warnings.filterwarnings("ignore")
+
+matplotlib.rcParams['font.sans-serif'] = "Times New Roman"
+matplotlib.rcParams['font.family'] = "sans-serif"
+matplotlib.rcParams['mathtext.default'] = 'regular'
+matplotlib.rcParams['axes.titlesize'] = 12
+matplotlib.rcParams['axes.labelsize'] = 10
+matplotlib.rcParams['xtick.labelsize'] = 8
+matplotlib.rcParams['ytick.labelsize'] = 8
 
 # log_name =
 # '../logs/entropies_clustering_gs_decade_{}.log'.format(sys.argv[2])
@@ -52,7 +61,7 @@ for i, row in tqdm(enumerate(entropies_matrix), desc='PREPROCESSING',
 fig, axs = plt.subplots(2, 2, constrained_layout=True)
 axs = axs.reshape((1, -1))[0]
 
-fig.suptitle("Xenofilia/Xenophobia's Distribution by Decade", fontsize=10)
+fig.suptitle("YDCI's Distribution by Decade", fontsize=12)
 
 for idx, decade in enumerate([1980, 1990, 2000, 2010]):
     dataset = entropies_matrix[:, (idx * 10):((idx + 1) * 10)]
@@ -78,8 +87,8 @@ for idx, decade in enumerate([1980, 1990, 2000, 2010]):
                      showfliers=False, showmeans=True)
     axs[idx].grid(linestyle='--', color='black', alpha=0.4)
     axs[idx].set_title('From {} to {}'.format(decade, decade + 9), fontsize=8)
-    axs[idx].set_xlabel('Cluster', fontsize=8)
-    axs[idx].set_ylabel('Xenofilia/Xenophobia', fontsize=8)
+    axs[idx].set_xlabel('Cluster')
+    axs[idx].set_ylabel('YDCI')
     axs[idx].tick_params(axis='both', which='major', labelsize=8)
 
 fig.savefig('../images/clustering/entropies_distribution_by_decade.pdf',
