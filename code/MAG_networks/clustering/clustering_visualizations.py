@@ -332,6 +332,8 @@ else:
                 '../images/clustering/mean_entropy_per_decade_cluster_{}.pdf'\
                 .format(cluster)
 
+            plt.subplots_adjust(wspace=0.4)
+
             fig.colorbar(plt.cm.ScalarMappable(cmap='coolwarm',
                                                norm=plt.Normalize(vmin=-1.0,
                                                                   vmax=1.0)),
