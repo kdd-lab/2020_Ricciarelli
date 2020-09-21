@@ -294,8 +294,7 @@ else:
 
                     entropies_per_country[country][year].append(entropy)
 
-            fig, ax = plt.subplots(nrows=2, ncols=2,
-                                   constrained_layout=True)
+            fig, ax = plt.subplots(nrows=2, ncols=2)
 
             fig.suptitle('Mean YDCI per Country over the '
                          'Decades - Cluster {}'.format(cluster), fontsize=10)
@@ -337,7 +336,8 @@ else:
                                                                   vmax=1.0)),
                          ax=ax[1, :], shrink=0.5, label='YDCI',
                          location='bottom')
-            fig.subplots_adjust(hspace=0.01)
+            fig.subplots_adjust(left=0.1, right=0.9, bottom=0.25, top=0.85,
+                                wspace=0.1, hspace=0.5)
             fig.savefig(save_n, format='pdf', bbox_inches='tight')
 
             plt.close(fig)
