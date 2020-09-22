@@ -33,6 +33,6 @@ ax.barh(np.arange(len(fos_counter)),
 ax.set_title('Fields of Study in the Dataset')
 ax.set_yticks(np.arange(len(fos_counter)),
               [fos for fos in sorted(fos_counter)])
-fig.savefig('../images/fis/fos_in_the_dataset.pdf', bbox_inches='tight',
+fig.savefig('../images/fos/fos_in_the_dataset.pdf', bbox_inches='tight',
             format='pdf')
 plt.close(fig)
