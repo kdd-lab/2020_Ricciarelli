@@ -25,8 +25,12 @@ with open(sys.argv[1], 'r') as fos_file:
             for year in creator[mag_id]:
                 for fos in creator[mag_id][year]:
                     fos_counter[fos] += 1
-import ipdb
-ipdb.set_trace()
+
+for fos in fos_counter:
+    new_key = fos.replace('_', ' ').capitalize() if '_' in fos else \
+        fos.capitalize()
+    fos_counter[new_key] = fos_counter.pop(fos)
+
 fig, ax = plt.subplots(constrained_layout=True)
 ax.barh(np.arange(len(fos_counter)),
         [fos_counter[fos] for fos in sorted(fos_counter)], color='steelblue',
