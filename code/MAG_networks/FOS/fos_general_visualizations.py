@@ -26,18 +26,13 @@ with open(sys.argv[1], 'r') as fos_file:
                 for fos in creator[mag_id][year]:
                     fos_counter[fos] += 1
 
-for fos in fos_counter:
-    new_key = fos.replace('_', ' ').capitalize() if '_' in fos else \
-        fos.capitalize()
-    fos_counter[new_key] = fos_counter.pop(fos)
-
 fig, ax = plt.subplots(constrained_layout=True)
 ax.barh(np.arange(len(fos_counter)),
         [fos_counter[fos] for fos in sorted(fos_counter)], color='steelblue',
         edgecolor='steelblue', log=True)
 ax.set_title('Fields of Study in the Dataset')
 ax.set_yticks(np.arange(len(fos_counter)))
-ax.set_yticklabels([fos for fos in sorted(fos_counter)])
+ax.set_yticklabels([fos.replace('_', ' ').capitalize() for fos in sorted(fos_counter)])
 fig.savefig('../images/fos/fos_in_the_dataset.pdf', bbox_inches='tight',
             format='pdf')
 plt.close(fig)
