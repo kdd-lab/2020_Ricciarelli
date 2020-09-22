@@ -35,7 +35,7 @@ with open(sys.argv[1], 'r') as fos_file:
 total_fos = sum([multidisciplinarity[key] for key in multidisciplinarity])
 
 for m in multidisciplinarity:
-    multidisciplinarity[m] = multidisciplinarity[m] / total_fos
+    multidisciplinarity[m] = (multidisciplinarity[m] / total_fos) * 100
 
 
 fig, ax = plt.subplots(constrained_layout=True)
@@ -56,7 +56,7 @@ ax.barh(np.arange(len(multidisciplinarity)),
         color='steelblue', edgecolor='steelblue')
 ax.set_title('Multidisciplinarity in the Dataset')
 ax.set_yticks(np.arange(len(multidisciplinarity)))
-ax.set_yticklabels([multidisciplinarity[k] for k in sorted(fos_counter)])
+ax.set_yticklabels([k for k in sorted(multidisciplinarity)])
 fig.savefig('../images/fos/multidisciplinarity.pdf', bbox_inches='tight',
             format='pdf')
 plt.close(fig)
