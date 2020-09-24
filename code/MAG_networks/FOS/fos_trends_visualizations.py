@@ -98,9 +98,9 @@ for year, color, style in zip([1986, 1989, 1991, 2001, 2008],
     vertical_lines.append(ax.axvline(x=year, ymin=-1.0, ymax=1.0, color=color,
                                      alpha=0.7, ls=style))
 
-ax.set_xlim(1979, 2018)
-ax.set_xticks(np.arange(1980, 2018, 10))
-ax.set_xticks(np.arange(1980, 2018), minor=True)
+ax.set_xlim(1979, 2020)
+ax.set_xticks(np.arange(1980, 2020, 10))
+ax.set_xticks(np.arange(1980, 2020), minor=True)
 ax.tick_params(axis='both', which='major', labelsize=6)
 ax.set_xlabel('Year', fontsize=8)
 ax.set_ylabel('Registered Entries', fontsize=8)
