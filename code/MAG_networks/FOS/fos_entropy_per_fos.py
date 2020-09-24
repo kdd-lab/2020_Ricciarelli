@@ -84,7 +84,7 @@ for i, fos_list in enumerate([sorted(entropy_per_fos_per_year)[:6],
     fig, ax = plt.subplots(3 if i == 0 else 4, 2, constrained_layout=True)
     ax = ax.reshape((1, -1))[0]
 
-    fig.suptitle('Xenofilia/Xenofobia per Field of Study over the Years',
+    fig.suptitle('YDCI per Field of Study over the Years',
                  fontsize=10)
 
     for idx, fos in enumerate(fos_list):
@@ -104,13 +104,13 @@ for i, fos_list in enumerate([sorted(entropy_per_fos_per_year)[:6],
                              entropy_per_fos_per_year[fos][y]['std'] for y in
                              sorted(entropy_per_fos_per_year[fos])],
                              color='steelblue', alpha=0.1)
-        ax[idx].set_xlim(1979, 2018)
+        ax[idx].set_xlim(1979, 2020)
         ax[idx].set_ylim(-0.5, 0.5)
-        ax[idx].set_xticks(np.arange(1980, 2018, 10))
-        ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
+        ax[idx].set_xticks(np.arange(1980, 2020, 10))
+        ax[idx].set_xticks(np.arange(1980, 2020), minor=True)
         ax[idx].tick_params(axis='both', which='major', labelsize=6)
         ax[idx].set_xlabel('Year', fontsize=6)
-        ax[idx].set_ylabel('Xenofilia/Xenofobia', fontsize=6)
+        ax[idx].set_ylabel('YDCI', fontsize=6)
 
     if i == 1:
         ax[-1].remove()
@@ -169,7 +169,7 @@ for fos in entropy_per_fos_per_country:
     title = fos.capitalize() if '_' not in fos else ' '\
         .join([chunk.capitalize() for chunk in fos.split('_')])
 
-    fig.suptitle('Xenofilia/Xenofobia per Field of Study over the Years'
+    fig.suptitle('YDCI per Field of Study over the Years'
                  ' by Country - {}'.format(title), fontsize=10)
 
     for idx, country in enumerate(sorted(entropy_per_fos_per_country[fos])):
@@ -193,7 +193,7 @@ for fos in entropy_per_fos_per_country:
         ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
         ax[idx].tick_params(axis='both', which='major', labelsize=6)
         ax[idx].set_xlabel('Year', fontsize=6)
-        ax[idx].set_ylabel('Xenofilia/Xenofobia', fontsize=6)
+        ax[idx].set_ylabel('YDCI', fontsize=6)
 
     fig.legend(ax[0].get_children()[1:6],
                ('Chernobyl disaster', 'Fall of the Berlin Wall',
