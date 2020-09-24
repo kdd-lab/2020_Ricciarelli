@@ -226,12 +226,12 @@ fig.suptitle('Most represented Fields of Study for various Countries',
 for idx, country in enumerate(['Italy', 'Germany', 'Norway', 'Poland',
                               'Portugal', 'United States of America', 'Russia',
                                'China']):
-    ax[idx].plot(np.arange(1980, 2018),
+    ax[idx].plot(np.arange(1980, 2020),
                  [fos_per_country[country][str(year)].most_common()[0][1]
-                 for year in np.arange(1980, 2018)], lw=2, color='steelblue',
+                 for year in np.arange(1980, 2020)], lw=2, color='steelblue',
                  alpha=0.5)
 
-    for i, x in enumerate(np.arange(1980, 2018)):
+    for i, x in enumerate(np.arange(1980, 2020)):
         y = ax[idx].get_children()[i].properties()['data'][1][i]
         field_of_study = fos_per_country[country][str(x)].most_common()[0][0]
 
@@ -250,9 +250,9 @@ for idx, country in enumerate(['Italy', 'Germany', 'Norway', 'Poland',
                                               ls=style))
 
     ax[idx].set_title(country, fontsize=8)
-    ax[idx].set_xlim(1979, 2018)
-    ax[idx].set_xticks(np.arange(1980, 2018, 10))
-    ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
+    ax[idx].set_xlim(1979, 2020)
+    ax[idx].set_xticks(np.arange(1980, 2020, 10))
+    ax[idx].set_xticks(np.arange(1980, 2020), minor=True)
     ax[idx].tick_params(axis='both', which='major', labelsize=6)
     ax[idx].set_xlabel('Year', fontsize=8)
     ax[idx].set_ylabel('Registered Entries', fontsize=8)
