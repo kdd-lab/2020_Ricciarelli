@@ -138,19 +138,19 @@ for idx, cluster in enumerate([1, 2]):
                     fos_counter_per_cluster[year][field_of_study] += 1
 
     fields_of_study = set([fos_counter_per_cluster[str(x)].most_common()[0][0]
-                          for x in np.arange(1980, 2018)])
+                          for x in np.arange(1980, 2020)])
 
     for fos in fields_of_study:
         if fos not in field_of_study_markers:
             field_of_study_markers[fos] = markers[fos_counter]
             fos_counter += 1
 
-    ax[idx].plot(np.arange(1980, 2018),
+    ax[idx].plot(np.arange(1980, 2020),
                  [fos_counter_per_cluster[str(year)].most_common()[0][1]
-                 for year in np.arange(1980, 2018)], lw=2, color='steelblue',
+                 for year in np.arange(1980, 2020)], lw=2, color='steelblue',
                  alpha=0.5)
 
-    for i, x in enumerate(np.arange(1980, 2018)):
+    for i, x in enumerate(np.arange(1980, 2020)):
         y = ax[idx].get_children()[i].properties()['data'][1][i]
         field_of_study = fos_counter_per_cluster[str(x)].most_common()[0][0]
 
@@ -167,9 +167,9 @@ for idx, cluster in enumerate([1, 2]):
                                               ls=style))
 
     ax[idx].set_title('Cluster {}'.format(cluster), fontsize=8)
-    ax[idx].set_xlim(1979, 2018)
-    ax[idx].set_xticks(np.arange(1980, 2018, 10))
-    ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
+    ax[idx].set_xlim(1979, 2020)
+    ax[idx].set_xticks(np.arange(1980, 2020, 10))
+    ax[idx].set_xticks(np.arange(1980, 2020), minor=True)
     ax[idx].tick_params(axis='both', which='major', labelsize=6)
     ax[idx].set_xlabel('Year', fontsize=8)
     ax[idx].set_ylabel('Registered Entries', fontsize=8)
