@@ -69,7 +69,7 @@ markers = list(mpl.markers.MarkerStyle.markers.keys())
 # MOST REPRESENTED FIELD OF STUDY PER YEAR ####################################
 
 fields_of_study = set([fos_counter_per_year[str(x)].most_common()[0][0]
-                      for x in np.arange(1980, 2018)])
+                      for x in np.arange(1980, 2020)])
 field_of_study_markers, legend_entries = dict(), dict()
 
 for idx, fos in enumerate(fields_of_study):
@@ -77,11 +77,11 @@ for idx, fos in enumerate(fields_of_study):
 
 fig, ax = plt.subplots(1, 1, constrained_layout=True)
 ax.set_title('Most represented Field of Study per Year', fontsize=10)
-ax.plot(np.arange(1980, 2018),
+ax.plot(np.arange(1980, 2020),
         [fos_counter_per_year[str(year)].most_common()[0][1]
-        for year in np.arange(1980, 2018)], lw=2, color='steelblue', alpha=0.5)
+        for year in np.arange(1980, 2020)], lw=2, color='steelblue', alpha=0.5)
 
-for idx, x in enumerate(np.arange(1980, 2018)):
+for idx, x in enumerate(np.arange(1980, 2020)):
     y = ax.get_children()[idx].properties()['data'][1][idx]
     field_of_study = fos_counter_per_year[str(x)].most_common()[0][0]
 
