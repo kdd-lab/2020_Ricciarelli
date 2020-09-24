@@ -188,9 +188,9 @@ for fos in entropy_per_fos_per_country:
             ax[idx].axvline(x=year, ymin=-1.0, ymax=1.0, color=color,
                             alpha=0.7, ls=style)
 
-        ax[idx].set_xlim(1979, 2018)
-        ax[idx].set_xticks(np.arange(1980, 2018, 10))
-        ax[idx].set_xticks(np.arange(1980, 2018), minor=True)
+        ax[idx].set_xlim(1979, 2020)
+        ax[idx].set_xticks(np.arange(1980, 2020, 10))
+        ax[idx].set_xticks(np.arange(1980, 2020), minor=True)
         ax[idx].tick_params(axis='both', which='major', labelsize=6)
         ax[idx].set_xlabel('Year', fontsize=6)
         ax[idx].set_ylabel('YDCI', fontsize=6)
