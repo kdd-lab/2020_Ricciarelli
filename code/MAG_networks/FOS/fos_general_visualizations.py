@@ -39,15 +39,16 @@ for m in multidisciplinarity:
 
 fos_counter = dict((v, k) for k, v in fos_counter.items())
 
+print(fos_counter)
 
 fig, ax = plt.subplots(constrained_layout=True)
 ax.barh(np.arange(len(fos_counter)),
-        [fos_counter[fos] for fos in sorted(fos_counter, reverse=True)],
+        [fos_counter[fos] for fos in sorted(fos_counter)],
         color='steelblue', edgecolor='steelblue', log=True)
 ax.set_title('Fields of Study in the Dataset')
 ax.set_yticks(np.arange(len(fos_counter)))
 ax.set_yticklabels([fos_counter[fos].replace('_', ' ').capitalize()
-                   for fos in sorted(fos_counter, reverse=True)])
+                   for fos in sorted(fos_counter)])
 ax.set_ylabel('Fileds of Study')
 ax.set_xlabel('# in the Dataset')
 fig.savefig('../images/fos/fos_in_the_dataset.pdf', bbox_inches='tight',
